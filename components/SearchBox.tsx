@@ -4,7 +4,9 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Article } from "@/lib/articles";
 
-export function SearchBox({ articles }: { articles: Article[] }) {
+export type SearchArticleItem = Pick<Article, "slug" | "title" | "description" | "keyword" | "categoryLabel">;
+
+export function SearchBox({ articles }: { articles: SearchArticleItem[] }) {
   const [query, setQuery] = useState("");
   const results = useMemo(() => {
     const normalized = query.trim().toLowerCase();
