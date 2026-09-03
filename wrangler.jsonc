@@ -8,6 +8,13 @@
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://isatips.adbles.com"
   },
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "isatips.adbles.com",
+      "custom_domain": true
+    }
+  ],
   "main": "vinext/server/fetch-handler",
   "assets": {
     "directory": "dist/client",
