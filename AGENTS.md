@@ -15,6 +15,10 @@
 7. 기준 문서의 최종 판단 질문 5개에 모두 명확하게 `YES`라고 답하기 어려우면 자동 실행하거나 발행하지 않고 검토 대상으로 보고한다.
 8. 기준 문서를 임의로 축소하거나 완화하지 않는다. 변경은 사용자의 명시적 지시에 따른다.
 
+## Claude 세션
+
+Claude(Claude Code · Cowork · claude.ai)에서 작업할 때는 저장소 루트의 `CLAUDE.md`를 함께 읽는다. 같은 운영 기준을 Claude 쪽 실행 환경에 맞춰 옮겨둔 파일이며, 두 파일이 어긋나면 아래 기준 문서가 최종 판단 기준이다.
+
 ## 기준 문서
 
 - `docs/ISATIPS_AI_MASTER_OPERATING_INSTRUCTION_v1.0.md`
