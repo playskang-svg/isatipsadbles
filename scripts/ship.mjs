@@ -205,27 +205,63 @@ if (!opts.wait) {
 }
 
 head("배포 반영 확인");
-const sha = git("rev-parse", "HEAD").slice(0, 7);
-console.log(`푸시한 커밋 ${sha} — GitHub Actions가 lint → build → 배포 → IndexNow 제출을 수행합니다.`);
+const sha = git("rev-parse", "HEAD");
+const short = sha.slice(0, 7);
+const repo = parseRepo(git("remote", "get-url", "origin"));
+console.log(`푸시한 커밋 ${short} — GitHub Actions가 lint → build → 배포 → IndexNow 제출을 수행합니다.`);
+if (repo) console.log(`진행 상황: https://github.com/${repo}/actions`);
 
-let ok = false;
-for (let i = 1; i <= 20; i += 1) {
-  await new Promise((r) => setTimeout(r, 15000));
-  try {
-    const res = await fetch(`${SITE_URL}/sitemap.xml`, { headers: { "cache-control": "no-cache" } });
-    if (res.ok) {
-      process.stdout.write(`  ${i * 15}초 경과 — 사이트 응답 정상\n`);
-      ok = true;
-      break;
-    }
-    process.stdout.write(`  ${i * 15}초 경과 — HTTP ${res.status}\n`);
-  } catch {
-    process.stdout.write(`  ${i * 15}초 경과 — 아직 응답 없음\n`);
-  }
+// 사이트가 200을 준다고 새 배포가 반영된 것은 아니다(이전 버전도 200을 준다).
+// 그래서 푸시한 커밋의 워크플로 실행 결과를 직접 확인한다.
+const result = repo ? await waitForRun(repo, sha) : null;
+
+if (result === null) {
+  console.log(`
+워크플로 상태를 확인하지 못했습니다(비공개 저장소이거나 API 제한).
+Actions 탭에서 ${short}의 실행 결과를 직접 확인하세요.`);
+} else if (result.conclusion === "success") {
+  console.log(`
+배포 완료. ${short}의 워크플로가 성공했습니다.
+IndexNow 제출 결과(제출 N건 → HTTP 200)는 Actions 로그 마지막 단계에 있습니다.`);
+} else if (result.conclusion) {
+  fail(`워크플로가 ${result.conclusion} 상태로 끝났습니다. 배포되지 않았습니다.
+로그: ${result.url}`);
+} else {
+  console.log(`
+5분 안에 끝나지 않았습니다. 계속 진행 중일 수 있습니다.
+로그: ${result.url || `https://github.com/${repo}/actions`}`);
 }
 
-if (ok) {
-  console.log(`\n완료. Actions 로그에서 IndexNow 제출 결과(제출 N건 → HTTP 200)를 확인하세요.`);
-} else {
-  console.log(`\n5분 안에 확인되지 않았습니다. GitHub Actions 탭에서 배포 상태를 직접 보세요.`);
+function parseRepo(remote) {
+  const m = remote.match(/github\.com[/:]([^/]+\/[^/]+?)(?:\.git)?$/);
+  return m ? m[1] : null;
+}
+
+async function waitForRun(repoSlug, headSha) {
+  const api = `https://api.github.com/repos/${repoSlug}/actions/runs?head_sha=${headSha}&per_page=1`;
+  let last = null;
+  for (let i = 1; i <= 15; i += 1) {
+    await new Promise((r) => setTimeout(r, 20000));
+    let run;
+    try {
+      const res = await fetch(api, { headers: { accept: "application/vnd.github+json", "user-agent": "ship/1.0" } });
+      if (!res.ok) {
+        process.stdout.write(`  ${i * 20}초 — API HTTP ${res.status}\n`);
+        if (res.status === 403 || res.status === 404) return null;
+        continue;
+      }
+      run = (await res.json()).workflow_runs?.[0];
+    } catch {
+      process.stdout.write(`  ${i * 20}초 — API 응답 없음\n`);
+      continue;
+    }
+    if (!run) {
+      process.stdout.write(`  ${i * 20}초 — 실행 대기 중\n`);
+      continue;
+    }
+    last = { conclusion: run.conclusion, url: run.html_url };
+    process.stdout.write(`  ${i * 20}초 — ${run.status}${run.conclusion ? ` / ${run.conclusion}` : ""}\n`);
+    if (run.status === "completed") return last;
+  }
+  return last ?? { conclusion: null, url: null };
 }
