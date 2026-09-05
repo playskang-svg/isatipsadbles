@@ -10,6 +10,7 @@ import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
 import { getMovingService } from "@/lib/services";
 import { SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
+import { isAffiliateUrl } from "@/lib/affiliate";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +22,7 @@ function renderInlineLinks(text: string) {
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
     const href = match[2];
-    const sponsored = /app\.ac\//i.test(href);
+    const sponsored = isAffiliateUrl(href);
     parts.push(href.startsWith("/")
       ? <Link key={`${match.index}-${href}`} href={href}>{match[1]}</Link>
       : <a key={`${match.index}-${href}`} href={href} target="_blank" rel={sponsored ? "sponsored nofollow noopener noreferrer" : "noopener noreferrer"}>{match[1]}</a>);

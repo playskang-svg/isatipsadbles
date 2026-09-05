@@ -1,15 +1,17 @@
 import type { Article } from "./articles";
+import { linkUrl } from "./affiliate";
 
 const ADMIN_SOURCE = {
   label: "행정안전부 2026년 지방자치단체 행정구역 및 인구 현황(2025.12.31. 기준)",
   url: "https://www.index.go.kr/unity/potal/main/EachDtlPageDetail.do?idx_cd=1041",
 };
 
-const MOVING_COMPARE = "https://Ocayn.info/t7rujwdigo";
-const TWO_QUOTES = "https://Ocayn.info/t8gy97bt69";
-const PACKING_MOVE = "https://Ocayn.info/t7rujwdigl";
-const CLEANING_COMPARE = "http://app.ac/vtGA0lM83";
-const INSTALL_REPAIR = "http://app.ac/jjw6cka73";
+const MOVING_COMPARE = linkUrl("move-cpa-isatime");
+const TWO_QUOTES = linkUrl("move-compare-2");
+const PACKING_MOVE = linkUrl("move-packing");
+const CLEANING_COMPARE = linkUrl("move-cleaning");
+const INSTALL_REPAIR = linkUrl("repair-soomgo-aircon");
+const TV_MOUNT = linkUrl("repair-soomgo-tv-mount");
 
 const HERO_MOVE = "/images/moving-field/living-a04-14.webp";
 const HERO_TV = "/images/moving-field/living-a03-12.webp";
@@ -199,8 +201,8 @@ const focusContent: Record<Focus, {
     answer: (name) => `${name} 벽걸이TV 이전설치는 기존 브래킷 철거, 새집 벽체와 타공 규정 확인이 먼저입니다. 이사업체가 운반만 하는지 전문기사가 철거·재설치까지 맡는지 구분하세요.`,
     action: "TV 모델과 크기, 브래킷, 기존 설치 사진, 새집 벽면과 콘센트 위치를 준비하고 무타공 방식이 필요한지도 미리 알리세요.",
     checklist: ["TV 모델·크기", "브래킷 재사용 가능 여부", "새집 벽체·타공 규정", "철거·운반·설치 책임자"],
-    ctaLabel: "설치·수리 견적 비교",
-    ctaUrl: INSTALL_REPAIR,
+    ctaLabel: "벽걸이TV 설치·철거 견적 비교",
+    ctaUrl: TV_MOUNT,
     faq: (name) => ({ question: `${name} 벽걸이TV 브래킷을 재사용할 수 있나요?`, answer: "TV와 브래킷 규격, 벽체와 설치 방식에 따라 달라집니다. 모델명과 기존 설치 사진을 전문기사에게 보여주고 호환성을 확인하세요." }),
   },
 };

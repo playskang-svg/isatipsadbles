@@ -1,10 +1,10 @@
 import type { Article } from "./articles";
 import { repairKeywordArticles, repairTargetKeywords, regionOf } from "./repair-keyword-pages";
 import { gyeonggiCityProfiles, gyeonggiRegionTree } from "./regional-articles";
+import { repairQuoteLink, repairSupplyLink, topicIdFromSlug } from "./affiliate-match";
 
 const PUBLISHED_AT = "2026-09-03T00:00:00.000Z";
 const UPDATED_AT = "2026-09-03T00:00:00.000Z";
-const INSTALL_REPAIR_URL = "http://app.ac/63MI0AJ93";
 
 type Destination = {
   city: string;
@@ -110,6 +110,9 @@ function makeRegionalArticle(plan: PlannedRegionalArticle): Article {
     "주차 위치, 계단과 승강기, 자재 반입 동선을 사진으로 확인해야 작업 범위를 비교하기 쉽습니다.",
   ];
   const intent = intentLabel(sourceKeyword);
+  const topicId = topicIdFromSlug(sourceArticle.slug);
+  const quote = repairQuoteLink(topicId);
+  const supply = repairSupplyLink(topicId, sourceKeyword);
   const localLinks = [
     { name: destination.locality, href: destination.localityHref },
     ...destination.siblings.filter((item) => item.name !== destination.locality).slice(0, 5),
@@ -154,6 +157,9 @@ function makeRegionalArticle(plan: PlannedRegionalArticle): Article {
         paragraphs: [
           sourceArticle.intro,
           `전체 모습, 손상 부위, 작동 영상과 치수를 함께 보내세요. ${destination.locality} 현장에서도 같은 이름의 작업이라도 자재와 파손 범위에 따라 부분 수리와 전체 교체 판단이 달라질 수 있습니다.`,
+          ...(supply
+            ? [`부속 교체로 끝날 수 있는 상태라면 규격을 먼저 확인하고 [${supply.label.replace(/^오늘의집 /u, "")} 제품 종류](${supply.url})를 비교해 보세요. 고정부나 바탕이 손상됐다면 자재만 바꿔도 같은 증상이 다시 나타날 수 있습니다.`]
+            : []),
         ],
       },
       {
@@ -167,7 +173,7 @@ function makeRegionalArticle(plan: PlannedRegionalArticle): Article {
         heading: `${destination.city} 사진 견적에 넣을 항목`,
         paragraphs: [
           "사진 견적에는 작업 대상의 전체 크기, 손상 부위, 제품 표시나 부속 규격, 바닥과 벽 상태를 넣으세요. 차량이 설 수 있는 위치부터 작업 장소까지의 이동 거리도 보여주면 현장 추가 항목을 줄이는 데 도움이 됩니다.",
-          `서비스 가능 범위와 기본·추가 작업을 확인하려면 [${targetKeyword} 설치·수리 견적 확인](${INSTALL_REPAIR_URL})에서 같은 사진과 조건으로 비교해 보세요. 자재, 철거, 폐기, 주변 마감과 부가세 포함 여부를 항목별로 적어야 합니다.`,
+          `서비스 가능 범위와 기본·추가 작업을 확인하려면 같은 사진과 조건으로 [${quote.label.replace(/^숨고 /u, "")} 견적을 받아](${quote.url}) 비교해 보세요. 자재, 철거, 폐기, 주변 마감과 부가세 포함 여부를 항목별로 적어야 합니다.`,
         ],
         checklist: ["전체 사진과 가까운 사진", "가로·세로·두께 또는 모델명", "작동 문제를 보여주는 영상", "주차·승강기·계단", "기본 작업과 추가 가능 항목", "작업 후 보수 범위"],
       },

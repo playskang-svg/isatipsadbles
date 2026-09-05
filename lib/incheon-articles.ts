@@ -1,13 +1,15 @@
 import type { Article } from "./articles";
+import { linkUrl } from "./affiliate";
 
 const ADMIN_SOURCE = { label: "인천광역시 행정구역 현황(2026년 7월 1일 기준)", url: "https://www.incheon.go.kr/IC040102" };
 const APARTMENT_SOURCE = { label: "인천광역시 공동주택 현황(2026년 6월 30일 기준)", url: "https://www.incheon.go.kr/build/BU050303/3080146" };
-const MOVING_COMPARE = "https://Ocayn.info/t7rujwdigo";
-const TWO_QUOTES = "https://Ocayn.info/t8gy97bt69";
-const PACKING_MOVE = "https://Ocayn.info/t7rujwdigl";
-const MOVE_REPAIR = "http://app.ac/t3MIJPJ73";
-const CLEANING_COMPARE = "http://app.ac/vtGA0lM83";
-const INSTALL_REPAIR = "http://app.ac/jjw6cka73";
+const MOVING_COMPARE = linkUrl("move-cpa-isatime");
+const TWO_QUOTES = linkUrl("move-compare-2");
+const PACKING_MOVE = linkUrl("move-packing");
+const MOVE_REPAIR = linkUrl("repair-soomgo-leak");
+const CLEANING_COMPARE = linkUrl("move-cleaning");
+const INSTALL_REPAIR = linkUrl("repair-soomgo-aircon");
+const TV_MOUNT = linkUrl("repair-soomgo-tv-mount");
 
 const HERO_CITY = "/images/incheon/incheon-moving-hero.webp";
 const HERO_APARTMENT = "/images/incheon/incheon-apartment-moving.webp";
@@ -201,7 +203,7 @@ function makeAreaArticle(profile: DistrictProfile, index: number): Article {
     sections: [
       { heading: `${profile.priority} 지역 특성과 이사 동선`, paragraphs: [`${profile.transport} 지도상 도로가 넓어 보여도 단지 출입구, 시장·학교, 마을길이나 공사 구간 때문에 마지막 진입이 달라질 수 있습니다.`, `현장 사진을 같은 방식으로 전달해 [포장이사 전문 상담을 확인](${PACKING_MOVE})하고 차량·인원·장비가 계약서에 표시되는지 보세요.`] },
       { heading: "거주 형태별 준비 포인트", paragraphs: [`${profile.housing} 아파트는 관리 예약과 지하 높이, 빌라·단독은 계단과 주차 거리, 상가주택은 영업·하역 시간을 먼저 확인하세요.`, "냉장고·소파·침대는 현관과 계단, 승강기 치수를 재고 분해 여부를 견적서에 남기세요."], checklist: ["도로에서 현관까지 운반 거리", "승강기 또는 계단 작업", "사다리차 설치 가능 공간", "관리사무소·이웃 안내"] },
-      { heading: "집수리·복원과 청소는 짐보다 먼저", paragraphs: ["도배·바닥·실리콘·타공 복원은 짐이 들어오면 작업 범위가 가려질 수 있습니다. 기존 집 원상복구와 새집 하자 보수의 책임자를 나눠 사진과 합의 내용을 보관하세요.", `[집이사와 하자보수 실시간 견적](${MOVE_REPAIR})을 확인할 때는 수리가 필요한 위치, 크기와 마감재 사진을 함께 준비하세요.`] },
+      { heading: "집수리·복원과 청소는 짐보다 먼저", paragraphs: ["도배·바닥·실리콘·타공 복원은 짐이 들어오면 작업 범위가 가려질 수 있습니다. 기존 집 원상복구와 새집 하자 보수의 책임자를 나눠 사진과 합의 내용을 보관하세요.", `물 자국이나 곰팡이처럼 누수가 의심되면 마감을 덮기 전에 [누수·설비 점검 견적](${MOVE_REPAIR})을 받아보세요. 수리가 필요한 위치, 크기와 마감재 사진을 함께 준비하면 원인 조사 범위를 정하기 쉽습니다.`] },
       { heading: "에어컨·TV·생활설치 일정", paragraphs: ["설치기사가 이삿짐 작업 중 같은 공간을 쓰면 대기나 파손 위험이 커질 수 있습니다. 큰 가구 배치가 끝난 뒤 벽체·전원·배관을 확인할 수 있도록 시간을 분리하세요.", `[설치·수리 견적을 비교](${INSTALL_REPAIR})할 때 제품 모델과 철거 여부, 새집 설치 위치를 함께 전달하세요.`] },
       { heading: "주변 지역 내부링크", paragraphs: [`상위 정보는 [${profile.name} 이사 가이드](/articles/${profile.slug})에서 확인할 수 있습니다. 구 경계를 넘는 지역과 주요 공동주택은 위 키워드트리와 하단 연관 글에서 이어집니다.`, localApartments.length ? `${profile.priority}의 검토된 주요 공동주택 ${localApartments.map((item) => item.name).join(", ")}은 별도 단지 체크리스트로 연결했습니다.` : "이 지역은 공동주택 이름만으로 페이지를 만들지 않고 관리·교통 차별 정보가 검증된 단지부터 연결합니다."] },
     ],
@@ -287,8 +289,8 @@ const unitFocuses: UnitFocus[] = [
     heading: "벽걸이TV 철거와 새집 벽체 확인",
     answer: (name) => `${name} 벽걸이TV 이전설치는 운반보다 기존 브래킷 철거, 새집 벽체와 타공 규정 확인이 먼저입니다. 이사업체가 운반만 담당하는지 전문기사가 철거·재설치까지 맡는지 구분하세요.`,
     action: () => "TV 크기와 모델, 브래킷 종류, 기존 설치 사진, 새집 벽면과 콘센트 위치를 준비하고 무타공 방식이 필요한지도 미리 알리세요.",
-    ctaLabel: "설치·수리 견적 비교",
-    ctaUrl: INSTALL_REPAIR,
+    ctaLabel: "벽걸이TV 설치·철거 견적 비교",
+    ctaUrl: TV_MOUNT,
     checklist: ["TV 모델과 화면 크기", "브래킷 재사용 가능 여부", "새집 벽체와 타공 규정", "철거·운반·설치 책임자"],
     faqQuestion: (name) => `${name} 벽걸이TV 브래킷을 재사용할 수 있나요?`,
     faqAnswer: "TV와 브래킷 규격, 벽체와 설치 방식에 따라 달라집니다. 모델명과 기존 설치 사진을 전문기사에게 보여주고 호환성과 필요한 부품을 확인하세요.",

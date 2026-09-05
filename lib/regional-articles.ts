@@ -1,9 +1,7 @@
 import type { Article } from "./articles";
 import { suwonRegionTree } from "./suwon-keyword-tree";
+import { airconQuoteUrl, cleaningQuoteUrl, homeRepairQuoteUrl, movingQuoteLinkForKeyword } from "./affiliate-match";
 
-const MOVE_REPAIR_URL = "http://app.ac/t3MIJPJ73";
-const INSTALL_REPAIR_URL = "http://app.ac/63MI0AJ93";
-const MOVING_COMPARE_URL = "https://Ocayn.info/t7rujwdigo";
 const REGIONAL_HERO = "/images/moving-field/living-a04-14.webp";
 const REGIONAL_TV = "/images/moving-field/living-a03-12.webp";
 
@@ -141,6 +139,7 @@ function makeArticle(row: typeof regionRows[number], index: number): Article {
     ? `${name}처럼 생활권 단위로 비교할 때도 시 전체 평균보다 실제 건물의 주차·승강기 조건이 더 중요합니다.`
     : `${name} 안에서도 출발지와 도착지의 생활권이 다르면 이동시간과 작업 방식이 달라질 수 있습니다.`;
   const scheduled = isoAfterHours(index * 3);
+  const movingQuote = movingQuoteLinkForKeyword(keyword);
 
   return {
     slug: regionalSlug(index),
@@ -176,7 +175,7 @@ function makeArticle(row: typeof regionRows[number], index: number): Article {
         heading: `${name} 에어컨 이전 설치 견적 확인`,
         paragraphs: [
           "에어컨은 떼어 옮기기만 하면 끝일까요? 벽걸이·스탠드·투인원 여부, 배관 길이, 타공 횟수, 실외기 앵글과 위험 작업 여부가 비용을 바꿉니다.",
-          `제품 모델명과 새집 실외기실 사진을 준비한 뒤 [${name} 에어컨 설치·수리 견적 확인](${INSTALL_REPAIR_URL})에서 조건을 비교해 보세요. 철거비, 운반비, 기본 배관과 추가 배관 단가를 각각 확인해야 합니다.`,
+          `제품 모델명과 새집 실외기실 사진을 준비한 뒤 [${name} 에어컨 설치·수리 견적을 받아](${airconQuoteUrl}) 조건을 비교해 보세요. 철거비, 운반비, 기본 배관과 추가 배관 단가를 각각 확인해야 합니다.`,
         ],
         checklist: ["실내기·실외기 모델명", "기존 배관 길이", "새집 실외기실 사진", "타공·앵글·고소 작업 여부", "사후보증 담당자"],
       },
@@ -184,13 +183,14 @@ function makeArticle(row: typeof regionRows[number], index: number): Article {
         heading: "집수리·원상복구는 언제 진행할까요?",
         paragraphs: [
           "못 자국, 벽지 오염, 바닥 찍힘, 문손잡이와 수전 문제는 짐을 뺀 뒤 잘 보입니다. 하지만 큰 가구 뒤 상태는 이사 전에 촬영해야 임대인·임차인 사이의 책임 범위를 정리하기 쉽습니다.",
-          `여러 공정을 함께 확인해야 한다면 [${name} 집이사와 하자보수 실시간 견적](${MOVE_REPAIR_URL})을 받아보세요. 작업 범위, 자재 등급, 폐기물 처리와 부가세 포함 여부를 같은 조건으로 적어야 비교가 쉬워집니다.`,
+          `누수 흔적이나 설비 문제까지 함께 확인해야 한다면 [${name} 누수·설비 점검 견적을 받아](${homeRepairQuoteUrl}) 원인 조사 범위부터 정하세요. 작업 범위, 자재 등급, 폐기물 처리와 부가세 포함 여부를 같은 조건으로 적어야 비교가 쉬워집니다.`,
         ],
       },
       {
         heading: "이사업체 견적은 같은 조건으로 비교하세요",
         paragraphs: [
           "전화로 평수만 말하면 견적이 흔들립니다. 방별 짐 사진, 버릴 물건, 대형가전, 붙박이장, 양쪽 주차거리를 같은 양식으로 보내세요.",
+          `정리한 조건을 그대로 여러 곳에 보내려면 [${name} ${movingQuote.label} 무료 견적](${movingQuote.url})처럼 같은 양식으로 신청할 수 있는 곳부터 확인해 보세요. 업체 수보다 같은 정보를 보내는 것이 비교에 더 중요합니다.`,
           "차량 톤수와 작업 인원, 사다리차·계단비, 장거리 운반비, 가전 설치, 파손 보상 절차를 견적서에 적으세요. 귀중품과 계약서는 직접 운반하는 편이 안전합니다.",
           "한국소비자원 소비자분쟁해결기준은 이사화물의 멸실·파손·훼손 피해를 다룹니다. 파손을 발견하면 즉시 사진과 영상으로 남기고 업체에 서면으로 알리세요.",
         ],
@@ -199,6 +199,7 @@ function makeArticle(row: typeof regionRows[number], index: number): Article {
         heading: "이사 2주 전부터 당일까지 준비 순서",
         paragraphs: [
           "2주 전에는 업체 비교, 폐기물 신고, 관리사무소 예약과 에어컨 철거·설치 일정을 잡습니다. 3~5일 전에는 냉장고 식재료를 줄이고 약·충전기·계약서를 별도 가방에 넣으세요.",
+          `입주청소를 맡긴다면 짐이 들어오기 전 빈집 상태에서 끝나도록 시간을 나누세요. 면적뿐 아니라 창틀·베란다·붙박이장 내부까지 범위를 적어 [${name} 입주청소 견적](${cleaningQuoteUrl})을 확인하면 포함 항목을 비교하기 쉽습니다.`,
           "당일에는 계량기와 집 상태를 촬영하고 운송 전 가구 흠집을 작업자와 함께 확인하세요. 새집에서는 큰 가전 위치와 문 열림 방향부터 결정하면 상자를 다시 옮기는 일을 줄일 수 있습니다.",
         ],
       },
@@ -234,9 +235,9 @@ const gyeonggiHubArticle: Article = {
   intro: "경기도 이사는 신도시 고층 아파트, 원도심 빌라, 대학가 원룸과 읍면 단독주택처럼 지역과 건물 조건이 다양합니다. 먼저 시를 선택한 뒤 공개된 구·동·읍 페이지에서 차량 진입, 승강기, 청소와 설치 조건을 확인하세요.",
   regionTree: gyeonggiRegionTree,
   sections: [
-    { heading: "지역명보다 출발지와 도착지 건물 조건이 먼저입니다", paragraphs: ["같은 시 안에서도 신도시 대단지와 원도심 골목의 작업 방식은 다릅니다. 양쪽 건물의 층수, 엘리베이터 예약, 트럭 주차 위치와 현관까지 운반 거리를 따로 기록하세요.", `조건을 같은 양식으로 정리한 뒤 [이사업체 견적을 비교](${MOVING_COMPARE_URL})하면 차량·인원·장비가 빠진 견적을 찾기 쉽습니다.`] },
+    { heading: "지역명보다 출발지와 도착지 건물 조건이 먼저입니다", paragraphs: ["같은 시 안에서도 신도시 대단지와 원도심 골목의 작업 방식은 다릅니다. 양쪽 건물의 층수, 엘리베이터 예약, 트럭 주차 위치와 현관까지 운반 거리를 따로 기록하세요.", `조건을 같은 양식으로 정리한 뒤 [이사마켓 무료 견적](${movingQuoteLinkForKeyword("아파트 이사").url})처럼 같은 정보를 여러 업체에 보낼 수 있는 곳에서 비교하면 차량·인원·장비가 빠진 견적을 찾기 쉽습니다.`] },
     { heading: "아파트·빌라·원룸·단독주택별 핵심 확인", image: { src: REGIONAL_HERO, alt: "아파트 실내의 이삿짐과 설치 준비를 보여주는 실제 사진", title: "주거 형태별 준비" }, paragraphs: ["아파트는 관리사무소 예약, 보양과 지하 높이를 확인하세요. 빌라·다가구는 계단과 골목 주차, 원룸은 기사 도움과 포장 범위, 단독주택은 마당·창고·옥상 짐을 별도 목록으로 만듭니다.", "지역 평균가격보다 실제 짐과 건물 사진으로 받은 견적을 우선하고, 현장에서 달라질 수 있는 조건은 계약 전에 문장으로 남기세요."] },
-    { heading: "청소와 설치는 이삿짐 반입과 겹치지 않게 잡으세요", image: { src: REGIONAL_TV, alt: "벽걸이TV 이전설치 상태를 확인하는 실제 현장 사진", title: "설치 일정 확인" }, paragraphs: ["입주청소는 빈집에서 하자와 오염을 확인한 뒤 진행하고, 에어컨·벽걸이TV·커튼은 운반과 전문 설치 책임을 나누세요.", `제품 모델과 새 위치 사진을 준비해 [설치·수리 견적을 확인](${INSTALL_REPAIR_URL})하고 기본 포함 범위와 추가 작업 기준을 물어보세요.`] },
+    { heading: "청소와 설치는 이삿짐 반입과 겹치지 않게 잡으세요", image: { src: REGIONAL_TV, alt: "벽걸이TV 이전설치 상태를 확인하는 실제 현장 사진", title: "설치 일정 확인" }, paragraphs: ["입주청소는 빈집에서 하자와 오염을 확인한 뒤 진행하고, 에어컨·벽걸이TV·커튼은 운반과 전문 설치 책임을 나누세요.", `제품 모델과 새 위치 사진을 준비해 [에어컨·TV 설치 견적을 확인](${airconQuoteUrl})하고 기본 포함 범위와 추가 작업 기준을 물어보세요. 입주청소는 [청소 범위별 견적](${cleaningQuoteUrl})을 따로 받아 짐 반입 시간과 겹치지 않게 잡으세요.`] },
     { heading: "지역 페이지에서 다음 정보를 찾는 방법", paragraphs: ["위 지역 목록에서 시를 누른 뒤 공개된 구·동·읍 글로 이동하세요. 수원시는 4개 구와 44개 행정동 전체가 연결되어 있고, 다른 지역은 검토·공개된 콘텐츠부터 순차적으로 확장됩니다.", "각 글의 상위 지역, 같은 생활권과 관련 서비스 링크를 따라가면 포장이사 견적, 청소, 에어컨·TV 설치와 원상복구 정보를 이어서 확인할 수 있습니다."] },
   ],
   faq: [

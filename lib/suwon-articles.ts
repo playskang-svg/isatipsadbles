@@ -1,8 +1,10 @@
 import type { Article, Section } from "./articles";
 import { suwonDistricts, suwonRegionTree } from "./suwon-keyword-tree";
+import { linkUrl } from "./affiliate";
+import { cleaningQuoteUrl, movingQuoteLinkForKeyword } from "./affiliate-match";
 
-const MOVE_REPAIR_URL = "http://app.ac/t3MIJPJ73";
-const INSTALL_REPAIR_URL = "http://app.ac/63MI0AJ93";
+const MOVE_REPAIR_URL = linkUrl("repair-soomgo-leak");
+const INSTALL_REPAIR_URL = linkUrl("repair-soomgo-aircon");
 const SUWON_ADMIN_URL = "https://www.suwon.go.kr/sw-www/www05/www05-01/www05-01-08.jsp";
 const PUBLISHED_AT = "2026-09-01T11:00:00.000Z";
 const UPDATED_AT = "2026-09-02T00:00:00.000Z";
@@ -11,6 +13,7 @@ const REAL_TV_IMAGE = "/images/moving-field/living-a03-12.webp";
 const accents = ["mint", "amber", "blue", "violet", "rose", "green"];
 
 function makeSections(areaLabel: string, localNote: string, district?: { name: string; slug: string }): Section[] {
+  const movingQuote = movingQuoteLinkForKeyword(`${areaLabel} 포장이사 견적`);
   const sections: Section[] = [
     {
       heading: `${areaLabel} 이사 견적이 달라지는 지역 조건`,
@@ -38,16 +41,18 @@ function makeSections(areaLabel: string, localNote: string, district?: { name: s
       checklist: ["제품 모델명과 제조연도", "기존·새집 배관 길이", "실외기 설치 위치", "타공·앵글·위험 작업", "누수·냉방 사후보증"],
     },
     {
-      heading: "이사 전 집수리와 원상복구 순서",
+      heading: "이사 전 집수리·입주청소와 원상복구 순서",
       paragraphs: [
         "못 자국, 벽지 오염, 바닥 찍힘과 문손잡이 문제는 짐을 빼면 더 잘 보입니다. 다만 큰 가구 뒤의 곰팡이와 누수 흔적은 이사 전에 촬영해야 책임 범위를 확인하기 쉽습니다. 임대차 주택은 수리 범위를 임대인과 먼저 문자로 맞추세요.",
-        `도배·바닥·수전처럼 여러 공정이 필요하다면 [${areaLabel} 집이사와 하자보수 실시간 견적](${MOVE_REPAIR_URL})을 받아보세요. 작업 면적, 자재 등급, 폐기물 처리, 출장비와 부가세 포함 여부를 같은 양식으로 적어야 비교가 쉬워집니다.`,
+        `곰팡이나 물 자국처럼 누수가 의심되는 부분이 있다면 마감을 덮기 전에 [${areaLabel} 누수·설비 점검 견적](${MOVE_REPAIR_URL})을 받아 원인 조사 범위부터 정하세요. 도배·바닥 같은 마감 공정은 원인을 확인한 뒤에 잡아야 같은 자리를 두 번 뜯지 않습니다. 작업 면적, 자재 등급, 폐기물 처리, 출장비와 부가세 포함 여부를 같은 양식으로 적어야 비교가 쉬워집니다.`,
+        `입주청소는 짐이 들어오기 전 빈집에서 끝나도록 일정을 나누세요. 면적뿐 아니라 창틀·베란다·붙박이장 내부까지 범위를 적어 [${areaLabel} 입주청소 견적](${cleaningQuoteUrl})을 확인하면 포함 항목을 비교하기 쉽습니다.`,
       ],
     },
     {
       heading: "포장이사 업체를 같은 기준으로 비교하는 법",
       paragraphs: [
         "방문견적 또는 사진견적을 받을 때 차량 톤수, 작업 인원, 포장 범위와 정리 범위를 견적서에 적으세요. 사다리차·계단 작업·장거리 운반·특수 가전 비용이 별도인지도 확인해야 당일 추가요금을 줄일 수 있습니다.",
+        `같은 사진과 조건을 여러 곳에 보내려면 [${areaLabel} ${movingQuote.label} 무료 견적](${movingQuote.url})처럼 동일한 양식으로 신청할 수 있는 곳부터 확인해 보세요. 업체 수를 늘리는 것보다 같은 정보를 보내는 편이 비교에 유리합니다.`,
         "계약 전에는 사업자 정보, 피해보상 기준, 계약금과 취소 규정을 확인하세요. 귀중품·현금·계약서는 직접 운반하고, 작업 전 가구 흠집과 전자제품 작동 상태를 사진이나 영상으로 남기는 것이 좋습니다.",
       ],
       checklist: ["차량 톤수와 작업 인원", "사다리차·계단비", "가전 분해·재설치 범위", "식사비·수고비 요구 여부", "파손 접수와 보상 절차"],
