@@ -9,6 +9,7 @@
     "start": "vinext start",
     "audit:seo": "node scripts/seo-audit.mjs",
     "indexnow": "node scripts/indexnow-submit.mjs",
+    "ship": "node scripts/ship.mjs",
     "audit:migration": "node scripts/migration-preflight.mjs",
     "lint": "tsc --noEmit",
     "dev:vinext": "vinext dev --port 3001",
