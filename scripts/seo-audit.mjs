@@ -1,6 +1,6 @@
 const baseUrl = (process.env.SITE_AUDIT_URL || "http://127.0.0.1:3000").replace(/\/$/, "");
 const canonicalBase = (process.env.CANONICAL_URL || "https://isatips.adbles.com").replace(/\/$/, "");
-const categories = ["planning", "quotes", "admin", "home-care", "regional"];
+const categories = ["planning", "quotes", "admin", "home-care", "regional", "repair-install"];
 const articles = [
   "moving-preparation-checklist",
   "moving-company-quote-comparison",
@@ -12,6 +12,9 @@ const articles = [
   "moving-with-pets",
   "easy-interior-ideas-for-beginners",
   "son-eomneun-nal-moving-guide",
+  "air-conditioner-moving-installation-cost",
+  "wall-mounted-tv-moving-installation-cost",
+  "washer-dryer-moving-installation-cost",
 ];
 const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
 const failures = [];

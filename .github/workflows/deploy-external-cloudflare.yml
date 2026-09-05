@@ -45,3 +45,10 @@ jobs:
 
       - name: Deploy Worker and assets
         run: npx wrangler deploy --config dist/server/wrangler.json
+
+      - name: Wait for deployment to serve
+        run: sleep 30
+
+      - name: Submit changed URLs to IndexNow
+        continue-on-error: true
+        run: node scripts/indexnow-submit.mjs --days 2
