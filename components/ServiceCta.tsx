@@ -1,3 +1,4 @@
+import { affiliateRel, affiliateTarget } from "@/lib/affiliate";
 import type { MovingService } from "@/lib/services";
 
 export function ServiceCta({ service }: { service: MovingService }) {
@@ -9,7 +10,7 @@ export function ServiceCta({ service }: { service: MovingService }) {
         <p>{service.description}</p>
         <small className="service-disclosure">제휴 링크를 통해 상담하거나 서비스를 이용하면 사이트 운영에 도움이 될 수 있습니다.</small>
       </div>
-      <a href={service.url} target="_blank" rel="sponsored noopener noreferrer">
+      <a href={service.url} target={affiliateTarget} rel={affiliateRel}>
         {service.buttonLabel} <span aria-hidden="true">↗</span>
       </a>
     </aside>

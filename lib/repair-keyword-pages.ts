@@ -1,5 +1,6 @@
 import type { Article, ArticleImage } from "./articles";
 import { gyeonggiRegionTree } from "./regional-articles";
+import { repairQuoteLink, repairSupplyLink } from "./affiliate-match";
 
 const PUBLISHED_AT = "2026-09-03T00:30:00.000Z";
 const UPDATED_AT = "2026-09-03T00:30:00.000Z";
@@ -325,6 +326,8 @@ function makeKeywordArticle(keyword: string, index: number): Article {
     ? `${region}에서 ${topic.label} 견적을 받을 때도 실제 서비스 가능 여부, 출장 조건, 주차·승강기와 폐기물 반출 동선을 업체마다 확인해야 합니다. 확인되지 않은 지역 고정가격은 기준으로 삼지 마세요.`
     : "지역 업체를 비교할 때는 서비스 가능 범위와 출장 조건, 주차·승강기와 폐기물 반출 동선을 같은 정보로 전달하세요.";
   const ambiguous = /삼성현관문|문수리박사/.test(keyword);
+  const quote = repairQuoteLink(topic.id);
+  const supply = repairSupplyLink(topic.id, keyword);
 
   return {
     slug: `repair-keyword-${String(index + 1).padStart(3, "0")}-${topic.id}`,
@@ -367,6 +370,9 @@ function makeKeywordArticle(keyword: string, index: number): Article {
         paragraphs: [
           `${topic.repairDecision} 겉으로 보이는 증상만 가리는 방식보다 원인이 남아 다시 문제가 생길 가능성까지 물어보세요.`,
           `관련 기본 판단은 [${topic.label} 종합 가이드](/articles/${topic.canonicalSlug})에서 이어서 확인할 수 있습니다. 현재 페이지의 ${keyword} 조건과 종합 가이드의 수리·교체 기준을 함께 사용하세요.`,
+          ...(supply
+            ? [`부속만 바꾸면 되는 상태라면 규격을 먼저 재고 [${supply.label.replace(/^오늘의집 /u, "")} 제품 종류](${supply.url})를 살펴보세요. 다만 규격이 맞지 않거나 고정부·바탕이 손상됐다면 자재 교체만으로는 같은 문제가 다시 생길 수 있습니다.`]
+            : []),
         ],
       },
       {
@@ -374,6 +380,7 @@ function makeKeywordArticle(keyword: string, index: number): Article {
         paragraphs: [
           `견적에는 ${topic.estimateItems}을 구분해 적으세요. 기본 작업과 현장에서 추가될 수 있는 항목, 추가 작업 전 승인 방법도 확인해야 합니다.`,
           `${actionText(intent, keyword)} 가격은 업체·자재·현장 조건에 따라 달라질 수 있으므로 확인되지 않은 고정금액이나 지역 평균가를 사실처럼 믿지 않는 편이 좋습니다.`,
+          `같은 사진과 치수를 여러 곳에 보내 비교하려면 [${quote.label.replace(/^숨고 /u, "")} 견적을 받아](${quote.url}) 항목별 금액을 나란히 확인해 보세요. 한 곳의 금액만으로는 무엇이 빠졌는지 판단하기 어렵습니다.`,
         ],
       },
       {
