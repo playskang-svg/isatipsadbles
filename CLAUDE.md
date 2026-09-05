@@ -56,7 +56,15 @@ npm run audit:seo       # 위 서버가 떠 있어야 동작
 
 Cowork 세션(클라우드 컨테이너)에서는 GitHub 자격증명이 없어 푸시가 되지 않는다. 커밋까지 만들어두고 사용자가 로컬 터미널에서 `git push origin main`을 실행한다.
 
-## 7. 로컬 작업 시 주의
+## 7. node_modules는 맥 소유
+
+맥과 Cowork 리눅스 샌드박스가 같은 `node_modules` 폴더를 공유한다. rolldown 같은 네이티브 바인딩은 `npm ci`를 돌린 쪽 플랫폼 것만 설치되므로 **양쪽에서 빌드할 수 없다.** 반대쪽에서는 `Cannot find native binding` 에러가 난다.
+
+배포를 실행하는 맥 쪽을 소유자로 둔다. Cowork 세션에서는 `npm ci`와 `npm run build`를 돌리지 않는다. 여기서 가능한 검증은 `npm run lint`(tsc는 순수 JS라 플랫폼 무관)와 `npm run audit:migration`까지이고, 빌드와 SEO 감사는 GitHub Actions에 맡긴다.
+
+`npm run ship`이 사전점검에서 이 불일치를 감지해 멈춘다.
+
+## 8. 로컬 작업 시 주의
 
 - 연결 폴더에서 빌드가 `EPERM ... unlink dist/...`로 실패하면 세션의 파일 삭제 권한이 없는 것이다. 권한을 받은 뒤 `rm -rf dist`하고 다시 빌드한다.
 - 여러 세션이 같은 저장소를 동시에 만질 수 있다. 커밋 전에 `git status`로 내가 만들지 않은 변경이 섞여 있는지 확인하고, 남의 작업은 별도 커밋으로 분리한다.

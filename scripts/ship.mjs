@@ -22,7 +22,7 @@
  */
 
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com").replace(/\/$/, "");
 const BRANCH = "main";
@@ -59,6 +59,49 @@ function run(cmd, cmdArgs, { capture = false, allowFail = false } = {}) {
   }
   return res;
 }
+
+function checkNativeBindings() {
+  const root = "node_modules/@rolldown";
+  if (!existsSync(root)) return; // 아직 설치 전이면 npm이 알아서 알려준다
+  const { platform, arch } = process;
+  const prefix = `binding-${platform}-${arch}`;
+  const candidates = readdirSync(root).filter((name) => name.startsWith(prefix));
+  const usable = candidates.some((name) => {
+    try {
+      return readdirSync(`${root}/${name}`).some((f) => f.endsWith(".node") || f.endsWith(".wasm"));
+    } catch {
+      return false;
+    }
+  });
+  if (usable) return;
+
+  const installed = readdirSync(root)
+    .filter((name) => name.startsWith("binding-"))
+    .filter((name) => {
+      try {
+        return readdirSync(`${root}/${name}`).some((f) => f.endsWith(".node") || f.endsWith(".wasm"));
+      } catch {
+        return false;
+      }
+    })
+    .map((name) => name.replace("binding-", ""));
+
+  fail(`node_modules가 다른 플랫폼용입니다.
+  이 환경: ${platform}-${arch}
+  설치된 바인딩: ${installed.join(", ") || "없음"}
+
+맥과 Cowork 리눅스 샌드박스가 같은 node_modules 폴더를 공유하기 때문입니다.
+네이티브 바인딩은 한쪽 것만 설치되므로 양쪽에서 빌드할 수 없습니다.
+
+이 환경에서 빌드하려면:
+
+    rm -rf node_modules && npm ci
+
+다만 그러면 반대쪽에서 다시 깨집니다. node_modules는 배포를 실행하는
+맥 쪽 소유로 두고, Cowork 세션에서는 npm ci / npm run build를 돌리지
+않는 편이 낫습니다. 빌드 검증은 GitHub Actions가 대신합니다.`);
+}
+
 const git = (...a) => run("git", a, { capture: true }).stdout.trim();
 
 // ── 0. 사전점검 ──────────────────────────────────────────────
@@ -72,8 +115,12 @@ const ignores = existsSync(".gitignore") ? readFileSync(".gitignore", "utf8") : 
 const missing = REQUIRED_IGNORES.filter((entry) => !ignores.includes(entry));
 if (missing.length) fail(`.gitignore에 다음이 없습니다: ${missing.join(", ")}`);
 
-const status = git("status", "--porcelain");
-const changed = status ? status.split("\n").map((line) => line.slice(3)) : [];
+// node_modules는 맥과 리눅스 샌드박스가 같은 폴더를 공유한다. 네이티브 바인딩은
+// 한쪽 플랫폼 것만 설치되므로, 다른 쪽에서 빌드하면 이해하기 어려운 에러가 난다.
+checkNativeBindings();
+
+const status = run("git", ["status", "--porcelain"], { capture: true }).stdout.replace(/\n$/, "");
+const changed = status ? status.split("\n").map((line) => line.replace(/^.{2}\s/, "")) : [];
 const secretish = changed.filter((p) => /(^|\/)\.env($|\.)|\.(pem|key|p12|pfx)$/.test(p));
 if (secretish.length) fail(`비밀 파일이 변경 목록에 있습니다: ${secretish.join(", ")}`);
 
