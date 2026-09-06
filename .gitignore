@@ -25,4 +25,5 @@ dist/
 
 # 로컬 에이전트 작업 폴더 및 런타임 비밀값
 .claude/
+.agents/
 .dev.vars*

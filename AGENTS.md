@@ -15,6 +15,20 @@
 7. 기준 문서의 최종 판단 질문 5개에 모두 명확하게 `YES`라고 답하기 어려우면 자동 실행하거나 발행하지 않고 검토 대상으로 보고한다.
 8. 기준 문서를 임의로 축소하거나 완화하지 않는다. 변경은 사용자의 명시적 지시에 따른다.
 
+## 배포
+
+이 저장소는 `main` 푸시 → GitHub Actions → Cloudflare Workers 경로로 배포한다. `.agents/skills/ship` 스킬을 쓴다.
+
+```bash
+npm run ship -- -m "커밋 메시지"
+```
+
+검증(타입검사 → migration → 클린빌드 → 서버 기동 후 SEO 감사) → 커밋 → 푸시 → 워크플로 결과 확인까지 한 번에 돈다. 실패하면 커밋을 만들지 않고 멈춘다.
+
+`publish` / `auto-publish-c` 스킬은 `npx wrangler deploy`로 직접 미는 방식이라 이 저장소에는 쓰지 않는다. CI의 lint·build·SEO 감사·IndexNow 제출을 건너뛰게 되고, 푸시 시 Actions 배포와 겹쳐 두 번 배포된다.
+
+`wrangler secret` 등록 같은 자격증명 작업도 이 환경에서 한다.
+
 ## Claude 세션
 
 Claude(Claude Code · Cowork · claude.ai)에서 작업할 때는 저장소 루트의 `CLAUDE.md`를 함께 읽는다. 같은 운영 기준을 Claude 쪽 실행 환경에 맞춰 옮겨둔 파일이며, 두 파일이 어긋나면 아래 기준 문서가 최종 판단 기준이다.
