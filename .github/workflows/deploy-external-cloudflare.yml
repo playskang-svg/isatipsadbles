@@ -21,6 +21,8 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       NEXT_PUBLIC_SITE_URL: https://isatips.adbles.com
+      COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+      COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -42,6 +44,12 @@ jobs:
 
       - name: Build Worker
         run: npm run build
+
+      - name: Configure Coupang secrets
+        if: ${{ env.COUPANG_ACCESS_KEY != '' && env.COUPANG_SECRET_KEY != '' }}
+        run: |
+          printf '%s' "$COUPANG_ACCESS_KEY" | npx wrangler secret put COUPANG_ACCESS_KEY --config dist/server/wrangler.json
+          printf '%s' "$COUPANG_SECRET_KEY" | npx wrangler secret put COUPANG_SECRET_KEY --config dist/server/wrangler.json
 
       - name: Deploy Worker and assets
         run: npx wrangler deploy --config dist/server/wrangler.json
