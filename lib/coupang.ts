@@ -63,12 +63,34 @@ function safeImageUrl(value?: string) {
   }
 }
 
-export async function searchCoupangProduct(keyword: string): Promise<CoupangProduct | null> {
+/** 자격증명이 런타임에 주입됐는지만 확인한다. 값은 절대 반환하지 않는다. */
+export function hasCoupangCredentials() {
+  return Boolean(process.env.COUPANG_ACCESS_KEY && process.env.COUPANG_SECRET_KEY);
+}
+
+export class CoupangCredentialsMissingError extends Error {
+  constructor() {
+    super("Coupang API credentials are not configured.");
+    this.name = "CoupangCredentialsMissingError";
+  }
+}
+
+/** subId는 쿠팡 파트너스 성과 분석용 태그다. 영숫자·하이픈만 허용된다. */
+function toSubId(value?: string) {
+  if (!value) return undefined;
+  const cleaned = value.replace(/[^a-zA-Z0-9-]/g, "").slice(0, 50);
+  return cleaned || undefined;
+}
+
+export async function searchCoupangProduct(keyword: string, subId?: string): Promise<CoupangProduct | null> {
   const accessKey = process.env.COUPANG_ACCESS_KEY;
   const secretKey = process.env.COUPANG_SECRET_KEY;
-  if (!accessKey || !secretKey) throw new Error("Coupang API credentials are not configured.");
+  if (!accessKey || !secretKey) throw new CoupangCredentialsMissingError();
 
-  const query = new URLSearchParams({ keyword, limit: "3" }).toString();
+  const params: Record<string, string> = { keyword, limit: "3" };
+  const tag = toSubId(subId);
+  if (tag) params.subId = tag;
+  const query = new URLSearchParams(params).toString();
   const authorization = await createAuthorization("GET", SEARCH_PATH, query, accessKey, secretKey);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8_000);
@@ -78,7 +100,15 @@ export async function searchCoupangProduct(keyword: string): Promise<CoupangProd
       headers: { Authorization: authorization, "Content-Type": "application/json;charset=UTF-8" },
       signal: controller.signal,
     });
-    if (!response.ok) throw new Error(`Coupang API request failed with status ${response.status}.`);
+    if (!response.ok) {
+      // 401/403은 키 문제, 429는 호출 한도. 재시도는 호출부가 판단한다(무한 재시도 금지).
+      const detail = response.status === 401 || response.status === 403
+        ? "인증 실패 — 키가 올바른지 확인하세요."
+        : response.status === 429
+          ? "호출 한도 초과."
+          : "";
+      throw new Error(`Coupang API request failed with status ${response.status}. ${detail}`.trim());
+    }
 
     const payload = await response.json() as {
       rCode?: string;

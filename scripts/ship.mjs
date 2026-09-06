@@ -22,7 +22,7 @@
  */
 
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com").replace(/\/$/, "");
 const BRANCH = "main";
@@ -58,6 +58,24 @@ function run(cmd, cmdArgs, { capture = false, allowFail = false } = {}) {
     fail(`${cmd} ${cmdArgs.join(" ")} 실패`);
   }
   return res;
+}
+
+function checkStaleLocks() {
+  const locks = [".git/index.lock", ".git/HEAD.lock"].filter((p) => existsSync(p));
+  if (locks.length === 0) return;
+
+  const ageMs = Math.min(...locks.map((p) => Date.now() - statSync(p).mtimeMs));
+  const ageSec = Math.round(ageMs / 1000);
+
+  if (ageSec < 60) {
+    fail(`git 잠금 파일이 ${ageSec}초 전에 생겼습니다: ${locks.join(", ")}
+다른 git 작업이 진행 중일 수 있습니다. 잠시 후 다시 실행하세요.`);
+  }
+
+  fail(`오래된 git 잠금 파일이 남아 있습니다(${Math.round(ageSec / 60)}분 경과): ${locks.join(", ")}
+진행 중인 git 작업이 없다면 잔여물입니다. 지우고 다시 실행하세요.
+
+    rm -f .git/*.lock .git/objects/*/tmp_obj_*`);
 }
 
 function checkNativeBindings() {
@@ -102,7 +120,7 @@ function checkNativeBindings() {
 않는 편이 낫습니다. 빌드 검증은 GitHub Actions가 대신합니다.`);
 }
 
-const git = (...a) => run("git", a, { capture: true }).stdout.trim();
+const git = (...a) => run("git", ["--no-optional-locks", ...a], { capture: true }).stdout.trim();
 
 // ── 0. 사전점검 ──────────────────────────────────────────────
 head("사전점검");
@@ -117,9 +135,10 @@ if (missing.length) fail(`.gitignore에 다음이 없습니다: ${missing.join("
 
 // node_modules는 맥과 리눅스 샌드박스가 같은 폴더를 공유한다. 네이티브 바인딩은
 // 한쪽 플랫폼 것만 설치되므로, 다른 쪽에서 빌드하면 이해하기 어려운 에러가 난다.
+checkStaleLocks();
 checkNativeBindings();
 
-const status = run("git", ["status", "--porcelain"], { capture: true }).stdout.replace(/\n$/, "");
+const status = run("git", ["--no-optional-locks", "status", "--porcelain"], { capture: true }).stdout.replace(/\n$/, "");
 const changed = status ? status.split("\n").map((line) => line.replace(/^.{2}\s/, "")) : [];
 const secretish = changed.filter((p) => /(^|\/)\.env($|\.)|\.(pem|key|p12|pfx)$/.test(p));
 if (secretish.length) fail(`비밀 파일이 변경 목록에 있습니다: ${secretish.join(", ")}`);

@@ -44,19 +44,40 @@ npm run audit:seo       # 위 서버가 떠 있어야 동작
 - 키워드→링크 매칭 규칙은 `lib/affiliate-match.ts` 한 곳에 모은다. 생성형 페이지를 개별로 고치지 않는다. 이름이 정해진 단독 글만 `lib/services.ts`의 `serviceByArticle`에 직접 적는다.
 - 링크를 폐기할 때는 JSON에서 지우지 말고 `status: "retired"`와 사유를 남긴다. 참조가 남아 있으면 빌드가 깨진다.
 
-## 5. 색인
+## 5. 쿠팡 API 시크릿
+
+`app/api/coupang-products`는 서버에서 HMAC 서명을 만들어 쿠팡 파트너스 검색 API를 호출한다. **Cloudflare Workers는 런타임에 `.env`를 읽지 않는다.** 로컬 `.env`에 키가 있어도 배포된 사이트에서는 인증이 실패한다. 키는 `wrangler secret`으로 따로 등록해야 한다.
+
+```bash
+npx wrangler secret list                      # 등록된 이름만 표시(값은 안 보임)
+npx wrangler secret put COUPANG_ACCESS_KEY
+npx wrangler secret put COUPANG_SECRET_KEY
+```
+
+원본 키는 `~/dev/A-factory/affiliate-links.json`의 `coupang` 블록에 있다. 그 파일의 `locations` 항목에 등록 현황을 적어둔다. 시크릿 키는 브라우저·정적 HTML·커밋 어디에도 넣지 않는다.
+
+설정 여부는 값 노출 없이 확인할 수 있다.
+
+```bash
+curl -s "https://isatips.adbles.com/api/coupang-products?diag=1"
+# {"credentialsConfigured":true}
+```
+
+키가 없으면 라우트는 502가 아니라 200에 `degraded: "credentials_missing"`을 실어 보내고, 프런트는 제휴 문구를 감춘 채 준비물 목록만 보여준다. 링크가 없는데 수수료 고지만 남는 상황을 막기 위해서다.
+
+## 6. 색인
 
 - `public/<key>.txt`가 IndexNow 키 파일이다. 파일명과 내용이 같아야 하고, 지우거나 이름을 바꾸면 제출이 전량 거절된다.
 - `npm run indexnow`가 사이트맵 lastmod 기준으로 최근 변경 URL만 제출한다. 전체 재제출(`--all`)은 상시 사용하지 않는다.
 - 배포 워크플로가 `wrangler deploy` 후 자동 제출한다. 구글은 IndexNow 미참여이므로 빙·네이버·얀덱스 계열에만 반영된다.
 
-## 6. 배포
+## 7. 배포
 
 `main`에 푸시하면 GitHub Actions가 lint → build → Cloudflare Workers 배포 → IndexNow 제출까지 진행한다.
 
 Cowork 세션(클라우드 컨테이너)에서는 GitHub 자격증명이 없어 푸시가 되지 않는다. 커밋까지 만들어두고 사용자가 로컬 터미널에서 `git push origin main`을 실행한다.
 
-## 7. node_modules는 맥 소유
+## 8. node_modules는 맥 소유
 
 맥과 Cowork 리눅스 샌드박스가 같은 `node_modules` 폴더를 공유한다. rolldown 같은 네이티브 바인딩은 `npm ci`를 돌린 쪽 플랫폼 것만 설치되므로 **양쪽에서 빌드할 수 없다.** 반대쪽에서는 `Cannot find native binding` 에러가 난다.
 
@@ -64,7 +85,7 @@ Cowork 세션(클라우드 컨테이너)에서는 GitHub 자격증명이 없어 
 
 `npm run ship`이 사전점검에서 이 불일치를 감지해 멈춘다.
 
-## 8. 로컬 작업 시 주의
+## 9. 로컬 작업 시 주의
 
 - 연결 폴더에서 빌드가 `EPERM ... unlink dist/...`로 실패하면 세션의 파일 삭제 권한이 없는 것이다. 권한을 받은 뒤 `rm -rf dist`하고 다시 빌드한다.
 - 여러 세션이 같은 저장소를 동시에 만질 수 있다. 커밋 전에 `git status`로 내가 만들지 않은 변경이 섞여 있는지 확인하고, 남의 작업은 별도 커밋으로 분리한다.

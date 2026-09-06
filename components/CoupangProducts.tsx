@@ -14,7 +14,11 @@ type Product = {
 };
 
 type ProductItem = ShoppingGuide["suggestions"][number] & { product: Product | null };
-type ProductResponse = Pick<ShoppingGuide, "title" | "description"> & { items: ProductItem[] };
+type ProductResponse = Pick<ShoppingGuide, "title" | "description"> & {
+  items: ProductItem[];
+  /** 상품 조회가 불가능한 상태. 키 미등록이거나 조회가 전부 실패한 경우. */
+  degraded?: "credentials_missing" | "lookup_failed";
+};
 
 export function CoupangProducts({ articleSlug, guide }: { articleSlug: string; guide: ShoppingGuide }) {
   const [data, setData] = useState<ProductResponse | null>(null);
@@ -36,15 +40,28 @@ export function CoupangProducts({ articleSlug, guide }: { articleSlug: string; g
     return () => controller.abort();
   }, [articleSlug]);
 
+  // 조회가 끝났는데 실제로 붙은 상품이 하나도 없으면 제휴 문구를 띄우지 않는다.
+  // 링크가 없는데 수수료 고지만 남는 것은 맞지 않는다.
+  const loaded = data !== null;
+  const hasProducts = loaded && data.items.some((item) => item.product);
+  const unavailable = failed || (loaded && !hasProducts);
+
   return (
     <section className="shopping-section" aria-labelledby="shopping-heading">
       <p className="eyebrow dark">MOVING PICKS</p>
       <h2 id="shopping-heading">{guide.title}</h2>
       <p>{guide.description}</p>
-      <p className="affiliate-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+      {hasProducts && <p className="affiliate-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
-      {failed ? (
-        <div className="shopping-message" role="status">현재 상품 정보를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.</div>
+      {unavailable ? (
+        <div className="shopping-message" role="status">
+          <p>상품 정보를 지금 불러올 수 없습니다. 아래 항목을 참고해 직접 검색해 보세요.</p>
+          <ul>
+            {guide.suggestions.map((suggestion) => (
+              <li key={suggestion.label}><strong>{suggestion.label}</strong> — {suggestion.note}</li>
+            ))}
+          </ul>
+        </div>
       ) : (
         <div className="shopping-grid" aria-busy={!data}>
           {(data?.items ?? guide.suggestions.map((suggestion) => ({ ...suggestion, product: null }))).map((item) => (
