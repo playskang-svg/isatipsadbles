@@ -20,7 +20,11 @@ import { join } from "node:path";
 
 const PUBLIC_DIR = new URL("../public/", import.meta.url).pathname;
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com").replace(/\/$/, "");
-const ENDPOINT = "https://api.indexnow.org/indexnow";
+const ENDPOINTS = [
+  { name: "Naver Search Advisor", url: "https://searchadvisor.naver.com/indexnow" },
+  { name: "Bing", url: "https://www.bing.com/indexnow" },
+  { name: "IndexNow.org", url: "https://api.indexnow.org/indexnow" },
+];
 const MAX_URLS_PER_REQUEST = 10000;
 
 function parseArgs(argv) {
@@ -70,13 +74,22 @@ async function fetchSitemapEntries() {
 }
 
 async function submit(host, key, urlList) {
-  const res = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: { "content-type": "application/json; charset=utf-8" },
-    body: JSON.stringify({ host, key, keyLocation: `${SITE_URL}/${key}.txt`, urlList }),
-  });
-  const text = await res.text().catch(() => "");
-  return { status: res.status, ok: res.ok, text: text.slice(0, 400) };
+  const results = [];
+  for (const ep of ENDPOINTS) {
+    try {
+      const res = await fetch(ep.url, {
+        method: "POST",
+        headers: { "content-type": "application/json; charset=utf-8" },
+        body: JSON.stringify({ host, key, keyLocation: `${SITE_URL}/${key}.txt`, urlList }),
+      });
+      const text = await res.text().catch(() => "");
+      const ok = res.status === 200 || res.status === 202;
+      results.push({ name: ep.name, status: res.status, ok, text: text.slice(0, 200) });
+    } catch (e) {
+      results.push({ name: ep.name, status: 0, ok: false, text: e.message });
+    }
+  }
+  return results;
 }
 
 async function main() {
@@ -120,9 +133,12 @@ async function main() {
 
   for (let i = 0; i < targets.length; i += MAX_URLS_PER_REQUEST) {
     const chunk = targets.slice(i, i + MAX_URLS_PER_REQUEST);
-    const result = await submit(host, key, chunk);
-    console.log(`제출 ${chunk.length}건 → HTTP ${result.status}${result.text ? ` ${result.text}` : ""}`);
-    if (!result.ok) process.exitCode = 1;
+    const results = await submit(host, key, chunk);
+    console.log(`\n제출 결과 (${chunk.length}건):`);
+    for (const r of results) {
+      console.log(`  ${r.ok ? "성공" : "실패"} [${r.name}]: HTTP ${r.status}${r.text ? ` (${r.text.trim()})` : ""}`);
+      if (!r.ok) process.exitCode = 1;
+    }
   }
 }
 
