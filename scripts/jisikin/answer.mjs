@@ -29,6 +29,16 @@ const OPENING_FILLER = [
 // 문장에 이 중 하나도 없으면 "누구에게나 할 수 있는 말"일 가능성이 높다.
 const SPECIFIC_SIGNAL = /[0-9]|층|평|엘리베이터|사다리차|계단|원룸|투룸|오피스텔|아파트|빌라|주차|견적서|계약서|관리사무소|보증금|전입신고|배관|실외기|타공|보양|용달|반포장|포장이사|잔금|영수증|사진|계량기|일정|주말|평일/u;
 
+// 조건을 언급만 하고 넘어가면 답이 아니다. 조건마다 나와야 할 해결책 어휘를 정해둔다.
+const SOLUTION_REQUIRED = [
+  { when: /엘리베이터\s*(?:가\s*)?없|엘베\s*없|계단으로|계단 이용/u, need: /사다리차|계단|인력|인원|분해|호이스트/u,
+    label: "엘리베이터 없음 → 사다리차·계단·인력 중 무엇으로 올릴지" },
+  { when: /사다리차/u, need: /지지대|주차|도로|전선|각도|진입|계단/u,
+    label: "사다리차 → 설치 공간·진입 조건" },
+  { when: /파손|깨졌|깨짐|분실/u, need: /사고증명서|통지|보상|배상|사진|소비자원|약관/u,
+    label: "파손·분실 → 접수 절차" },
+];
+
 const NUMBER_CLAIM = /\d[\d,]*\s*(?:만\s*원|원|만원|퍼센트|%)/gu;
 const HEDGE = /(달라질 수|다를 수|차이가 있을 수|업체|조건에 따라|기준으로|확인해|문의해)/u;
 
@@ -138,6 +148,11 @@ export function validateAnswer(text, config, context = {}) {
     warnings.push(`금액·비율 표현(${claims.join(", ")})이 있는데 조건 단서가 없습니다. 확인된 값만 쓰거나 범위를 조건과 함께 적으세요.`);
   }
 
+  // 위치 무관 금지어 — 채택 구걸과 맺음 인사는 어디에 있든 기계식으로 읽힌다
+  for (const phrase of config.bannedAnywhere ?? []) {
+    if (text.includes(phrase)) blocking.push(`금지 문구: "${phrase}"`);
+  }
+
   // 사족 감시 (사용자 요청: 정말 도움이 되는 말만)
   for (const pattern of OPENING_FILLER) {
     if (pattern.test(body)) {
@@ -186,6 +201,12 @@ export function validateAnswer(text, config, context = {}) {
       warnings.push(
         `질문자가 밝힌 조건이 답변에 없습니다: ${missingConditions.map((item) => `${item.label}(${item.value})`).join(", ")}`,
       );
+    }
+
+    for (const rule of SOLUTION_REQUIRED) {
+      if (rule.when.test(context.questionText) && !rule.need.test(body)) {
+        blocking.push(`조건에 대한 해결책이 없습니다 — ${rule.label}`);
+      }
     }
 
     const question = context.questionText.replace(/\s+/gu, "");

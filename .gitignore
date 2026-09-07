@@ -30,3 +30,4 @@ dist/
 
 # 지식인 답변 이력 — 질문자 정보와 답변 본문이 담기므로 공개 저장소에 올리지 않는다
 data/jisikin-log.json
+data/jisikin-history.json

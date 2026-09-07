@@ -82,6 +82,49 @@ function bidirectional(queryGrams, fieldText) {
   return Math.max(overlap(queryGrams, field), overlap(field, queryGrams));
 }
 
+/**
+ * 질문이 특정 품목을 지목하면 그 품목을 다루지 않는 글은 후보에서 뺀다.
+ * 2-gram만으로는 "그릇 깨짐"이 "방문 깨짐"에 걸린다. 실제로 걸렸다.
+ */
+const ITEM_TERMS = {
+  "에어컨": ["에어컨", "에어콘", "실외기", "냉매"],
+  "벽걸이TV": ["벽걸이", "티비", "셋톱", "타공"],
+  "도어락·문": ["도어락", "번호키", "방화문", "도어클로저", "경첩", "현관문", "중문", "미닫이"],
+  "싱크대·수전": ["싱크대", "수전", "수도꼭지", "배수구"],
+  "욕실": ["변기", "샤워부스", "욕조", "줄눈"],
+  "샷시·유리": ["샷시", "새시", "폴딩도어", "방충망", "유리"],
+  "입주청소": ["입주청소", "이사청소"],
+  "식기세척기": ["식기세척기", "식세기"],
+  "세탁기·건조기": ["세탁기", "건조기", "드럼"],
+  "사다리차": ["사다리차", "사다리"],
+  "폐기물": ["폐가전", "폐가구", "대형폐기물", "무료수거"],
+  "행정": ["전입신고", "확정일자", "장기수선충당금"],
+  "보증금": ["보증금", "원상복구"],
+  "반려동물": ["반려동물", "고양이", "강아지", "펫"],
+  // detect: 질문이 이 주제인지 알아보는 단어. cover: 글이 이 주제를 실제로 다루는지 보는 단어.
+  // "깨짐"으로 글을 고르면 방문깨짐(문짝 수리) 글이 걸린다. 실제로 걸렸다.
+  "파손보상": { detect: ["파손", "깨짐", "깨진", "분실", "보상", "손해배상", "사고증명서"], cover: ["보상", "손해배상", "배상", "사고증명서", "분쟁조정", "표준약관"] },
+  "이사박스": ["이사박스", "이삿짐박스", "단프라"],
+};
+
+/** 질문이 지목한 품목들. 없으면 빈 배열. */
+function termsOf(entry, side) {
+  return Array.isArray(entry) ? entry : entry[side];
+}
+
+export function detectItems(query) {
+  const text = String(query).toLowerCase().replace(/\s+/gu, "");
+  return Object.entries(ITEM_TERMS)
+    .filter(([, entry]) => termsOf(entry, "detect").some((term) => text.includes(term)))
+    .map(([item]) => item);
+}
+
+function articleCoversItem(article, item) {
+  const haystack = `${article.title} ${article.keyword} ${article.secondaryKeywords.join(" ")} ${article.headings.join(" ")} ${article.description}`
+    .toLowerCase().replace(/\s+/gu, "");
+  return termsOf(ITEM_TERMS[item], "cover").some((term) => haystack.includes(term));
+}
+
 const FIELD_WEIGHTS = [
   ["keyword", 0.3],
   ["title", 0.24],
@@ -125,8 +168,16 @@ export function scoreArticle(query, article) {
 
 export function rankArticles(query, index, limit = 5) {
   if (idf.size === 0) buildIdf(index);
+  const items = detectItems(query);
   return index
-    .map((article) => ({ article, ...scoreArticle(query, article) }))
+    .map((article) => {
+      const scored = { article, ...scoreArticle(query, article) };
+      // 지목된 품목을 하나도 다루지 않는 글은 배제한다.
+      if (items.length > 0 && !items.some((item) => articleCoversItem(article, item))) {
+        return { ...scored, score: 0, excludedFor: items };
+      }
+      return scored;
+    })
     .sort((a, b) => b.score - a.score || b.article.updatedAt.localeCompare(a.article.updatedAt))
     .slice(0, limit);
 }
@@ -141,6 +192,7 @@ export function rankArticles(query, index, limit = 5) {
  */
 export function classify(ranked, config) {
   const best = ranked[0];
+  if (best && best.score === 0) return { verdict: "uncovered", best: null, ranked };
   if (!best) return { verdict: "uncovered", best: null, ranked };
   if (best.score >= config.strongMatchThreshold) return { verdict: "covered", best, ranked };
   if (best.score >= config.matchThreshold) return { verdict: "weak", best, ranked };
