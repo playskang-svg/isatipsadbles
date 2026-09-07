@@ -27,7 +27,7 @@ const OPENING_FILLER = [
 ];
 
 // 문장에 이 중 하나도 없으면 "누구에게나 할 수 있는 말"일 가능성이 높다.
-const SPECIFIC_SIGNAL = /[0-9]|층|평|엘리베이터|사다리차|계단|원룸|투룸|오피스텔|아파트|빌라|주차|견적서|계약서|관리사무소|보증금|전입신고|배관|실외기|타공|보양|용달|반포장|포장이사|잔금|영수증|사진|계량기|일정|주말|평일/u;
+const SPECIFIC_SIGNAL = /[0-9]|층|평|엘리베이터|사다리차|계단|원룸|투룸|오피스텔|아파트|빌라|주차|견적서|계약서|관리사무소|보증금|전입신고|배관|실외기|타공|보양|용달|반포장|포장이사|잔금|영수증|사진|계량기|일정|주말|평일|사고증명서|표준약관|소비자원|피해구제|분쟁조정|내용증명|통지|영수증|완충재|뽁뽁이|박스|약관|기한|인도|접수/u;
 
 // 조건을 언급만 하고 넘어가면 답이 아니다. 조건마다 나와야 할 해결책 어휘를 정해둔다.
 const SOLUTION_REQUIRED = [
@@ -234,13 +234,23 @@ const GENERIC = new Set([
   "지금", "다른", "많이", "조금", "정말", "제가", "저는", "해서", "하는", "있는", "같은", "어떻게",
 ]);
 
+// 한국어 조건절이 거의 다 -면으로 끝나서 "받으려면"이 지역명으로 잡힌다.
+// 정규식으로 가르려다 더 틀렸다. 후보를 뽑고 어미를 걸러내는 편이 정확하다.
+const NOT_A_PLACE = /(?:으려면|하려면|려면|으면|하면|되면|라면|다면|이면|시면|보면|가면|주면|지면|오면|리면|기면|되구|이구)$/u;
+
+function detectRegion(text) {
+  // 조사가 붙어도 잡아야 한다("성정동으로", "서북구에서").
+  const candidates = String(text).match(/[가-힣]{2,4}(?:시|군|구|동|읍|면)(?=$|[^가-힣]|에|으로|로|은|는|이|가|을|를|과|와|부터|까지)/gu) ?? [];
+  return candidates.find((value) => !NOT_A_PLACE.test(value));
+}
+
 const CONDITION_HINTS = [
   [/(\d+)\s*층/u, "층수"],
   [/(\d+)\s*평|(\d+)\s*㎡/u, "평수"],
   [/원룸|투룸|오피스텔|아파트|빌라|단독주택/u, "주거 형태"],
   [/엘리베이터|승강기|사다리차|계단/u, "운반 조건"],
   [/(\d+)\s*(?:월|일)|다음\s*주|이번\s*주|주말|평일/u, "일정"],
-  [/[가-힣]{2,}(?:시|군|구|동|읍|면)(?![가-힣])/u, "지역"],
+  [detectRegion, "지역"],
   [/혼자|가족|신혼|아이|반려|고양이|강아지/u, "동거 조건"],
   [/짐이?\s*(?:적|많)|박스\s*\d+/u, "짐의 양"],
 ];
@@ -249,8 +259,11 @@ const CONDITION_HINTS = [
 export function questionFocus(questionText) {
   const text = String(questionText ?? "");
   const conditions = CONDITION_HINTS
-    .filter(([pattern]) => pattern.test(text))
-    .map(([pattern, label]) => ({ label, value: text.match(pattern)?.[0]?.trim() }));
+    .map(([matcher, label]) => ({
+      label,
+      value: typeof matcher === "function" ? matcher(text) : text.match(matcher)?.[0]?.trim(),
+    }))
+    .filter((item) => Boolean(item.value));
 
   const terms = [...new Set(
     text.replace(/[^가-힣a-z0-9\s]/giu, " ")
