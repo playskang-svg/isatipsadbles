@@ -17,9 +17,9 @@ const coreRegionalFlow = [
 
 const curatedLinks: Record<string, string[]> = {
   "moving-preparation-checklist": ["moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "move-in-report-address-change", "moving-cleaning-guide"],
-  "moving-company-quote-comparison": ["packing-moving-cost-factors", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "studio-moving-service-comparison", "moving-preparation-checklist"],
-  "packing-moving-cost-factors": ["moving-company-quote-comparison", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "air-conditioner-moving-installation-cost", "moving-preparation-checklist"],
-  "moving-day-checklist": ["moving-preparation-checklist", "moving-cleaning-guide", "move-in-report-address-change", "rental-deposit-moving-out-checklist", "moving-with-pets"],
+  "moving-company-quote-comparison": ["packing-moving-cost-factors", "moving-damage-compensation-claim", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "studio-moving-service-comparison", "moving-preparation-checklist"],
+  "packing-moving-cost-factors": ["moving-company-quote-comparison", "moving-damage-compensation-claim", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "air-conditioner-moving-installation-cost", "moving-preparation-checklist"],
+  "moving-day-checklist": ["moving-preparation-checklist", "moving-damage-compensation-claim", "moving-cleaning-guide", "move-in-report-address-change", "rental-deposit-moving-out-checklist", "moving-with-pets"],
   "move-in-report-address-change": ["moving-day-checklist", "rental-deposit-moving-out-checklist", "moving-preparation-checklist", "moving-cleaning-guide", "moving-company-quote-comparison"],
   "moving-cleaning-guide": ["move-in-first-day-essentials", "moving-day-checklist", "easy-interior-ideas-for-beginners", "moving-with-pets", "moving-preparation-checklist"],
   "rental-deposit-moving-out-checklist": ["moving-company-quote-comparison", "moving-day-checklist", "moving-cleaning-guide", "move-in-report-address-change", "easy-interior-ideas-for-beginners"],
@@ -36,6 +36,7 @@ const curatedLinks: Record<string, string[]> = {
   "no-drill-wall-mounted-tv-installation": ["wall-mounted-tv-moving-installation-cost", "easy-interior-ideas-for-beginners", "rental-deposit-moving-out-checklist", "moving-cleaning-guide", "move-in-first-day-essentials"],
   "moving-box-quantity-size-guide": ["studio-moving-service-comparison", "move-in-first-day-essentials", "moving-preparation-checklist", "packing-moving-cost-factors", "moving-day-checklist"],
   "studio-moving-service-comparison": ["moving-box-quantity-size-guide", "moving-company-quote-comparison", "packing-moving-cost-factors", "elevator-moving-cost-conditions", "moving-ladder-truck-cost-guide"],
+  "moving-damage-compensation-claim": ["moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "moving-ladder-truck-cost-guide", "rental-deposit-moving-out-checklist"],
   "interior-door-hole-repair-guide": ["interior-door-replacement-cost-guide", "door-handle-hinge-sagging-repair", "rental-deposit-moving-out-checklist", "easy-interior-ideas-for-beginners", "fire-door-repair-replacement-guide"],
   "interior-door-replacement-cost-guide": ["interior-door-hole-repair-guide", "door-handle-hinge-sagging-repair", "sliding-middle-door-repair-installation", "rental-deposit-moving-out-checklist", "easy-interior-ideas-for-beginners"],
   "fire-door-repair-replacement-guide": ["entrance-steel-gate-repair-cost", "door-handle-hinge-sagging-repair", "interior-door-replacement-cost-guide", "rental-deposit-moving-out-checklist", "moving-day-checklist"],
