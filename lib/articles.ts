@@ -682,6 +682,7 @@ import { doorRepairArticles } from "./door-repair-articles";
 import { homeRepairArticles } from "./home-repair-articles";
 import { repairKeywordArticlesWithRegionalLinks, repairRegionalArticles } from "./repair-regional-pages";
 import { enrichArticlesWithFieldImages } from "./article-images";
+import { kinGeneratedArticles } from "./kin-generated-articles";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -693,6 +694,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...homeRepairArticles,
   ...repairKeywordArticlesWithRegionalLinks,
   ...repairRegionalArticles,
+  ...kinGeneratedArticles,
 ]);
 
 export const categoryMeta = {

@@ -8,6 +8,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "audit:seo": "node scripts/seo-audit.mjs",
+    "kin": "npx tsx scripts/kin-agent.ts",
     "indexnow": "node scripts/indexnow-submit.mjs",
     "ship": "node scripts/ship.mjs",
     "audit:migration": "node scripts/migration-preflight.mjs",
