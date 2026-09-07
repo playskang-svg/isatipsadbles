@@ -2,6 +2,11 @@ const baseUrl = (process.env.SITE_AUDIT_URL || "http://127.0.0.1:3000").replace(
 const canonicalBase = (process.env.CANONICAL_URL || "https://isatips.adbles.com").replace(/\/$/, "");
 const categories = ["planning", "quotes", "admin", "home-care", "regional", "repair-install"];
 const articles = [
+  "entrance-door-lock-replacement-guide",
+  "washbasin-replacement-drain-repair-guide",
+  "bathroom-tile-grout-repair-guide",
+  "bathroom-silicone-replacement-guide",
+  "window-screen-frame-replacement-guide",
   "moving-preparation-checklist",
   "moving-company-quote-comparison",
   "packing-moving-cost-factors",

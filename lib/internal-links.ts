@@ -16,12 +16,17 @@ const coreRegionalFlow = [
 ];
 
 const curatedLinks: Record<string, string[]> = {
+  "entrance-door-lock-replacement-guide": ["door-handle-hinge-sagging-repair", "fire-door-repair-replacement-guide", "entrance-steel-gate-repair-cost", "interior-door-replacement-cost-guide", "moving-day-checklist"],
+  "washbasin-replacement-drain-repair-guide": ["bathroom-toilet-shower-renovation-guide", "home-repair-plumbing-estimate-guide", "bathroom-silicone-replacement-guide", "kitchen-sink-faucet-replacement-guide", "moving-cleaning-guide"],
+  "bathroom-tile-grout-repair-guide": ["bathroom-silicone-replacement-guide", "bathroom-toilet-shower-renovation-guide", "home-repair-plumbing-estimate-guide", "washbasin-replacement-drain-repair-guide", "moving-cleaning-guide"],
+  "bathroom-silicone-replacement-guide": ["bathroom-tile-grout-repair-guide", "bathroom-toilet-shower-renovation-guide", "washbasin-replacement-drain-repair-guide", "home-repair-plumbing-estimate-guide", "moving-cleaning-guide"],
+  "window-screen-frame-replacement-guide": ["window-sash-folding-door-repair-guide", "home-repair-plumbing-estimate-guide", "moving-cleaning-guide", "custom-mirror-glass-installation-guide", "moving-preparation-checklist"],
   "moving-preparation-checklist": ["moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "move-in-report-address-change", "moving-cleaning-guide"],
   "moving-company-quote-comparison": ["packing-moving-cost-factors", "moving-damage-compensation-claim", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "studio-moving-service-comparison", "moving-preparation-checklist"],
   "packing-moving-cost-factors": ["moving-company-quote-comparison", "moving-damage-compensation-claim", "moving-ladder-truck-cost-guide", "elevator-moving-cost-conditions", "air-conditioner-moving-installation-cost", "moving-preparation-checklist"],
   "moving-day-checklist": ["moving-preparation-checklist", "moving-damage-compensation-claim", "moving-cleaning-guide", "move-in-report-address-change", "rental-deposit-moving-out-checklist", "moving-with-pets"],
   "move-in-report-address-change": ["moving-day-checklist", "rental-deposit-moving-out-checklist", "moving-preparation-checklist", "moving-cleaning-guide", "moving-company-quote-comparison"],
-  "moving-cleaning-guide": ["move-in-first-day-essentials", "moving-day-checklist", "easy-interior-ideas-for-beginners", "moving-with-pets", "moving-preparation-checklist"],
+  "moving-cleaning-guide": ["bathroom-tile-grout-repair-guide", "move-in-first-day-essentials", "moving-day-checklist", "easy-interior-ideas-for-beginners", "moving-with-pets", "moving-preparation-checklist"],
   "rental-deposit-moving-out-checklist": ["moving-company-quote-comparison", "moving-day-checklist", "moving-cleaning-guide", "move-in-report-address-change", "easy-interior-ideas-for-beginners"],
   "moving-with-pets": ["moving-preparation-checklist", "moving-day-checklist", "moving-cleaning-guide", "easy-interior-ideas-for-beginners", "move-in-report-address-change"],
   "easy-interior-ideas-for-beginners": ["moving-cleaning-guide", "rental-deposit-moving-out-checklist", "moving-day-checklist", "moving-preparation-checklist", "moving-with-pets"],
