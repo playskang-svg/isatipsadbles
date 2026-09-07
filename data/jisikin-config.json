@@ -1,0 +1,17 @@
+{
+  "_note": "지식인 답변 에이전트 운영 파라미터. 기준은 docs/JISIKIN_ANSWER_AGENT.md.",
+  "dailyAnswerLimit": 3,
+  "matchThreshold": 0.09,
+  "strongMatchThreshold": 0.18,
+  "minAnswerChars": 300,
+  "maxLinksPerAnswer": 1,
+  "allowedLinkHosts": ["isatips.adbles.com"],
+  "blockedLinkHosts": ["app.ac", "linkmoa.kr", "lpweb.kr", "ocayn.info", "soomgo.com", "link.coupang.com", "coupang.com"],
+  "targetKeywords": [
+    { "keyword": "천안 원룸이사", "why": "서치어드바이저 노출 1위(천안원룸이사예약), 클릭 0", "priority": 1 },
+    { "keyword": "천안 서북구 원룸 이사", "why": "노출 발생, 대응 글 있음(cheonan-seobuk-gu-moving)", "priority": 1 },
+    { "keyword": "천안 청룡동 이사", "why": "노출 발생", "priority": 2 },
+    { "keyword": "포장이사 견적 비교", "why": "핵심 수익 키워드", "priority": 2 },
+    { "keyword": "이사 에어컨 이전설치 비용", "why": "핵심 수익 키워드", "priority": 2 }
+  ]
+}
