@@ -1,0 +1,29 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "updatedAt": "2026-09-10T20:24:26.356Z",
+  "updatedBy": "actions",
+  "networks": [
+    "숨고(LinkPrice) 견적 딥링크",
+    "오늘의집(Tenping) 자재·공구",
+    "쿠팡파트너스"
+  ],
+  "coverageJudged": true,
+  "counts": {
+    "open": 0,
+    "new": 0,
+    "resolved": 0
+  },
+  "needs": [],
+  "history": [
+    {
+      "at": "2026-09-10T20:24:26.356Z",
+      "by": "actions",
+      "open": 0,
+      "new": 0,
+      "resolved": 0
+    }
+  ]
+}
