@@ -1,0 +1,133 @@
+# ⚠ 중앙 저장소 템플릿에서 생성됩니다. 여기서 고치지 마세요.
+#
+# 재고 방출 — 맥이나 Codespace 가 미리 써둔 글을 하루 3번에 나눠 한 편씩 내보낸다.
+# 몰아 쓴 글을 한 번에 내보내면 발행이 뭉치고 그다음이 빈다. 검색엔진은 꾸준한 쪽을 좋아한다.
+#
+# 방출 → 빌드 → 커밋 → 배포 → 라이브 검증 → 색인. 검증에 실패하면 되돌리고 그 글은 막음 표시한다.
+name: agents-release (이사팁스)
+
+on:
+  schedule:
+    - cron: "0 23 * * *"  # 8:00 KST
+    - cron: "0 3 * * *"  # 12:00 KST
+    - cron: "0 10 * * *"  # 19:00 KST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "적용·빌드까지만 하고 커밋·배포하지 않음"
+        type: boolean
+        default: false
+      count:
+        description: "이번에 방출할 편수"
+        default: "1"
+
+permissions:
+  contents: write
+  issues: write
+  actions: write     # 자체 배포 워크플로를 호출한다 — 봇 푸시는 그걸 트리거하지 않는다
+
+concurrency:
+  group: agents-isatips
+  cancel-in-progress: false
+
+jobs:
+  release:
+    # 킬스위치: AGENTS_ENABLED=false 는 전부, AUTOPUBLISH_ENABLED=false 는 발행만 멈춘다.
+    if: vars.AGENTS_ENABLED != 'false' && vars.AUTOPUBLISH_ENABLED != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      SITE_KEY: isatips
+      SITE_DIR: ${{ github.workspace }}
+      AGENTS_DIR: ${{ github.workspace }}/_agents
+      AGENT_STATE_DIR: ${{ github.workspace }}/.fleet/state
+      GH_TOKEN: ${{ github.token }}
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+      FLEET_EXECUTOR: github-actions
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: 체크아웃 경로 제외
+        run: echo "_agents/" >> .git/info/exclude
+
+      - name: 에이전트 원본 가져오기
+        uses: actions/checkout@v4
+        with:
+          repository: playskang-svg/adbles-agents
+          path: _agents
+          ssh-key: ${{ secrets.AGENTS_DEPLOY_KEY }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # 재고가 있어도 내보낼 수단이 없으면 꺼내지 않는다.
+      # 꺼낸 뒤 배포에 실패하면 그 글은 되돌려지고 막음 표시가 붙는다 — 멀쩡한 글을 잃는다.
+      - name: 방출 전 점검
+        id: pre
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: node "$AGENTS_DIR/runner/preflight.mjs" --site "$SITE_KEY" --stage release
+
+      - name: 재고 방출
+        id: rel
+        if: steps.pre.outputs.go == 'true'
+        run: node "$AGENTS_DIR/runner/inventory.mjs" release --site "$SITE_KEY" --n "${{ inputs.count || '1' }}"
+
+      - name: 의존성 설치
+        if: steps.rel.outputs.released > 0
+        run: npm ci
+
+      - name: 타입검사
+        if: steps.rel.outputs.released > 0
+        run: npm run lint
+
+      - name: 빌드
+        if: steps.rel.outputs.released > 0
+        run: npm run build
+
+      - name: 발행 커밋
+        id: commit
+        if: steps.rel.outputs.released > 0 && env.DRY_RUN != 'true'
+        run: node "$AGENTS_DIR/runner/commit.mjs" --site "$SITE_KEY" --stage release
+
+      - name: 배포 (wrangler)
+        if: steps.commit.outputs.published == 'true' && 'workflow' == 'agent'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy --config dist/server/wrangler.json
+
+      - name: 배포 (자체 워크플로 호출)
+        if: steps.commit.outputs.published == 'true' && 'workflow' == 'workflow'
+        run: node "$AGENTS_DIR/runner/trigger-deploy.mjs" --workflow "deploy-external-cloudflare.yml" --sha "${{ steps.commit.outputs.sha }}"
+
+      - name: 라이브 검증
+        id: verify
+        if: steps.commit.outputs.published == 'true'
+        run: node "$AGENTS_DIR/runner/verify-live.mjs" --site "$SITE_KEY" --wait 30
+
+      - name: 실패 시 되돌리기
+        if: failure() && steps.commit.outputs.published == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node "$AGENTS_DIR/runner/rollback.mjs" --site "$SITE_KEY" --sha "${{ steps.commit.outputs.sha }}"
+
+      - name: autoindex — 색인 제출
+        if: steps.verify.outcome == 'success'
+        continue-on-error: true
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: |
+          node "$AGENTS_DIR/runner/inject-credentials.mjs" >/dev/null
+          node "$AGENTS_DIR/agents/autoindex/scripts/ping.mjs" --site "$SITE_KEY" --diff
+
+      - name: 상태 저장
+        if: always() && env.DRY_RUN != 'true'
+        run: node "$AGENTS_DIR/runner/state.mjs" save --site "$SITE_KEY" --commit
+
+      - name: sitemgr — 관리 에이전트 보고
+        if: always()
+        run: node "$AGENTS_DIR/agents/sitemgr/scripts/sitemgr.mjs" report --site "$SITE_KEY" --issue

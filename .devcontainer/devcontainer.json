@@ -1,0 +1,27 @@
+{
+  "name": "이사팁스 · 함대",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "playskang-svg/adbles-agents": { "permissions": { "contents": "read" } }
+      }
+    },
+    "vscode": {
+      "extensions": ["GitHub.copilot", "GitHub.copilot-chat"]
+    }
+  },
+
+  "containerEnv": {
+    "SITE_KEY": "isatips",
+    "SITE_DIR": "${containerWorkspaceFolder}",
+    "AGENTS_REPO": "playskang-svg/adbles-agents",
+    "AGENTS_DIR": "${containerWorkspaceFolder}/_agents",
+    "AGENT_STATE_DIR": "${containerWorkspaceFolder}/.fleet/state",
+    "FLEET_EXECUTOR": "copilot-codespace"
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup-fleet.sh",
+  "postStartCommand": "bash .devcontainer/setup-fleet.sh --update"
+}

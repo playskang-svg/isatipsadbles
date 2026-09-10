@@ -28,6 +28,7 @@ jobs:
       SITE_KEY: isatips
       AGENTS_DIR: ${{ github.workspace }}/_agents
       AGENT_STATE_DIR: ${{ github.workspace }}/.fleet/state
+      SITE_DIR: ${{ github.workspace }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -75,16 +76,49 @@ jobs:
         continue-on-error: true
         run: node "$AGENTS_DIR/agents/goldkey/scripts/goldkey.mjs" find --site "$SITE_KEY"
 
-      # linkmgr collect 는 키워드 하나마다 도는 명령이다. 오늘 뽑힌 후보 키워드로 미리 모아 두면
-      # 발행 회차에서 링크를 다시 긁지 않아도 된다.
-      - name: linkmgr — 내일 쓸 링크 미리 수집
+      # ── 여기서부터 대기열 채우기 ─────────────────────────────────────────
+      # 글은 여기서 쓰지 않는다. 쓰는 것은 맥 로컬 claude 나 Codespace 의 Copilot 이다.
+      # 여기서는 재고가 목표에 모자란 만큼만 글감(키워드·제목·링크)을 대기열에 넣는다.
+      - name: 재고 부족분 계산
+        id: need
+        run: node "$AGENTS_DIR/runner/inventory.mjs" need --site "$SITE_KEY"
+
+      - name: postgen·titlegen·linkmgr — 집필 대기열
+        if: steps.need.outputs.need > 0
         continue-on-error: true
         env:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
         run: |
-          node "$AGENTS_DIR/runner/pipeline.mjs" pick --site "$SITE_KEY" --n 3 --out "$RUNNER_TEMP/picks.json"
-          node "$AGENTS_DIR/runner/pipeline.mjs" links --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/links.json"
+          node "$AGENTS_DIR/runner/inject-credentials.mjs" >/dev/null
+          node "$AGENTS_DIR/runner/pipeline.mjs" pick   --site "$SITE_KEY" --n "${{ steps.need.outputs.need }}" --out "$RUNNER_TEMP/picks.json"
+          node "$AGENTS_DIR/runner/pipeline.mjs" titles --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/titles.json"
+          node "$AGENTS_DIR/runner/pipeline.mjs" links  --site "$SITE_KEY" --from "$RUNNER_TEMP/titles.json" --out "$RUNNER_TEMP/links.json"
+          node "$AGENTS_DIR/runner/queue.mjs" put --site "$SITE_KEY" --type publish --titles "$RUNNER_TEMP/titles.json" --links "$RUNNER_TEMP/links.json"
+
+      - name: 제휴링크 점검 — 품절·단종·제휴 없는 글
+        continue-on-error: true
+        run: node "$AGENTS_DIR/runner/affiliate-refresh.mjs" scan --site "$SITE_KEY"
+
+      - name: affkey — 제휴가 필요한 키워드 감지
+        continue-on-error: true
+        run: node "$AGENTS_DIR/agents/affkey/scripts/affkey.mjs" scan --site "$SITE_KEY"
+
+      - name: crosslink — 우리 사이트 간 연결 대기열
+        continue-on-error: true
+        run: node "$AGENTS_DIR/agents/crosslink/scripts/crosslink.mjs" queue --site "$SITE_KEY"
+
+      - name: 대기열 커밋
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain .fleet/queue)" ]; then
+            git config user.name "adbles-agents[bot]"
+            git config user.email "adbles-agents@users.noreply.github.com"
+            git add .fleet/queue
+            git commit -m "chore(queue): 이사팁스 대기열 갱신 [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push || echo "::warning::대기열 푸시 실패 — 다음 회차에 다시 만든다"
+          fi
 
       - name: 상태 저장
         if: always()
