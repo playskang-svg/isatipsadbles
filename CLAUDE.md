@@ -2,6 +2,14 @@
 
 Antigravity/Codex용 `AGENTS.md`와 같은 기준을 Claude에도 적용한다. 두 파일이 어긋나면 `docs/ISATIPS_AI_MASTER_OPERATING_INSTRUCTION_v1.0.md`가 최종 기준이다.
 
+
+## 0. Codespaces & 로컬 교차 작업 2단계 필수 규칙 (충돌 방지 원칙)
+Codespaces와 로컬을 번갈아가며 쓸 때는 딱 2단계 순서만 지킨다:
+1. **작업을 시작할 때 (발행/배포 전 포함) 👉 `git pull origin main` 먼저 실행!**
+   - 맥북이든 Codespace든 자리에 앉아 작업을 시작하기 직전, 터미널에서 `git pull`을 한 번 실행해 최신 상태로 맞춘다.
+2. **작업을 마쳤을 때 (발행/배포 완료 포함) 👉 `commit & push` 완료하기!**
+   - 자리를 떠나거나 다른 환경으로 넘어가기 전에 항상 작업한 내용을 `git push` 해둔다.
+
 ## 1. 최상위 운영 기준
 
 콘텐츠 생성·수정, SEO, 내부링크, 카테고리 구성, 수익화 작업을 시작하기 전에 `docs/ISATIPS_AI_MASTER_OPERATING_INSTRUCTION_v1.0.md`를 처음부터 끝까지 읽는다. 개별 지시와 충돌하지 않는 한 이 원칙을 유지하며, 임의로 축소하거나 완화하지 않는다.
