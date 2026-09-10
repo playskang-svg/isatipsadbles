@@ -1,0 +1,29 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "affiliate",
+  "createdAt": "2026-09-10T20:24:26.309Z",
+  "createdBy": "actions/34525845978",
+  "networks": [
+    "숨고(LinkPrice) 견적 딥링크",
+    "오늘의집(Tenping) 자재·공구",
+    "쿠팡파트너스"
+  ],
+  "disclosure": "이 글에는 제휴 링크가 포함되어 있으며, 구매 시 일정액의 수수료를 받을 수 있습니다.",
+  "coupangEnabled": true,
+  "slice": {
+    "day": 0,
+    "of": 7,
+    "files": 2
+  },
+  "existingLinks": [],
+  "productIds": [],
+  "barePages": [
+    "lib/articles.ts",
+    "lib/incheon-articles.ts"
+  ],
+  "newKeywords": [],
+  "instructions": "# 제휴링크 갱신 — 이사팁스\n\n너는 맥에서 무인으로 돌고 있다. 사람에게 물어볼 수 없다.\n\n## 규칙\n\n1. **제휴 URL을 지어내지 않는다.** 새 링크가 필요하면 반드시 아래 명령으로 실제 링크를 받아온다:\n   ```\n   node /home/runner/work/isatipsadbles/isatipsadbles/_agents/agents/linkmgr/scripts/linkmgr.mjs collect --site isatips --kw \"<키워드>\" --coupang\n   ```\n2. 가격·재고를 본문에 단정해 쓰지 않는다. \"현재 39,900원\" 같은 문장은 다음 주에 거짓이 된다.\n   가격대나 조건으로 쓴다 — \"3만 원대\", \"로켓배송 여부는 링크에서 확인\".\n3. 제휴링크를 넣은 글에는 고지 문구가 반드시 있어야 한다:\n   > 이 글에는 제휴 링크가 포함되어 있으며, 구매 시 일정액의 수수료를 받을 수 있습니다.\n4. **한 글에 제휴링크는 최대 3개.** 이미 그만큼 있으면 추가하지 말고 교체만 한다.\n   링크 하나당 본문 700자 이상이어야 한다 — 짧은 글에 여러 개 넣지 않는다.\n5. 글의 흐름과 무관한 자리에 링크를 끼워 넣지 않는다. 독자가 그 상품을 필요로 하는 문단에만 넣는다.\n   링크가 촘촘하면 독자는 광고글로 읽고 되돌아간다.\n6. 커밋하지 않는다. 배포하지 않는다.\n\n## 1. 제휴링크가 없는 글 (2건)\n\n아래 글에는 제휴링크가 하나도 없다. 글 주제에 **자연스럽게 맞는 것만** 붙인다.\n맞는 상품이 없으면 붙이지 않는다 — 억지로 넣은 링크는 이탈률만 올린다.\n\n- `lib/articles.ts`\n- `lib/incheon-articles.ts`\n\n---\n\n끝나면 `git diff --stat` 으로 무엇을 바꿨는지 출력한다."
+}
