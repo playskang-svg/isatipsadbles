@@ -3,14 +3,158 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-09-10T03:44:16.343Z",
-  "pagesCrawled": 12,
-  "sitemapUrls": 665,
-  "externalChecked": 5,
+  "scannedAt": "2026-09-10T23:23:04.072Z",
+  "pagesCrawled": 200,
+  "sitemapUrls": 0,
+  "externalChecked": 25,
   "summary": {
-    "low": 2
+    "high": 1,
+    "low": 26
   },
+  "occurrences": 27,
   "findings": [
+    {
+      "severity": "high",
+      "kind": "no-sitemap",
+      "page": "https://isatips.adbles.com",
+      "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/regional-repair-115-custom-door-install",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-030-interior-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-042-entrance-steel-gate",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-072-custom-door-install",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-132-sliding-middle-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/bathroom-toilet-shower-renovation-guide",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/window-screen-frame-replacement-guide",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-009-door-hole",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-011-fire-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-015-interior-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-016-fire-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-019-interior-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-020-entrance-steel-gate",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-061-interior-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-062-sliding-middle-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-086-fire-door",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-149-entrance-steel-gate",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
     {
       "severity": "low",
       "kind": "external-unreachable",
@@ -28,8 +172,72 @@
       "status": 0,
       "error": "fetch failed",
       "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/move-in-report-address-change",
+      "href": "https://www.gov.kr/mw/AA020InfoCappView.do?CappBizCD=13100000016",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/son-eomneun-nal-moving-guide",
+      "href": "https://webzine.nfm.go.kr/2020/09/01/%EB%8B%A4%EC%96%91%ED%95%9C-%EC%9D%B4%EC%82%AC-%EC%9D%B4%EC%95%BC%EA%B8%B0",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/moving-damage-compensation-claim",
+      "href": "https://m.easylaw.go.kr/MOB/CsmInfoRetrieve.laf?csmSeq=629&ccfNo=3&cciNo=1&cnpClsNo=1",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/gyeonggi-moving-regional-guide",
+      "href": "https://jumin.mois.go.kr/statMonth.do",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/gyeonggi-002-aircon-install",
+      "href": "https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001243735",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/suwon-city-moving-guide",
+      "href": "https://www.suwon.go.kr/sw-www/www05/www05-01/www05-01-08.jsp",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/incheon-moving-regional-guide",
+      "href": "https://www.incheon.go.kr/IC040102",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
     }
   ],
+  "detail": {},
   "autoFixable": [
     "dead-anchor",
     "empty-href",
