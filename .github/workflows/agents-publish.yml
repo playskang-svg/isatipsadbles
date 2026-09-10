@@ -76,23 +76,36 @@ jobs:
       - name: 의존성 설치
         run: npm ci
 
-      - name: 발행 후보 선정
+      # postgen·titlegen·linkmgr 는 사람이 대화형으로 쓰는 CLI다.
+      # runner/pipeline.mjs 가 그 CLI를 호출하고 출력을 JSON으로 옮긴다 —
+      # 판단 로직(무엇을 고를지, 제목을 어떻게 빚을지)은 전부 에이전트 쪽에 남는다.
+      - name: 발행 후보 선정 (postgen)
         id: pick
-        run: node "$AGENTS_DIR/agents/postgen/scripts/plan.mjs" pick --site "$SITE_KEY" --n 1 --json > "$RUNNER_TEMP/picks.json"
+        run: node "$AGENTS_DIR/runner/pipeline.mjs" pick --site "$SITE_KEY" --n 1 --out "$RUNNER_TEMP/picks.json"
+
+      - name: 쓸 것이 있는지 확인
+        id: has
+        run: |
+          n=$(node -e "console.log(require('$RUNNER_TEMP/picks.json').length)")
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          [ "$n" -gt 0 ] || echo "::notice::집필 후보가 없습니다. 이번 회차는 발행하지 않습니다."
 
       - name: titlegen — 고CTR 제목 생성
-        run: node "$AGENTS_DIR/agents/titlegen/scripts/titlegen.mjs" --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/titles.json"
+        if: steps.has.outputs.count > 0
+        run: node "$AGENTS_DIR/runner/pipeline.mjs" titles --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/titles.json"
 
       - name: linkmgr — 이 글에 붙일 링크 확보
+        if: steps.has.outputs.count > 0
         continue-on-error: true
         env:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
-        run: node "$AGENTS_DIR/agents/linkmgr/scripts/linkmgr.mjs" prepare --site "$SITE_KEY" --from "$RUNNER_TEMP/titles.json" --out "$RUNNER_TEMP/links.json"
+        run: node "$AGENTS_DIR/runner/pipeline.mjs" links --site "$SITE_KEY" --from "$RUNNER_TEMP/titles.json" --out "$RUNNER_TEMP/links.json"
 
       # 여기가 유일하게 LLM이 도는 곳이다. 프롬프트는 사이트 프로필에서 조립된다 —
       # 같은 에이전트라도 사이트마다 페르소나·금지어·출처 요건이 다르다.
       - name: postgen — 본문 집필
+        if: steps.has.outputs.count > 0
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -112,19 +125,20 @@ jobs:
       # 완전 무인이므로 게이트가 유일한 방어선이다. 여기서 걸리면 발행하지 않는다.
       - name: 품질 게이트
         id: gate
+        if: steps.has.outputs.count > 0
         run: node "$AGENTS_DIR/runner/quality-gate.mjs" --site "$SITE_KEY" --report "$RUNNER_TEMP/gate.json"
 
       - name: 타입검사
-        if: steps.gate.outcome == 'success'
+        if: steps.has.outputs.count > 0 && steps.gate.outcome == 'success'
         run: npm run lint
 
       - name: 빌드
-        if: steps.gate.outcome == 'success'
+        if: steps.has.outputs.count > 0 && steps.gate.outcome == 'success'
         run: npm run build
 
       - name: 발행 커밋
         id: commit
-        if: steps.gate.outcome == 'success' && env.DRY_RUN != 'true'
+        if: steps.has.outputs.count > 0 && steps.gate.outcome == 'success' && env.DRY_RUN != 'true'
         run: node "$AGENTS_DIR/runner/commit.mjs" --site "$SITE_KEY" --stage publish
 
       - name: 배포

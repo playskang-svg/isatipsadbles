@@ -75,12 +75,16 @@ jobs:
         continue-on-error: true
         run: node "$AGENTS_DIR/agents/goldkey/scripts/goldkey.mjs" find --site "$SITE_KEY"
 
-      - name: linkmgr — 내부·외부·제휴 링크 수집
+      # linkmgr collect 는 키워드 하나마다 도는 명령이다. 오늘 뽑힌 후보 키워드로 미리 모아 두면
+      # 발행 회차에서 링크를 다시 긁지 않아도 된다.
+      - name: linkmgr — 내일 쓸 링크 미리 수집
         continue-on-error: true
         env:
           COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
           COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
-        run: node "$AGENTS_DIR/agents/linkmgr/scripts/linkmgr.mjs" collect --site "$SITE_KEY"
+        run: |
+          node "$AGENTS_DIR/runner/pipeline.mjs" pick --site "$SITE_KEY" --n 3 --out "$RUNNER_TEMP/picks.json"
+          node "$AGENTS_DIR/runner/pipeline.mjs" links --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/links.json"
 
       - name: 상태 저장
         if: always()
