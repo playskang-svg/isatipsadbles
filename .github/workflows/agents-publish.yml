@@ -1,0 +1,157 @@
+# ⚠ 중앙 저장소 템플릿에서 생성됩니다. 여기서 고치지 마세요.
+#
+# 발행 사이클 — 제목을 빚고(titlegen), 글을 쓰고(postgen), 품질 게이트를 통과해야
+# 커밋·배포·색인까지 나간다. 게이트에서 걸리면 발행하지 않고 이슈로 남긴다.
+name: agents-publish (이사팁스)
+
+on:
+  schedule:
+    - cron: "30 20 * * 1,3,5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "초안만 만들고 발행하지 않음"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: agents-isatips
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # 킬스위치 두 겹: AGENTS_ENABLED=false 는 전부, AUTOPUBLISH_ENABLED=false 는 발행만 멈춘다.
+    if: vars.AGENTS_ENABLED != 'false' && vars.AUTOPUBLISH_ENABLED != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SITE_KEY: isatips
+      AGENTS_DIR: ${{ runner.temp }}/agents
+      AGENT_STATE_DIR: ${{ github.workspace }}/.fleet/state
+      GH_TOKEN: ${{ github.token }}
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: 에이전트 원본 가져오기
+        uses: actions/checkout@v4
+        with:
+          repository: playskang-svg/adbles-agents
+          path: ${{ runner.temp }}/agents
+          ssh-key: ${{ secrets.AGENTS_DEPLOY_KEY }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 자격증명 주입
+        env:
+          NAVER_AD_API_KEY: ${{ secrets.NAVER_AD_API_KEY }}
+          NAVER_AD_SECRET_KEY: ${{ secrets.NAVER_AD_SECRET_KEY }}
+          NAVER_AD_CUSTOMER_ID: ${{ secrets.NAVER_AD_CUSTOMER_ID }}
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: node "$AGENTS_DIR/runner/inject-credentials.mjs"
+
+      - name: 이전 상태 복원
+        run: node "$AGENTS_DIR/runner/state.mjs" restore --site "$SITE_KEY"
+
+      # 발행 전제 조건을 먼저 본다. ANTHROPIC_API_KEY가 없으면 글을 쓸 수 없고,
+      # 없는 채로 진행하면 빈 커밋이 나가 사이트를 망가뜨린다.
+      - name: 사전 점검
+        id: pre
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node "$AGENTS_DIR/runner/preflight.mjs" --site "$SITE_KEY" --stage publish
+
+      - name: 의존성 설치
+        run: npm ci
+
+      - name: 발행 후보 선정
+        id: pick
+        run: node "$AGENTS_DIR/agents/postgen/scripts/plan.mjs" pick --site "$SITE_KEY" --n 1 --json > "$RUNNER_TEMP/picks.json"
+
+      - name: titlegen — 고CTR 제목 생성
+        run: node "$AGENTS_DIR/agents/titlegen/scripts/titlegen.mjs" --site "$SITE_KEY" --from "$RUNNER_TEMP/picks.json" --out "$RUNNER_TEMP/titles.json"
+
+      - name: linkmgr — 이 글에 붙일 링크 확보
+        continue-on-error: true
+        env:
+          COUPANG_ACCESS_KEY: ${{ secrets.COUPANG_ACCESS_KEY }}
+          COUPANG_SECRET_KEY: ${{ secrets.COUPANG_SECRET_KEY }}
+        run: node "$AGENTS_DIR/agents/linkmgr/scripts/linkmgr.mjs" prepare --site "$SITE_KEY" --from "$RUNNER_TEMP/titles.json" --out "$RUNNER_TEMP/links.json"
+
+      # 여기가 유일하게 LLM이 도는 곳이다. 프롬프트는 사이트 프로필에서 조립된다 —
+      # 같은 에이전트라도 사이트마다 페르소나·금지어·출처 요건이 다르다.
+      - name: postgen — 본문 집필
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node "$AGENTS_DIR/runner/build-prompt.mjs" \
+            --site "$SITE_KEY" --stage postgen \
+            --titles "$RUNNER_TEMP/titles.json" --links "$RUNNER_TEMP/links.json" \
+            --out "$RUNNER_TEMP/prompt.md"
+          npx -y @anthropic-ai/claude-code@latest \
+            --print "$(cat "$RUNNER_TEMP/prompt.md")" \
+            --model claude-sonnet-5 \
+            --permission-mode acceptEdits \
+            --add-dir "$AGENTS_DIR" \
+            --allowedTools "Read Edit Write Grep Glob Bash(node *) Bash(npm run *)" \
+            --disallowedTools "WebFetch" \
+            2>&1 | tail -40
+
+      # 완전 무인이므로 게이트가 유일한 방어선이다. 여기서 걸리면 발행하지 않는다.
+      - name: 품질 게이트
+        id: gate
+        run: node "$AGENTS_DIR/runner/quality-gate.mjs" --site "$SITE_KEY" --report "$RUNNER_TEMP/gate.json"
+
+      - name: 타입검사
+        if: steps.gate.outcome == 'success'
+        run: npm run lint
+
+      - name: 빌드
+        if: steps.gate.outcome == 'success'
+        run: npm run build
+
+      - name: 발행 커밋
+        id: commit
+        if: steps.gate.outcome == 'success' && env.DRY_RUN != 'true'
+        run: node "$AGENTS_DIR/runner/commit.mjs" --site "$SITE_KEY" --stage publish
+
+      - name: 배포
+        id: deploy
+        if: steps.commit.outputs.published == 'true' && 'workflow' == 'agent'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy --config dist/server/wrangler.json
+
+      # 라이브에서 실제로 열리는지 확인한다. 안 열리면 되돌린다 —
+      # 무인 운전에서 되돌릴 줄 모르는 것이 가장 위험하다.
+      - name: 라이브 검증
+        id: verify
+        if: steps.commit.outputs.published == 'true'
+        run: node "$AGENTS_DIR/runner/verify-live.mjs" --site "$SITE_KEY" --wait 30
+
+      - name: 실패 시 되돌리기
+        if: failure() && steps.commit.outputs.published == 'true'
+        run: node "$AGENTS_DIR/runner/rollback.mjs" --site "$SITE_KEY" --sha "${{ steps.commit.outputs.sha }}"
+
+      - name: autoindex — 색인 제출
+        if: steps.verify.outcome == 'success'
+        continue-on-error: true
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: node "$AGENTS_DIR/agents/autoindex/scripts/ping.mjs" --site "$SITE_KEY" --diff
+
+      - name: 상태 저장
+        if: always()
+        run: node "$AGENTS_DIR/runner/state.mjs" save --site "$SITE_KEY" --commit
+
+      - name: sitemgr — 관리 에이전트 보고
+        if: always()
+        run: node "$AGENTS_DIR/agents/sitemgr/scripts/sitemgr.mjs" report --site "$SITE_KEY" --issue
