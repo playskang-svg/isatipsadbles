@@ -2,8 +2,8 @@
   "$schema": "https://adbles.com/schema/affiliate-links-v1.json",
   "version": "2026.09.05-04",
   "build": "a35f977d",
-  "updated": "2026-09-07",
-  "link_count": 81,
+  "updated": "2026-09-11",
+  "link_count": 103,
   "note": "A-Factory 제휴링크 단일 소스. 사람이 읽는 문서는 affiliate-link.md. 코드에서는 이 JSON을 import해서 link_key로 조회한다. 어느 키워드에 어느 링크를 붙일지는 각 링크의 keywords 필드와 isatipsadbles/lib/affiliate-match.ts의 매칭 규칙을 기준으로 한다.",
   "partner_id": "A100702444",
   "links": [
@@ -1557,6 +1557,481 @@
         "소노벨 천안",
         "아고다 천안"
       ]
+    },
+    {
+      "key": "coupon-agoda-global",
+      "category": "travel_coupon",
+      "label": "아고다 전세계 5% 할인코드",
+      "cta": "아고다 5% 즉시할인 받기",
+      "url": "https://3ha.in/r/684222",
+      "network": "3hoursahead.com (아고다)",
+      "status": "active",
+      "updated": "2026-09-10",
+      "keywords": [
+        "아고다 할인코드",
+        "아고다 5%",
+        "호텔 할인쿠폰"
+      ]
+    },
+    {
+      "key": "coupon-tripcom-mega",
+      "category": "travel_coupon",
+      "label": "트립닷컴 메가세일 70% 특가",
+      "cta": "트립닷컴 메가세일 확인하기",
+      "url": "https://3ha.in/r/684441",
+      "network": "3hoursahead.com (트립닷컴)",
+      "status": "active",
+      "updated": "2026-09-10",
+      "keywords": [
+        "트립닷컴 할인코드",
+        "트립닷컴 메가세일",
+        "트립닷컴 항공권"
+      ]
+    },
+    {
+      "key": "coupon-klook-tours",
+      "category": "travel_coupon",
+      "label": "클룩 투어 6% 할인코드",
+      "cta": "클룩 액티비티 할인받기",
+      "url": "https://3ha.in/r/684262",
+      "network": "3hoursahead.com (클룩)",
+      "status": "active",
+      "updated": "2026-09-10",
+      "keywords": [
+        "클룩 할인코드",
+        "클룩 6%",
+        "유니버설 재팬 티켓"
+      ]
+    },
+    {
+      "key": "coupon-yeogi-domestic",
+      "category": "travel_coupon",
+      "label": "여기어때 국내 숙소 10% 특가",
+      "cta": "여기어때 숙소 예약하기",
+      "url": "https://3ha.in/r/686503",
+      "network": "3hoursahead.com (여기어때)",
+      "status": "active",
+      "updated": "2026-09-10",
+      "keywords": [
+        "여기어때 할인코드",
+        "국내 숙소 할인",
+        "호캉스 특가"
+      ]
+    },
+    {
+      "key": "coupon-yanolja-stay",
+      "category": "travel_coupon",
+      "label": "야놀자 호캉스 15% 할인코드",
+      "cta": "야놀자 15% 쿠폰 받기",
+      "url": "https://3ha.in/r/686504",
+      "network": "3hoursahead.com (야놀자)",
+      "status": "active",
+      "updated": "2026-09-10",
+      "keywords": [
+        "야놀자 할인코드",
+        "야놀자 쿠폰",
+        "레저 특가"
+      ]
+    },
+    {
+      "key": "sunmool-coupang-aesop-room",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "핫템 이솝 올루스 아로마틱 룸 스프레이 100ml",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7212329043&itemId=16989887512&vendorItemId=92703083542&traceid=V0-153-8fdeabaeff8cea10&requestid=20260911145031939115349457&token=31850C%7CMIXED&pt=0&slot=7",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "이솝 올루스 룸스프레이 100ml"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "7212329043",
+        "name": "핫템 이솝 올루스 아로마틱 룸 스프레이 100ml",
+        "price": 74000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/hlRduUUkvYb-4NvHhu4bptDc6gPDqFW9aQ3UpQlyt28kffvlMjU7AQxtE0cnQjj1J5cpBKBm5fKLZE9qLY338zJSnGW5kfgC_ZmUa4ZmMbOk9UnG6f9hxlZMUtRxq6GgBzYwedApQfk9MwkjJsac0HcnNgHS-0yMfpodPF7YAykQ0BhWoU2C8uuPkwn-eq1wkSZswkFfDfdrJnuZnjgBZsvQodUO-AyjRfLwS5S7v1Y71VkJwMs5qEXdlrjwJDOifYD3ThfLqcgxU8dOAYy_XElinZ7o-LCN98CuFElchWLFFZrwLQJq8WwcL39c0nyXdiqPMl9LlxLQA6BSu-awxO2QrqFywhVadRtIeeUOKbefM0DRM8-3YJt3-NpjgC5CNSKi6Nv4HRfJOwGTFJsDLNnGd3JiEeVlTHkePGeBaMBaxZw1cQ1dWisUdR5wJEcTb-pIiYl1fkAfvxTZ9dU7vjUFJClw5VlluGp0hg-4iNv2OuibWknUC6pDtjy_7lS_0SGIaq9Z5QjMkqpwP0U4ocAH_oF4HKroHR-NlNzaGBf-G69YZKvJo1RE",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "Aesop (이솝)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-redginseng",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "정관장 홍삼정 에브리타임 리미티드  30포 정관장포장 쇼핑백증정",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7713557340&itemId=24159395459&vendorItemId=91786923982&traceid=V0-153-3830491e47150d01&requestid=20260911145045490324760862&token=31850C%7CGM&pt=0&slot=1",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "정관장 에브리타임 리미티드 30포"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "7713557340",
+        "name": "정관장 홍삼정 에브리타임 리미티드  30포 정관장포장 쇼핑백증정",
+        "price": 119000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/JSsqiIyhQA38hXsGJeusnSCWRtN8T0N1Mv7SzsywPQ30XQsSNOH2OU0kP5qyFThw_ZwvUxtPutl7L9x51yHdJDlfEXWNr2s4GfuleXAZOutWmbo9cLZkaV2xcUyaXvf0jzFJcAsmKlJwFSGNW1Ao0TeLPdPkVmZTv5Cq_4ec807Fm3HYwXv6s2Q21aTaj_Ll1_s0cZQXhhez2sBN-QCgoVGOWn91g5viWQ06lv70DpjnPXZmms7-0R2lRSds8_Fu_RKAtpAUOwHSdqMQ352RTTDsdAwxNcFaGkoNyyYhrkyL3MqL6Iz9ZwokA3AkR2Y-ITpDfs-pW7qprgLbiTP4Biv6VqjSyPmc-5otxAmHKug9Z7qyHs60yOv4xIzjTeXwA8JqnveRHtFJv7xE3fbiiJwuvtom4wM6LDznKRarv1nT_K_xafBs11koXhBiEWeyxktP8E7kNOCcRNkvqnuV_KNTuzMIAvNPylT6aMXFcQKi9rYBNPIZmpYl3WW7_BldCP9Dsu1qfXzerm6pFayMqXR9roaz4pcRiwwRDXDWxbPwTDuXhUo=",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "정관장"
+      }
+    },
+    {
+      "key": "sunmool-coupang-pulio",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "풀리오 종아리 마사지기 V3",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9572321950&itemId=28571335105&vendorItemId=95515698293&traceid=V0-153-6c414ae26207db5b&requestid=20260911145052176153059270&token=31850C%7CMIXED&pt=0&slot=6",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "풀리오 종아리 마사지기 V3"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9572321950",
+        "name": "풀리오 종아리 마사지기 V3",
+        "price": 129500,
+        "imageUrl": "https://ads-partners.coupang.com/image1/4h2CnRuYIXV4rtjS4iU1t8QIVZq1E5qZyYDk9gmjNPi8uQzqU7m4x61uXbKxfT8LVpKL_iObb4jxsqQhXLIbnOkb_rCin4MPzk6WATCGMzolbGu4zT11BUgK4J92S1-oHYot3Ck6aXRJl-qlhAslH-Er4nDo9oW4tFu4Bx_Qi9GEg4DMl1ajAb-HvifVA106pCNIPG0RuZkiJ7fbhWGIO49YfP6kSpCBNpNhDYxc5qfy0oACuMGpXEY6I1APvN7p0aYlULESVLvWBSr1xF1sPnWEaBpenYA26Y4TelnOExcsgDMNJSBeCSKYvVkiipZNxBAiNqiB8_bjJd9D11g5WcHzZCMup9JSfvLPyFMq0pA94eMQPfLqqEYUW3ZpMgAQo42hD1EedtRrhOBFB34ygjYdYWJxlUCgDcc7l5J5OAOGG8KMZ7AAVQlirYrmEe68XobtZUqbqEMTi396lmMXgonqLStkGOm2IEjREwPHHIRoWp9butgvxuMfNTcGGbOlg8_Rxm3ghXCcuWtd3yniAV7yyKE7HI8nTt3r",
+        "isRocket": true,
+        "isFreeShipping": false,
+        "brand": "PULIO (풀리오)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-nonfiction",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "[정품] +-+ nonfiction 모든피부용 튜브형 논픽션 상탈크림 핸드크림 50ml",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9678459036&itemId=28940588451&vendorItemId=90936670721&traceid=V0-153-19258b7e1011dd72&requestid=20260911145058792059131617&token=31850C%7CMIXED&pt=0&slot=9",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "논픽션 상탈크림 핸드크림 50ml"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9678459036",
+        "name": "[정품] +-+ nonfiction 모든피부용 튜브형 논픽션 상탈크림 핸드크림 50ml",
+        "price": 27900,
+        "imageUrl": "https://ads-partners.coupang.com/image1/1Z3JbVSmPq_QfWHj1TzEjk3MStuxgs3ZI04znY9Xg83Qnikw0COZPVbwYgeTdm7h9K64HNqhEepWqR0l0jEl0pZ3u8kW3sXhCyawkedj5v-Qvl5so37KqOGawmWzHJJH_N5DOmN6ZE-W2uGTkkZmwniRu2PgnckvVB1LHjooutAdhN2kO36dys-5yMqRnAO0eXVo_WPCb4ZqTeiuflA0Qiz_oC5TRnfVwoUEJLtyOoLkCnihPrgxsE1oqH53NKgX7Tl2GQvk4XU5aFDpa_ko5Ie5LXv1MTYWtsuiAamEt5hp-58e28sqGmA6uMLFCXNn2J0Cps9sdV2ZpjthEb6EQ3MmVL4p3iCCQh9Op9tLcEBGyhejoLZ37Z3I7pMeFvf18EUgxbaIA2YSk8ANEMRzsDEeulRpk2kFTPEXsqbeLfBGdzZ7Zuks7j_FqC2Dg6gVkd-WWHZBSVh8Qhu3w_v6LEcyAQIQSIbDLuiUL2YslRoIALALmnte4ZoLGNGqYU8RNroD1dtUV5HB_DpCWBIOjCxJPpY2xH8osZbXTiwW0HfdAdGt3V9m15Q=",
+        "isRocket": false,
+        "isFreeShipping": false,
+        "brand": "NONFICTION (논픽션)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-kinto",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "KINTO (킨토) 투고 텀블러 360ml 플러그 첨부 화이트 20441",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=6834664090&itemId=23917432909&vendorItemId=90939723371&traceid=V0-153-f78e4e9fe358d605&requestid=20260911145105838153054017&token=31850C%7CMIXED&pt=0&slot=10",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "킨토 투고 텀블러 360ml"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "6834664090",
+        "name": "KINTO (킨토) 투고 텀블러 360ml 플러그 첨부 화이트 20441",
+        "price": 49460,
+        "imageUrl": "https://ads-partners.coupang.com/image1/0VHNMqWTdOTEM4SA0b732CibL5V-l-rYajVJrYNBq8_QnKVnEOVDfjoDu3e__pUNtjW8p-bdyQmiauFIt0y_tplRy_W2lg2LIMVnnrrdzCDD5U8U0vaoa8Ey7hf9aP6j4306w3M_Sm0qUwfKw2F5drWoHTqllxgXcT2brwChGUKOx_ae0LNKp0-pQW3olJsfSoIFVBL64eHXBphxnN751PEEQgwjynJdLCa_H2cCv8ZXiwkCuD-V-PShuPMfkNEOlAZKzJQJ5znmJqgy4hWkqv4Eq1efwrcMTKG13cUFJqhTA0V_CUP7mSq4iPHRtHsAqZo1exEznjw4ahRfpuARIa6EatN040i4BnpL2PzwV057pPuVFDbM5lK7dNmfkd5x2eaP6EprDSAVi0rqG2bTmUO1CJOcM5XEbUbCirKaGljZs6DiYTiV5tAwySI_DTQkQl9Dy9vayMpijKyuxoVxnuIGycJHH71pGIYb3xCKB5pgtwa9b_r4edDaeFcnxaIVNc5UU-ikIsVuUv2EXc75GfkuJzzA49IKxsq-UQpE-2tItAmE_IarCNoRUA==",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "KINTO (킨토)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-lexon",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "LEXON MINA 렉슨미나 M 무드등 집들이 결혼선물 인테리어 조명 - LH64",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8491835784&itemId=19529383206&vendorItemId=84596526740&traceid=V0-153-8aff8d003c6843fe&requestid=20260911145112516044779107&token=31850C%7CMIXED&pt=0&slot=3",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "렉슨 미나 M LH64"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "8491835784",
+        "name": "LEXON MINA 렉슨미나 M 무드등 집들이 결혼선물 인테리어 조명 - LH64",
+        "price": 72000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/RbCsuPnEOVvfPyvORQaV1Q0jNysXcwbE_sERiwNWoDMxHj_zpbROD_EQsKuyoixybsJYNV-ITz0wuxNzpu_meMql2LQDKWzcCOMtV-58ex-odf_1izKcT67P-na5ypLcGazKUDi00B3NaEVITe5rw3miK4GgRkxTm4zclpt2vNFdXFymN50aLcPA-MQemYzPagKHr_ndZHakghcgJxbrEIHUTo0WRrhiRGzdIg6Rn6BjFIqqURuecahuCFvuueNhx467KcUIkZdfRdJXZfrYVoL06t_zzpt5eQNnVEbbwuUhzdOtP1lgK4UuAxFfwOdQpPb3hQ44_1L7qAk0SrqX9fCFMU3Itnc1AHCs8Itr55L323nqLGb6OF_oEBTbN28uDhBHEeLZOj-jfxaCO4zmgQWsyy4Be8SyYuTNis2icYAhujxgSEN4rdqZ2Uc98kf41Rahy7gXgHjTam8Z_jglwWrNEWLc3wZsEWgkz15gY_XxuEJIongILicMSnRL_5SlTdLnjKYWmn3KzMafwK_RO26rjVTytRbs7Yg320SNlnL7u1b8BDkziFCi",
+        "isRocket": false,
+        "isFreeShipping": false,
+        "brand": "LEXON (렉슨)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-medicube",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "[본사 정품] 메디큐브 부스터프로 미니",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8464437029&itemId=24489528784&vendorItemId=95125758418&traceid=V0-153-a8042f67825773ac&requestid=20260911145126149051124783&token=31850C%7CMIXED&pt=0&slot=8",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "메디큐브 부스터 프로 미니"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "8464437029",
+        "name": "[본사 정품] 메디큐브 부스터프로 미니",
+        "price": 106310,
+        "imageUrl": "https://ads-partners.coupang.com/image1/mGGs4wPjleDonqevmHIh_ll9lfeYdp7YzkMfrQa0OiQisrDvPJgp3pnXykx6w6CZsUXxLR4CN5fz9_lDSEe6gSixOLnw_Ney7cwDLrYCRcPiBYHJvANUZ1Nqae-7muvtXQFXJz33Xf2FeMfe3HiJpCdTuhQXPP0nhtiAWbkky884k3T5xRhqi5gc0-QG8DtIQb6cwLiKtNbtGB9IBx9qaLE2ep0sEM5OcfNHjEjRiR-PnURSnnmHMJ4fXJB83CkiZT6kG0uSRQdtI1nxjF9oDu3NSqKvK4TugqIGEDR9Jt64BmleeSHbL71xTxfCmo-hePXorCttWQlUOGQTbbPKHt1G2HSolvW7Hqc9lUjf3ETQA49WB9tPYPewpSoTrcM_ewf_YZ7P5c4W95u7DU8Gd6zsWeIoZ2rZrTfrYm496VL45uHB18ewWUfZJAYwOGjknT2nGbaL6gxInpkVHuBZKobR_nxDIOV8SUIJit_2PHsfn2QufMsmm_ooFz4LXppVsjoJar8UDPh1F0_71P73GewAs5fyza-E1_bbtL_i7jqHa2CE4rJqR_DrZw==",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "medicube (메디큐브)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-aesop-travel",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "이솝 어라이벌 트래블 키트 여행용 바디용품",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9037380649&itemId=26513528023&vendorItemId=93488035636&traceid=V0-153-4733ace06d38f461&requestid=20260911145132761059132553&token=31850C%7CMIXED&pt=0&slot=3",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "이솝 어라이벌 트래블 키트"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9037380649",
+        "name": "이솝 어라이벌 트래블 키트 여행용 바디용품",
+        "price": 61000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/OlZew1Oj1uu8Rm2QOrkYr5dnL4y7D_6L10hDZFwxR_LbuCbF2ShXosf61tFpFp3ilP2tNN7WdiTmI7DOvoNkNkPjjaWgZHzx70N_ZjYN9sRJK5NbRBPtb_Fvo5OFIgvAlAgh27qpkmmavO4yUHoPEp8z2G0NIc_ZuT6NYmpG_bvSgfW_bfJYE561suIsERdIjXGIglRWJHGWvqQnjhXfBb2MiGX_3LOJanfBYlm0xHkc2Ph-8xa_3yLY44stYyPrhgRXWioL9qNvmHPPDk3Yss9lIiIoA4mI4_4pP4C3A6rbzDcopTVi9ubDXunJ3VeNBtswXWiu8atHrBXHCz_85FlAEgFgdEplgHDEBunapwR-OdUFQrjY-kgqHtvuADlXbdHwMeqZI9_xDgpQoKyeyAx6z3dpZ0LGJxoIosJPwBEmKK96uYHc2ckICOQuna780euqrMMUTdrT4OWP01AHRQL-r6QzIBz_mxfxAi9RcIoJ_LbG6b8uzppis8_RrV5qK9n-OAfAQU9kUwZOv5f28k639eo-8WdydEoOM7q51XoVTuDd1vbvgIw=",
+        "isRocket": true,
+        "isFreeShipping": true,
+        "brand": "Aesop (이솝)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-nespresso",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "[공식판매처] 네스프레소  버츄오 팝 GCV2 에스프레소 캡슐커피머신 코코넛 화이트+레몬즙 패키지",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9708551484&itemId=29046405345&vendorItemId=85390118963&traceid=V0-153-23dd9204e7f178f0&requestid=20260911145146299319284357&token=31850C%7CMIXED&pt=0&slot=6",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "네스프레소 버츄오 팝"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9708551484",
+        "name": "[공식판매처] 네스프레소  버츄오 팝 GCV2 에스프레소 캡슐커피머신 코코넛 화이트+레몬즙 패키지",
+        "price": 82000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/7MKKuM_JMmGRErJL7JLzfn5CucMRNgiiQm0H8HabQchyvygaTwKA4-OEpmrdX00J0cn8VpZRSoK_kWci85Q_XLtXeY-b5Epu4IAh5DA4Jl7X2M6S5Qg0I5T1yW0zbNaRlBxn14ahVgK1OvR2oTpJQtBvFAgfpyUaPGB4CGk4BR81IdqVEFM5VXL93u4Pza8Rmutd3FPigK6Hfbb1DZfdVc_YF64AzT6nBH4_uSVFnTVEZVHNPGTES_TomNbo_y1KjBB6Y-ZVUseM0KdW9m3vRwwexngGwqYk_OilxUQPYiH8TBONGPyP5wmpKbzMAoESigXNMwdrslZDtYn6CUIYkCVdoGeUtB9GFRu026x8OCgyL0db9nOjPtWmVHOSQf6a_yD-A1PPySYrUFlmPb1bN0e4dgMy2NNxTXb-0wTO-FIC4NgQV3BPtxwd9htzOqU4L-EU7uc9GL-EHSyCo7rBY4q8Xz5_-js4LgL__vOp9szG35JxyxQMmkGUav4qwaapV-QJ_MVDaNHIUn84dKlz0WihNkL0U1DrGhDHedGbJTQoY3owaFuh7fg=",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "Nespresso (네스프레소)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-marshall",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "마샬 엠버튼2 블랙 화이트 Marshall Emberton II 블루투스 스피커",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8764230988&itemId=25486746804&vendorItemId=93383518168&traceid=V0-153-f7d67752278a3dee&requestid=20260911145153023211410907&token=31850C%7CMIXED&pt=0&slot=5",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "마샬 엠버튼 2"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "8764230988",
+        "name": "마샬 엠버튼2 블랙 화이트 Marshall Emberton II 블루투스 스피커",
+        "price": 205000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/883D21k2U1RLMJrO86yf_myy2-aadXXvk3_RgUaOGlTQh1IO8etwZq_peaUoyjIhyeHhirj8fZ3IOWuj2EQsEERWDwyNvNx_ujioZaELg75asOcYVr9ozg42ghUozw4fo5NBk-5FQca8j0WFIr4ftYTYFOw8wiY6XgR4xmgUwsuhXlmEtUaxifpsH-Wd0ux065-f_WzQ6K4Ix9AQrE1aone2ueju8SIL6GiWX-PzcqBMWjCGDRiPWXVUT7mgNp6DhuaOCm5CPbYLjIZe53Jxng0yoT_gaUexnuBHpxdXNx6ktianxdsm3Fy8DFDpcK4Qwq9JGevuQi-E3exbVm2jlbARsnEkwPnFkcenTilhFcVnG-ULBD7-K0BLN1-0_tbAy_rZQKvog1HFn3tCQa1ShkKe2sMKF3yLCp_bztWMERQdXW5b4deFf-ysiMD3QppVbakWrs3A9dVfGsfOYgR-_tum96Wtq3jAlJUhv8soRiXveNaOY13XZrl5mWcHK-TRBIYOFfnOnrjBzrEX3rfPD1OMto0ErypdDlG3EzIsYEwQzwvYW1FD",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "Marshall (마샬)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-orthomol",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "오쏘몰 이뮨, 30정, 1개",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7437344570&itemId=7877577488&vendorItemId=95810191859&traceid=V0-153-10183e309add1c2f&clickBeacon=e7a618a0-ada4-11f1-bf52-bad9f0f42c26%7E3&requestid=20260911145159720076631420&token=31850C%7CMIXED&pt=1&slot=1",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "오쏘몰 이뮨 30일"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "7437344570",
+        "name": "오쏘몰 이뮨, 30정, 1개",
+        "price": 97540,
+        "imageUrl": "https://ads-partners.coupang.com/image1/J7xh_RoY_s-p8RFMJ0Fg3GQdBHVzc7y5T8XcuwqbQ4CcDTefdblm6_0lK0pB_QRSaTlTY2tcPdxG3AIreL8JT4i3Ex2b7RaNp4cCRHZPUOoLsmILK5crkmP3GB-lPVdQQCu23Gye-_KZP8AJN4Q0v5ka2k9E4QmzIFjedIFy_-rchZbV_6Ijw5D_WSxDl1F4XlAue6Jtkl0ffptKumblwRkG1v6xsnQh7MEpTxkQ6fcA-HFTEua3mQUlUnjhTlgN92M9KVw9poUIKKW7G45GaKt6XaXsbnvzTzIfX9cBpwa-Anyn0lxbGXUQpnkCUVB2orXpOZjlXOUrw8xI85ZYLttp0ebqeEP3YTLJhH4yLA3A9zc9MUoR77twtFqsJnz1hdXdmmNgDps09nawG4MHCP24Puar-F0HWrwSKjL2PKwwhqFpnSwl2VMoOWp3JlxnQ9MCAdjAUaLes0cXBexuE0HGaI2bBAsA5RkQ_4qjPE5yk1kmGJse2g3rZQFOFM5_VADWBBiBSyZENn1bNYM_JH3zJtqB2EpgR63rv2gNTA==",
+        "isRocket": false,
+        "isFreeShipping": false,
+        "brand": "Orthomol (오쏘몰)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-diptyque",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "[정품] 딥티크 캔들 베이 190G 딥디크 향초 국내배송 빠른배송",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9505128344&itemId=28320968313&vendorItemId=95273539064&traceid=V0-153-e066610d36aa1572&requestid=20260911145206457211415215&token=31850C%7CMIXED&pt=0&slot=5",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "딥티크 베이 캔들 190g"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9505128344",
+        "name": "[정품] 딥티크 캔들 베이 190G 딥디크 향초 국내배송 빠른배송",
+        "price": 73800,
+        "imageUrl": "https://ads-partners.coupang.com/image1/--7VZ4k8Anxf7o56-7346evEyk30ixOOFnPzIc0CaRpy6_F4fMC99K26M5muJuJseKc9EHwuRqL_qGaOrWS9UgoGOPYyXFOKwkAhGRsk65j5lFffr0Sj5JzloYTxTm4LZjCZVBLbyRLPMp58Zjl2gSORXlxorPBXb7qzjYwvXg4S5HvaG_Yka8tZIP7RelCgKvZP4IJU3B8Bv1HtjkBkxo2T_nk5Dx3UdPUj4S-imsVtpBa-UVQ2c-yTodW3JqiMLc9hTJMY3kIfxkYPp8Fjb129yQN_XRiPBdcJkeYg0cBnjFCRFXLFx6hOLyZyzGVcBWTPdqz8gTGQgxw2d7zmORDhZVODfpDqxOP93UuBl4dCdG-drPBv5OrxN9EKxVi3ngZFneFy-NbciPdQc4GR90B99N-o9w65iLcloIGsvxzgFPeCs7FQ2Xhwr9Gsw3E5Ma6BaAR8TRZA6eR-rbC-mObWkgZ0-myuSyt0OBbcdTmEoHjRlrZ1svYTIJHq8PuccHoLjZSEqLNWUaeYbJoOjJ3HjCjPG7vJRv71KN3RAh6EoemnXvB3VyU=",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "brand": "Diptyque (딥티크)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-nonfiction-duo",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "논픽션 상탈크림 핸드크림 앤 비건 립밤 듀오 50ml + 3.5g",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9469719365&itemId=28695461007&vendorItemId=95636653135&traceid=V0-153-d7c7e41ddea026df&requestid=20260911145213151180117234&token=31850C%7CMIXED&pt=0&slot=6",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "논픽션 핸드크림 립밤 세트"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "product": {
+        "id": "9469719365",
+        "name": "논픽션 상탈크림 핸드크림 앤 비건 립밤 듀오 50ml + 3.5g",
+        "price": 41000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/-ThXZaUOgG5ytPgf-Ue4eLqMP_2ADvOFnFnHcT3ONPWAVSynwgTI0aZSoUJFRaBngwg6mUscd_5Yln1iO5JtjrD4yb5IIHfr4D3JDBEsgdPJ_JS0GpgPxAcFcWGzBMT30ADm2LB7FYLcZ5-zFdkJmyATYKZXQQ65JwoXyvCa-UQKg8SryT7pz9s6U87Suc9i3xJmxMpDCZOb-CftDKn58yK8dpr0idz5IiA5Lxxgk3mqbdXT4BoQE-dbZ6ElwGSDczEpYHlWZTdmTnf8WuqZ9CYnSgcgrPukLwyGg0qJkZKAKXJPy8f-FFR2iCszIhGioVIFHjsEGAqav43ybG2dl0K0_T7v1TMlOSerrZqCfnI-LiYPNvzIC7hWu43szhAlU0VkLQDq0qfJ7NHZiuB5o-jrmvDhI62-ivtB7vAjMImNc1Cl_4slUEx3WJOtv2aNyU8cl-hn2pAp3E4ZJhPznIYHWTqV9uBixJLg6mS0Dn1aTTdIBwVR0CCteUykvdsTMqDn1O8NO9U-NP1WUEbj1nVWd-jY3thY7i0=",
+        "isRocket": true,
+        "isFreeShipping": false,
+        "brand": "NONFICTION (논픽션)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-loccitane-shower",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "록시땅 쎄드라 샤워 젤",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "록시땅 꺄데 쉐이빙"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9710490114&itemId=6031464694&vendorItemId=92775254013&traceid=V0-153-cda0e3a137a943ab&requestid=20260911145025176096117642&token=31850C%7CMIXED&pt=0&slot=2",
+      "product": {
+        "id": "9710490114",
+        "name": "록시땅 쎄드라 샤워 젤",
+        "price": 33000,
+        "imageUrl": "https://ads-partners.coupang.com/image1/SL8Tnm0fHjDdunP3SKFQNYMq42CMt8-z8lpZzGB_pcB6H1MqjFDMUfrEIuoZj3wJwxTMx5Ub0ByElF8HmZAjTo9GA4oHS0D2i44w3P4j5p17JSIi51_ULe0BDZwhMBJjZnqR6_t5e1adIO87z3HZ5UctTdPOi40GtATbtGUxoKjjUcrx8Z4gL93yFYDwZv10s1J6OrlPeUlm6aroS8cvMR1h1Ko8Epp02CPVBgb05mnxbW2YMUfIfsH01qS8N8WLc8x4k48i_OINOfmBPoajuOgnUpm5QeR-T592egROr6c-zwF6HLRnq6zTBvdPqrI5cseCMrYSk6g6YdtA4UepelxB24CV58DYLTn8jAfYzC0IXgFzTSI9KqyPWjURvxo5tn3EVfMmEg0N2R1A5ieP7ZHIKwSRmIWci9Hy41IKMJad-8860za7c8zCGCEa4w3V57pkZA1tEmLOkm9eFqmxKAzd6QIx4dTbD9-0NdLVIdc1z4ierBrP_uDKSLIpwwm9UmdBQd7p74qSkDbkKZ_wFwoot1G5b1z2h4SzBTwQ650nuFFgSg-MivpPrHekMhAGfkYrK8jGydGjhLXQxSpgKfszrrSUzwJVGiGNAeD1shfZG5M=",
+        "isRocket": false,
+        "isFreeShipping": false,
+        "brand": "록시땅"
+      }
+    },
+    {
+      "key": "sunmool-coupang-kinto-bottle",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "킨토 투고보틀 360ml",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T05:50:20.992Z",
+      "keywords": [
+        "킨토 투고 텀블러 360ml"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=6188307023&itemId=7991154063&vendorItemId=94676811315&traceid=V0-153-9cff1cef73edba4f&requestid=20260911145105838153054017&token=31850C%7CMIXED&pt=0&slot=6",
+      "product": {
+        "id": "6188307023",
+        "name": "킨토 투고보틀 360ml",
+        "price": 23900,
+        "imageUrl": "https://ads-partners.coupang.com/image1/pDrtTB5O4nqDNgTVpEkhj6by3KgqWneBqCAk_k3q_itqHwRzy-ubtRiZWTkZpMO29gxmd59BCrCB9EJ82ty6G8l1O8PG-Rb7ynsJhHlxzH2qIK-n_6h5iFTTjliK7-6n4N0Xr_-wWZ36llmL3aJ5nlApS6Rj4gMtX5Ho5AZgx4_hR0eScXtYEycIqmXOkeMY8IrcO7qbfXtiOJV_0PGHik6O7Wn-GYdq0aYz1pjliN0yLdfhxgyj_SL5EjLXqpGvT0T59WGyu8lfBEh0avAQh7Di4P3mt89-okbTWtpUobenK2zamnpXAxnyVHfPY5wr8xSR63Okl-rzBKtHuP9xqGFZFvoaiPji63w1tJCPVoZ1Jqu9jij6zD3hRTNnCpFoGA7Oc0XvjZhBqQaVqU7GepWu6dUsT0yqDNqatHOtpooP7HNHKfuocl2x16DUTewRbubfGFIS4ntxElDhQzVfH3LqA6aZlu53yxUBbKitNNnTho7alV_DjWf886Ii0FVz6zMK1CZ-YctKUJE9eiiqGY9c0uNy6dFZ04Dt40CDbd7j13iEST_d_4I=",
+        "isRocket": false,
+        "isFreeShipping": false,
+        "brand": "KINTO (킨토)"
+      }
+    },
+    {
+      "key": "sunmool-coupang-arkdi-packing",
+      "site": "present.tipspedia.kr",
+      "category": "gift",
+      "label": "아크디 여행용 압축파우치 7종 세트",
+      "cta": "쿠팡에서 가격 보기",
+      "network": "coupang",
+      "status": "active",
+      "updated": "2026-09-11",
+      "checkedAt": "2026-09-11T06:11:59.819Z",
+      "keywords": [
+        "아크디 여행용 압축파우치 7종 세트"
+      ],
+      "source": "Coupang Partners API via linkmgr",
+      "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9485452567&itemId=28245857426&vendorItemId=95199330549&traceid=V0-153-6ade8edc0261130f&clickBeacon=c1c31f90-ada7-11f1-92ed-4c51d7385802%7E3&requestid=20260911151224584127397417&token=31850C%7CMIXED&pt=1&slot=1",
+      "product": {
+        "id": "9485452567",
+        "name": "아크디 여행용 압축파우치 7종 세트",
+        "price": 23600,
+        "imageUrl": "https://ads-partners.coupang.com/image1/eS6kawTNSosomts6eXZmh9-ux7f-xZA8a3pWJpkHmcqajwNbcZjLegj6Gmzh2z8-fyI-2wdurSViBa3RCvYOBd2WUZhyBOzFAILZYTqFQrVhglW5tr0bsjEuS0CkFpAlBzpOJWhc6iefFVCFM03dOi_1eGzrZEvA1r8N1d9DncrMzgT4RmIj44JeeW0uFjbdLKPJuFmOFDrlx2UN3_8u6wn4V5LW7fUCpOA_vFL_nMutl0SVeVdzh8NaQzn2_txi8ZeLy5z6Yy5ppiEQ44hS8JlIhQqMGwkIHFQaVFm7_LWqv8KY5ZS0dcbSyB0qiefhIiCt7lILY-fbHV01uFKfFW1yxZz23NHDHMmW4kOOrQ5tPbmimM992PMAioI7hzf9uXXc8Wdv9jbHG5Mr7pqDN9uCwp9gq01wlXX0gufM8ueOg01FqnhtIousUj6T-21eS3lSkS5Sh1I11F2EtUPcGL-mz2PXa-p1XwKMUpZ2pV0yKJnuH7SjzNELMqFZKa2Zf66SNfktZf-IigEHSjxkFLzfSESqwRQC",
+        "isRocket": true,
+        "isFreeShipping": false,
+        "brand": "아크디"
+      }
     }
   ],
   "slug_map": {
