@@ -19,7 +19,7 @@
     "sync:affiliate": "node scripts/sync-affiliate-links.mjs",
     "prebuild": "npm run sync:affiliate",
     "predev": "npm run sync:affiliate",
-    "kin": "node --import ./scripts/jisikin/register.mjs scripts/jisikin.mjs"
+    "kin": "node --import ./scripts/site/register.mjs scripts/jisikin.mjs"
   },
   "dependencies": {
     "@vinext/cloudflare": "^1.0.0-beta.6",
