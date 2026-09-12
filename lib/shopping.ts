@@ -92,6 +92,15 @@ export const shoppingGuides: Record<string, ShoppingGuide> = {
       { label: "간접조명", keyword: "인테리어 LED 간접조명", note: "공간의 밝기와 분위기를 나눠 조절할 때" },
     ],
   },
+  "curtain-blind-installation-cost": {
+    title: "실측 전에 미리 봐두면 좋은 커튼·블라인드",
+    description: "제품군별 형태를 먼저 살펴보면 업체에 원하는 스타일을 구체적으로 전달할 수 있습니다.",
+    suggestions: [
+      { label: "암막커튼", keyword: "거실 암막커튼", note: "차광·보온이 우선인 침실이나 거실에" },
+      { label: "롤스크린 블라인드", keyword: "롤스크린 블라인드", note: "채광 조절과 깔끔한 인상이 필요할 때" },
+      { label: "압축봉 커튼봉", keyword: "무타공 압축봉 커튼봉", note: "전월세에서 타공 없이 임시로 달 때" },
+    ],
+  },
 };
 
 export function getShoppingGuide(slug: string) {
