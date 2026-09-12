@@ -183,6 +183,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "studio-moving-service-comparison": studioMove,
   "moving-ladder-truck-cost-guide": twoQuoteComparison,
   "elevator-moving-cost-conditions": twoQuoteComparison,
+  "wallpaper-flooring-move-in-cleaning-order": cleaningSpecialist,
 };
 
 export function getMovingService(slug: string): MovingService | undefined {

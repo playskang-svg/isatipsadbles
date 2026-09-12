@@ -22,6 +22,9 @@ const articles = [
   "washer-dryer-moving-installation-cost",
   "moving-damage-compensation-claim",
   "curtain-blind-installation-cost",
+  "post-move-organizing-service-cost",
+  "dishwasher-moving-installation-cost",
+  "wallpaper-flooring-move-in-cleaning-order",
 ];
 const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
 const failures = [];
