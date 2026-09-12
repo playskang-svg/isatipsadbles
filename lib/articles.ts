@@ -775,6 +775,7 @@ import { homeRepairArticles } from "./home-repair-articles";
 import { repairKeywordArticlesWithRegionalLinks, repairRegionalArticles } from "./repair-regional-pages";
 import { enrichArticlesWithFieldImages } from "./article-images";
 import { kinGeneratedArticles } from "./kin-generated-articles";
+import { yonginCurtainBlindArticles } from "./yongin-curtain-blind-articles";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -787,6 +788,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...repairKeywordArticlesWithRegionalLinks,
   ...repairRegionalArticles,
   ...kinGeneratedArticles,
+  ...yonginCurtainBlindArticles,
 ]);
 
 export const categoryMeta = {

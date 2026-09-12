@@ -1,5 +1,6 @@
 import { linkUrl } from "@/lib/affiliate";
 import { repairQuoteLink, topicIdFromSlug } from "@/lib/affiliate-match";
+import { yonginDistricts, YONGIN_CITY_SLUG } from "@/lib/yongin-keyword-tree";
 
 export type MovingService = {
   eyebrow: string;
@@ -184,6 +185,13 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "moving-ladder-truck-cost-guide": twoQuoteComparison,
   "elevator-moving-cost-conditions": twoQuoteComparison,
 };
+
+// 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.
+serviceByArticle[YONGIN_CITY_SLUG] = interiorGuide;
+for (const district of yonginDistricts) {
+  serviceByArticle[district.slug] = interiorGuide;
+  for (const dong of district.dongs) serviceByArticle[dong.slug] = interiorGuide;
+}
 
 export function getMovingService(slug: string): MovingService | undefined {
   const direct = serviceByArticle[slug];

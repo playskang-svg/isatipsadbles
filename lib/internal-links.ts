@@ -1,5 +1,6 @@
 import type { Article } from "./articles";
 import { suwonDistricts } from "./suwon-keyword-tree";
+import { yonginDistricts, YONGIN_CITY_SLUG } from "./yongin-keyword-tree";
 
 export type InternalLinkRecommendation = {
   article: Article;
@@ -39,7 +40,7 @@ const curatedLinks: Record<string, string[]> = {
   "elevator-moving-cost-conditions": ["moving-ladder-truck-cost-guide", "moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "studio-moving-service-comparison"],
   "wall-mounted-tv-moving-installation-cost": ["no-drill-wall-mounted-tv-installation", "air-conditioner-moving-installation-cost", "moving-company-quote-comparison", "packing-moving-cost-factors", "easy-interior-ideas-for-beginners"],
   "no-drill-wall-mounted-tv-installation": ["wall-mounted-tv-moving-installation-cost", "easy-interior-ideas-for-beginners", "rental-deposit-moving-out-checklist", "moving-cleaning-guide", "move-in-first-day-essentials", "curtain-blind-installation-cost"],
-  "curtain-blind-installation-cost": ["rental-deposit-moving-out-checklist", "easy-interior-ideas-for-beginners", "no-drill-wall-mounted-tv-installation", "move-in-first-day-essentials", "moving-cleaning-guide", "custom-door-installation-construction-guide"],
+  "curtain-blind-installation-cost": ["rental-deposit-moving-out-checklist", "easy-interior-ideas-for-beginners", "no-drill-wall-mounted-tv-installation", "move-in-first-day-essentials", "moving-cleaning-guide", "custom-door-installation-construction-guide", "yongin-curtain-blind-installation-cost"],
   "moving-box-quantity-size-guide": ["studio-moving-service-comparison", "move-in-first-day-essentials", "moving-preparation-checklist", "packing-moving-cost-factors", "moving-day-checklist"],
   "studio-moving-service-comparison": ["moving-box-quantity-size-guide", "moving-company-quote-comparison", "packing-moving-cost-factors", "elevator-moving-cost-conditions", "moving-ladder-truck-cost-guide"],
   "moving-damage-compensation-claim": ["moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "moving-ladder-truck-cost-guide", "rental-deposit-moving-out-checklist"],
@@ -52,7 +53,7 @@ const curatedLinks: Record<string, string[]> = {
   "commercial-glass-automatic-door-repair-cost": ["entrance-steel-gate-repair-cost", "fire-door-repair-replacement-guide", "sliding-middle-door-repair-installation", "door-handle-hinge-sagging-repair", "interior-door-replacement-cost-guide"],
 };
 
-const stopWords = new Set(["이사", "정보", "방법", "확인", "체크", "가이드", "정리", "비용", "수원시"]);
+const stopWords = new Set(["이사", "정보", "방법", "확인", "체크", "가이드", "정리", "비용", "수원시", "용인시"]);
 
 function tokenize(article: Article) {
   return new Set(
@@ -73,8 +74,26 @@ function suwonHierarchyLinks(slug: string) {
   return [];
 }
 
+function yonginHierarchyLinks(slug: string) {
+  if (slug === YONGIN_CITY_SLUG) {
+    return ["curtain-blind-installation-cost", ...yonginDistricts.map((district) => district.slug)];
+  }
+  for (const district of yonginDistricts) {
+    if (district.slug === slug) {
+      return [YONGIN_CITY_SLUG, "curtain-blind-installation-cost", ...district.dongs.slice(0, 3).map((dong) => dong.slug)];
+    }
+    const dongIndex = district.dongs.findIndex((dong) => dong.slug === slug);
+    if (dongIndex >= 0) {
+      const siblings = [district.dongs[dongIndex - 1], district.dongs[dongIndex + 1]].flatMap((dong) => dong ? [dong.slug] : []);
+      return [district.slug, YONGIN_CITY_SLUG, "curtain-blind-installation-cost", ...siblings];
+    }
+  }
+  return [];
+}
+
 function preferredSlugs(article: Article) {
   const hierarchy = suwonHierarchyLinks(article.slug);
+  const yonginLinks = yonginHierarchyLinks(article.slug);
   const incheonTreeLinks = article.source?.url.includes("incheon.go.kr")
     ? [
         "incheon-moving-regional-guide",
@@ -90,8 +109,8 @@ function preferredSlugs(article: Article) {
   const repairKeywordGuide = article.slug.startsWith("repair-keyword-")
     ? article.breadcrumbs?.find((crumb) => crumb.href.startsWith("/articles/"))?.href.replace("/articles/", "")
     : undefined;
-  const curated = curatedLinks[article.slug] ?? (article.category === "regional" ? coreRegionalFlow : []);
-  return [...new Set([...hierarchy, ...incheonTreeLinks, ...(repairKeywordGuide ? [repairKeywordGuide] : []), ...curated])];
+  const curated = curatedLinks[article.slug] ?? (article.category === "regional" && !article.slug.startsWith("yongin-") ? coreRegionalFlow : []);
+  return [...new Set([...hierarchy, ...yonginLinks, ...incheonTreeLinks, ...(repairKeywordGuide ? [repairKeywordGuide] : []), ...curated])];
 }
 
 function reasonFor(article: Article) {
