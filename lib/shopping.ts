@@ -92,6 +92,15 @@ export const shoppingGuides: Record<string, ShoppingGuide> = {
       { label: "간접조명", keyword: "인테리어 LED 간접조명", note: "공간의 밝기와 분위기를 나눠 조절할 때" },
     ],
   },
+  "post-move-organizing-service-cost": {
+    title: "정리 전에 먼저 봐두면 좋은 수납용품",
+    description: "공간을 실측한 뒤 크기를 맞춰 준비하면 정리 속도가 빨라지고 재구매를 줄일 수 있습니다.",
+    suggestions: [
+      { label: "수납박스", keyword: "옷장 수납정리 박스", note: "옷방·붙박이장 내부를 칸칸이 나눌 때" },
+      { label: "압축팩", keyword: "이불 옷 압축팩", note: "계절 옷·이불 부피를 줄일 때" },
+      { label: "라벨기", keyword: "휴대용 라벨기", note: "정리 후 자리를 표시해 유지관리할 때" },
+    ],
+  },
   "curtain-blind-installation-cost": {
     title: "실측 전에 미리 봐두면 좋은 커튼·블라인드",
     description: "제품군별 형태를 먼저 살펴보면 업체에 원하는 스타일을 구체적으로 전달할 수 있습니다.",
