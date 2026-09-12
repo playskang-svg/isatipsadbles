@@ -21,6 +21,7 @@ const articles = [
   "wall-mounted-tv-moving-installation-cost",
   "washer-dryer-moving-installation-cost",
   "moving-damage-compensation-claim",
+  "curtain-blind-installation-cost",
 ];
 const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
 const failures = [];

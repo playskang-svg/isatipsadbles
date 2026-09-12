@@ -161,6 +161,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "moving-cleaning-guide": cleaningSpecialist,
   "rental-deposit-moving-out-checklist": twoQuoteComparison,
   "easy-interior-ideas-for-beginners": interiorGuide,
+  "curtain-blind-installation-cost": interiorGuide,
   "son-eomneun-nal-moving-guide": twoQuoteComparison,
   "interior-door-hole-repair-guide": repairQuotes("door-hole"),
   "interior-door-replacement-cost-guide": repairQuotes("interior-door"),
