@@ -3,22 +3,14 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-09-12T22:56:17.166Z",
-  "pagesCrawled": 200,
-  "sitemapUrls": 0,
-  "externalChecked": 27,
+  "scannedAt": "2026-09-10T03:44:16.343Z",
+  "pagesCrawled": 12,
+  "sitemapUrls": 665,
+  "externalChecked": 5,
   "summary": {
-    "high": 1,
-    "low": 3
+    "low": 2
   },
-  "occurrences": 4,
   "findings": [
-    {
-      "severity": "high",
-      "kind": "no-sitemap",
-      "page": "https://isatips.adbles.com",
-      "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
-    },
     {
       "severity": "low",
       "kind": "external-unreachable",
@@ -36,18 +28,8 @@
       "status": 0,
       "error": "fetch failed",
       "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/gyeonggi-002-aircon-install",
-      "href": "https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001243735",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
     }
   ],
-  "detail": {},
   "autoFixable": [
     "dead-anchor",
     "empty-href",
