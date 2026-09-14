@@ -1,0 +1,15 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "title": "10월이사손없는날, 견적서에 이 항목 빠지면 당일 현장 추가금 붙습니다",
+  "slug": null,
+  "keyword": "10월이사손없는날",
+  "createdAt": "2026-09-14T04:41:30.391Z",
+  "createdOn": "f67c5b73addc7e169000ad6e4ef0e5ab942ec723",
+  "files": [
+    "lib/articles.ts",
+    "lib/internal-links.ts"
+  ],
+  "patch": "2026-09-14T04-41-30-387Z-001.patch"
+}
