@@ -11,5 +11,7 @@
     "lib/articles.ts",
     "lib/internal-links.ts"
   ],
-  "patch": "2026-09-14T04-41-30-387Z-001.patch"
+  "patch": "2026-09-14T04-41-30-387Z-001.patch",
+  "blocked": "발행 후 라이브 검증 실패로 되돌림 — 원인 확인 전까지 다시 꺼내지 않는다",
+  "blockedAt": "2026-09-14T04:43:29.913Z"
 }
