@@ -1,0 +1,1402 @@
+{
+  "site": "isatips",
+  "scoredAt": "2026-09-14T04:28:25.095Z",
+  "rows": [
+    {
+      "keyword": "10월이사손없는날",
+      "from": "원룸이사",
+      "volume": 1410,
+      "volumePc": 150,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 7,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "ko.wikipedia.org",
+          1
+        ],
+        [
+          "lifetrend.co.kr",
+          2
+        ],
+        [
+          "moveuniversity.kr",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "1위가능",
+      "why": "1위 백과(ko.wikipedia.org) — 정의만 있고 실행 정보가 없다.",
+      "incumbent": "백과"
+    },
+    {
+      "keyword": "세면대물마개교체",
+      "from": "세면대",
+      "volume": 1430,
+      "volumePc": 200,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.ppomppu.co.kr",
+          1
+        ],
+        [
+          "coupickit.com",
+          2
+        ],
+        [
+          "coushop.shop",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 0,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "1위가능",
+      "why": "질의어를 정면으로 겨냥한 글이 없다 · 1위 전문사이트(www.ppomppu.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "욕실샤워수전교체",
+      "from": "세면대",
+      "volume": 1490,
+      "volumePc": 210,
+      "volumeMobile": 1280,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "saejib.co.kr",
+          1
+        ],
+        [
+          "m.bathmediavip.com",
+          2
+        ],
+        [
+          "ggomggombath.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "상위가능",
+      "why": "겨냥한 글 1건 · 1위 전문사이트(saejib.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "현관문도어락교체",
+      "from": "누수",
+      "volume": 1410,
+      "volumePc": 110,
+      "volumeMobile": 1300,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "miso.kr",
+          1
+        ],
+        [
+          "www.daangn.com",
+          1
+        ],
+        [
+          "kfinds.com",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "상위가능",
+      "why": "겨냥한 글 2건 · 1위 대형플랫폼(miso.kr)",
+      "incumbent": "대형플랫폼"
+    },
+    {
+      "keyword": "얼굴인식도어락",
+      "from": "누수",
+      "volume": 1470,
+      "volumePc": 250,
+      "volumeMobile": 1220,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "ko.accio.com",
+          1
+        ],
+        [
+          "smarthome.zigbang.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "상위가능",
+      "why": "겨냥한 글 2건 · 1위 전문사이트(ko.accio.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "싱크대호스교체",
+      "from": "이삿 욕실",
+      "volume": 1420,
+      "volumePc": 160,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.youtube.com",
+          6
+        ],
+        [
+          "ohou.se",
+          8
+        ],
+        [
+          "www.daangn.com",
+          9
+        ],
+        [
+          "www.ppomppu.co.kr",
+          11
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "상위가능",
+      "why": "겨냥한 글 1건 · 1위 영상(www.youtube.com)",
+      "incumbent": "영상"
+    },
+    {
+      "keyword": "긴다리세면대",
+      "from": "세면대",
+      "volume": 1430,
+      "volumePc": 370,
+      "volumeMobile": 1060,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.americanstandard.co.kr",
+          1
+        ],
+        [
+          "xn--pu5bz8lo3a.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "상위가능",
+      "why": "겨냥한 글 1건 · 1위 전문사이트(www.americanstandard.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "욕실거울교체",
+      "from": "싱크대",
+      "volume": 1420,
+      "volumePc": 160,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "remodeling.koreahometech.com",
+          1
+        ],
+        [
+          "mirrorcabinet.jibsurifactory.com",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "상위가능",
+      "why": "겨냥한 글 1건 · 1위 전문사이트(remodeling.koreahometech.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "전기업체",
+      "from": "이삿 전기",
+      "volume": 1470,
+      "volumePc": 240,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.kita.net",
+          1
+        ],
+        [
+          "www.youtube.com",
+          6
+        ],
+        [
+          "contents.history.go.kr",
+          7
+        ],
+        [
+          "www.samsungsem.com",
+          8
+        ],
+        [
+          "namu.wiki",
+          9
+        ],
+        [
+          "www.mk.co.kr",
+          10
+        ],
+        [
+          "home.kepco.co.kr",
+          11
+        ],
+        [
+          "xn--ok0by7si4bkzs.kr",
+          12
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 8,
+      "grade": "상위가능",
+      "why": "겨냥한 글 2건 · 1위 전문사이트(www.kita.net)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "원홀수전",
+      "from": "세면대",
+      "volume": 1430,
+      "volumePc": 610,
+      "volumeMobile": 820,
+      "adComp": "높음",
+      "adDepth": 9,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.vittz.co.kr",
+          1
+        ],
+        [
+          "www.kelim.net",
+          1
+        ],
+        [
+          "youbath.co.kr",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "상위가능",
+      "why": "겨냥한 글 2건 · 1위 전문사이트(www.vittz.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "변기가격",
+      "from": "방화문",
+      "volume": 1390,
+      "volumePc": 160,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "ko.accio.com",
+          1
+        ],
+        [
+          "ohou.se",
+          3
+        ],
+        [
+          "t.bathmediavip.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "상위가능",
+      "why": "겨냥한 글 2건 · 1위 전문사이트(ko.accio.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "아파트중문설치비용",
+      "from": "전입신고",
+      "volume": 1500,
+      "volumePc": 220,
+      "volumeMobile": 1280,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "bestjungmun.com",
+          1
+        ],
+        [
+          "ko.accio.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건 · 1위 전문사이트(bestjungmun.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "스테이박스보관이사",
+      "from": "방화문",
+      "volume": 1430,
+      "volumePc": 240,
+      "volumeMobile": 1190,
+      "adComp": "높음",
+      "adDepth": 7,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.staybox.net",
+          2
+        ],
+        [
+          "staybox.net",
+          4
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 8,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 8건 · 1위 전문사이트(www.staybox.net)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "싱크대문짝교체비용",
+      "from": "싱크대",
+      "volume": 1410,
+      "volumePc": 270,
+      "volumeMobile": 1140,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "information.suriwang.kr",
+          2
+        ],
+        [
+          "saejib.co.kr",
+          3
+        ],
+        [
+          "www.lawtalk.co.kr",
+          5
+        ],
+        [
+          "homecarepro.kr",
+          5
+        ],
+        [
+          "jumbocar.co.kr",
+          6
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 6,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 6건 · 1위 영상(www.youtube.com)",
+      "incumbent": "영상"
+    },
+    {
+      "keyword": "주방리모델링비용",
+      "from": "싱크대",
+      "volume": 1460,
+      "volumePc": 240,
+      "volumeMobile": 1220,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "soomgo.com",
+          1
+        ],
+        [
+          "zip.save-money.co.kr",
+          2
+        ],
+        [
+          "miso.kr",
+          3
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 9,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 9건 · 1위 영상(www.youtube.com)",
+      "incumbent": "영상"
+    },
+    {
+      "keyword": "도시가스배관철거",
+      "from": "가스 수리",
+      "volume": 1410,
+      "volumePc": 180,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "opengov.seoul.go.kr",
+          1
+        ],
+        [
+          "www.daangn.com",
+          1
+        ],
+        [
+          "xn--1522-5408-9n27ah9ay0fjw9hoh3agn1a.com",
+          2
+        ],
+        [
+          "xn--1800-9371-9n27ah9af55cpg8bmwao05i.com",
+          3
+        ],
+        [
+          "www.towngas.co.kr",
+          4
+        ],
+        [
+          "www.youtube.com",
+          5
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 14,
+      "ourRank": null,
+      "domainCount": 6,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 14건 · 1위 관공서(opengov.seoul.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "베란다폴딩도어",
+      "from": "전입신고",
+      "volume": 1480,
+      "volumePc": 230,
+      "volumeMobile": 1250,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "topfold.ykwindow.com",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 7건 · 1위 전문사이트(topfold.ykwindow.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "34평도배비용",
+      "from": "전입 계약",
+      "volume": 1460,
+      "volumePc": 240,
+      "volumeMobile": 1220,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "www.doberman.kr",
+          1
+        ],
+        [
+          "socialnews-pick.net",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 7건 · 1위 영상(www.youtube.com)",
+      "incumbent": "영상"
+    },
+    {
+      "keyword": "가스레인지설치",
+      "from": "도시가스 수리",
+      "volume": 1460,
+      "volumePc": 230,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.seoulgas.co.kr",
+          1
+        ],
+        [
+          "www.hjibs.com",
+          1
+        ],
+        [
+          "namu.wiki",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 3,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 3건 · 1위 전문사이트(www.seoulgas.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "현관도어락교체",
+      "from": "누수",
+      "volume": 1390,
+      "volumePc": 130,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "119.product-pack.com",
+          7
+        ],
+        [
+          "www.youtube.com",
+          8
+        ],
+        [
+          "www.daangn.com",
+          9
+        ],
+        [
+          "www.work24.go.kr",
+          11
+        ],
+        [
+          "bcrecycle.posad.kr",
+          12
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 5,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 6건 · 1위 전문사이트(119.product-pack.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "깨진타일보수",
+      "from": "처진문",
+      "volume": 1500,
+      "volumePc": 240,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "floortile.veteranmaster.com",
+          1
+        ],
+        [
+          "01032734685.wazzang.com",
+          1
+        ],
+        [
+          "tilerepair.veteranmaster.com",
+          2
+        ],
+        [
+          "www.sallim-begin.com",
+          2
+        ],
+        [
+          "partial.veteranmaster.com",
+          3
+        ],
+        [
+          "www.youtube.com",
+          4
+        ],
+        [
+          "tilerepair.jibsurifactory.com",
+          5
+        ],
+        [
+          "tile-repair.com",
+          6
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 8,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 7건 · 1위 전문사이트(floortile.veteranmaster.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "샤워수전교체",
+      "from": "세면대",
+      "volume": 1450,
+      "volumePc": 300,
+      "volumeMobile": 1150,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "saejib.co.kr",
+          1
+        ],
+        [
+          "homeco.kr",
+          1
+        ],
+        [
+          "mariodrain.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건 · 1위 전문사이트(saejib.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "주방상판교체",
+      "from": "이사 싱크대",
+      "volume": 1450,
+      "volumePc": 230,
+      "volumeMobile": 1220,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "ks.veteranfix.com",
+          1
+        ],
+        [
+          "www.daangn.com",
+          1
+        ],
+        [
+          "homecarepro.kr",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 9,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 9건 · 1위 전문사이트(ks.veteranfix.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "현관롤방충망",
+      "from": "문틀",
+      "volume": 1440,
+      "volumePc": 260,
+      "volumeMobile": 1180,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "xn--2e0bu9hwsggpc918a.kr",
+          1
+        ],
+        [
+          "nk-screen.com",
+          1
+        ],
+        [
+          "news.bucheon.go.kr",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 14,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 14건 · 1위 전문사이트(xn--2e0bu9hwsggpc918a.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "도어락보강판",
+      "from": "누수",
+      "volume": 1430,
+      "volumePc": 320,
+      "volumeMobile": 1110,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "ownerclan.com",
+          1
+        ],
+        [
+          "www.ownerclan.com",
+          3
+        ],
+        [
+          "www.domeggook.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건 · 1위 전문사이트(ownerclan.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "욕실타일시공",
+      "from": "새시",
+      "volume": 1390,
+      "volumePc": 200,
+      "volumeMobile": 1190,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.work24.go.kr",
+          1
+        ],
+        [
+          "www.gseek.kr",
+          1
+        ],
+        [
+          "repairt.veteranmaster.com",
+          1
+        ],
+        [
+          "bath.kjipsuri.com",
+          2
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 8,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 8건 · 1위 관공서(www.work24.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "욕실문교체",
+      "from": "ABS도어",
+      "volume": 1500,
+      "volumePc": 190,
+      "volumeMobile": 1310,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "door.jipsurihouse.com",
+          1
+        ],
+        [
+          "doorcare-kr.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건 · 1위 전문사이트(door.jipsurihouse.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "변성실리콘",
+      "from": "세면대",
+      "volume": 1490,
+      "volumePc": 460,
+      "volumeMobile": 1030,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "wchem.kr",
+          1
+        ],
+        [
+          "itempage3.auction.co.kr",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 9,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 9건 · 1위 전문사이트(wchem.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "싱크대제작",
+      "from": "싱크대",
+      "volume": 1470,
+      "volumePc": 410,
+      "volumeMobile": 1060,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "hdkitchen.shop",
+          1
+        ],
+        [
+          "ovenremodel.jipsuricity.com",
+          1
+        ],
+        [
+          "sinkmate.haengjipsamaster.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 3,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 3건 · 1위 전문사이트(hdkitchen.shop)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "싱크대문짝",
+      "from": "싱크대",
+      "volume": 1470,
+      "volumePc": 310,
+      "volumeMobile": 1160,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.cubeframe.co.kr",
+          1
+        ],
+        [
+          "ohou.se",
+          1
+        ],
+        [
+          "door.homecarepro.kr",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 7건 · 1위 전문사이트(www.cubeframe.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "소형이사",
+      "from": "문틀",
+      "volume": 1480,
+      "volumePc": 340,
+      "volumeMobile": 1140,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "soomgo.com",
+          2
+        ],
+        [
+          "24.kukmin.co.kr",
+          7
+        ],
+        [
+          "www.youtube.com",
+          8
+        ],
+        [
+          "dalseomove.howm.kr",
+          9
+        ],
+        [
+          "24club.co.kr",
+          10
+        ],
+        [
+          "roomnara24.kr",
+          11
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 17,
+      "ourRank": null,
+      "domainCount": 6,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 17건 · 1위 대형플랫폼(soomgo.com)",
+      "incumbent": "대형플랫폼"
+    },
+    {
+      "keyword": "나비경첩",
+      "from": "ABS도어",
+      "volume": 1470,
+      "volumePc": 410,
+      "volumeMobile": 1060,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "dict.wordrow.kr",
+          1
+        ],
+        [
+          "www.daisomall.co.kr",
+          1
+        ],
+        [
+          "doorfix.myhometerior.kr",
+          2
+        ],
+        [
+          "catalog.11st.co.kr",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건 · 1위 전문사이트(dict.wordrow.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "문틀교체",
+      "from": "ABS도어",
+      "volume": 1450,
+      "volumePc": 240,
+      "volumeMobile": 1210,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "doorfix.koreajipsurimaster.com",
+          1
+        ],
+        [
+          "kkumigo.com",
+          1
+        ],
+        [
+          "ko.accio.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 10,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 10건 · 1위 전문사이트(doorfix.koreajipsurimaster.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "변기종류",
+      "from": "방화문",
+      "volume": 1450,
+      "volumePc": 220,
+      "volumeMobile": 1230,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "suri24.inblog.io",
+          1
+        ],
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "ww.bathmediavip.com",
+          2
+        ],
+        [
+          "namu.wiki",
+          3
+        ],
+        [
+          "www.accio.com",
+          3
+        ],
+        [
+          "ko.accio.com",
+          4
+        ],
+        [
+          "www.sanitary-net.com",
+          5
+        ],
+        [
+          "ohou.se",
+          6
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 17,
+      "ourRank": null,
+      "domainCount": 8,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 17건 · 1위 전문사이트(suri24.inblog.io)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "중문가격",
+      "from": "전입신고",
+      "volume": 1440,
+      "volumePc": 250,
+      "volumeMobile": 1190,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "kkumigo.com",
+          1
+        ],
+        [
+          "ko.accio.com",
+          1
+        ],
+        [
+          "only-door.com",
+          2
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 3,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 7건 · 1위 전문사이트(kkumigo.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "배관규격",
+      "from": "방화문",
+      "volume": 1430,
+      "volumePc": 750,
+      "volumeMobile": 680,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.standard.go.kr",
+          1
+        ],
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "www.sudo.info",
+          1
+        ],
+        [
+          "kr.misumi-ec.com",
+          1
+        ],
+        [
+          "www.xn--hu5b15siqb.shop",
+          2
+        ],
+        [
+          "www.nnnn.kr",
+          2
+        ],
+        [
+          "hanshinsns.com",
+          2
+        ],
+        [
+          "www.kcsc.re.kr",
+          2
+        ],
+        [
+          "www.idx.or.kr",
+          3
+        ],
+        [
+          "jaeda.kr",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 14,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 6건 · 1위 관공서(www.standard.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "유리문",
+      "from": "ABS도어",
+      "volume": 1420,
+      "volumePc": 410,
+      "volumeMobile": 1010,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.korhomeexpert.com",
+          1
+        ],
+        [
+          "ko.accio.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 5,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 5건 · 1위 전문사이트(www.korhomeexpert.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "입주",
+      "from": "이전설치",
+      "volume": 1460,
+      "volumePc": 290,
+      "volumeMobile": 1170,
+      "adComp": "낮음",
+      "adDepth": 0,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "easylaw.go.kr",
+          1
+        ],
+        [
+          "www.gccity.go.kr",
+          1
+        ],
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "namu.wiki",
+          2
+        ],
+        [
+          "www.seoulhousing.kr",
+          2
+        ],
+        [
+          "www.kosaf.go.kr",
+          2
+        ],
+        [
+          "soco.seoul.go.kr",
+          3
+        ],
+        [
+          "www.law.go.kr",
+          3
+        ],
+        [
+          "www.khug.or.kr",
+          4
+        ],
+        [
+          "apply.lh.or.kr",
+          4
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 45,
+      "ourRank": null,
+      "domainCount": 10,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 45건 · 1위 관공서(easylaw.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "씽크대수전헤드",
+      "from": "세면대",
+      "volume": 1400,
+      "volumePc": 240,
+      "volumeMobile": 1160,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.domeggook.com",
+          3
+        ],
+        [
+          "www.youtube.com",
+          5
+        ],
+        [
+          "prod.danawa.com",
+          6
+        ],
+        [
+          "livonmall.shop",
+          7
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "의도불일치",
+      "why": "1위 쇼핑(www.domeggook.com) — 상품을 사려는 질의다. 정보 글로 1위를 해도 전환되지 않는다.",
+      "incumbent": "쇼핑"
+    },
+    {
+      "keyword": "소방설비",
+      "from": "방화문",
+      "volume": 1420,
+      "volumePc": 440,
+      "volumeMobile": 980,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "namu.wiki",
+          1
+        ],
+        [
+          "www.q-net.or.kr",
+          3
+        ],
+        [
+          "ko.wikipedia.org",
+          5
+        ],
+        [
+          "www.gyeongju.go.kr",
+          6
+        ],
+        [
+          "www.goryeong.go.kr",
+          7
+        ],
+        [
+          "www.work24.go.kr",
+          8
+        ],
+        [
+          "www.youtube.com",
+          22
+        ]
+      ],
+      "bigCount": 3,
+      "targeted": 38,
+      "ourRank": null,
+      "domainCount": 7,
+      "grade": "경쟁높음",
+      "why": "대형 플랫폼 3곳 상위",
+      "incumbent": "백과"
+    }
+  ]
+}
