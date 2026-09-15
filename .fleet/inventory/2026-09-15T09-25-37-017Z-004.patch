@@ -1,0 +1,138 @@
+diff --git a/lib/internal-links.ts b/lib/internal-links.ts
+index 9fc40c0..380bbb0 100755
+--- a/lib/internal-links.ts
++++ b/lib/internal-links.ts
+@@ -41,6 +41,7 @@ const curatedLinks: Record<string, string[]> = {
+   "wall-mounted-tv-moving-installation-cost": ["no-drill-wall-mounted-tv-installation", "air-conditioner-moving-installation-cost", "moving-company-quote-comparison", "packing-moving-cost-factors", "easy-interior-ideas-for-beginners"],
+   "no-drill-wall-mounted-tv-installation": ["wall-mounted-tv-moving-installation-cost", "easy-interior-ideas-for-beginners", "rental-deposit-moving-out-checklist", "moving-cleaning-guide", "move-in-first-day-essentials", "curtain-blind-installation-cost"],
+   "curtain-blind-installation-cost": ["rental-deposit-moving-out-checklist", "easy-interior-ideas-for-beginners", "no-drill-wall-mounted-tv-installation", "move-in-first-day-essentials", "moving-cleaning-guide", "custom-door-installation-construction-guide", "yongin-curtain-blind-installation-cost"],
++  "tile-repair-compound-selection-guide": ["bathroom-tile-grout-repair-guide", "bathroom-silicone-replacement-guide", "home-repair-plumbing-estimate-guide", "bathroom-toilet-shower-renovation-guide", "moving-cleaning-guide", "rental-deposit-moving-out-checklist"],
+   "moving-box-quantity-size-guide": ["studio-moving-service-comparison", "move-in-first-day-essentials", "moving-preparation-checklist", "packing-moving-cost-factors", "moving-day-checklist"],
+   "studio-moving-service-comparison": ["moving-box-quantity-size-guide", "moving-company-quote-comparison", "packing-moving-cost-factors", "elevator-moving-cost-conditions", "moving-ladder-truck-cost-guide"],
+   "moving-damage-compensation-claim": ["moving-company-quote-comparison", "packing-moving-cost-factors", "moving-day-checklist", "moving-ladder-truck-cost-guide", "rental-deposit-moving-out-checklist"],
+diff --git a/lib/kin-generated-articles.ts b/lib/kin-generated-articles.ts
+index 9f94bf4..2dbdcec 100644
+--- a/lib/kin-generated-articles.ts
++++ b/lib/kin-generated-articles.ts
+@@ -397,4 +397,109 @@ export const kinGeneratedArticles: Article[] = [
+       },
+     ],
+   },
++  {
++    slug: "tile-repair-compound-selection-guide",
++    title: "타일보수제, 깨진 타일과 들뜬 타일에 같은 걸 쓰면 안 되는 이유",
++    description:
++      "타일보수제는 한 가지 제품이 아니라 줄눈재·타일용 접착제·에폭시 충전제·실리콘으로 갈립니다. 증상별로 어느 쪽을 써야 하는지와 보수제로 끝나지 않는 신호를 정리했습니다.",
++    category: "repair-install",
++    categoryLabel: "수리·설치",
++    keyword: "타일보수제",
++    secondaryKeywords: [
++      "타일 보수",
++      "깨진 타일 보수",
++      "타일 들뜸",
++      "타일 접착제",
++      "에폭시 퍼티",
++      "타일 보수 셀프",
++    ],
++    readingTime: 7,
++    publishedAt: PUBLISHED_AT,
++    updatedAt: UPDATED_AT,
++    accent: "amber",
++    affiliateNotice: true,
++    intro:
++      "‘타일보수제’라는 이름으로 묶여 팔리지만 실제로는 쓰임이 다른 네 갈래가 섞여 있습니다. 타일 사이를 채우는 줄눈재, 떨어진 타일을 다시 붙이는 타일용 접착제, 깨진 조각과 패인 자리를 메우는 에폭시 계열 충전제, 그리고 움직임이 있는 모서리를 막는 실리콘입니다. 그래서 증상을 먼저 정하고 제품을 고르는 순서여야 합니다. 특히 타일이 들떠 있는 상태는 표면을 메우는 제품으로는 해결되지 않습니다. 붙어 있지 않은 타일 위에 무엇을 발라도 밑에서 다시 움직이기 때문입니다.",
++    sections: [
++      {
++        heading: "증상을 네 가지로 먼저 나누세요",
++        paragraphs: [
++          "손등이나 동전으로 타일 면을 가볍게 두드려 보세요. 옆 타일과 달리 빈 소리(통통 울리는 소리)가 나면 아래 접착층이 떨어진 들뜸입니다. 소리가 같다면 붙어 있는 상태이므로 표면 손상만 보면 됩니다.",
++          "다음으로 손상 위치를 봅니다. 타일과 타일 사이가 파이거나 부스러지면 줄눈 문제, 타일 자체에 금이 가거나 모서리가 깨졌으면 타일 표면 문제, 타일과 욕조·세면대·싱크대가 만나는 경계라면 줄눈이 아니라 실리콘 자리입니다.",
++          "마지막으로 물이 닿는 곳인지 구분하세요. 욕실 바닥이나 샤워 벽면처럼 늘 젖는 자리는 같은 증상이라도 내수성이 있는 자재를 써야 하고, 현관이나 베란다 바닥은 사람이 밟는 하중까지 받아 요구 조건이 다릅니다.",
++        ],
++        checklist: [
++          "두드렸을 때 빈 소리가 나는가",
++          "손상이 줄눈인가 타일 자체인가",
++          "모서리(움직이는 경계)인가",
++          "늘 젖는 자리인가",
++          "밟는 바닥인가 벽인가",
++        ],
++      },
++      {
++        heading: "증상별로 손에 쥐어야 하는 제품이 다릅니다",
++        paragraphs: [
++          "줄눈이 부스러지거나 파인 자리라면 줄눈재입니다. 표면만 어둡고 눌러도 단단하다면 오염에 가까워 보수보다 세정이 먼저입니다. 이 판단은 [욕실 타일 줄눈 시공·보수 기준](/articles/bathroom-tile-grout-repair-guide)에서 덧바르기와 걷어내기를 나누는 방식으로 더 자세히 정리해 두었습니다.",
++          "타일이 통째로 떨어졌거나 들떠서 걷어낼 수 있는 상태라면 타일용 접착제입니다. 일반 목공용이나 순간접착제는 습기와 하중을 견디지 못해 얼마 못 갑니다. 벽인지 바닥인지, 젖는 자리인지에 따라 쓰는 제품이 갈리므로 제품 설명의 적용 부위를 반드시 확인하세요.",
++          "타일 표면이 깨졌거나 모서리 조각이 떨어져 나간 자리는 에폭시 계열 충전제나 보수용 퍼티를 씁니다. 굳으면 단단해져 밟는 자리에도 버티지만 색이 한정적이고 광택이 다릅니다. 반대로 타일과 욕조·세면대 경계는 움직임을 견뎌야 하므로 실리콘이 맞습니다. 이 자리를 줄눈재나 퍼티로 채우면 얼마 지나지 않아 다시 갈라집니다. 실리콘 판단은 [욕실 실리콘 교체 기준](/articles/bathroom-silicone-replacement-guide)을 보세요.",
++        ],
++      },
++      {
++        heading: "보수제를 사기 전에 멈춰야 하는 신호",
++        paragraphs: [
++          "들뜬 타일이 한두 장이 아니라 넓은 면에 걸쳐 있다면 접착층이나 바탕 자체가 문제일 수 있습니다. 이때 몇 장만 다시 붙여도 옆 자리가 순서대로 떠오릅니다. 두드려 본 범위를 종이에 표시해 보고 면적이 넓다면 부분 보수로 접근하지 않는 편이 낫습니다.",
++          "아랫집 천장에 물 자국이 있거나 욕실 밖 복도 걸레받이가 젖는다면 타일이 아니라 방수층 이야기입니다. 이 상태에서 겉을 메우면 새는 경로만 가려집니다. 누수 정황이 있으면 보수제를 사기 전에 원인을 먼저 확인하고, 범위가 커지면 [집수리·설비 견적 묶는 기준](/articles/home-repair-plumbing-estimate-guide)에서 공정을 나눠 보세요.",
++          "바닥 타일이 밟을 때마다 소리가 나거나 발밑에서 움직인다면 사람이 다칠 수 있는 상태입니다. 깨진 조각이 날카롭게 남아 있는 경우도 마찬가지입니다. 임시로 덮어 두는 것과 고치는 것은 다르므로, 통행이 많은 자리라면 임시 조치 뒤에 제대로 된 시공 일정을 잡으세요.",
++        ],
++      },
++      {
++        heading: "색과 광택은 완전히 맞지 않습니다",
++        paragraphs: [
++          "보수한 자리는 가까이서 보면 티가 납니다. 같은 흰색이라도 기존 타일은 세월에 따라 색이 변해 있고, 보수제는 굳으면서 색이 조금씩 달라집니다. 광택 타일에 무광 보수제를 쓰면 빛을 받는 각도에서 확실히 드러납니다.",
++          "눈에 잘 띄는 자리라면 잘 안 보이는 구석에 먼저 소량 시험해 보고 굳은 뒤 색을 비교하세요. 굳기 전과 후의 색이 다른 제품이 많아 바르는 순간의 색으로 판단하면 안 됩니다.",
++          "여러 색을 섞어 맞추는 제품도 있지만 한 번 굳으면 되돌리기 어렵습니다. 넓은 면을 보수해야 해서 색 차이가 부담스럽다면 그 면의 타일을 같은 자재로 교체하는 쪽이 결과가 깔끔할 수 있습니다.",
++        ],
++      },
++      {
++        heading: "양생 시간만큼 그 공간을 못 씁니다",
++        paragraphs: [
++          "보수제는 바르는 시간보다 굳는 시간이 깁니다. 제품마다 표면이 마르는 시간과 물을 써도 되는 시간이 따로 표시돼 있고 이 둘은 같지 않습니다. 겉이 말랐다고 물을 뿌리면 안쪽이 무른 상태에서 다시 풀립니다.",
++          "욕실이라면 그 기간 동안 샤워를 못 한다는 뜻입니다. 화장실이 하나뿐인 집은 일정이 곧 생활 문제가 되므로, 작업 전에 물을 언제부터 써도 되는지 제품 표기나 시공하는 쪽에 확인하고 그 날짜를 달력에 적어 두세요.",
++          "굳는 동안 환기도 필요합니다. 에폭시 계열은 냄새가 강한 제품이 있어 창을 열 수 없는 욕실이라면 환풍기를 계속 돌리고 작업 중 장갑과 보호안경을 쓰세요.",
++        ],
++        checklist: [
++          "표면 건조 시간",
++          "물 사용 가능 시점",
++          "환기 방법",
++          "대체 화장실·샤워 계획",
++          "보호장구",
++        ],
++      },
++      {
++        heading: "이사 일정이라면 빈집일 때가 가장 쉽습니다",
++        paragraphs: [
++          "짐이 없고 물을 안 써도 되는 기간이 곧 양생 시간입니다. 입주청소를 부를 계획이라면 보수 작업을 청소보다 먼저 끝내야 분진과 잔여물이 다시 쌓이지 않습니다. 순서는 [입주청소 진행 기준](/articles/moving-cleaning-guide)과 맞춰 잡으세요.",
++          "임차 중인 집이라면 손대기 전에 상태부터 기록하세요. 원상복구 의무의 범위는 계약 내용과 손상 경위, 통상적인 사용으로 생긴 손모인지에 따라 달라지므로 임의로 판단하지 말고 임대인에게 알리고 동의 내용을 메시지로 남기는 편이 안전합니다. 기준은 [찾기쉬운 생활법령정보 — 주택임대차 임차인의 권리·의무](https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=629&ccfNo=4&cciNo=2&cnpClsNo=1)에서 확인할 수 있고, 퇴거 때 확인할 항목은 [전세 퇴거 원상복구 체크리스트](/articles/rental-deposit-moving-out-checklist)에 정리돼 있습니다.",
++        ],
++      },
++    ],
++    faq: [
++      {
++        question: "들뜬 타일 위에 보수제를 발라 두면 안 되나요?",
++        answer:
++          "붙어 있지 않은 타일 위에 무엇을 발라도 아래에서 계속 움직여 다시 갈라집니다. 들뜸은 표면을 메우는 문제가 아니라 다시 붙이거나 바탕을 확인해야 하는 문제입니다.",
++      },
++      {
++        question: "타일 한 장만 깨졌는데 셀프로 가능한가요?",
++        answer:
++          "벽면이고 두드렸을 때 주변이 들뜨지 않았다면 충전제로 메우거나 그 한 장을 교체하는 방법을 시도할 수 있습니다. 바닥이거나 주변까지 빈 소리가 나면 범위를 먼저 확인하세요.",
++      },
++      {
++        question: "보수한 자리 색이 튀는데 다시 할 수 있나요?",
++        answer:
++          "굳은 뒤에는 긁어내야 해서 주변 타일이 손상될 수 있습니다. 눈에 띄는 자리라면 구석에 소량 시험해 굳은 색을 확인한 뒤 본 작업에 들어가세요.",
++      },
++    ],
++    source: { label: "찾기쉬운 생활법령정보 — 주택임대차 임차인의 권리·의무", url: "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=629&ccfNo=4&cciNo=2&cnpClsNo=1" },
++  },
+ ];
+diff --git a/scripts/seo-audit.mjs b/scripts/seo-audit.mjs
+index 9c72d65..39011c8 100755
+--- a/scripts/seo-audit.mjs
++++ b/scripts/seo-audit.mjs
+@@ -22,6 +22,7 @@ const articles = [
+   "washer-dryer-moving-installation-cost",
+   "moving-damage-compensation-claim",
+   "curtain-blind-installation-cost",
++  "tile-repair-compound-selection-guide",
+ ];
+ const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
+ const failures = [];

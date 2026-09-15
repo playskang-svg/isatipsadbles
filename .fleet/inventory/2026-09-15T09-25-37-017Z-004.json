@@ -1,0 +1,16 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "title": "타일보수제, 깨진 타일과 들뜬 타일에 같은 걸 쓰면 안 되는 이유",
+  "slug": "tile-repair-compound-selection-guide",
+  "keyword": "타일보수제",
+  "createdAt": "2026-09-15T09:25:37.022Z",
+  "createdOn": "7de5e08614b655f97e7ec3a6955b3f4080dec20a",
+  "files": [
+    "lib/internal-links.ts",
+    "lib/kin-generated-articles.ts",
+    "scripts/seo-audit.mjs"
+  ],
+  "patch": "2026-09-15T09-25-37-017Z-004.patch"
+}
