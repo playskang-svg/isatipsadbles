@@ -1,0 +1,16 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "title": "주방수전헤드 교체, 헤드만 돌려 빠지는 수전과 몸체째 갈아야 하는 수전",
+  "slug": "kitchen-faucet-head-replacement-guide",
+  "keyword": "주방수전헤드",
+  "createdAt": "2026-09-15T09:24:06.714Z",
+  "createdOn": "902b08170b063ea3d7c693be2b265cd158b6d9cf",
+  "files": [
+    "lib/internal-links.ts",
+    "lib/kin-generated-articles.ts",
+    "scripts/seo-audit.mjs"
+  ],
+  "patch": "2026-09-15T09-24-06-709Z-003.patch"
+}

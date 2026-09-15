@@ -1,0 +1,140 @@
+diff --git a/lib/internal-links.ts b/lib/internal-links.ts
+index 9fc40c0..2f6c62b 100755
+--- a/lib/internal-links.ts
++++ b/lib/internal-links.ts
+@@ -28,6 +28,7 @@ const curatedLinks: Record<string, string[]> = {
+   "moving-day-checklist": ["moving-preparation-checklist", "moving-damage-compensation-claim", "moving-cleaning-guide", "move-in-report-address-change", "rental-deposit-moving-out-checklist", "moving-with-pets"],
+   "move-in-report-address-change": ["moving-day-checklist", "rental-deposit-moving-out-checklist", "moving-preparation-checklist", "moving-cleaning-guide", "moving-company-quote-comparison"],
+   "moving-cleaning-guide": ["bathroom-tile-grout-repair-guide", "move-in-first-day-essentials", "moving-day-checklist", "easy-interior-ideas-for-beginners", "moving-with-pets", "moving-preparation-checklist"],
++  "kitchen-faucet-head-replacement-guide": ["kitchen-sink-faucet-replacement-guide", "washbasin-replacement-drain-repair-guide", "home-repair-plumbing-estimate-guide", "bathroom-silicone-replacement-guide", "move-in-first-day-essentials", "moving-cleaning-guide"],
+   "rental-deposit-moving-out-checklist": ["moving-company-quote-comparison", "moving-day-checklist", "moving-cleaning-guide", "move-in-report-address-change", "easy-interior-ideas-for-beginners", "curtain-blind-installation-cost"],
+   "moving-with-pets": ["moving-preparation-checklist", "moving-day-checklist", "moving-cleaning-guide", "easy-interior-ideas-for-beginners", "move-in-report-address-change"],
+   "easy-interior-ideas-for-beginners": ["moving-cleaning-guide", "rental-deposit-moving-out-checklist", "moving-day-checklist", "moving-preparation-checklist", "moving-with-pets", "curtain-blind-installation-cost"],
+diff --git a/lib/kin-generated-articles.ts b/lib/kin-generated-articles.ts
+index 9f94bf4..060d117 100644
+--- a/lib/kin-generated-articles.ts
++++ b/lib/kin-generated-articles.ts
+@@ -255,6 +255,111 @@ export const kinGeneratedArticles: Article[] = [
+     ],
+   },
+ 
++  {
++    slug: "kitchen-faucet-head-replacement-guide",
++    title: "주방수전헤드 교체, 헤드만 돌려 빠지는 수전과 몸체째 갈아야 하는 수전",
++    description:
++      "주방 수전 헤드는 토수구 끝이 분리되는 구조여야 단품 교체가 됩니다. 분리 여부 확인법, 나사 규격을 잘못 사지 않는 방법, 누수 위치별 판단 기준을 정리했습니다.",
++    category: "repair-install",
++    categoryLabel: "수리·설치",
++    keyword: "주방수전헤드",
++    secondaryKeywords: [
++      "주방 수전 헤드 교체",
++      "싱크대 수전 헤드",
++      "수전 헤드 규격",
++      "절수 헤드",
++      "샤워형 주방 수전",
++      "수전 헤드 누수",
++    ],
++    readingTime: 7,
++    publishedAt: PUBLISHED_AT,
++    updatedAt: UPDATED_AT,
++    accent: "green",
++    affiliateNotice: true,
++    intro:
++      "주방 수전 헤드만 바꿀 수 있는지는 토수구(물 나오는 관) 끝이 분리되는 구조인지로 갈립니다. 끝부분이 별도 링으로 조여져 있고 손이나 공구로 돌려 빠지면 헤드만 교체할 수 있습니다. 반대로 토수구와 한 덩어리로 성형돼 이음매가 없거나, 헤드가 호스에 붙어 당겨 쓰는 일체형이라면 헤드만 파는 부품이 맞지 않아 수전 몸체 쪽을 봐야 합니다. 물을 잠그고 1분만 만져 보면 어느 쪽인지 대부분 확인됩니다.",
++    sections: [
++      {
++        heading: "먼저 토수구 끝이 분리되는지부터 확인하세요",
++        paragraphs: [
++          "수도를 잠근 뒤 토수구 끝을 손으로 잡고 돌려 보세요. 미끄러우면 고무장갑을 끼거나 헝겊을 대고 플라이어로 살짝 잡습니다. 대부분의 제품은 정면에서 봤을 때 시계 반대 방향으로 풀립니다. 이음매 자리에 육각이나 홈이 보이면 분리형일 가능성이 큽니다.",
++          "돌아가지 않는다고 힘으로 밀어붙이지 마세요. 토수구가 얇은 관이라 비틀리면 헤드가 아니라 수전 전체를 갈아야 하는 상황이 됩니다. 물때가 굳어 안 풀리는 경우도 있으니 식초를 적신 천으로 이음매를 감싸 두었다가 다시 시도하는 편이 낫습니다.",
++          "싱크대 아래로 호스가 늘어나는 인출형(당겨 쓰는 형)은 헤드와 호스가 커넥터로 연결돼 있습니다. 이 경우 같은 커넥터 규격의 교체용 헤드가 있는지 제조사 쪽에서 먼저 확인해야 하고, 범용 부품으로 대체하기 어려운 제품도 있습니다.",
++        ],
++        checklist: [
++          "토수구 끝에 이음매(링)가 보이는가",
++          "돌려서 분리되는가",
++          "일반형인가 인출형(호스)인가",
++          "분리한 부품 안쪽이 수나사인가 암나사인가",
++          "물때·이물질이 낀 상태인가",
++        ],
++      },
++      {
++        heading: "규격은 숫자를 외우지 말고 뺀 부품을 그대로 대조하세요",
++        paragraphs: [
++          "주방 수전 헤드는 나사가 바깥쪽에 난 수나사형과 안쪽에 난 암나사형이 있고, 같은 형태 안에서도 지름이 갈립니다. 제품마다 기준이 달라 ‘주방용은 이 규격’이라고 단정할 수 없습니다. 분리한 부품을 그대로 들고 가 맞춰 보거나, 자를 대고 지름이 보이도록 촬영해 판매처에 확인하는 방법이 가장 확실합니다.",
++          "겉에서 재면 실제 나사 지름과 다르게 나옵니다. 수나사는 산 바깥쪽 끝, 암나사는 안쪽 골 기준으로 재야 하고, 수전 브랜드와 모델명이 몸체나 설명서에 남아 있다면 그 정보가 규격보다 빠른 단서입니다.",
++          "변환 어댑터로 맞추는 방법도 있지만 단이 하나 더 생기면서 누수 지점이 늘어납니다. 어댑터 없이 바로 맞는 제품을 먼저 찾아보고, 어댑터를 쓴다면 오링이 함께 들어 있는지 확인하세요.",
++        ],
++      },
++      {
++        heading: "절수·샤워형으로 바꾸면 체감이 달라집니다",
++        paragraphs: [
++          "절수 헤드는 물길을 좁히고 공기를 섞어 사용량을 줄이는 방식이 많습니다. 설거지 물살은 비슷하게 느껴져도 냄비나 물병에 물을 받을 때는 느려졌다고 느낄 수 있습니다. 받는 용도가 많은 집이라면 직수와 절수 모드를 전환할 수 있는 제품이 낫습니다.",
++          "샤워형으로 전환되는 헤드는 싱크볼이 얕으면 물이 튑니다. 싱크볼 깊이와 토수구 높이를 보고, 개수대 가장자리까지 물이 퍼질 여유가 있는지 확인하세요. 회전형은 돌아가는 범위만큼 벽이나 상부장 문과 부딪히지 않는지도 봐야 합니다.",
++          "수압이 원래 약한 집이라면 절수형으로 바꾼 뒤 더 약하게 느껴질 수 있습니다. 수압 문제가 헤드가 아니라 급수 쪽에서 오는 것이라면 헤드를 바꿔도 해결되지 않으니, 다른 수도꼭지도 함께 약한지부터 비교해 보세요.",
++        ],
++      },
++      {
++        heading: "새는 위치에 따라 고칠 대상이 달라집니다",
++        paragraphs: [
++          "헤드와 토수구 이음매에서 물이 배어 나오면 오링 노후나 조임 부족인 경우가 많아 부품 교체로 끝나기도 합니다. 반면 수전 몸체와 레버 사이, 또는 수전 아래 싱크대 안쪽에서 젖는다면 헤드와 무관합니다.",
++          "싱크대 하부장 안쪽 바닥이 젖거나 목재가 부풀어 있다면 급수 연결부나 배수 트랩 쪽을 먼저 확인해야 합니다. 이 범위까지 넘어가면 부품이 아니라 공사 견적 문제이므로 [싱크대 교체·수전 수리 견적 항목](/articles/kitchen-sink-faucet-replacement-guide)에서 항목을 나눠 보는 편이 낫습니다.",
++          "세면대 쪽에서 비슷한 증상이 같이 보인다면 개별 부품이 아니라 집 전체 설비 상태일 수 있습니다. [세면대 교체·배수 수리 판단 기준](/articles/washbasin-replacement-drain-repair-guide)과 함께 확인하세요.",
++        ],
++        checklist: [
++          "물이 새는 지점 촬영",
++          "잠근 상태에서도 새는가",
++          "하부장 바닥 젖음·목재 부풀음",
++          "다른 수도꼭지도 같은 증상인가",
++        ],
++      },
++      {
++        heading: "교체는 짧지만 과조임에서 대부분 실패합니다",
++        paragraphs: [
++          "물을 잠그고 기존 헤드를 풀어 낸 뒤 나사산에 낀 물때와 이물질을 닦습니다. 새 헤드에 동봉된 오링이나 패킹을 빠뜨리지 말고, 손으로 끝까지 돌린 다음 공구로는 조금만 더 조이는 정도로 마칩니다. 플라스틱 나사산은 세게 조이면 그대로 깨집니다.",
++          "테프론 테이프는 모든 자리에 감는 부품이 아닙니다. 오링이나 패킹으로 밀봉하는 구조에 테이프까지 감으면 오히려 밀착이 어긋날 수 있으니, 제품 설명서에 테이프를 쓰라고 적힌 경우에만 감으세요.",
++          "조립이 끝나면 물을 천천히 열고 이음매를 마른 휴지로 훑어 봅니다. 젖어 나오면 한 번 풀어 오링 위치를 다시 잡는 편이 낫고, 계속 새면 규격이 맞지 않는 것이므로 더 조이지 말고 부품을 바꾸세요.",
++        ],
++      },
++      {
++        heading: "이사·입주 직후에 하면 확인이 쉽습니다",
++        paragraphs: [
++          "짐이 들어오기 전 싱크대 하부장이 비어 있을 때가 누수 확인에 가장 좋은 시점입니다. 헤드를 바꾸는 김에 하부장 바닥, 급수 밸브 주변, 배수 트랩 연결부까지 한 번 훑어 두면 나중에 젖은 자국이 언제 생긴 것인지 구분할 수 있습니다. 입주 첫날 챙길 것은 [입주 첫날 준비물](/articles/move-in-first-day-essentials)에 정리해 두었습니다.",
++          "임차 중이라면 헤드 같은 소모성 부품 교체를 임차인이 하는지 임대인이 하는지는 계약 내용과 파손 경위에 따라 달라집니다. 단정하지 말고 교체 전에 임대인이나 관리 주체에 알리고, 떼어 낸 기존 부품은 퇴거 때 되돌려 놓을 수 있도록 보관하세요.",
++        ],
++      },
++    ],
++    faq: [
++      {
++        question: "헤드가 돌아가지 않는데 계속 돌려도 되나요?",
++        answer:
++          "힘으로 밀어붙이면 토수구가 비틀려 수전 전체를 교체해야 할 수 있습니다. 식초를 적신 천으로 이음매를 감싸 물때를 불린 뒤 다시 시도하고, 그래도 안 되면 분리형이 아닐 가능성을 먼저 의심하세요.",
++      },
++      {
++        question: "규격을 모르는데 어떻게 사야 하나요?",
++        answer:
++          "분리한 부품을 그대로 들고 가 맞춰 보는 방법이 가장 확실합니다. 어렵다면 나사 부분에 자를 대고 촬영해 판매처에 확인하고, 수전 모델명이 남아 있으면 함께 알려 주세요.",
++      },
++      {
++        question: "절수 헤드로 바꾸면 설거지가 불편해지나요?",
++        answer:
++          "물살 자체는 비슷하게 느껴지는 경우가 많지만 물을 받는 속도는 느려질 수 있습니다. 냄비나 물병에 받는 일이 잦다면 직수와 절수를 전환할 수 있는 제품을 고르세요.",
++      },
++    ],
++    source: { label: "한국소비자원 주택 인테리어 피해예방 안내", url: "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1001947436&page=9" },
++  },
++
+   {
+     slug: "bathroom-silicone-replacement-guide",
+     title: "욕실 실리콘 교체, 곰팡이만 닦아도 되는 경우는?",
+diff --git a/scripts/seo-audit.mjs b/scripts/seo-audit.mjs
+index 9c72d65..e4f7986 100755
+--- a/scripts/seo-audit.mjs
++++ b/scripts/seo-audit.mjs
+@@ -13,6 +13,7 @@ const articles = [
+   "moving-day-checklist",
+   "move-in-report-address-change",
+   "moving-cleaning-guide",
++  "kitchen-faucet-head-replacement-guide",
+   "rental-deposit-moving-out-checklist",
+   "moving-with-pets",
+   "easy-interior-ideas-for-beginners",
