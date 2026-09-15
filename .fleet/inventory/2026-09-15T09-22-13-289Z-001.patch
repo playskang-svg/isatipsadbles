@@ -1,0 +1,142 @@
+diff --git a/lib/internal-links.ts b/lib/internal-links.ts
+index 9fc40c0..d8aa1f0 100755
+--- a/lib/internal-links.ts
++++ b/lib/internal-links.ts
+@@ -17,7 +17,8 @@ const coreRegionalFlow = [
+ ];
+ 
+ const curatedLinks: Record<string, string[]> = {
+-  "entrance-door-lock-replacement-guide": ["door-handle-hinge-sagging-repair", "fire-door-repair-replacement-guide", "entrance-steel-gate-repair-cost", "interior-door-replacement-cost-guide", "moving-day-checklist"],
++  "entrance-door-lock-replacement-guide": ["push-pull-door-lock-replacement-guide", "door-handle-hinge-sagging-repair", "fire-door-repair-replacement-guide", "entrance-steel-gate-repair-cost", "interior-door-replacement-cost-guide", "moving-day-checklist"],
++  "push-pull-door-lock-replacement-guide": ["entrance-door-lock-replacement-guide", "door-handle-hinge-sagging-repair", "fire-door-repair-replacement-guide", "interior-door-replacement-cost-guide", "entrance-steel-gate-repair-cost", "moving-day-checklist"],
+   "washbasin-replacement-drain-repair-guide": ["bathroom-toilet-shower-renovation-guide", "home-repair-plumbing-estimate-guide", "bathroom-silicone-replacement-guide", "kitchen-sink-faucet-replacement-guide", "moving-cleaning-guide"],
+   "bathroom-tile-grout-repair-guide": ["bathroom-silicone-replacement-guide", "bathroom-toilet-shower-renovation-guide", "home-repair-plumbing-estimate-guide", "washbasin-replacement-drain-repair-guide", "moving-cleaning-guide"],
+   "bathroom-silicone-replacement-guide": ["bathroom-tile-grout-repair-guide", "bathroom-toilet-shower-renovation-guide", "washbasin-replacement-drain-repair-guide", "home-repair-plumbing-estimate-guide", "moving-cleaning-guide"],
+diff --git a/lib/kin-generated-articles.ts b/lib/kin-generated-articles.ts
+index 9f94bf4..89199d4 100644
+--- a/lib/kin-generated-articles.ts
++++ b/lib/kin-generated-articles.ts
+@@ -106,6 +106,111 @@ export const kinGeneratedArticles: Article[] = [
+     ],
+   },
+ 
++  {
++    slug: "push-pull-door-lock-replacement-guide",
++    title: "푸시풀도어락, 기존 타공 그대로 쓸 수 있는 문과 안 되는 문",
++    description:
++      "푸시풀 도어락은 손잡이를 밀고 당겨 여는 구조라 기존 레버형과 문 가공 범위가 다릅니다. 타공 지름과 백셋, 문 두께, 문 종류를 기준으로 그대로 교체할 수 있는 경우를 구분했습니다.",
++    category: "repair-install",
++    categoryLabel: "수리·설치",
++    keyword: "푸시풀도어락",
++    secondaryKeywords: [
++      "푸시풀 도어락 교체",
++      "푸시풀 도어락 설치",
++      "푸시풀 도어락 단점",
++      "모티스 도어락",
++      "도어락 타공 규격",
++      "현관 푸시풀 도어락",
++    ],
++    readingTime: 7,
++    publishedAt: PUBLISHED_AT,
++    updatedAt: UPDATED_AT,
++    accent: "blue",
++    affiliateNotice: true,
++    intro:
++      "푸시풀 도어락으로 바꿀 수 있는지는 제품 사양이 아니라 지금 달린 문에서 결정됩니다. 기존 도어락을 떼고 타공 지름·백셋(문 끝에서 타공 중심까지 거리)·문 두께 세 가지가 새 제품의 대응 범위 안에 들어오면 추가 가공 없이 붙습니다. 문제는 푸시풀 제품 상당수가 문 측면을 파내는 모티스 구조라는 점입니다. 지금 달린 것이 측면 가공이 없는 일반형이라면 문을 더 깎아야 할 수 있습니다. 그래서 제품을 주문하기 전에 기존 도어락을 먼저 분리해 재 보는 순서가 맞습니다.",
++    sections: [
++      {
++        heading: "레버형과 갈리는 지점은 문 측면 가공입니다",
++        paragraphs: [
++          "푸시풀은 손잡이를 아래로 내리는 동작 없이 밀고 당겨 여는 구조입니다. 잠금 부품이 문 측면 안쪽에 상자처럼 들어가는 모티스형이 많고, 이 경우 문 옆면을 사각으로 파내고 프론트 판을 묻는 가공이 필요합니다.",
++          "지금 달린 도어락이 원형 구멍만으로 붙어 있는 일반형이라면, 모티스형으로 바꿀 때 그 사각 가공이 새로 생깁니다. 반대로 이미 모티스가 들어가 있으면 모티스 규격(프론트 판 크기, 백셋, 데드볼트 위치)이 맞는지만 확인하면 됩니다.",
++          "모티스가 아닌 푸시풀 제품도 있습니다. 다만 같은 ‘푸시풀’이라는 이름 안에 두 구조가 섞여 있으므로, 제품 설명에서 모티스 포함인지 기존 구멍 호환형인지 확인한 뒤 골라야 헛돈을 쓰지 않습니다.",
++        ],
++        checklist: [
++          "현재 도어락이 모티스형인가 일반형인가",
++          "문 옆면에 사각 프론트 판이 묻혀 있는가",
++          "타공 지름과 개수",
++          "백셋 (문 끝에서 타공 중심까지)",
++          "문 두께",
++          "문 여는 방향과 손잡이 좌·우",
++        ],
++      },
++      {
++        heading: "문 종류별로 먼저 막히는 조건이 다릅니다",
++        paragraphs: [
++          "세대 현관이 방화문이라면 임의로 부품을 바꾸지 않습니다. 방화문은 문짝·문틀·잠금장치가 한 세트로 성능을 인정받는 구조라, 가공을 더하거나 인증 범위 밖 부품을 달면 성능 판단이 달라질 수 있습니다. 관리사무소 규정과 제조사가 밝힌 호환 범위를 먼저 확인하세요. 문 자체가 의심스러우면 [방화문 수리·교체 기준](/articles/fire-door-repair-replacement-guide)을 함께 보는 편이 빠릅니다.",
++          "현관 앞 방풍문이나 베란다 쪽 샷시문은 두께가 얇고 내부가 비어 있어 대응 두께가 맞는 제품인지부터 봐야 합니다. 강화유리문은 설치된 뒤에 구멍을 새로 뚫을 수 없어 기존 타공 위치와 지름에 맞는 제품만 들어갑니다.",
++          "목문은 두께 여유가 있어 선택 폭이 넓지만, 기존 구멍 주변이 부서졌거나 물을 먹어 물러 있으면 고정력이 나오지 않습니다. 이 경우 도어락이 아니라 문짝 쪽 문제이므로 [방문 교체 비용과 실측 기준](/articles/interior-door-replacement-cost-guide)에서 교체 범위를 먼저 판단하세요.",
++        ],
++      },
++      {
++        heading: "밀고 당기는 방향과 주변 간섭을 미리 그려 보세요",
++        paragraphs: [
++          "푸시풀은 손잡이가 세로로 길게 붙는 제품이 많습니다. 문이 열리는 쪽에 신발장, 우산꽂이, 방풍문이 가까이 있으면 손잡이가 닿거나 손 넣을 공간이 안 나올 수 있습니다. 문을 끝까지 열어 두고 손잡이 길이만큼 종이나 테이프로 표시해 보면 간섭이 바로 보입니다.",
++          "짐을 든 채 드나드는 동선이라면 바깥에서 당기는 쪽인지 미는 쪽인지도 체감이 다릅니다. 유모차나 캐리어가 자주 지나는 현관이면 손잡이가 몸에 걸리는 높이인지도 함께 확인하세요.",
++          "좌수·우수 구분이 있는 제품은 주문 단계에서 방향을 지정합니다. 문 바깥에 서서 경첩이 어느 쪽에 있는지 사진으로 남겨 두면 잘못 주문할 일이 줄어듭니다.",
++        ],
++      },
++      {
++        heading: "직접 교체와 출장 설치를 가르는 선",
++        paragraphs: [
++          "기존과 같은 모티스 규격에 타공도 그대로 맞고 문에 손상이 없다면 설명서를 보고 바꿀 수 있습니다. 반대로 새 가공이 필요하거나, 강화유리·방화문이거나, 문 내부가 부서졌다면 설치 경험이 있는 쪽에 맡기는 편이 안전합니다. 문 측면 사각 가공은 한 번 잘못 파면 되돌릴 수 없습니다.",
++          "작업 중에는 문이 닫혀 갇히지 않도록 고정하고, 분해 순서를 단계마다 촬영해 두세요. 떼어낸 기존 부품과 나사는 새 제품이 정상 작동하는 것을 확인할 때까지 버리지 않습니다. 전자식이면 배터리를 넣은 상태에서 안팎 모두 열림·잠김을 여러 번 반복해 보고 마무리하세요.",
++        ],
++        checklist: [
++          "분해 전 상태 촬영",
++          "작업 중 문 고정",
++          "기존 부품 보관",
++          "안팎 열림·잠김 반복 확인",
++          "비상 개폐 방법 숙지",
++        ],
++      },
++      {
++        heading: "이사와 함께 바꾼다면 짐 들어오기 전이 편합니다",
++        paragraphs: [
++          "현관 작업은 짐이 들어오기 전에 끝내는 편이 낫습니다. 짐이 쌓이면 현관 앞 작업 공간이 좁아지고, 문을 오래 열어 둬야 하는 작업이라 보안도 신경 쓰입니다. 입주 당일 일정은 [이사 당일 체크리스트](/articles/moving-day-checklist)에서 다른 작업과 겹치지 않게 배치하세요.",
++          "전 거주자가 쓰던 도어락을 그대로 둘지는 등록된 카드·지문을 초기화할 수 있는지에 달려 있습니다. 등록 개수를 확인할 방법이 없고 초기화 절차도 모르겠다면 교체가 확실합니다. 문 종류별 판단 기준은 [현관문 도어락 교체 기준](/articles/entrance-door-lock-replacement-guide)에 따로 정리해 두었습니다.",
++        ],
++      },
++      {
++        heading: "견적은 제품비·설치비·가공비를 나눠 받으세요",
++        paragraphs: [
++          "제품 가격, 기본 설치비, 추가 타공이나 모티스 가공, 문틀·스트라이커 보강, 출장비와 주차비를 따로 적어 달라고 하세요. 금액은 가공이 들어가는지 여부에서 가장 크게 갈리므로, 하나로 묶인 견적은 나중에 무엇 때문에 올랐는지 확인할 수 없습니다.",
++          "문이 처지거나 래치가 문틀 구멍에 어긋나 있으면 도어락만 새로 달아도 뻑뻑한 느낌이 남습니다. 그럴 때는 [처진 문·문고리·경첩 수리](/articles/door-handle-hinge-sagging-repair)를 먼저 확인하고, 문 정렬을 잡은 뒤 도어락을 교체하는 순서가 맞습니다.",
++        ],
++      },
++    ],
++    faq: [
++      {
++        question: "지금 쓰는 도어락 구멍에 푸시풀을 그대로 달 수 있나요?",
++        answer:
++          "타공 지름과 백셋, 문 두께가 새 제품의 대응 범위에 들어오고 모티스 규격까지 맞으면 가능합니다. 기존이 일반형이고 새 제품이 모티스형이면 문 측면 가공이 추가로 필요합니다.",
++      },
++      {
++        question: "방화문에도 푸시풀 도어락을 달 수 있나요?",
++        answer:
++          "임의 가공이나 인증 범위 밖 부품 설치는 피해야 합니다. 관리사무소 규정과 제조사가 밝힌 호환 범위를 먼저 확인하고, 판단이 어려우면 문 제조사나 관리 주체에 문의하세요.",
++      },
++      {
++        question: "푸시풀이 레버형보다 고장이 잦은가요?",
++        answer:
++          "구조만으로 단정할 수는 없습니다. 다만 손잡이 전체가 움직이는 방식이라 문 처짐이나 문틀 어긋남이 있으면 증상이 더 빨리 드러납니다. 교체 전에 문 정렬부터 확인하세요.",
++      },
++    ],
++    source: { label: "한국소비자원 주택 인테리어 피해예방 안내", url: "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1001947436&page=9" },
++  },
++
+   {
+     slug: "washbasin-replacement-drain-repair-guide",
+     title: "세면대 교체와 배수구·물마개 수리, 어디까지 손대야 할까?",
+diff --git a/scripts/seo-audit.mjs b/scripts/seo-audit.mjs
+index 9c72d65..7c8db93 100755
+--- a/scripts/seo-audit.mjs
++++ b/scripts/seo-audit.mjs
+@@ -3,6 +3,7 @@ const canonicalBase = (process.env.CANONICAL_URL || "https://isatips.adbles.com"
+ const categories = ["planning", "quotes", "admin", "home-care", "regional", "repair-install"];
+ const articles = [
+   "entrance-door-lock-replacement-guide",
++  "push-pull-door-lock-replacement-guide",
+   "washbasin-replacement-drain-repair-guide",
+   "bathroom-tile-grout-repair-guide",
+   "bathroom-silicone-replacement-guide",

@@ -1,0 +1,16 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "title": "푸시풀도어락, 기존 타공 그대로 쓸 수 있는 문과 안 되는 문",
+  "slug": "push-pull-door-lock-replacement-guide",
+  "keyword": "푸시풀도어락",
+  "createdAt": "2026-09-15T09:22:13.294Z",
+  "createdOn": "69262618c70c937a6f24d9f555d6ee9ef1c30ca8",
+  "files": [
+    "lib/internal-links.ts",
+    "lib/kin-generated-articles.ts",
+    "scripts/seo-audit.mjs"
+  ],
+  "patch": "2026-09-15T09-22-13-289Z-001.patch"
+}
