@@ -3,7 +3,7 @@
   "label": "이사팁스",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "updatedAt": "2026-09-16T20:50:15.746Z",
+  "updatedAt": "2026-09-17T20:56:43.939Z",
   "updatedBy": "actions",
   "networks": [
     "숨고(LinkPrice) 견적 딥링크",
@@ -69,6 +69,13 @@
     },
     {
       "at": "2026-09-16T20:50:15.746Z",
+      "by": "actions",
+      "open": 0,
+      "new": 0,
+      "resolved": 0
+    },
+    {
+      "at": "2026-09-17T20:56:43.939Z",
       "by": "actions",
       "open": 0,
       "new": 0,
