@@ -7,10 +7,10 @@
 //   npm run kin -- check --q "..." --file draft.txt --article cheonan-seobuk-gu-moving
 //   npm run kin -- record --url "https://kin.naver.com/qna/detail.naver?docId=123" --article <slug> --file draft.txt
 import { readFileSync } from "node:fs";
-import { buildIndex, loadArticleBody } from "./jisikin/index-build.mjs";
-import { rankArticles, classify } from "./jisikin/match.mjs";
+import { buildIndex, loadArticleBody } from "./site/index-build.mjs";
+import { rankArticles, classify } from "./site/match.mjs";
 import { validateAnswer, evidenceFrom } from "./jisikin/answer.mjs";
-import { loadConfig, SITE_URL } from "./jisikin/config.mjs";
+import { loadConfig, articleUrl } from "./jisikin/config.mjs";
 import { readLog, writeLog, appendEntry, alreadyAnswered, answeredToday, questionId } from "./jisikin/store.mjs";
 
 function parseArgs(argv) {
@@ -159,7 +159,7 @@ async function cmdRecord(config, flags) {
     questionUrl: flags.url,
     questionText: flags.q ?? null,
     articleSlug: flags.article ?? null,
-    articleUrl: flags.article ? `${SITE_URL}/articles/${flags.article}` : null,
+    articleUrl: flags.article ? articleUrl(flags.article) : null,
     answerText: flags.file || flags.text ? readDraft(flags) : null,
     status: flags.status ?? "posted",
     postedAt: new Date().toISOString(),
