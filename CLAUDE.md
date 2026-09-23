@@ -48,7 +48,7 @@ npm run audit:seo       # 위 서버가 떠 있어야 동작
 
 - 글 본문: `lib/articles.ts` 및 주제별 `lib/*-articles.ts`
 - 내부링크: `lib/internal-links.ts`
-- 제휴링크: 절대 URL을 하드코딩하지 않는다. `~/dev/A-factory/affiliate-links.json`이 단일 소스이고 `npm run sync:affiliate`가 `data/affiliate-links.json`으로 복사한다. 코드는 `link_key`로만 조회한다.
+- 제휴링크: 절대 URL을 하드코딩하지 않는다. **중앙 저장소 [`playskang-svg/affiliatelink`](https://github.com/playskang-svg/affiliatelink)의 `data/affiliate-links.json`이 단일 소스**다(2026-09-23부터 — 이전에는 맥 로컬 `~/dev/A-factory/affiliate-links.json`이었다). `npm run sync:affiliate`가 형제 폴더 `~/dev/affiliatelink/data/affiliate-links.json`(또는 `AFFILIATE_SOURCE` 환경변수 경로)을 읽어 이 저장소의 `data/affiliate-links.json`으로 복사한다. 코드는 `link_key`로만 조회한다. 링크를 추가·수정할 땐 이 저장소가 아니라 `affiliatelink`를 먼저 고치고 pull → sync 순서를 따른다.
 - 키워드→링크 매칭 규칙은 `lib/affiliate-match.ts` 한 곳에 모은다. 생성형 페이지를 개별로 고치지 않는다. 이름이 정해진 단독 글만 `lib/services.ts`의 `serviceByArticle`에 직접 적는다.
 - 링크를 폐기할 때는 JSON에서 지우지 말고 `status: "retired"`와 사유를 남긴다. 참조가 남아 있으면 빌드가 깨진다.
 
@@ -62,7 +62,7 @@ npx wrangler secret put COUPANG_ACCESS_KEY
 npx wrangler secret put COUPANG_SECRET_KEY
 ```
 
-원본 키는 `~/dev/A-factory/affiliate-links.json`의 `coupang` 블록에 있다. 그 파일의 `locations` 항목에 등록 현황을 적어둔다. 시크릿 키는 브라우저·정적 HTML·커밋 어디에도 넣지 않는다.
+원본 키는 여전히 맥 로컬 `~/dev/A-factory/affiliate-links.json`의 `coupang` 블록에 있다. **이 키는 중앙 저장소(`affiliatelink`)로 옮기지 않는다** — 여러 사이트가 clone해 쓰는 공유 저장소에 실제 API 자격증명을 두면 노출 표면이 커진다. 그 로컬 파일의 `locations` 항목에 등록 현황을 적어둔다. 시크릿 키는 브라우저·정적 HTML·커밋 어디에도 넣지 않는다.
 
 설정 여부는 값 노출 없이 확인할 수 있다.
 
