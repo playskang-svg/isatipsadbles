@@ -28,6 +28,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <meta name="naver-site-verification" content="3282d2db9375a4851fb63d9c035dd838b949ad12" />
         <meta name="google-site-verification" content="LWdL0F6ApPkB6JBk2OCFG61dmbCZ0c83kTK5J-P6Z2Q" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DE5FM2FHN7"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DE5FM2FHN7');`,
+          }}
+        />
       </head>
       <body>
         <a className="skip-link" href="#main-content">본문 바로가기</a>
