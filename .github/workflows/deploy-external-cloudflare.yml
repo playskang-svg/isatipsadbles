@@ -47,6 +47,7 @@ jobs:
 
       - name: Configure Coupang secrets
         if: ${{ env.COUPANG_ACCESS_KEY != '' && env.COUPANG_SECRET_KEY != '' }}
+        continue-on-error: true
         run: |
           printf '%s' "$COUPANG_ACCESS_KEY" | npx wrangler secret put COUPANG_ACCESS_KEY --config dist/server/wrangler.json
           printf '%s' "$COUPANG_SECRET_KEY" | npx wrangler secret put COUPANG_SECRET_KEY --config dist/server/wrangler.json
