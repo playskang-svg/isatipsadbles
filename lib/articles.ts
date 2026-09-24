@@ -776,12 +776,14 @@ import { repairKeywordArticlesWithRegionalLinks, repairRegionalArticles } from "
 import { enrichArticlesWithFieldImages } from "./article-images";
 import { kinGeneratedArticles } from "./kin-generated-articles";
 import { yonginCurtainBlindArticles } from "./yongin-curtain-blind-articles";
+import { incheonRepairArticles } from "./incheon-repair-articles";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
   ...regionalArticles,
   ...suwonArticles,
   ...incheonArticles,
+  ...incheonRepairArticles,
   ...cheonanArticles,
   ...doorRepairArticles,
   ...homeRepairArticles,

@@ -22,6 +22,7 @@ const articles = [
   "washer-dryer-moving-installation-cost",
   "moving-damage-compensation-claim",
   "curtain-blind-installation-cost",
+  "incheon-repair-install-cost-guide",
 ];
 const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
 const failures = [];
