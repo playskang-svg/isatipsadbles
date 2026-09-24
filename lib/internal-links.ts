@@ -1,6 +1,7 @@
 import type { Article } from "./articles";
 import { suwonDistricts } from "./suwon-keyword-tree";
 import { yonginDistricts, YONGIN_CITY_SLUG } from "./yongin-keyword-tree";
+import { incheonRepairDistricts, INCHEON_REPAIR_CITY_SLUG } from "./incheon-repair-keyword-tree";
 
 export type InternalLinkRecommendation = {
   article: Article;
@@ -91,10 +92,23 @@ function yonginHierarchyLinks(slug: string) {
   return [];
 }
 
+function incheonRepairHierarchyLinks(slug: string) {
+  if (slug === INCHEON_REPAIR_CITY_SLUG) {
+    return incheonRepairDistricts.map((district) => district.slug);
+  }
+  const districtIndex = incheonRepairDistricts.findIndex((district) => district.slug === slug);
+  if (districtIndex >= 0) {
+    const siblings = [incheonRepairDistricts[districtIndex - 1], incheonRepairDistricts[districtIndex + 1]].flatMap((district) => district ? [district.slug] : []);
+    return [INCHEON_REPAIR_CITY_SLUG, ...siblings];
+  }
+  return [];
+}
+
 function preferredSlugs(article: Article) {
   const hierarchy = suwonHierarchyLinks(article.slug);
   const yonginLinks = yonginHierarchyLinks(article.slug);
-  const incheonTreeLinks = article.source?.url.includes("incheon.go.kr")
+  const incheonRepairLinks = incheonRepairHierarchyLinks(article.slug);
+  const incheonTreeLinks = article.source?.url.includes("incheon.go.kr") && incheonRepairLinks.length === 0
     ? [
         "incheon-moving-regional-guide",
         ...(article.regionTree?.districts.flatMap((district) => [
@@ -109,8 +123,8 @@ function preferredSlugs(article: Article) {
   const repairKeywordGuide = article.slug.startsWith("repair-keyword-")
     ? article.breadcrumbs?.find((crumb) => crumb.href.startsWith("/articles/"))?.href.replace("/articles/", "")
     : undefined;
-  const curated = curatedLinks[article.slug] ?? (article.category === "regional" && !article.slug.startsWith("yongin-") ? coreRegionalFlow : []);
-  return [...new Set([...hierarchy, ...yonginLinks, ...incheonTreeLinks, ...(repairKeywordGuide ? [repairKeywordGuide] : []), ...curated])];
+  const curated = curatedLinks[article.slug] ?? (article.category === "regional" && !article.slug.startsWith("yongin-") && incheonRepairLinks.length === 0 ? coreRegionalFlow : []);
+  return [...new Set([...hierarchy, ...yonginLinks, ...incheonRepairLinks, ...incheonTreeLinks, ...(repairKeywordGuide ? [repairKeywordGuide] : []), ...curated])];
 }
 
 function reasonFor(article: Article) {
