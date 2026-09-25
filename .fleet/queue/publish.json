@@ -1,0 +1,72 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-09-25T21:06:05.791Z",
+  "updatedAt": "2026-09-25T21:06:05.791Z",
+  "createdBy": "actions/36189208954",
+  "titles": [
+    {
+      "keyword": "욕실줄눈셀프",
+      "volume": 1470,
+      "grade": "1위가능",
+      "title": "욕실줄눈셀프, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "욕실줄눈셀프, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "욕실줄눈셀프, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "욕실줄눈셀프, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-09-25T21:06:05.751Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "욕실줄눈셀프",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "9262846568",
+          "name": "브릭오유 1초싹 타일 줄눈 마커펜 보수제 셀프 시공, 실버펄, 6개",
+          "price": 16000,
+          "priceFormatted": "16,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/6ssqSvB7cKox6Oc56jjL2ddCwCG9lTzL_u-9KV--0s-RbuhUfOnyPV1E3FShe-tIgweKqiGLe9Xd-2ntkY-KulJgp23OPAHwvk4Z-OosNiwAMXCEDbWfsz1lvk78Mr_P7ElK8fvu-iv1kJJd8TDifFf4k5ylYFXNXEU6aZGkS_mohnp2UX8-kE3xE30iKGahXR-NYyTL-Awt2UCdOZ_Zwj5R2-VcreqG53DlmHX6RqZqLPsMguTohVGzysBSblfvxmYuYxOPFbwdVOkKyjvLyfRN0QVtZKiez9sOSHA1B_BKzLz9vpXTs0rcGkukui4GReploSviN3-SLtAzFy5MyjuHhu7RjI-R3dvG41PGM_AbWX25Ip0vqXTxMpwmNrgGVcTJ6MBcbeGsTDLspL0Y6tJfC8SN2_WxbuRxZAXOpOz_yX_J42Xqn34wAQpB04yq-iDwbyhphYx13kdhmynL_nlSkOQdvudxtSg-aomN9iu88ZgLh8gX9JM-4nAXfofo89mlIo74YeLzfxYt7hGXH9X4tvbFe0bq7QNl979F",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9262846568&itemId=27408039423&vendorItemId=94388845384&traceid=V0-153-386b0a325e171007&clickBeacon=ec15d110-b924-11f1-b630-13a531f24ae8%7E3&requestid=20260926060605489289286196&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "7658158254",
+          "name": "쓱싹마녀 욕실 타일줄눈보수제 셀프시공",
+          "price": 11600,
+          "priceFormatted": "11,600원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/FG1XU_CyVGQ_vCGVFLca_J3Xip00HgIELTpn4aXQrfPYK3DTv98FyEiqs9McoQ954TkIbToC4xSMFUBKDtwrCsp4v4R5Xx7aXGZkIIdmYMCzm5eQfh6U_Wzzfbop5JqmQC7_E3olXNjXkDM4ENLp92WNLkHVD-8kR10P38IZpT0nLC-2ldF3qmzAoNrB9zWkmsDgWzWS9K6jpeR75H1JwNhHEivYNZ8qY01rylxx081GVCmRUf5XS8PZvuc8f4vJBqeLFtsBWpJZ2eWQWIHjzBDFcwNGph_QswMnpfDkxetk0yyVuXMImh5dFCi1QE-WL35I063BXIWRGgHMM2YSxJgj1D6a2P_FWPCXw872c9racvjXFOEJqjKuYcpDRtNBh03TiPCkEwA3CvL-qIkYscS7ru4I2K_wLGJP-84Bnr8kPs5bf_m2wwNPpm_9lJ1kwtrKsxWTIgZUoIUDKHqw9yKUsKE2dmFQmSyxfVlrFelHIV4oHzMjN3DcqI_Fz3t0o5ZHK2Ftf9t_-UZcUMujwI0K8HUsqoFsOKX40lg2FmMSc4uknRn2mJ_WuC8svCGhYy88zd4=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7658158254&itemId=20394735455&vendorItemId=90418886090&traceid=V0-153-069be033af6c585a&requestid=20260926060605489289286196&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    }
+  ]
+}
