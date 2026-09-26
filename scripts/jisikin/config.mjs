@@ -1,8 +1,8 @@
-import { PROJECT_ROOT as root } from "./paths.mjs";
+import { PROJECT_ROOT as root } from "../site/paths.mjs";
 import { readFileSync, existsSync } from "node:fs";
 
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com").replace(/\/$/u, "");
+export { articleUrl } from "../site/site.mjs";
 export const CONFIG_PATH = `${root}/data/jisikin-config.json`;
 export const LOG_PATH = `${root}/data/jisikin-log.json`;
 
