@@ -1,19 +1,24 @@
 {
   "_note": "지식인 답변 에이전트 운영 파라미터. 기준은 docs/JISIKIN_ANSWER_AGENT.md.",
-
-  "dailyAnswerLimit": 3,
+  "dailyAnswerLimit": 5,
   "matchThreshold": 0.09,
   "strongMatchThreshold": 0.18,
   "minAnswerChars": 300,
   "maxLinksPerAnswer": 1,
-
-  "allowedLinkHosts": ["isatips.adbles.com"],
-  "blockedLinkHosts": [
-    "app.ac", "linkmoa.kr", "lpweb.kr", "ocayn.info",
-    "soomgo.com", "coupang.com", "link.coupang.com",
-    "linkprice.com", "tenping.kr"
+  "allowedLinkHosts": [
+    "isatips.adbles.com"
   ],
-
+  "blockedLinkHosts": [
+    "app.ac",
+    "linkmoa.kr",
+    "lpweb.kr",
+    "ocayn.info",
+    "soomgo.com",
+    "coupang.com",
+    "link.coupang.com",
+    "linkprice.com",
+    "tenping.kr"
+  ],
   "_bannedAnywhere": "위치와 무관하게 들어 있으면 등록을 막는 문구. 채택 구걸과 맺음 인사는 어디에 있든 기계식으로 읽힌다.",
   "bannedAnywhere": [
     "채택 부탁드립니다",
@@ -22,17 +27,53 @@
     "도움이 되셨길 바랍니다",
     "도움이 되셨으면 좋겠습니다"
   ],
-
   "_targetKeywords": "서치어드바이저에서 노출이 잡힌 키워드가 먼저다. 노출은 있는데 클릭이 0이면 색인은 됐고 순위가 낮다는 뜻이라, 같은 주제의 지식인 답변이 직접 유입과 주제 신호를 동시에 만든다.",
   "targetKeywords": [
-    { "keyword": "천안 원룸이사", "why": "서치어드바이저 노출 1위(천안원룸이사예약), 클릭 0", "priority": 1 },
-    { "keyword": "천안 서북구 원룸 이사", "why": "노출 발생, 대응 글 있음(cheonan-seobuk-gu-moving)", "priority": 1 },
-    { "keyword": "천안 청룡동 이사", "why": "노출 발생", "priority": 2 },
-    { "keyword": "포장이사 견적 비교", "why": "핵심 수익 키워드", "priority": 2 },
-    { "keyword": "이사 에어컨 이전설치 비용", "why": "핵심 수익 키워드", "priority": 2 },
-    { "keyword": "용달이사 사다리차", "why": "판단 기준형 질문이 많아 금액 없이 답할 수 있다", "priority": 2 },
-    { "keyword": "벽걸이TV 이전설치", "why": "무타공 포함 대응 글 2건 보유", "priority": 3 },
-    { "keyword": "입주청소 비용", "why": "대응 글 보유", "priority": 3 },
-    { "keyword": "이사 전입신고 확정일자", "why": "행정 절차형, 사실 확인 가능", "priority": 3 }
-  ]
+    {
+      "keyword": "천안 원룸이사",
+      "why": "서치어드바이저 노출 1위(천안원룸이사예약), 클릭 0",
+      "priority": 1
+    },
+    {
+      "keyword": "천안 서북구 원룸 이사",
+      "why": "노출 발생, 대응 글 있음(cheonan-seobuk-gu-moving)",
+      "priority": 1
+    },
+    {
+      "keyword": "천안 청룡동 이사",
+      "why": "노출 발생",
+      "priority": 2
+    },
+    {
+      "keyword": "포장이사 견적 비교",
+      "why": "핵심 수익 키워드",
+      "priority": 2
+    },
+    {
+      "keyword": "이사 에어컨 이전설치 비용",
+      "why": "핵심 수익 키워드",
+      "priority": 2
+    },
+    {
+      "keyword": "용달이사 사다리차",
+      "why": "판단 기준형 질문이 많아 금액 없이 답할 수 있다",
+      "priority": 2
+    },
+    {
+      "keyword": "벽걸이TV 이전설치",
+      "why": "무타공 포함 대응 글 2건 보유",
+      "priority": 3
+    },
+    {
+      "keyword": "입주청소 비용",
+      "why": "대응 글 보유",
+      "priority": 3
+    },
+    {
+      "keyword": "이사 전입신고 확정일자",
+      "why": "행정 절차형, 사실 확인 가능",
+      "priority": 3
+    }
+  ],
+  "_dailyAnswerLimit": "네이버가 공개한 일일 답변 제한은 확인되지 않았다. 이 숫자는 판단값이다. 적게 다는 비용은 되돌릴 수 있고 계정·도메인이 스팸으로 분류되는 비용은 되돌리기 어렵다는 비대칭 때문에 보수적으로 잡았다. 2026-09-07 3→5."
 }
