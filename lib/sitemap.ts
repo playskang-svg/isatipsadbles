@@ -23,6 +23,15 @@ export function getSitemapEntries(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const tools = [
+    {
+      url: `${SITE_URL}/tools/moving-cost/`,
+      lastModified: new Date("2026-09-26"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+  ];
+
   const categories = Object.keys(categoryMeta).map((category) => {
     const categoryArticles = articles.filter((article) => article.category === category);
     const categoryUpdate = categoryArticles.reduce(
@@ -38,7 +47,7 @@ export function getSitemapEntries(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...fixed, ...categories, ...posts];
+  return [...fixed, ...tools, ...categories, ...posts];
 }
 
 function escapeXml(value: string) {
