@@ -23,6 +23,21 @@ const articles = [
   "moving-damage-compensation-claim",
   "curtain-blind-installation-cost",
   "incheon-repair-install-cost-guide",
+  "hanam-moving-regional-guide",
+  "hanam-cheonhyeon-moving-guide",
+  "hanam-sinjang-1-moving-guide",
+  "hanam-sinjang-2-moving-guide",
+  "hanam-deokpung-1-moving-guide",
+  "hanam-deokpung-2-moving-guide",
+  "hanam-deokpung-3-moving-guide",
+  "hanam-misa-1-moving-guide",
+  "hanam-misa-2-moving-guide",
+  "hanam-misa-3-moving-guide",
+  "hanam-gambuk-moving-guide",
+  "hanam-gamil-moving-guide",
+  "hanam-wirye-moving-guide",
+  "hanam-chungung-moving-guide",
+  "hanam-choi-moving-guide",
 ];
 const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
 const failures = [];

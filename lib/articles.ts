@@ -767,6 +767,7 @@ const baseArticles: Article[] = [
 ];
 
 import { regionalArticles } from "./regional-articles";
+import { hanamArticles } from "./hanam-articles";
 import { suwonArticles } from "./suwon-articles";
 import { incheonArticles } from "./incheon-articles";
 import { cheonanArticles } from "./cheonan-articles";
@@ -781,6 +782,7 @@ import { incheonRepairArticles } from "./incheon-repair-articles";
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
   ...regionalArticles,
+  ...hanamArticles,
   ...suwonArticles,
   ...incheonArticles,
   ...incheonRepairArticles,

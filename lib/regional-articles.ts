@@ -1,5 +1,6 @@
 import type { Article } from "./articles";
 import { suwonRegionTree } from "./suwon-keyword-tree";
+import { hanamRegionTree } from "./hanam-articles";
 import { airconQuoteUrl, cleaningQuoteUrl, homeRepairQuoteUrl, movingQuoteLinkForKeyword } from "./affiliate-match";
 
 const REGIONAL_HERO = "/images/moving-field/living-a04-14.webp";
@@ -97,6 +98,7 @@ const publishedRegionLinks = publishedRegionRows.map((row, index) => ({
 const cityLink = new Map<string, string>(publishedRegionLinks.filter((item) => item.name === item.parent).map((item) => [item.parent, item.href]));
 
 function regionTreeFor(parent: string): NonNullable<Article["regionTree"]> {
+  if (parent === "하남시") return hanamRegionTree;
   const children = publishedRegionLinks.filter((item) => item.parent === parent && item.name !== parent);
   return {
     title: `${parent} 지역별 이사 정보`,
@@ -118,7 +120,8 @@ export const gyeonggiRegionTree: NonNullable<Article["regionTree"]> = {
       href: "/articles/suwon-city-moving-guide",
       dongs: suwonRegionTree.districts.map((district) => ({ name: district.name, href: district.href })),
     },
-    ...[...new Set(publishedRegionLinks.map((item) => item.parent))].map((parent) => ({
+    { name: "하남시", href: "/articles/hanam-moving-regional-guide", dongs: hanamRegionTree.districts[0].dongs },
+    ...[...new Set(publishedRegionLinks.map((item) => item.parent))].filter((parent) => parent !== "하남시").map((parent) => ({
       name: parent,
       href: cityLink.get(parent) ?? "/category/regional",
       dongs: publishedRegionLinks.filter((item) => item.parent === parent && item.name !== parent).map((item) => ({ name: item.name, href: item.href })),
