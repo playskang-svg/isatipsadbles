@@ -17,8 +17,9 @@
 
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const PUBLIC_DIR = new URL("../public/", import.meta.url).pathname;
+const PUBLIC_DIR = fileURLToPath(new URL("../public/", import.meta.url));
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com").replace(/\/$/, "");
 const ENDPOINTS = [
   { name: "Naver Search Advisor", url: "https://searchadvisor.naver.com/indexnow" },
