@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-09-17T20:54:11.764Z",
+  "checkedAt": "2026-09-29T21:47:42.500Z",
   "engine": "naver",
   "results": [
     {
@@ -18,7 +18,21 @@
     },
     {
       "keyword": "천안 청룡동 이사",
-      "error": "HTTP 403"
+      "hit": true,
+      "rank": 4,
+      "block": "웹사이트",
+      "title": "천안 청룡동 입주청소, 이사 전 빈집 시간은 어떻게 잡을까? | 이사준비백서",
+      "urls": [
+        "https://isatips.adbles.com/articles/cheonan-dongnam-cheongnyong-dong-moving"
+      ],
+      "items": [
+        {
+          "url": "https://isatips.adbles.com/articles/cheonan-dongnam-cheongnyong-dong-moving",
+          "title": "천안 청룡동 입주청소, 이사 전 빈집 시간은 어떻게 잡을까? | 이사준비백서",
+          "rank": 4,
+          "block": "웹사이트"
+        }
+      ]
     },
     {
       "keyword": "포장이사 견적 비교",
@@ -74,7 +88,7 @@
     },
     {
       "keyword": "천안 이사업체",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "무타공 벽걸이TV 설치",
@@ -90,7 +104,7 @@
     },
     {
       "keyword": "이사 파손 보상 30일",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "이사 전입신고 확정일자",
