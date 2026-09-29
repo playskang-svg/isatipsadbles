@@ -1,0 +1,130 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-09-29T21:50:40.446Z",
+  "updatedAt": "2026-09-29T21:50:40.446Z",
+  "createdBy": "actions/36635506945",
+  "titles": [
+    {
+      "keyword": "외벽방수실리콘",
+      "volume": 1460,
+      "grade": "상위가능",
+      "title": "외벽방수실리콘, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "외벽방수실리콘, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "외벽방수실리콘, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "외벽방수실리콘, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    },
+    {
+      "keyword": "싱크대교체비용",
+      "volume": 1460,
+      "grade": "상위가능",
+      "title": "싱크대교체비용, 누수 없이 혼자 교체하는 공구와 몽키스패너 요령",
+      "hook": "누수 불안 해소 및 필수 공구 안내",
+      "intent": "셀프 교체 중 물 샐까 봐 두려워하는 독자 타깃",
+      "alternatives": [
+        "싱크대교체비용, 오래된 아파트 호환 규격과 출장 교체 실견적",
+        "싱크대교체비용, 싼 제품 샀다가 테프론 테이프 감다 후회하는 이유",
+        "싱크대교체비용, 부속품 교체할 때 계량기 밸브 잠그는 순서"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-09-29T21:50:39.741Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "외벽방수실리콘",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8522661882",
+          "name": "퀵마켓 방수 변성 실리콘+외부용+크랙보수+비오염 MS (노즐 포함), 백색, 3개",
+          "price": 14930,
+          "priceFormatted": "14,930원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/8zfIjF-HRFWNoC9Q8-CESoGASIoGEAGMgv58UvfAW4Orh-g2Ojfaqru5tzcdzCMzWRQBoLSyUmjC2qGTtynYJNizYaKnyojwm5Qcw7e5oto_YFSlYeGxlXvCqvNklqkL9CQRMId-d6utg86vAkSFEdS10xG2rwsstGY7Vo-uIykdkayO-ljmF0Jlit6sQWRwO01lksgtDB7cY1BsSfF_3n_p7OORR7NcX9edDqcaXrJUZuKXIqtGHgNKIRYa9RBXH6dK0edxUCPRzu2dxYGtS5wUyn60joY_GuzSh2D7ifLuDISZUTM3GFbZlV6ZBRtRyXEN2G_ddPjmlFObk998eEzbU7k_rdhfhxnQNmMi7tr6EMTVd7peUDL7dOzSmZiFl4-88VmstJjqM25tvt6M7XrWYhai98pfUuwmFc58wLaA58BNXnb7U_ytI5CrsHTjr-qteUGwrGbkUgQdLb7Sv47qvplHGNWUvH2nkBjMUcje7ae0LPFf0vIDE7izzJuEAFwZp85MWlFSPBv4wYf48ftsvBAX4sQV6FsxM9Gu",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8522661882&itemId=24674349655&vendorItemId=91587062889&traceid=V0-153-84e7fcae68c532e7&clickBeacon=cf8871a0-bc4f-11f1-9f9c-60dfa0dcf2fb%7E3&requestid=20260930065039473061808823&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "1320973435",
+          "name": "픽스올 플렉시 고탄성 방수 강력접착 실리콘 화이트 290ml",
+          "price": 11900,
+          "priceFormatted": "11,900원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/pQUvGmTdMCvcECUPpYoCjE5bPN4RwaUZTQtbBUQ-g3y2LIiR1rl76sJe1mVKKsPt-lMdbLZoTMS04jjqVtyHNDCkYYtXATXJKYkxFLcbHDM79nVm60jt6NW8Dh1LxM8LQa9roPsSvk4ni_bYLhPtAKNrhOHjsJQfYVDODNJJhn9MBpxn1SoiSkjcZt4kxtF1PZM0eH5flX_vktM0HXy8Ts1NqqVoIhANsXnYJQbA-6symcxYaHkJAqekekQaVfhzV-RBOzHc7lVQWQI0sAXHKrGvm0IbWkrXlOPdFLQDcUVSS2LrNcn209K9lttZd4KOJ5deYahGfbKO5PuJHrzBkWHenWHxh1-obO_Pyu64A3c8JMv2rF-3MOVVFJcEeEtJildveHOEBPzPneq8dY3BSXp4leH4Q94xAYMgpPN8lMuqzLf8Ck19GeMIwF3wb7RJQWL5QRxY1PinOqGrpGFnYUT3GjnY-oLKlFHpco8GRu8g2VWzbifiGTHYSN-ilzgHUzqOgUHOznoiWJ7xXs30kSkIql-NSYp-lUA=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=1320973435&itemId=2341872549&vendorItemId=70338452256&traceid=V0-153-22b5f19b8c738cb3&requestid=20260930065039473061808823&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-29T21:50:40.411Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "싱크대교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "7165583457",
+          "name": "싱크대 문짝 제작 DIY 씽크대 문짝교체 붙박이장도어교체 신발장도어교체 비싼싱크대 바꾸지말고 도어교체 해보세요",
+          "price": 1000,
+          "priceFormatted": "1,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/Ezv5eYHkJipnH2RXEze-y9Jv6Ev1WsoMHGn3c5HobRvqrOqYO6LAQsRVrQr-VqIHSzbPtaIklOrr0XgCCE2zkYVzFSL2WhBkPdudsNxrlhEKPdowQTi6Y2LSMo8bSb4DluPe5zIx6jOMz-Y6N0H5WgG0gJdDjJ5i7BaVtNh9w2x0CEK_rQC11h0ubYlpRSZe9863Q4tGfJMcYT3Lm-NIIvk7SUTd4ghzd1Vp6ke1tGFcy2OGZd1DZe3UxEnACdRNTaEueayUIWK8qGiB5pwwxcZzFNhIbadz2wXcK55Oamlosz8TYt1DYUHlGk-NXOiXWDhtlpbvZ2m7R73DJNneoGrFxlLfgO_qX3eMy1iLHD9SKamW3ico_2TiFQFFyosIdppaqGc_EhNAotv0etC4VviIgvki8ongopvZp5qHn4InXE5Venpe-G-yz7HdUQO8SuOG2XUA5y6XY_Fku7tQNzukH14xcWHXJ-N_aFIuf5DycjombGQa_g8CIBbfwBUjpvX1AJf4K1dbpcC4oLgwwqzOmtHQD2h4Bspop_rrX-E_Au0StXlU",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7165583457&itemId=18041684362&vendorItemId=85196004162&traceid=V0-153-b71a19b23633362f&clickBeacon=cfedc320-bc4f-11f1-9cde-d0fa6c360c92%7E3&requestid=20260930065040137311763688&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8984472582",
+          "name": "한솔홈 일자형 싱크대 교체 화이트 무광 씽크대 주방리모델링 주방수납장 홈카페 시공 철거포함",
+          "price": 1482000,
+          "priceFormatted": "1,482,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/nlqjdyk8tCTWcOZ9nhZyjMtRNHuDGIgoT3VsxPLa48w8yTk9OKRuQFCwxphwufv1tm6xoa-J_zNX3Ysyp7twCj-tvNlXF4Ct-swufZYonhdtq1Z1teasVKC9fSuYhkYnsRUND1KAI03JvlVg2FGnZ2KmdJy5OHp-i9ixpB_v6XSOQWwHvC-8oTAnZC270jlTl_ZqQfLKbqsRTvrr74NlO-8Rb4KE9Qkvmn5f_GAAvIsAS1ZMTsHPCUyweyvpYCyup11zxTu4YCQw-ZOS7F5Mp12dhcFdwes5ISX0jop5c-ah53engU5uN0UYWSTno0c8stW6WLtfgQinCE3oQh6GIn7WvjOYi9a7-aRSxd05EZJiuCnfWMq8s4tsa4M24oSKpOQfP7QfhfoBtaGi3IAlomjH6oWfa2QxbVmIWfmfdcKvtp7l8KzgzJemx2BdtHEhIHN0_6utzDPUDPudYMFaaFq5aVXX3KFht6A4C6D1n0YissxO24PdM3oGx-oOv3QpEwlDYZ6fdw2_oXNMoNzXPj08ehA9cRqOCvAI2ah1MD1eVsOXqvuOAzk=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8984472582&itemId=26309345788&vendorItemId=93286945581&traceid=V0-153-7a6416b85cfe7711&requestid=20260930065040137311763688&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    }
+  ]
+}
