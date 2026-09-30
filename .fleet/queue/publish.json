@@ -5,8 +5,8 @@
   "repo": "playskang-svg/isatipsadbles",
   "type": "publish",
   "createdAt": "2026-09-29T21:50:40.446Z",
-  "updatedAt": "2026-09-29T21:50:40.446Z",
-  "createdBy": "actions/36635506945",
+  "updatedAt": "2026-09-30T21:51:55.048Z",
+  "createdBy": "actions/36781681680",
   "titles": [
     {
       "keyword": "외벽방수실리콘",
@@ -121,6 +121,51 @@
           "priceFormatted": "1,482,000원",
           "imageUrl": "https://ads-partners.coupang.com/image1/nlqjdyk8tCTWcOZ9nhZyjMtRNHuDGIgoT3VsxPLa48w8yTk9OKRuQFCwxphwufv1tm6xoa-J_zNX3Ysyp7twCj-tvNlXF4Ct-swufZYonhdtq1Z1teasVKC9fSuYhkYnsRUND1KAI03JvlVg2FGnZ2KmdJy5OHp-i9ixpB_v6XSOQWwHvC-8oTAnZC270jlTl_ZqQfLKbqsRTvrr74NlO-8Rb4KE9Qkvmn5f_GAAvIsAS1ZMTsHPCUyweyvpYCyup11zxTu4YCQw-ZOS7F5Mp12dhcFdwes5ISX0jop5c-ah53engU5uN0UYWSTno0c8stW6WLtfgQinCE3oQh6GIn7WvjOYi9a7-aRSxd05EZJiuCnfWMq8s4tsa4M24oSKpOQfP7QfhfoBtaGi3IAlomjH6oWfa2QxbVmIWfmfdcKvtp7l8KzgzJemx2BdtHEhIHN0_6utzDPUDPudYMFaaFq5aVXX3KFht6A4C6D1n0YissxO24PdM3oGx-oOv3QpEwlDYZ6fdw2_oXNMoNzXPj08ehA9cRqOCvAI2ah1MD1eVsOXqvuOAzk=",
           "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8984472582&itemId=26309345788&vendorItemId=93286945581&traceid=V0-153-7a6416b85cfe7711&requestid=20260930065040137311763688&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-09-30T21:51:55.008Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "싱크대교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8953186531",
+          "name": "한솔홈 주방 씽크대 주방인테리어 부엌가구 부엌리모델링 싱크교체",
+          "price": 1482000,
+          "priceFormatted": "1,482,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/1JQGJNZp0IaI99CE1BwnxEDvnCuPluk6vbeu5HlopqqX6mSOrNaImdq9-jqhV9HEW8Xi9Q9F-DVlrmEBOub-c39Qy6XRgN6t3icAWUdTAI7dwzlspRpVU0ghAeXy70XLe6ofuAXBeL8d0lR5HlxZV6oHbz7-zlt6VBDgb3Fyz2cng5M55HXpy5MJBWMXw0Ffe1Ka7AbYkyg4IXQYt-JWCdeXzOuBWsaAzNApoPXAKOCbhWAqP_eLwTkSl_POhSB6B7RmieOptn2Yau6Md-4K70X25hUn8_aCLNbTwkA5vuk-GzhFe4L7qzxiKyM_U0pNykemJiqloe4uXMukHG3ToRBw76jDQcoDUoc-hiWSmQ5FCqy0A_nyW3qktB4CAqmwVOgABxnNyrBQFtK_LMJzprCJyK1ujwV6RJgLA9n8wVB5yHwyHuOj12RtmlmTP_j9tT9t4M-4ugf-GQopL9BXcqzV4wL_3Leibi0CXbe-HE1dTwLSdwccZ4OeEMF23YdZi8AKJ_l79vTE9uQqvYSjU117WzyeazYG4i6td-Jsa_fBqo39NaQ=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8953186531&itemId=26190755133&vendorItemId=93170133886&traceid=V0-153-f37ac84fa3147aaf&requestid=20261001065154818149098365&token=31850C%7CGM&pt=0&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "8491608199",
+          "name": "sy씽크대 개수대 폭90cm 사무실용 원룸등 다용도",
+          "price": 139000,
+          "priceFormatted": "139,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/HVIzFd8xY5fi8wRNHXB2mMVG-m_KmdIhHPVL2Qp25JmmwCiCSNbWCQSt2Y6z_e4Vnr2I3TyhPqAQMY46fABhZXGxMSv9FqLaguib3lSCJIevHY3aWdx0FdVPAXkGkEM3-YPGLL38cYFlpmb6llaxjadF8MYKkn_wtbxGCf8R0e3tc5Vm-hXyilWw9ddFy0OO7eUAhdrS0qbZ8uAspxelF02WOU5yW0WiLil9BPeK3690-7RUUW_Sw2aZnB-8DTAIZw4RI2ry53KiIjAPZaSCiP30gIvUM2VDLAkh8Edo08bT9DVTyxg-JCaMBoxaNAIBFjzNgKEQSLWQQRssV4DcIJ8eCZPXMVOruwI7eCmng5E-5FZFUrWJvQhS0R3VikQpjNxKvkoqGkCNSjzBSvOg2vN5ynklgvDjfVH2NWqGUDtSmuT4jG-fMX0122-jAlDLJkJsS_cf0faJGliJt_476RoJXQSnLwc6DIAQU7BDiOyOJXaBuV5NeC6N2u1Bqbw0iUs6V-72fn_BKQMC4VrzDvTm9io_k0I6zQc5YgyD4KHte1MqLDxukw==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8491608199&itemId=20623528202&vendorItemId=87697658474&traceid=V0-153-ea41a0ac1c951e1c&requestid=20261001065154818149098365&token=31850C%7CGM&pt=0&slot=2",
           "isRocket": false,
           "isFreeShipping": true
         }
