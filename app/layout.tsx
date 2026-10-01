@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, DEFAULT_OG_IMAGE_URL, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,8 +11,9 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   keywords: SITE_KEYWORDS,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: "ko_KR", siteName: SITE_NAME, title: SITE_NAME, description: SITE_DESCRIPTION, url: "/" },
-  twitter: { card: "summary_large_image", title: SITE_NAME, description: SITE_DESCRIPTION },
+  openGraph: { type: "website", locale: "ko_KR", siteName: SITE_NAME, title: SITE_NAME, description: SITE_DESCRIPTION, url: "/", images: [DEFAULT_OG_IMAGE] },
+  twitter: { card: "summary_large_image", title: SITE_NAME, description: SITE_DESCRIPTION, images: [DEFAULT_OG_IMAGE_URL] },
+  other: { "og:image:secure_url": DEFAULT_OG_IMAGE_URL },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" } },
 };
 
