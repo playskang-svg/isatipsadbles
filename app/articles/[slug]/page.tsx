@@ -9,7 +9,7 @@ import { getArticle, getPublishedArticles, isArticlePublished } from "@/lib/arti
 import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
 import { getMovingService } from "@/lib/services";
-import { SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 import { isAffiliateUrl } from "@/lib/affiliate";
 
 export const dynamic = "force-dynamic";
@@ -42,6 +42,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getArticle(slug);
   if (!article) return {};
   if (!isArticlePublished(article)) return { title: "공개 예정 글", robots: { index: false, follow: false } };
+  // 글별 대표 이미지 우선, 없으면 사이트 기본 OG 이미지
+  const heroImageUrl = article.heroImage ? new URL(article.heroImage.src, SITE_URL).toString() : undefined;
+  const heroImageType = heroImageUrl ? ({ webp: "image/webp", jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", avif: "image/avif" } as Record<string, string>)[heroImageUrl.split("?")[0].split(".").pop()?.toLowerCase() ?? ""] : undefined;
+  const ogImage = article.heroImage && heroImageUrl
+    ? { url: heroImageUrl, secureUrl: heroImageUrl, ...(heroImageType ? { type: heroImageType } : {}), width: 1200, height: 675, alt: article.heroImage.alt }
+    : DEFAULT_OG_IMAGE;
   return {
     title: article.title,
     description: article.description,
@@ -49,8 +55,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: { canonical: `/articles/${article.slug}` },
     authors: [{ name: `${SITE_NAME} 편집팀`, url: "/about" }],
     category: article.categoryLabel,
-    openGraph: { type: "article", title: article.title, description: article.description, url: `/articles/${article.slug}`, siteName: SITE_NAME, locale: "ko_KR", publishedTime: article.publishedAt, modifiedTime: article.updatedAt, authors: [SITE_NAME], section: article.categoryLabel, tags: [article.keyword, article.categoryLabel], ...(article.heroImage ? { images: [{ url: article.heroImage.src, width: 1200, height: 675, alt: article.heroImage.alt }] } : {}) },
-    twitter: { card: article.heroImage ? "summary_large_image" : "summary", title: article.title, description: article.description, ...(article.heroImage ? { images: [article.heroImage.src] } : {}) },
+    openGraph: { type: "article", title: article.title, description: article.description, url: `/articles/${article.slug}`, siteName: SITE_NAME, locale: "ko_KR", publishedTime: article.publishedAt, modifiedTime: article.updatedAt, authors: [SITE_NAME], section: article.categoryLabel, tags: [article.keyword, article.categoryLabel], images: [ogImage] },
+    twitter: { card: "summary_large_image", title: article.title, description: article.description, images: [ogImage.url] },
+    other: { "og:image:secure_url": ogImage.url },
   };
 }
 

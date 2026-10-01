@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/ArticleCard";
 import { categoryMeta, getPublishedArticles } from "@/lib/articles";
 import { repairRegionalIndex } from "@/lib/repair-regional-pages";
-import { SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 
 type CategoryKey = keyof typeof categoryMeta;
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     description: meta.description,
     keywords: [meta.label, "이사 정보", SITE_NAME, ...SITE_KEYWORDS],
     alternates: { canonical: `/category/${category}` },
-    openGraph: { type: "website", title: `${meta.label} 정보`, description: meta.description, url: `/category/${category}`, siteName: SITE_NAME },
+    openGraph: { type: "website", title: `${meta.label} 정보`, description: meta.description, url: `/category/${category}`, siteName: SITE_NAME, images: [DEFAULT_OG_IMAGE] },
   };
 }
 

@@ -13,6 +13,17 @@ export const SITE_KEYWORDS = [
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://isatips.adbles.com";
 
+// 링크 공유 미리보기(OG) 기본 이미지: 글별 대표 이미지가 없을 때 사용 (1200x630 JPEG)
+export const DEFAULT_OG_IMAGE_URL = new URL("/og-default.jpg", SITE_URL).toString();
+export const DEFAULT_OG_IMAGE = {
+  url: DEFAULT_OG_IMAGE_URL,
+  secureUrl: DEFAULT_OG_IMAGE_URL,
+  type: "image/jpeg",
+  width: 1200,
+  height: 630,
+  alt: "이사준비백서 - 포장이사 견적·입주청소·전입신고까지 이사 준비 한 번에",
+};
+
 export const navItems = [
   { label: "이사 준비", href: "/category/planning" },
   {
