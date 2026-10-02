@@ -19,6 +19,16 @@
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','G-DE5FM2FHN7');
 </script>
+<!-- Meta Pixel: 이사팁스 전환 측정 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1059379453590338');fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'moving_cost_calculator'});
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebApplication","name":"이사 비용 계산기","url":"https://isatips.adbles.com/tools/moving-cost/","applicationCategory":"UtilitiesApplication","operatingSystem":"All","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@type":"Organization","name":"이사준비백서","url":"https://isatips.adbles.com/"}},
@@ -165,9 +175,11 @@ footer a{color:#fff}
 .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:40}
 .toast.on{opacity:1}
 .disclosure{font-size:12.5px;color:var(--muted);background:var(--paper);border-radius:12px;padding:10px 12px;margin-top:14px}
+.hero-disclosure{margin:16px 0 0;max-width:720px;font-size:12.5px;color:#cfe0d6;padding:9px 12px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.06)}
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1059379453590338&ev=PageView&noscript=1"></noscript>
 <header class="top"><div class="wrap">
   <a class="brand" href="/"><i>+</i>이사준비백서</a>
   <nav class="toplinks" aria-label="주요 메뉴">
@@ -182,6 +194,7 @@ footer a{color:#fff}
   <h1>우리집 이사비, <em>1분</em>이면 나와요</h1>
   <p>평수·거리·층수·날짜만 고르면 포장이사 예상 비용과 추가비용, 할증을 피하는 절약 날짜, 이사 D-day 할 일까지 한 번에 정리해 드려요.</p>
   <div class="chips"><span>✔ 회원가입 없음</span><span>✔ 손없는날 자동 체크</span><span>✔ 견적용 요약 복사</span><span>✔ 캘린더 등록</span></div>
+  <p class="hero-disclosure">광고·제휴 안내: 무료 견적 버튼을 통해 상담 신청이 완료되면 운영자가 수수료를 받을 수 있어요. 이용자가 부담하는 비용에는 영향이 없습니다.</p>
 </div></div>
 
 <main class="wrap">
@@ -419,7 +432,7 @@ var qs=new URLSearchParams(location.search);
 var SRC=qs.get('utm_source')||sessionStorage.getItem('mc_src')||(document.referrer?(function(){try{return new URL(document.referrer).hostname}catch(e){return 'ref'}})():'direct');
 try{sessionStorage.setItem('mc_src',SRC);}catch(e){}
 var CAMP=qs.get('utm_campaign')||'';
-function track(name,params){params=params||{};params.traffic_src=SRC;if(CAMP)params.campaign=CAMP;try{gtag('event',name,params);}catch(e){}}
+function track(name,params){params=params||{};params.traffic_src=SRC;if(CAMP)params.campaign=CAMP;try{gtag('event',name,params);}catch(e){}try{if(window.fbq)fbq('trackCustom',name,params);}catch(e){}}
 
 /* ---------- UI refs ---------- */
 var f={date:$('date'),py:$('py'),dist:$('dist'),f1:$('f1'),f2:$('f2'),m1:$('m1'),m2:$('m2'),ac:$('ac'),clean:$('clean'),tv:$('tv'),wash:$('wash'),waste:$('waste')};
@@ -496,7 +509,12 @@ function calc(s){
 
 function pickCtas(s,r){
   var main;
-  if(r.tier===0){main=[L.oneroom,L.isamarket];}
+  var paid=/^(meta|facebook|instagram|danggeun|karrot)$/i.test(SRC||'');
+  if(paid){
+    if(r.tier===0){main=[L.oneroom,L.modu];}
+    else if(s.type==='pack'){main=[L.modu,L.wematch];}
+    else{main=[L.wematch,L.modu];}
+  }else if(r.tier===0){main=[L.oneroom,L.isamarket];}
   else if(s.type==='pack'){main=[L.isamarket,L.modu,L.wematch];}
   else{main=[L.isamarket,L.wematch,L.modu];}
   var extra=[];
@@ -648,7 +666,7 @@ function run(fromUser){
 
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[data-key]');
-  if(a){track('cta_click',{link_key:a.dataset.key,placement:a.dataset.place,value:+a.dataset.v||0,currency:'KRW'});}
+  if(a){var p={link_key:a.dataset.key,placement:a.dataset.place,value:+a.dataset.v||0,currency:'KRW'};track('cta_click',p);try{if(window.fbq)fbq('trackCustom','AffiliateCtaClick',p);}catch(e){}}
 });
 $('calc').onclick=function(){run(true);};
 $('icsBtn').onclick=ics;
