@@ -3,37 +3,21 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-10-03T00:17:11.817Z",
+  "scannedAt": "2026-10-03T23:37:59.024Z",
   "pagesCrawled": 200,
   "sitemapUrls": 0,
   "externalChecked": 28,
   "summary": {
-    "high": 3,
+    "high": 1,
     "low": 3
   },
-  "occurrences": 6,
+  "occurrences": 4,
   "findings": [
     {
       "severity": "high",
       "kind": "no-sitemap",
       "page": "https://isatips.adbles.com",
       "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://isatips.adbles.com/articles/gyeonggi-028-repair",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
-    },
-    {
-      "severity": "high",
-      "kind": "page-dead",
-      "page": "https://isatips.adbles.com/articles/gyeonggi-029-apartment-move",
-      "status": 403,
-      "error": null,
-      "note": "사이트맵이나 내부 링크가 가리키는데 열리지 않는다"
     },
     {
       "severity": "low",
