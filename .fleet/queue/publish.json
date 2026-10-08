@@ -1,0 +1,188 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-10-08T22:50:35.554Z",
+  "updatedAt": "2026-10-08T22:50:35.554Z",
+  "createdBy": "actions/37855557759",
+  "titles": [
+    {
+      "keyword": "COMMAX도어락",
+      "volume": 1440,
+      "grade": "1위가능",
+      "title": "COMMAX도어락, 셀프 교체 vs 기사 방문 비용·소요시간 비교",
+      "hook": "자가 교체와 전문 기사 출장비 실익 비교",
+      "intent": "혼자 할 수 있는지 기사를 불러야 하는지 망설이는 독자 타깃",
+      "alternatives": [
+        "COMMAX도어락, 무타공 설치와 타공 규격 차이로 추가금 막는 법",
+        "COMMAX도어락, 당일 교체 전 문 두께·백셋 규격 확인 3단계",
+        "COMMAX도어락, 건전지 방전 시 9V 비상 전원과 고장 판정 기준"
+      ]
+    },
+    {
+      "keyword": "이사짐보관업체",
+      "volume": 1380,
+      "grade": "1위가능",
+      "title": "이사짐보관업체, 견적서에 이 항목 빠지면 당일 현장 추가금 붙습니다",
+      "hook": "당일 바가지 요금과 계약 외 추가금 예방",
+      "intent": "계약서 특약에 반드시 넣어야 할 핵심 체크리스트",
+      "alternatives": [
+        "이사짐보관업체, 1톤 용달과 반포장 사이 짐 양으로 선택하는 법",
+        "이사짐보관업체, 파손·분실 발생 시 현장에서 바로 보상받는 절차",
+        "이사짐보관업체, 무조건 최저가 골랐다가 이삿날 계약 취소당하는 구조"
+      ]
+    },
+    {
+      "keyword": "화장실변기실리콘",
+      "volume": 1420,
+      "grade": "상위가능",
+      "title": "화장실변기실리콘, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "화장실변기실리콘, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "화장실변기실리콘, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "화장실변기실리콘, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-10-08T22:50:34.579Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "COMMAX도어락",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8847776215",
+          "name": "COMMAX 무타공 지문인식 푸시풀 도어락, CDL-915P, 고객직접설치",
+          "price": 154800,
+          "priceFormatted": "154,800원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/LjNiPQo0rw6WX5JMLro8ZpzzrYW2tlIt2tplGlYAIRkWYCPdzQZCndzMw968sqlLftdxegqKdf58MXJCElpdj10geKlTS3Py_4BImBdOBl0uhxwygImdyHHlFvrosVSp7_VNXDXLttPy0Q0PPBBt_hbduugxfHkf5A_CoEpLs506x_SLE9yORc6cYOkFLcxqb8xEWceFEENdDtAHHkRp5cA__aQEU_wzcCFWHuOYiJj6ggLGaltsbXa3idumMbU382gYm_3nEnzRMu_r0tQem7ovJ4Q-gn7DrCZrdde4B_w_U-4t_rBalomiX7Hu3iaqpihTZ6_cHfvP1iiBK2ABPV7G90OewygoEsXoKGkmMYqfuxGUqq-BB0FhphdULbh3nFQ71WfgetWTqsY4JuE3n04oTh-2oKCUTEtMy1qOwiROCikuGf0aRd_FLV4YANfTEjk41ASHOpepO9HH3Xikqsri2tm0Q0gERjEK80kosA0R8UQmP5Je9PaqcomaPk4ivBFjyraMs2damFZY7CkH",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8847776215&itemId=25790787758&vendorItemId=92778543342&traceid=V0-153-0daf38fd9d17ee8a&clickBeacon=abf6bd60-c36a-11f1-8d0a-d3e4a1af94d4%7E3&requestid=20261009075034351003851854&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9742312717",
+          "name": "코맥스 무타공 푸시풀 비상키 도어락 디지털 번호키 현관문 전자키 CDL-801MP",
+          "price": 157000,
+          "priceFormatted": "157,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/sUQjoLAHLMqNI6BosSfPu4zUf1OG-BK_khlzyLIlzXCtFcMzAaMPYKhWteqXxDwXf9X5TcGRceP3HDw4WGOkJ1qJZbby83r1Av7uAjoiTL2A61Zsl7cbkjLpQjSFfG2VWX9MKOOrBB45ue6F45qLBDW28aKw_31bvycXIr7nsGwS8KpQRM41kO57Yf1mwaCZMrVGRKcLJuH0b0CRp96SpJj8tQ_2MwrJgKrXBiFipetSJuYfzeju-7bmqSC_YMEWoOwNzhb3JlSjudEjHfKW0avKlU3bVi-6OEndzDBf10q6e9nKwrPEPFZelZlglwAb3r_crIwmPk8fs34wsOnY3JkxboMLORpDZz_E0g18aDTSwGPX6M6jzMab_MZXGc-CSFiyMzyMUQ29pVjImDOXXNle4aDMGflztziaoLDpHzFmebOzuyQjAQNslfKIDQ9VCbIp3oHywvgPq8lv3TYzDrxLBhySeoDTCmTFseFT7qPHPObSj1YAuI92V-G9vBaGhAl1edeEksIS40sLC-jRpvbFE99VMwf3O9lLmpsMkHl3_JUC48ewY9HbajaiVN5dfummsk2PHl9VLNsJ7n9F7xtuEtC9jlbSuAbKrUc=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9742312717&itemId=29160945725&vendorItemId=96083124734&traceid=V0-153-98b843ab2b4910fd&requestid=20261009075034351003851854&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-08T22:50:35.108Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "이사짐보관업체",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8857119365",
+          "name": "2pcs 튼튼한 초대형 이사 가방 180L 손잡이 이불 정리 옷 이삿짐 캠핑 이사박스, 6개, 블루",
+          "price": 46010,
+          "priceFormatted": "46,010원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/j7PaCC59vIS9IFCijyzrWgWR6p3-uPZAanFqm_-s39W-t9b6YvPINabLq7Z70wHKL-cKDRWZf3lPOOq2PQDQkqDFM50pY4fCkdIe4YDMmaStF5mxEusJJ5R5pemiwWRzAgeUpDqyAQz9XMT-2TLewKVAVFQ6O1QGhthuaAq8S_XjaVqjU9ihIq4PaAGSRcHyY9gWD8-RjbB-qYAvKyfKTx7s8rcG8h5Asa5JMehqyw4IJJw0i0vGn6hYbsWysZC1x7CdpwwtPxmCAY9x9-6eBM1OodN9v64Um9bo9k88FqXIYUd8LgHPBBz7fJv5pFoA6R6byTVFISSTkQ-DHqkcCOP4cBcPQop4rDF1eLhfazrTCSAIwT1N5BSH_dLDjABghu_fR9eZ2LlIj95lz8tYLSpGTqVsnh29K8j4AoIBQmFtdIyIDl3kj_N829fKfWKKdjxjdUZTkj3GJk3p8OzBvAf5rMbHbLEo8wS3zyAt6u7JrxUuq5jI22slEdVKHckKMVNdlWKnuSxcvusVHV38xLteKBfWxCtGBXmfSow=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8857119365&itemId=26539083032&vendorItemId=93513079804&traceid=V0-153-9e9c9d9c171ce13b&clickBeacon=ac3dff90-c36a-11f1-b9e3-dbdb7f5a42f1%7E3&requestid=20261009075034795224417491&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9724706336",
+          "name": "포장이사박스 이사짐센터 보관준비 이삿짐업체 대형프라스틱 소형",
+          "price": 11150,
+          "priceFormatted": "11,150원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/f8FXWzWU56rEW57_fwVEjpQNF_OUuT9IchQO9Gn5E6wBNQVJx0Juiv2nJ0fgLjfLR4qoR2ZnctYL8UQc2pwlUV7Btx3bSNg13HxSBajMH4sFB_ZqsoMGvlxJsGEO3RXy8u1XFYhefaGrw5uI9o0ucCH6ckxe8n1o8qUN-bD_ccX9A5L1SE33b5opFLVRcrVeBm8oMOR5YUwAeuzZx9gMNrLDUNaKfK8StnSiIzkvIrA-tWqdUH4M0srtgX7Hno4twQ01ApWumZGgbC2iGQUcLZrJgHfrjiHUXWYXgV6pIFkULsqDnsvFuciaYS0sjbaDasK8wpCNR2mdMXD3Fn8De3nr0FJm4OX424pZM-RNU29119dgLlM1faEhB-8JQAfkNECidwhsvY-OOSDsPD1Qoicgn0iUdvp_gxxxNd6yAK9oDnaWpJviMeKyloHcR5pqt2dKFF_gAKha5s8dEmqtGK4X_674E1HnxHeRaDao63RK4Zi6FfRBNjsBJWWzO85nia-qDs9piwDo2UaNkzt8zyMcI4Vm99JZ0LqtfTnfz1t-mtmsuHhzKPDk",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9724706336&itemId=29101499519&vendorItemId=96026599535&traceid=V0-153-d008172878cfc29d&requestid=20261009075034795224417491&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": false,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-08T22:50:35.515Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "화장실변기실리콘",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8300309571",
+          "name": "욕실의여왕 실리콘 스크래퍼 헤라 타일 줄눈 제거기/스크래퍼 1개+이지실리콘 2개, 1세트",
+          "price": 15900,
+          "priceFormatted": "15,900원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/9s7dIFZqcjRuv31D9iriXtuMXW8nmRNibkXoXqW09gNZ8s328HzfpGKgXOA_0mARfl8_B-7fWIK4wCWuTLffY0GCpyIFFE1ybqmJCKA8AI3YE7TBi-29Vp6kIWCc-scPAvRN1Yn1bYJ7Iv1LQCYZDpWnKkbLx3Jf7crKekoYPRMJ5mCHgl6fDTgbmaNoBzWzhB5KRafBrEPGW7YZZ8J2uHJrQEIXmFhsFOafAjgMtDc9xVHpK1dGRcCd66fCiMijHk44Iq6DGRdUAgBK6LyXIRmESrcKZqPSAtP7QIBBS947Zvgl6uVoybjjBCbJfNj7ywEOO8kGHtw_cu6r72JMaBpjResdeplNndhYv7VjsF_HBdiS8iXNGYE9EqV85K86RCtfyY9PKSaIrMWvbcZ4RNYIxJYUAY4kLFK7bMgLFwRpx_w3pt1tpKV16UawDxAdcIxodY8uRxbjohpwqTzCp_5MszbkgMvyDzwrJJ0scoRJKzJ_ozb0so_iknOFxycxTPDvYZjBebfzoUdSMB5FCtpnTYZ3r6Ciw4S-qFw=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8300309571&itemId=23944140631&vendorItemId=84146051103&traceid=V0-153-13a6f0f4ed8b0321&clickBeacon=ac88eb40-c36a-11f1-ae4c-3838fe16337d%7E3&requestid=20261009075035316177695277&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "8642166587",
+          "name": "오공 욕실용 실리콘 실란트 핸드씰 투명",
+          "price": 3430,
+          "priceFormatted": "3,430원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/Hdx_LopsVs3w9A81HYA4NMyR8uwaBvG-1uZLnsrl8n7Wiz85Iwvs1ZjpRj1aSAE592V2jWVnfvMCdtHG-1RoEqT3PVNp3mtbHSAtlWj0-JNTynIdGqjyQ0VZqxAvatK7OfFKDjnhpi2UXVTs-pT6v57X6byUd3qUUKUpPmC5-ZBr_e7IIUaHgg8kQ7ATMDCjbPtBEPFSpIgBDFq34SD2EwF3bXCI_aUGfHbXk0jVaKVICEUIZiGzwTy0Z--wEAqJGsu9YOtj927vTNOJ_xVVslG_O8e8xEAec4tVxtTIzygQCPr1LSRLdE9DrMj-huZP0x1FMgfZwcKCr9UKnAonHkOlAi85mAnpnGdaPHkbiC28v4SrkrR-TAihaqXIEM43bg5w9uG62Rk-WSsuc3WayPm0hEoTlgklyHoBqtZR2Gb26CIA47A8SQctZIqV7hTNWeFdjMxDlQoRL517LQAWsIbrR-3HASwmmGb1-bM3CLNc-xaUxFWmv1pKVkOU3nzi9vgDcsRLqVZTbAgyR5ur3HQkW3a-0-zU",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8642166587&itemId=10139203944&vendorItemId=89832532010&traceid=V0-153-04f7d4a538ae490b&requestid=20261009075035316177695277&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    }
+  ]
+}
