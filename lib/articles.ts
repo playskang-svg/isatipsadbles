@@ -778,6 +778,7 @@ import { enrichArticlesWithFieldImages } from "./article-images";
 import { kinGeneratedArticles } from "./kin-generated-articles";
 import { yonginCurtainBlindArticles } from "./yongin-curtain-blind-articles";
 import { incheonRepairArticles } from "./incheon-repair-articles";
+import { preMoveInteriorArticles } from "./pre-move-interior-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -793,6 +794,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...repairRegionalArticles,
   ...kinGeneratedArticles,
   ...yonginCurtainBlindArticles,
+  ...preMoveInteriorArticles,
 ]);
 
 export const categoryMeta = {

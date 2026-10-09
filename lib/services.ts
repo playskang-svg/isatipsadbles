@@ -44,6 +44,24 @@ const interiorGuide: MovingService = {
   url: linkUrl("repair-interior"),
 };
 
+/** 집닥 인테리어 견적 (텐핑 CPA 2023112116490001). 링크 데이터가 동기화로 덮여도 CTA가 깨지지 않게 폴백을 둔다. */
+const ZIPDOC_FALLBACK_URL = "https://ocayn.info/t8g4kjiibn";
+function zipdocUrl(): string {
+  try {
+    return linkUrl("interior-cpa-zipdoc");
+  } catch {
+    return ZIPDOC_FALLBACK_URL;
+  }
+}
+
+const interiorQuote: MovingService = {
+  eyebrow: "INTERIOR QUOTE",
+  title: "범위 목록이 준비됐다면 인테리어 견적을 비교해 보세요",
+  description: "공간별로 정리한 공사 범위를 그대로 전달하고, 내역서와 일정이 담긴 견적을 받아 나란히 비교해 보세요.",
+  buttonLabel: "집닥 인테리어 견적 상담 신청",
+  url: zipdocUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string): MovingService {
   const quote = repairQuoteLink(topicId);
@@ -163,6 +181,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "rental-deposit-moving-out-checklist": twoQuoteComparison,
   "easy-interior-ideas-for-beginners": interiorGuide,
   "curtain-blind-installation-cost": interiorGuide,
+  "pre-move-in-interior-quote-comparison": interiorQuote,
   "son-eomneun-nal-moving-guide": twoQuoteComparison,
   "interior-door-hole-repair-guide": repairQuotes("door-hole"),
   "interior-door-replacement-cost-guide": repairQuotes("interior-door"),
