@@ -62,6 +62,25 @@ const interiorQuote: MovingService = {
   url: zipdocUrl(),
 };
 
+
+/** 위매치다이사 이사업체 비교 견적 (텐핑 CPA 2018112615050001). 소형·원룸·용달 이사는 무효라 가정이사 대상으로 안내한다. */
+const WEMATCH_FALLBACK_URL = "https://ocayn.info/t7rt9471u7";
+function wematchUrl(): string {
+  try {
+    return linkUrl("move-cpa-wematch");
+  } catch {
+    return WEMATCH_FALLBACK_URL;
+  }
+}
+
+const wematchCompare: MovingService = {
+  eyebrow: "MOVING QUOTE",
+  title: "이사 날짜가 정해졌다면 여러 업체 견적을 한 번에 비교하세요",
+  description: "위매치다이사는 이사업체가 아니라 내 주변 이사업체 견적을 모아 비교하는 플랫폼입니다. 원룸·소형이 아닌 가정집 이사라면 같은 조건으로 견적을 받아 나란히 비교해 보세요.",
+  buttonLabel: "위매치다이사 견적 비교 신청",
+  url: wematchUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string): MovingService {
   const quote = repairQuoteLink(topicId);
@@ -182,6 +201,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "easy-interior-ideas-for-beginners": interiorGuide,
   "curtain-blind-installation-cost": interiorGuide,
   "pre-move-in-interior-quote-comparison": interiorQuote,
+  "bad-moving-company-avoid-checklist": wematchCompare,
   "son-eomneun-nal-moving-guide": twoQuoteComparison,
   "interior-door-hole-repair-guide": repairQuotes("door-hole"),
   "interior-door-replacement-cost-guide": repairQuotes("interior-door"),
