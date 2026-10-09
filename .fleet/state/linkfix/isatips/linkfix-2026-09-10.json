@@ -1,0 +1,48 @@
+{
+  "site": "isatips",
+  "label": "이사팁스 (이사준비백서)",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "scannedAt": "2026-09-10T03:44:16.343Z",
+  "pagesCrawled": 12,
+  "sitemapUrls": 665,
+  "externalChecked": 5,
+  "summary": {
+    "low": 2
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/moving-preparation-checklist",
+      "href": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1000120619",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "external-unreachable",
+      "page": "https://isatips.adbles.com/articles/moving-company-quote-comparison",
+      "href": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1004458186",
+      "status": 0,
+      "error": "fetch failed",
+      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
+    }
+  ],
+  "autoFixable": [
+    "dead-anchor",
+    "empty-href",
+    "javascript-void",
+    "placeholder-url",
+    "http-to-https",
+    "double-slash"
+  ],
+  "reportOnly": [
+    "dead-external-link",
+    "external-unreachable",
+    "orphan-page",
+    "redirect-chain",
+    "noindex"
+  ]
+}
