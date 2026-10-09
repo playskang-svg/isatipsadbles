@@ -3,7 +3,7 @@
   "version": "2026.09.05-04",
   "build": "a35f977d",
   "updated": "2026-09-11",
-  "link_count": 103,
+  "link_count": 104,
   "note": "A-Factory 제휴링크 단일 소스. 사람이 읽는 문서는 affiliate-link.md. 코드에서는 이 JSON을 import해서 link_key로 조회한다. 어느 키워드에 어느 링크를 붙일지는 각 링크의 keywords 필드와 isatipsadbles/lib/affiliate-match.ts의 매칭 규칙을 기준으로 한다.",
   "partner_id": "A100702444",
   "links": [
@@ -228,6 +228,31 @@
         "셀프 인테리어",
         "집 꾸미기"
       ]
+    },
+    {
+      "key": "interior-cpa-zipdoc",
+      "category": "repair",
+      "label": "집닥 인테리어 견적",
+      "cta": "집닥 인테리어 견적 상담 신청",
+      "url": "https://ocayn.info/t8g4kjiibn",
+      "merchant": "집닥",
+      "network": "tenping",
+      "campaign_type": "CPA 참여형",
+      "campaign_id": "2023112116490001",
+      "payout": "건당 42,000원 (2026-10-09 기준)",
+      "conversion": "상담 신청 접수",
+      "min_approval": "50%",
+      "verify_period": "3영업일",
+      "status": "active",
+      "keywords": [
+        "인테리어 견적",
+        "인테리어 견적 비교",
+        "아파트 인테리어",
+        "리모델링 비용"
+      ],
+      "collected_at": "2026-10-09",
+      "updated": "2026-10-09",
+      "issue": "주의사항: A/S 기간 언급 금지, 검색광고 금지, 외부 이미지 도용 금지, 외부 입력폼 수집 금지"
     },
     {
       "key": "repair-ohouse-silicone",
