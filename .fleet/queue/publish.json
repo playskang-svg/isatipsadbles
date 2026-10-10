@@ -5,8 +5,8 @@
   "repo": "playskang-svg/isatipsadbles",
   "type": "publish",
   "createdAt": "2026-10-08T22:50:35.554Z",
-  "updatedAt": "2026-10-09T22:13:42.510Z",
-  "createdBy": "actions/37997652385",
+  "updatedAt": "2026-10-10T21:07:38.378Z",
+  "createdBy": "actions/38086137657",
   "titles": [
     {
       "keyword": "COMMAX도어락",
@@ -318,6 +318,78 @@
           "isFreeShipping": true
         }
       ]
+    },
+    {
+      "collected_at": "2026-10-10T21:07:37.289Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "COMMAX도어락",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T21:07:37.605Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "화장실변기실리콘",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-10-10T21:07:38.340Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "이사짐보관업체",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
     }
   ]
 }
