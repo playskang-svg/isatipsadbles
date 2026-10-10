@@ -243,6 +243,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "moving-ladder-truck-cost-guide": twoQuoteComparison,
   "elevator-moving-cost-conditions": twoQuoteComparison,
   "storage-moving-cost-guide": storageMoveQuote,
+  "moving-truck-tonnage-guide": wematchCompare,
 };
 
 // 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.

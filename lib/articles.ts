@@ -782,6 +782,7 @@ import { preMoveInteriorArticles } from "./pre-move-interior-article";
 import { movingCompanyCheckArticles } from "./moving-company-check-article";
 import { aptInteriorOrderArticles } from "./apt-interior-order-article";
 import { storageMovingArticles } from "./storage-moving-article";
+import { movingTonnageArticles } from "./moving-tonnage-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -801,6 +802,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...movingCompanyCheckArticles,
   ...aptInteriorOrderArticles,
   ...storageMovingArticles,
+  ...movingTonnageArticles,
 ]);
 
 export const categoryMeta = {
