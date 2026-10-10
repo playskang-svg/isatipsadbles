@@ -1,33 +1,12 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-09-11T20:22:51.044Z",
+  "checkedAt": "2026-10-10T21:04:27.073Z",
   "engine": "naver",
   "results": [
     {
       "keyword": "천안원룸이사예약",
-      "hit": true,
-      "rank": 5,
-      "block": "웹사이트",
-      "title": "천안 서북구 포장이사 견적, 아파트·원룸에서 확인할 조건 | 이사준비백서",
-      "urls": [
-        "https://isatips.adbles.com/articles/cheonan-seobuk-gu-moving",
-        "https://isatips.adbles.com/articles/cheonan-seobuk-buldang-2-dong-moving"
-      ],
-      "items": [
-        {
-          "url": "https://isatips.adbles.com/articles/cheonan-seobuk-gu-moving",
-          "title": "천안 서북구 포장이사 견적, 아파트·원룸에서 확인할 조건 | 이사준비백서",
-          "rank": 5,
-          "block": "웹사이트"
-        },
-        {
-          "url": "https://isatips.adbles.com/articles/cheonan-seobuk-buldang-2-dong-moving",
-          "title": "천안 불당2동 아파트 이사, 엘리베이터 예약 전에 볼 4가지 | 이사준비백서",
-          "rank": 6,
-          "block": "기타"
-        }
-      ]
+      "hit": false
     },
     {
       "keyword": "천안 원룸이사",
@@ -39,7 +18,21 @@
     },
     {
       "keyword": "천안 청룡동 이사",
-      "hit": false
+      "hit": true,
+      "rank": 3,
+      "block": "웹사이트",
+      "title": "천안 청룡동 입주청소, 이사 전 빈집 시간은 어떻게 잡을까? | 이사준비백서",
+      "urls": [
+        "https://isatips.adbles.com/articles/cheonan-dongnam-cheongnyong-dong-moving"
+      ],
+      "items": [
+        {
+          "url": "https://isatips.adbles.com/articles/cheonan-dongnam-cheongnyong-dong-moving",
+          "title": "천안 청룡동 입주청소, 이사 전 빈집 시간은 어떻게 잡을까? | 이사준비백서",
+          "rank": 3,
+          "block": "웹사이트"
+        }
+      ]
     },
     {
       "keyword": "포장이사 견적 비교",
