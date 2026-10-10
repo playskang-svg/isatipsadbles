@@ -81,6 +81,24 @@ const wematchCompare: MovingService = {
   url: wematchUrl(),
 };
 
+/** 서경석의 이사방 포장이사 2곳 견적 (텐핑 CPA 2019062817160001). 원룸·용달·60일 초과·일정 미정은 무효라 가정집 포장이사 대상으로 안내한다. */
+const ISABANG_FALLBACK_URL = "https://ocayn.info/t8gy97bt69";
+function isabangUrl(): string {
+  try {
+    return linkUrl("move-compare-2");
+  } catch {
+    return ISABANG_FALLBACK_URL;
+  }
+}
+
+const storageMoveQuote: MovingService = {
+  eyebrow: "STORAGE MOVE",
+  title: "짐 빼는 날이 정해졌다면 2곳 견적을 같은 조건으로 비교하세요",
+  description: "보관 기간, 창고 종류, 출발·도착 주소를 똑같이 전달하고 보관료와 2차 운반비를 나란히 확인해 보세요. 이사 날짜가 정해진 가정집 포장이사 기준입니다.",
+  buttonLabel: "포장이사 2곳 견적 비교 신청",
+  url: isabangUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string): MovingService {
   const quote = repairQuoteLink(topicId);
@@ -224,6 +242,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "studio-moving-service-comparison": studioMove,
   "moving-ladder-truck-cost-guide": twoQuoteComparison,
   "elevator-moving-cost-conditions": twoQuoteComparison,
+  "storage-moving-cost-guide": storageMoveQuote,
 };
 
 // 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.
