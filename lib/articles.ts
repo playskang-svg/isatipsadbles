@@ -784,6 +784,7 @@ import { aptInteriorOrderArticles } from "./apt-interior-order-article";
 import { storageMovingArticles } from "./storage-moving-article";
 import { movingTonnageArticles } from "./moving-tonnage-article";
 import { livingRemodelArticles } from "./living-remodel-article";
+import { longDistanceMovingArticles } from "./long-distance-moving-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -805,6 +806,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...storageMovingArticles,
   ...movingTonnageArticles,
   ...livingRemodelArticles,
+  ...longDistanceMovingArticles,
 ]);
 
 export const categoryMeta = {

@@ -99,6 +99,14 @@ const storageMoveQuote: MovingService = {
   url: isabangUrl(),
 };
 
+const longDistanceQuote: MovingService = {
+  eyebrow: "LONG DISTANCE",
+  title: "장거리 이사는 일정과 도착 시간을 같은 조건으로 비교하세요",
+  description: "출발지·도착지, 당일 또는 1박2일 여부, 상차·하차 희망 시간을 두 업체에 똑같이 전달하고 이동비와 숙박·식비 포함 여부를 나란히 확인해 보세요. 이사 날짜가 정해진 가정집 포장이사 기준입니다.",
+  buttonLabel: "포장이사 2곳 견적 비교 신청",
+  url: isabangUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string): MovingService {
   const quote = repairQuoteLink(topicId);
@@ -245,6 +253,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "elevator-moving-cost-conditions": twoQuoteComparison,
   "storage-moving-cost-guide": storageMoveQuote,
   "moving-truck-tonnage-guide": wematchCompare,
+  "long-distance-moving-cost-guide": longDistanceQuote,
 };
 
 // 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.
