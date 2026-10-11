@@ -8,13 +8,6 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   const articles = getPublishedArticles();
-  const searchArticles = articles.map(({ slug, title, description, keyword, categoryLabel }) => ({
-    slug,
-    title,
-    description,
-    keyword,
-    categoryLabel,
-  }));
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -57,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="search-section"><div className="container"><SearchBox articles={searchArticles} /></div></section>
+      <section className="search-section"><div className="container"><SearchBox /></div></section>
 
       <section className="section categories-section">
         <div className="container">

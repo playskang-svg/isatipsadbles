@@ -29,13 +29,23 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <meta name="naver-site-verification" content="3282d2db9375a4851fb63d9c035dd838b949ad12" />
         <meta name="google-site-verification" content="LWdL0F6ApPkB6JBk2OCFG61dmbCZ0c83kTK5J-P6Z2Q" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DE5FM2FHN7"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-DE5FM2FHN7');`,
+gtag('config', 'G-DE5FM2FHN7');
+// 초기 렌더링을 막지 않도록 로드 후 유휴 시간에 gtag.js를 불러온다.
+window.addEventListener('load', function () {
+  var load = function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DE5FM2FHN7';
+    document.head.appendChild(s);
+  };
+  if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+  else setTimeout(load, 1500);
+});`,
           }}
         />
       </head>
