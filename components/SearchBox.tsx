@@ -15,8 +15,8 @@ export function SearchBox() {
   useEffect(() => {
     if (!query || articles || failed) return;
     fetch("/api/search-index")
-      .then((res) => (res.ok ? res.json() : Promise.reject(new Error(String(res.status)))))
-      .then((data: SearchArticleItem[]) => setArticles(data))
+      .then((res): Promise<SearchArticleItem[]> => (res.ok ? res.json() : Promise.reject(new Error(String(res.status)))))
+      .then((data) => setArticles(data))
       .catch(() => setFailed(true));
   }, [query, articles, failed]);
 
