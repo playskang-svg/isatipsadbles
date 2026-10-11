@@ -270,3 +270,10 @@ export function getMovingService(slug: string): MovingService | undefined {
   const topicId = topicIdFromSlug(slug);
   return topicId ? repairQuotes(topicId) : undefined;
 }
+
+/** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */
+export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide"]);
+export function filterRestrictedKeywords(slug: string, keywords: readonly string[]): string[] {
+  if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
+  return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));
+}

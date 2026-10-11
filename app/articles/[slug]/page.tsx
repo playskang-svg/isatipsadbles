@@ -8,7 +8,7 @@ import { ServiceCta } from "@/components/ServiceCta";
 import { getArticle, getPublishedArticles, isArticlePublished } from "@/lib/articles";
 import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
-import { getMovingService } from "@/lib/services";
+import { filterRestrictedKeywords, getMovingService } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 import { isAffiliateUrl } from "@/lib/affiliate";
 
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.description,
-    keywords: [article.keyword, ...(article.secondaryKeywords ?? []), article.categoryLabel, SITE_NAME, ...SITE_KEYWORDS],
+    keywords: [article.keyword, ...(article.secondaryKeywords ?? []), article.categoryLabel, SITE_NAME, ...filterRestrictedKeywords(article.slug, SITE_KEYWORDS)],
     alternates: { canonical: `/articles/${article.slug}` },
     authors: [{ name: `${SITE_NAME} 편집팀`, url: "/about" }],
     category: article.categoryLabel,
@@ -89,7 +89,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     dateModified: article.updatedAt,
     inLanguage: "ko-KR",
     articleSection: article.categoryLabel,
-    keywords: [article.keyword, ...(article.secondaryKeywords ?? []), article.categoryLabel, SITE_NAME, ...SITE_KEYWORDS],
+    keywords: [article.keyword, ...(article.secondaryKeywords ?? []), article.categoryLabel, SITE_NAME, ...filterRestrictedKeywords(article.slug, SITE_KEYWORDS)],
     wordCount,
     isAccessibleForFree: true,
     mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
