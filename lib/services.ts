@@ -229,6 +229,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "pre-move-in-interior-quote-comparison": interiorQuote,
   "apartment-interior-construction-order": interiorQuote,
   "living-in-home-remodeling-guide": interiorQuote,
+  "old-apartment-interior-priority": interiorQuote,
   "bad-moving-company-avoid-checklist": wematchCompare,
   "son-eomneun-nal-moving-guide": twoQuoteComparison,
   "interior-door-hole-repair-guide": repairQuotes("door-hole"),
