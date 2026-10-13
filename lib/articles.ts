@@ -787,6 +787,7 @@ import { livingRemodelArticles } from "./living-remodel-article";
 import { longDistanceMovingArticles } from "./long-distance-moving-article";
 import { cheapMovingDateArticles } from "./cheap-moving-date-article";
 import { oldAptPriorityArticles } from "./old-apt-priority-article";
+import { fridgeMovingArticles } from "./fridge-moving-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -811,6 +812,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...longDistanceMovingArticles,
   ...cheapMovingDateArticles,
   ...oldAptPriorityArticles,
+  ...fridgeMovingArticles,
 ]);
 
 export const categoryMeta = {
