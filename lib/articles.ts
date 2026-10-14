@@ -790,6 +790,7 @@ import { oldAptPriorityArticles } from "./old-apt-priority-article";
 import { fridgeMovingArticles } from "./fridge-moving-article";
 import { kidsMovingArticles } from "./kids-moving-article";
 import { winterMovingArticles } from "./winter-moving-article";
+import { newlywedMovingArticles } from "./newlywed-moving-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -817,6 +818,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...fridgeMovingArticles,
   ...kidsMovingArticles,
   ...winterMovingArticles,
+  ...newlywedMovingArticles,
 ]);
 
 export const categoryMeta = {
