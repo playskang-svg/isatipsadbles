@@ -123,6 +123,14 @@ const winterMoveQuote: MovingService = {
   url: isabangUrl(),
 };
 
+const dualIncomeMoveQuote: MovingService = {
+  eyebrow: "DUAL-INCOME MOVE",
+  title: "휴가 하루로 끝내려면 2곳 견적을 같은 조건으로 비교하세요",
+  description: "희망 시작 시간, 도착지에서 짐을 받을 사람, 엘리베이터 예약 시간을 두 업체에 똑같이 전달하고 작업 시간과 추가요금 조건을 나란히 확인해 보세요. 두 달 안으로 날짜가 정해진 가정집 포장이사 기준입니다.",
+  buttonLabel: "포장이사 2곳 견적 비교 신청",
+  url: isabangUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string): MovingService {
   const quote = repairQuoteLink(topicId);
@@ -273,6 +281,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "long-distance-moving-cost-guide": longDistanceQuote,
   "fridge-moving-preparation-guide": fridgeMoveQuote,
   "winter-moving-preparation-guide": winterMoveQuote,
+  "dual-income-couple-moving-schedule-guide": dualIncomeMoveQuote,
   "cheap-moving-date-guide": wematchCompare,
   "moving-with-kids-school-transfer-guide": wematchCompare,
   "newlywed-moving-combine-households-guide": wematchCompare,
@@ -294,7 +303,7 @@ export function getMovingService(slug: string): MovingService | undefined {
 }
 
 /** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */
-export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide"]);
+export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide"]);
 export function filterRestrictedKeywords(slug: string, keywords: readonly string[]): string[] {
   if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
   return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));

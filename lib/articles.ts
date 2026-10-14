@@ -791,6 +791,7 @@ import { fridgeMovingArticles } from "./fridge-moving-article";
 import { kidsMovingArticles } from "./kids-moving-article";
 import { winterMovingArticles } from "./winter-moving-article";
 import { newlywedMovingArticles } from "./newlywed-moving-article";
+import { dualIncomeMovingArticles } from "./dual-income-moving-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -819,6 +820,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...kidsMovingArticles,
   ...winterMovingArticles,
   ...newlywedMovingArticles,
+  ...dualIncomeMovingArticles,
 ]);
 
 export const categoryMeta = {
