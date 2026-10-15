@@ -8,7 +8,7 @@ import { ServiceCta } from "@/components/ServiceCta";
 import { getArticle, getPublishedArticles, isArticlePublished } from "@/lib/articles";
 import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
-import { filterRestrictedKeywords, getMovingService } from "@/lib/services";
+import { filterRestrictedArticles, filterRestrictedKeywords, getMovingService } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 import { isAffiliateUrl } from "@/lib/affiliate";
 
@@ -70,7 +70,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const publishedArticles = getPublishedArticles();
   const publishedArticleHrefs = new Set(publishedArticles.map((item) => `/articles/${item.slug}`));
   const isAvailableHref = (href?: string) => Boolean(href && (!href.startsWith("/articles/") || publishedArticleHrefs.has(href)));
-  const recommendations = getInternalLinkRecommendations(article, publishedArticles, 6);
+  const recommendations = getInternalLinkRecommendations(article, filterRestrictedArticles(article.slug, publishedArticles), 6);
   const contextualLinks = recommendations.slice(0, 3);
   const related = recommendations.slice(3, 6).map((item) => item.article);
   const articleUrl = `${SITE_URL}/articles/${article.slug}`;

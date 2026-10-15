@@ -318,3 +318,8 @@ export function filterRestrictedKeywords(slug: string, keywords: readonly string
   if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
   return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));
 }
+/** 이사방 CTA 글의 연관 글 추천에서도 원룸·용달·오피스텔 주제 글을 뺀다. */
+export function filterRestrictedArticles<T extends { slug: string; title: string; keyword: string; description: string }>(slug: string, list: readonly T[]): T[] {
+  if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...list];
+  return list.filter((item) => !/원룸|용달|오피스텔/u.test(`${item.title} ${item.keyword} ${item.description}`));
+}
