@@ -295,6 +295,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "moving-with-kids-school-transfer-guide": wematchCompare,
   "newlywed-moving-combine-households-guide": wematchCompare,
   "parents-home-moving-preparation-guide": wematchCompare,
+  "move-out-maintenance-fee-settlement-guide": wematchCompare,
 };
 
 // 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.
