@@ -131,6 +131,14 @@ const dualIncomeMoveQuote: MovingService = {
   url: isabangUrl(),
 };
 
+const rainyDayMoveQuote: MovingService = {
+  eyebrow: "RAINY DAY MOVE",
+  title: "우천 시 진행 조건까지 2곳 견적으로 비교하세요",
+  description: "연기 판단 기준, 우천 연기 때 계약금 처리, 비닐 랩·방수 덮개 포함 여부, 현관·엘리베이터 바닥 보호 범위를 두 업체에 똑같이 물어보고 답을 나란히 비교해 보세요. 두 달 안으로 날짜가 정해진 가정집 포장이사 기준입니다.",
+  buttonLabel: "포장이사 2곳 견적 비교 신청",
+  url: isabangUrl(),
+};
+
 const packingTypeQuote: MovingService = {
   eyebrow: "PACKING SCOPE",
   title: "포장 범위를 같은 조건으로 적고 2곳 견적을 비교하세요",
@@ -291,6 +299,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "winter-moving-preparation-guide": winterMoveQuote,
   "dual-income-couple-moving-schedule-guide": dualIncomeMoveQuote,
   "packing-vs-half-packing-moving-difference": packingTypeQuote,
+  "rainy-day-moving-preparation-guide": rainyDayMoveQuote,
   "cheap-moving-date-guide": wematchCompare,
   "moving-with-kids-school-transfer-guide": wematchCompare,
   "newlywed-moving-combine-households-guide": wematchCompare,
@@ -314,7 +323,7 @@ export function getMovingService(slug: string): MovingService | undefined {
 }
 
 /** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */
-export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference"]);
+export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference", "rainy-day-moving-preparation-guide"]);
 export function filterRestrictedKeywords(slug: string, keywords: readonly string[]): string[] {
   if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
   return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));
