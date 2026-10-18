@@ -19,6 +19,10 @@ export function Footer() {
           <strong>안내</strong>
           <div className="footer-links"><Link href="/about">사이트 소개</Link><Link href="/editorial-policy">편집 원칙</Link></div>
         </div>
+        <div>
+          <strong>함께 보면 좋은 정보</strong>
+          <div className="footer-links"><a href="https://gajun.kr/">가전비교연구소 · 이사 가전 고르기</a><a href="https://suriwiki.com/">수리위키 · 집 수리·설치</a><a href="https://present.tipspedia.kr/">선물저널 · 집들이 선물</a><a href="https://tipspedia.kr/">팁스피디아 · 생활꿀팁</a></div>
+        </div>
       </div>
       <div className="container footer-bottom">
         <span>© 2026 {SITE_NAME}</span>
