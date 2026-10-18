@@ -1,0 +1,130 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-10-18T20:03:26.315Z",
+  "updatedAt": "2026-10-18T20:03:26.315Z",
+  "createdBy": "actions/39161213303",
+  "titles": [
+    {
+      "keyword": "COMMAX도어락",
+      "volume": 1340,
+      "grade": "1위가능",
+      "title": "COMMAX도어락, 셀프 교체 vs 기사 방문 비용·소요시간 비교",
+      "hook": "자가 교체와 전문 기사 출장비 실익 비교",
+      "intent": "혼자 할 수 있는지 기사를 불러야 하는지 망설이는 독자 타깃",
+      "alternatives": [
+        "COMMAX도어락, 무타공 설치와 타공 규격 차이로 추가금 막는 법",
+        "COMMAX도어락, 당일 교체 전 문 두께·백셋 규격 확인 3단계",
+        "COMMAX도어락, 건전지 방전 시 9V 비상 전원과 고장 판정 기준"
+      ]
+    },
+    {
+      "keyword": "화장실변기실리콘",
+      "volume": 1380,
+      "grade": "상위가능",
+      "title": "화장실변기실리콘, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "화장실변기실리콘, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "화장실변기실리콘, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "화장실변기실리콘, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-10-18T20:03:25.742Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "COMMAX도어락",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "9658017174",
+          "name": "코맥스 CDL-88P 4WAY(브라운) 디지털도어락 다크실버 푸시풀 번호 카드키 지문 비상키 I, 고객직접설치, CDL-88P(지문)(브라운)",
+          "price": 250800,
+          "priceFormatted": "250,800원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/yl9T5SFD14oYmRfNyu-qGaq2zptJmfaHGgpDRJukRxuZ_rM9cYxURNjslUv7WyRZykalw2QX2GolqbsBKNGhrt3Pnv8jTOb1aV8eFX2mw2Jo06TnkYOwKEjHGrsDG2i4O7fyCyyKKlxptQ82ABpxO1kFWdEoYUIralRk-NfdN1BN8xur-QGS7B4UrUtRPr1pJ-pC1ct-hpkWviRzKh0FvEPW0KGqApTfvj3ApUpkqqPCpvNAtrvSULs2kn01TuFgpI-VN2H6CdluB9PNSW7KQ20WtZ2wBCsYSiTiDt2EEYwMf33M1k7vGebmB4t2KFVOuRvAfWPclWUi0r0bK8qBGjSXSlyIGXdrbi7UKiwoAYis6FMs8hQvRdg_hOcs6nYTPA-BVfNuDgsYLFuyCv2Ll5fHOld3IqgJWdqvGNZ2EKgCwBzo_BiNx_fky5AxdkpUVv6JICz7k5-KI95pqvqb7beBhCDr0qxgLHNSnS1ckK8ntTATIfW2iaUSSkdPPBH6HwmJhqORB9WBxJ6ZBEdLGKyR9oJmVwwUI2xAi9UQ",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9658017174&itemId=28870769583&vendorItemId=96041072828&traceid=V0-153-fcc44d95eb35f95d&clickBeacon=fa6e41e0-cb2e-11f1-be62-8bae6f2523b0%7E3&requestid=20261019050325504022486689&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "7210605091",
+          "name": "COMMAX 무타공 지문인식 카드키 푸시풀 디지털 손잡이 있음 도어락",
+          "price": 187000,
+          "priceFormatted": "187,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/8yXxREjvqJ6IRp4h89v3EH0gOsuyw_3yIWQiu28ownqEFU_oIAjltBzoT7wnQ6BM_vNdANvvRaNOGQJKTqvZ8GzHIPSN1hQIIAsnPH1EnhCn_5E1KeLsLodHIQTk_5LPWjcY04JtptjYtXz3wY4l7VpuIB5V6oFPfHp0YCxM1vbnBcR-cD7SnE7eXPOOzOpPXjFVge4omx7vOzYy_Y843l30KXMaijXOZrAt9URAUu-yTQAie3b0QX7VP2T7eRNu6sW8dqs8W3pXvb1TKOrd_W0VMNZwSwM2ePhpAf680dz-EHshN0yHG52caOg0LC5bfjtpVmeF0ECaej2jnB_n76l9Hpr6IK_7aqckHLZ44owmaMhsg4TliVmPcrCwKrHaeNr-eBQ2odutXPDYdxl-nUGvLMhtStjJ_TbCuGjXHLefC41TWCJV7OXC-nVjU-ONU8AK8cpLtRmGmSuSScNe_wEkDNXdx6unNa8NqaHfNHmdR8OLkg8gUaKVxwFAN-2gpy9jJXb4Kt-GPl1JBlvsW0C-f8Xc-go_R-c=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7210605091&itemId=21283533791&vendorItemId=88343558502&traceid=V0-153-21f2549ffd399ea9&requestid=20261019050325504022486689&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": true
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-18T20:03:26.275Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "화장실변기실리콘",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8300309571",
+          "name": "욕실의여왕 실리콘 스크래퍼 헤라 타일 줄눈 제거기/스크래퍼 1개+이지실리콘 2개, 1세트",
+          "price": 15900,
+          "priceFormatted": "15,900원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/0lux_g1QOOXnuVZx0mYf6QlZdBm8uqW1mATmF28tbCm3e6cg21ASPrUAcMSxmAL4Uj5bbTPDBb6o32utEYbqWAC7TpkGeeXtWnZ5xS0IfW_Fe-UG1hGIODtCzCtRA3N5eo6_Nx5HzA6q6JtdDytCdjNFlz6CV15Wsp7I-AE2zA2QWzIxXkCG2fRcxIpTHAThjOPB3aCU6wi4eFemzhTGNEXM5-afm-ZCJ2AQ6z-_7WZ7WNNcSTrU45s5cX0girZCXeGEd70rai-XibO5aoNr2ARdQUYr9Tzo2uJXHs2igkRL0hasNAglyV5WP7guEjRFGW8-mn5gCBIf0z7SbrbFE9mjvYarBXhFfMx4-_azyFAcbQqfZ0FZI3HxNhOCgun14izAJ2bFGjnEk5LC24tZmsERm03mWruRaWWdY_nF61IEXG72hbjpCZxZpvDFKNrfnE53Iw96-fn4Me6Wd93qk5W2jH3FA8l5hRCRNnQ6WIy_72dcENv4y1dXMEy24EWKhvEmPZXo_XYGecyTou-BjL0q_V4fATajKxhS_A==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8300309571&itemId=23944140631&vendorItemId=84146051103&traceid=V0-153-13a6f0f4ed8b0321&clickBeacon=fabb5070-cb2e-11f1-8733-f36ba86d410d%7E3&requestid=20261019050326007315215628&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "7855872923",
+          "name": "쓱싹마녀 초간단 실리콘 백색 + 매직 스크래퍼 세트",
+          "price": 10800,
+          "priceFormatted": "10,800원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/ndqGdI6Mcwocp6vInfjxD2p76ZaOeM97tCtlwUhOuPsH4B2Z7EGWQRs1OVDy-CFuYVBvJpkw2-Ag8obPvYQUk03_XLTv9LSiFMVaYqyDqrCbKM-gPUztPl_-yK_8zruxbdHfBHIAPLPRgu3wun7CE1cbN6NK24kAep5iD-LucxeI0egbVU4OnjNXFOD1G_aUVToAjH6514RYLzlcjK2XYBkweF6nFsvQuQlspswL1vEbktpe-WSX3zQnhhOIbOe_wmGnIyy6EXtwCqnCJbE1Yn8I1MYUqYOdihayS-b1JDTY9gRxNKKiD7VVolS1t6MBfFNbOfmS_EAEdAR2Hq9myQu3U1ZoPj1ocR0Opx-OO3wK8l-cVD9N37-8X2giqh4wNjuK8sSj9_1OmGcvGBQ9cD3I2qeDUn3lZcylkN1MUHEmX2HUT_YC94Or3oaGeR_RtARQt0UW3ZSj1F8-Cc602TFbAjheZ2eTRtsnSP_3Ya8Wp8RGPhmf1kdN7O3cleHZCzHOAoFkAsJQzYHGTnaPUZq6yWY4ot4Qn0kJ-RvQKoqjVEFjIG1R1PE=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7855872923&itemId=21425155615&vendorItemId=88472179314&traceid=V0-153-68086e02ba35fd11&requestid=20261019050326007315215628&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    }
+  ]
+}
