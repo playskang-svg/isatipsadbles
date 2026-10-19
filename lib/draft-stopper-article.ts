@@ -119,7 +119,10 @@ export const draftStopperArticles: Article[] = [
         },
         paragraphs: [
           "에너지공단도 에어캡, 문풍지, 커튼을 함께 쓰라고 안내합니다. 틈막이는 틈의 바람을, 에어캡은 유리 표면을, 커튼은 창 앞 공기층을 맡는 식으로 역할이 다릅니다.",
-          "외풍을 막고도 아침 바닥이 차갑다면 보조 난방 기구를 안전 기준으로 비교한 [전기장판 추천 안전 기준 5가지](https://blog.naver.com/topclassbiz/224445562942) 글도 참고하세요. 이사를 앞두었다면 [겨울 이사 준비 가이드](/articles/winter-moving-preparation-guide)에서 동파 대비를 먼저 확인하세요.",
+          "틈을 막았는데도 아침 바닥이 여전히 차갑다면, 이제 남은 건 난방입니다. 전기장판은 온도 조절과 저온화상 안전 기준부터 보는 게 실수를 줄여줍니다. 그 기준 5가지를 정리해 둔 글이 아래 버튼에 있어요.",
+          "[![전기장판 추천 안전 기준 5가지 네이버 블로그 글 보기](/images/buttons/btn_blog.webp)](https://blog.naver.com/topclassbiz/224445562942)",
+          "이사를 앞두었다면 보온보다 동파 대비가 더 급합니다. 순서는 아래 버튼의 가이드에 정리해 두었어요.",
+          "[![겨울 이사 준비 가이드 보기](/images/buttons/btn_guide.webp)](/articles/winter-moving-preparation-guide)",
         ],
       },
     ],
