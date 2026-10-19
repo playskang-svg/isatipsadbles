@@ -798,6 +798,8 @@ import { moveOutFeeSettlementArticles } from "./move-out-fee-settlement-article"
 import { rainyDayMovingArticles } from "./rainy-day-moving-article";
 import { draftStopperArticles } from "./draft-stopper-article";
 import { condensationArticles } from "./condensation-article";
+import { novemberSonDayArticles } from "./november-son-day-article";
+import { novemberSonDayArticles } from "./november-son-day-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -833,6 +835,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...rainyDayMovingArticles,
   ...draftStopperArticles,
   ...condensationArticles,
+  ...novemberSonDayArticles,
 ]);
 
 export const categoryMeta = {
