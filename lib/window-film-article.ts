@@ -13,7 +13,7 @@ export const windowFilmArticles: Article[] = [
     keyword: "단열필름",
     secondaryKeywords: ["창문 단열필름", "단열필름 결로", "창문 결로 방지", "결로방지필름"],
     readingTime: 6,
-    publishedAt: "2026-10-20",
+    publishedAt: "2026-10-19",
     updatedAt: "2026-10-20",
     accent: "teal",
     intro:
