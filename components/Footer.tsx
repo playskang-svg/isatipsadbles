@@ -27,6 +27,7 @@ export function Footer() {
       <div className="container footer-bottom">
         <span>© 2026 {SITE_NAME}</span>
         <span>계약·보증금·행정 절차는 개인 상황에 따라 달라질 수 있으므로 공식 기관에서 다시 확인하세요.</span>
+        <span className="footer-disclosure">이 사이트의 일부 링크(이사 견적 비교, 숨고, 쿠팡 파트너스 등)는 제휴 링크이며, 링크를 통해 이용하시면 사이트 운영자가 소정의 수수료를 받을 수 있습니다. 글의 내용과 추천 기준은 수수료와 무관하게 작성합니다.</span>
       </div>
     </footer>
   );

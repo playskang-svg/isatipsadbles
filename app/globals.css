@@ -326,3 +326,6 @@ a { color:inherit; text-decoration:none; }
   .product-button { min-height:40px; padding:0 11px; font-size:12px; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+
+.footer-bottom { flex-wrap:wrap; }
+.footer-disclosure { flex-basis:100%; line-height:1.6; }
