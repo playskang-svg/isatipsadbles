@@ -16,16 +16,26 @@ export const dynamic = "force-dynamic";
 
 function renderInlineLinks(text: string) {
   const parts: ReactNode[] = [];
-  const pattern = /\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g;
+  const pattern = /\[!\[([^\]]*)\]\(([^)]+)\)\]\(((?:https?:\/\/|\/)[^)]+)\)|\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
-    const href = match[2];
+    const isButton = match[2] !== undefined;
+    const href = isButton ? match[3] : match[5];
+    const label = isButton ? match[1] : match[4];
     const sponsored = isAffiliateUrl(href);
-    parts.push(href.startsWith("/")
-      ? <Link key={`${match.index}-${href}`} href={href}>{match[1]}</Link>
-      : <a key={`${match.index}-${href}`} href={href} target="_blank" rel={sponsored ? "sponsored nofollow noopener noreferrer" : "noopener noreferrer"}>{match[1]}</a>);
+    if (isButton) {
+      // 버튼 이미지 CTA: [![설명](/images/buttons/btn_*.png)](링크)
+      const img = <img src={match[2]} alt={label} width={1000} height={290} loading="lazy" />;
+      parts.push(href.startsWith("/")
+        ? <Link key={`${match.index}-${href}`} href={href} className="btn-image">{img}</Link>
+        : <a key={`${match.index}-${href}`} href={href} className="btn-image" target="_blank" rel={sponsored ? "sponsored nofollow noopener noreferrer" : "noopener noreferrer"}>{img}</a>);
+    } else {
+      parts.push(href.startsWith("/")
+        ? <Link key={`${match.index}-${href}`} href={href}>{label}</Link>
+        : <a key={`${match.index}-${href}`} href={href} target="_blank" rel={sponsored ? "sponsored nofollow noopener noreferrer" : "noopener noreferrer"}>{label}</a>);
+    }
     lastIndex = pattern.lastIndex;
   }
   if (lastIndex < text.length) parts.push(text.slice(lastIndex));
