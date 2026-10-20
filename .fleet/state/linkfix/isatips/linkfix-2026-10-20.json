@@ -1,0 +1,38 @@
+{
+  "site": "isatips",
+  "label": "이사팁스 (이사준비백서)",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "scannedAt": "2026-10-20T00:14:40.897Z",
+  "pagesCrawled": 200,
+  "sitemapUrls": 0,
+  "externalChecked": 42,
+  "summary": {
+    "high": 1
+  },
+  "occurrences": 1,
+  "findings": [
+    {
+      "severity": "high",
+      "kind": "no-sitemap",
+      "page": "https://isatips.adbles.com",
+      "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
+    }
+  ],
+  "detail": {},
+  "autoFixable": [
+    "dead-anchor",
+    "empty-href",
+    "javascript-void",
+    "placeholder-url",
+    "http-to-https",
+    "double-slash"
+  ],
+  "reportOnly": [
+    "dead-external-link",
+    "external-unreachable",
+    "orphan-page",
+    "redirect-chain",
+    "noindex"
+  ]
+}

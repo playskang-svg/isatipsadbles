@@ -3,48 +3,20 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-10-18T22:53:13.720Z",
+  "scannedAt": "2026-10-20T00:14:40.897Z",
   "pagesCrawled": 200,
   "sitemapUrls": 0,
-  "externalChecked": 40,
+  "externalChecked": 42,
   "summary": {
-    "high": 1,
-    "low": 3
+    "high": 1
   },
-  "occurrences": 4,
+  "occurrences": 1,
   "findings": [
     {
       "severity": "high",
       "kind": "no-sitemap",
       "page": "https://isatips.adbles.com",
       "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/moving-preparation-checklist",
-      "href": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1000120619",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/moving-company-quote-comparison",
-      "href": "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1004458186",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/gyeonggi-002-aircon-install",
-      "href": "https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001243735",
-      "status": 0,
-      "error": "fetch failed",
-      "note": "응답없음 — 일시적일 수 있어 다음 회차에 다시 본다"
     }
   ],
   "detail": {},
