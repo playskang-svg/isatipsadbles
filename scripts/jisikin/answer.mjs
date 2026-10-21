@@ -2,6 +2,8 @@
 // (2) 쓴 답변이 발행 가능한지 기계적으로 검사한다.
 // 네이버 지식인 운영정책과 기준문서 §7(사실성)·§12(수익화)에서 나온 규칙이다.
 
+import { shingles, jaccard } from "../site/text.mjs";
+
 const ADVERT_PATTERNS = [
   [/무조건/u, "단정형 표현 '무조건'"],
   [/100\s*%|백퍼|100퍼/u, "단정형 표현 '100%'"],
@@ -41,20 +43,6 @@ const SOLUTION_REQUIRED = [
 
 const NUMBER_CLAIM = /\d[\d,]*\s*(?:만\s*원|원|만원|퍼센트|%)/gu;
 const HEDGE = /(달라질 수|다를 수|차이가 있을 수|업체|조건에 따라|기준으로|확인해|문의해)/u;
-
-function shingles(text, size = 4) {
-  const normalized = String(text).replace(/https?:\/\/[^\s]+/gu, " ").replace(/[^가-힣a-z0-9]+/giu, "");
-  const set = new Set();
-  for (let i = 0; i <= normalized.length - size; i += 1) set.add(normalized.slice(i, i + size));
-  return set;
-}
-
-function jaccard(a, b) {
-  if (a.size === 0 || b.size === 0) return 0;
-  let shared = 0;
-  for (const gram of a) if (b.has(gram)) shared += 1;
-  return shared / (a.size + b.size - shared);
-}
 
 function firstSentence(text) {
   return bodyWithoutLinks(text).split(/(?<=[.!?])\s+/u)[0]?.slice(0, 40) ?? "";

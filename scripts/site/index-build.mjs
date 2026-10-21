@@ -1,7 +1,7 @@
 // 발행된 글 전체를 검색 가능한 인덱스로 만든다.
 // lib/articles.ts를 직접 읽으므로 생성형 페이지(repair-keyword-*, regional-*)까지 빠짐없이 들어온다.
 import { PROJECT_ROOT } from "./paths.mjs";
-import { SITE_URL } from "./config.mjs";
+import { articleUrl } from "./site.mjs";
 
 let cached = null;
 
@@ -15,7 +15,7 @@ export async function buildIndex() {
 
   cached = mod.getPublishedArticles().map((article) => ({
     slug: article.slug,
-    url: `${SITE_URL}/articles/${article.slug}`,
+    url: articleUrl(article.slug),
     title: article.title,
     description: article.description,
     category: article.category,
