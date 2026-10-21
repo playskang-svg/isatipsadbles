@@ -802,6 +802,7 @@ import { novemberSonDayArticles } from "./november-son-day-article";
 import { windowFilmArticles } from "./window-film-article";
 import { freezePreventionArticles } from "./freeze-prevention-article";
 import { boilerReplacementArticles } from "./boiler-replacement-article";
+import { boilerCheckArticles } from "./boiler-check-article";
 
 export const articles: Article[] = enrichArticlesWithFieldImages([
   ...baseArticles,
@@ -841,6 +842,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...windowFilmArticles,
   ...freezePreventionArticles,
   ...boilerReplacementArticles,
+  ...boilerCheckArticles,
 ]);
 
 export const categoryMeta = {
