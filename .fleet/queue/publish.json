@@ -1,0 +1,130 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-10-29T22:25:50.503Z",
+  "updatedAt": "2026-10-29T22:25:50.503Z",
+  "createdBy": "actions/40965257343",
+  "titles": [
+    {
+      "keyword": "미세방충망가격",
+      "volume": 1480,
+      "grade": "상위가능",
+      "title": "미세방충망가격, 틀 통째 교체 vs 망만 갈기 비용·수명 비교",
+      "hook": "틀 교체와 망 교체의 가격 차이와 내구성",
+      "intent": "굳이 틀까지 바꿔야 하는지 망설이는 독자 타깃",
+      "alternatives": [
+        "미세방충망가격, 미세방충망 바람 안 통한다는 오해와 실측 통기성",
+        "미세방충망가격, 24평 아파트 창문 개수별 시공 견적과 교체 시간",
+        "미세방충망가격, 가스켓 헐거움과 틈새 벌레 유입 막는 점검법"
+      ]
+    },
+    {
+      "keyword": "줄눈시공가격",
+      "volume": 1490,
+      "grade": "상위가능",
+      "title": "줄눈시공가격, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "줄눈시공가격, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "줄눈시공가격, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "줄눈시공가격, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-10-29T22:25:49.806Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "미세방충망가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "7478637910",
+          "name": "에코아일 미세먼지 방충망 롤 촘촘망 창문 셀프 교체 1M 5M",
+          "price": 36500,
+          "priceFormatted": "36,500원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/NgFRWBl50qDq64GlNoy4a3CGRYzD9ed1DeWvuBrVvfjVR1hZKebQY9HFp6zeluUBtKOMYZIprB24EuAAmxRa0F9kEWzYo5j1S-POWGcB0URN_wPTLxQiGcfdjs6jmyEBSmWRCLxfSRBqiwIh9RrvD8PtMnFfollouO7-SFmukHVM-xi92z2gABvsu0NOLytnQNDBssY_587GSFU_9gW2JGUkrT5Ank4jZZ4uwnYSHlzQbfylXIdUnAoz3io6J-jz6rlPecpjsB34f2nY6BZ1tN8pPBpPma2YQM3ZIl65p0l6_gmgqQhvelq3rSPRVpLDIOm9V9GnqHhGq59Z0ZPX4QWTYXOkvjBTjilwlp22E0-rMd9cnfRnww6tKZ6oQVGiMxIKdZtZ8aAtaqL-01GH-xz50NL3FA-1Of2m_7GwAuC6nwbGaAQOGyBKeeh69jmSpjBbQsC-TiTNGxtrFhnYB2djmEKgXF50OOe5qPUZ81gIRQ5p4GJU7TufIp82783tKxc4iaQij1EaA8pH89dEDEwPVeaeFO1n-oYEXOHecDKMniqZj4MN",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7478637910&itemId=19529836508&vendorItemId=74430808417&traceid=V0-153-6e10d547cb97e652&requestid=20261030072549458279727427&token=31850C%7CGM&pt=0&slot=1",
+          "isRocket": false,
+          "isFreeShipping": false
+        },
+        {
+          "id": "9443181350",
+          "name": "루나텍스 미세방충망 대용량 1롤 셀프 교체 30M 15M 10M 촘촘 발수 모노망",
+          "price": 33000,
+          "priceFormatted": "33,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/aBL4hVPvCxVZZ66waEp_kSSzQdDps-2j5cmRjnB42bv0AU9WPbi-HxfBjsZTN9cyHOHQzba3il_9xLFvn1E5TPr9F1UJpAN2QKFz2lJ0LdzUabiOGPeLopDsSb_WOGV2ixjLz_cb-voDnlUcnRDhhYoi5hAEOgWS7WvsbcoGWqt2fcR41NewGUOTVpeM2brSmFwlv-5wzbLGkU1qWrbeuGJIAUmBvTYwJfM9vreO4GtCO5qzxy1Z_olGPWzIcFusHFeJISuK2p5NP3A9aUvbO9zRk9zkv3xO9OcOKOXpF9CgqVlKCMs2ZIyLiiN-NYjtolKUPk47kFvfWbe68BB9VFNZv08ly_9-o4DA1HKTBZ25GmxkZwgpQtrAoo-YgtQhcDXNfrSU2WU3l81HC_x8UAgeJ4ZL-gm2k_w44MW9smZ7-B2ksAUbPf0nRqD26qh4WozA6oVmv16Q4GrhMOtOoQEmYD1HpOBht80XqvcibKTaNw7V2vV1VoUAc-YlS2mMQcPor3gFflK9FhJkGPaAJm2xQSe9GdUw1vGOfyrbZGxgEOsyqkRa",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9443181350&itemId=28562330717&vendorItemId=95785401163&traceid=V0-153-1799fbead74cdf1c&requestid=20261030072549458279727427&token=31850C%7CGM&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    },
+    {
+      "collected_at": "2026-10-29T22:25:50.459Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "줄눈시공가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "7658158254",
+          "name": "쓱싹마녀 욕실 타일줄눈보수제 셀프시공",
+          "price": 11700,
+          "priceFormatted": "11,700원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/duTfp4L38aZyIIBHdtbqPKNsMAKX3xKCTI_nv41br41xRNEcYQxQj1gYkvvrMT6FQgmddFrs_ioIbiPXbTF1yEt00H7nucfE4prbX53futKI4hYFu-65GWUbisCNT-5ohbZBqmsZRRqxdVK51yjbNZx7PKK9LCmc_Fe1cULWUXu_fLAUqDitxJuiWvjWc3BAV8LQhfdoBsz8jlNl8AmcVTIoWFC-Ynzgw1app2dK1862zNPh1Lt8ij4R3TtgY1vtSnLU7WtxUdBgsSA-WgP53Z19y2ixhkZ84PcwSz5oRkWqbjiLAD_XHmK5hyHJGCcOu-bRCbbEEUjXJSoQHJEvgbBgkvL4_Ki4yiZsVQ9DsNP9cc_cS4q-c1P8_8UCwmU3rtoaNrYDqxsvLkNlsLhBAp9eqCNR9wiyxH1RmqWgoD0xCKSM899WnpdL_sSTTJUQSjpE3dmykWNGnUyLoSwR8hdl9bY5IBDCJpB-ZNxx-WZ4GXC-XEhl80qbA-rJwytQEyYeBJ5D6EIV4glLdVQdmmZo2N1Wti588JmayqrYQxgboop2KaCB",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=7658158254&itemId=20394735455&vendorItemId=90417401121&traceid=V0-153-069be033af6c585a&requestid=20261030072550114024876196&token=31850C%7CGM&pt=0&slot=1",
+          "isRocket": false,
+          "isFreeShipping": true
+        },
+        {
+          "id": "9634161933",
+          "name": "DDJJ 기능성 타일 줄눈 보수제 메꾸미 접합제 셀프줄눈 젖은 곳 시공 가능 강력 방수 다용도 간편 셀프시공 세트 250g (실리콘 제거용 스크래퍼 포함)",
+          "price": 9900,
+          "priceFormatted": "9,900원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/3Gw9BTdFZDnfzIey3OMu2hJaXjdt1LzfzhQ3ABOd0pXvWJRqQGXTH_G2-hsciHZEi6Iuu8PpbEL6VQDErgU0xgjvQ0O3XYBiqfWAKYzhVkklF2QPsCIs3xQeD17G9NKgVZcWPQT1QpmIl2ff3oB_Q0VidnLP46O8AeOxekWvzxrhXBELP095XfvTnqXsVUfeFWPH3y24NYj7jFN8CPXlHA6Lq6gwq-f-Ac8ReVW2tnJurx_zf2E1vCDIC3a4-jlhGgzT1IxO5r3DeY_TjhcO22KHjW-PknJwp3-GM9MClreksRiTihcrt4BihDmmXXtTAlcDEfb-7QXaTDkmFVIXOJqjfC8wCHasrqrr4YwfGwEkgT20-Dp54zhJXSJRo__hIhvffeXgxs4RvhFNb23g-NoeV96T5JCLnFvHXiY9fN6_sd58H40D7uJJ71UxWevI4ONvr98UXZmp5DaUYj2fBjrpLQN1ceE8y-Irtf0IKYi7WWkzvoJx3uoEXz-v9Wi652fk5iLIU4WeP2QLrrckpKwaM9y6cDKmGCCB2XQ5Vs5jxoY0Hd89qw==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=9634161933&itemId=28780442511&vendorItemId=95600849851&traceid=V0-153-a01fddb282d7159a&requestid=20261030072550114024876196&token=31850C%7CGM&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    }
+  ]
+}
