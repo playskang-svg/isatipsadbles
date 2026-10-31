@@ -1,0 +1,72 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-10-31T20:57:52.478Z",
+  "updatedAt": "2026-10-31T20:57:52.479Z",
+  "createdBy": "actions/41241069928",
+  "titles": [
+    {
+      "keyword": "화장실세면대수전",
+      "volume": 1390,
+      "grade": "상위가능",
+      "title": "화장실세면대수전, 누수 없이 혼자 교체하는 공구와 몽키스패너 요령",
+      "hook": "누수 불안 해소 및 필수 공구 안내",
+      "intent": "셀프 교체 중 물 샐까 봐 두려워하는 독자 타깃",
+      "alternatives": [
+        "화장실세면대수전, 오래된 아파트 호환 규격과 출장 교체 실견적",
+        "화장실세면대수전, 싼 제품 샀다가 테프론 테이프 감다 후회하는 이유",
+        "화장실세면대수전, 부속품 교체할 때 계량기 밸브 잠그는 순서"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-10-31T20:57:52.440Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "화장실세면대수전",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": [
+        {
+          "id": "8539949300",
+          "name": "한영 신소재 세면대 수전 HY-7310, 단일 색상, 1세트",
+          "price": 32000,
+          "priceFormatted": "32,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/w7-qqGHOqWb6PN_Zw1ZZcvNbzHQUtgvjMJ5rbtQjd6wob9b9LCyIMOYFaaHzpwbKXr2RFcHHRJDah-FMxlxSMI-md6QNIAhc2tb4LWEicss3iZbCkeWpvndRuuqAE-dvD2q0-JzNLekVknJE43Lk1lj_ran2484DW92nWhOEl-9FFjk7nWMAslmykk6wWETi93GeXDSSWHtUzsATO08OIglHAXHN7-O71cqhW50IXxxtxZZcboimgb6Gt4wdRhzPTjcUTKOeuf4X81gAbxpAODneNLT9hGw60K8ysuUpFd2uP0XxnXs-2B2OQz4sbjNM2tuEHyGcFs4fchgeYphaeFdjX6sk-6Zb7kEf4vr_Rm9REejneLB9BiOr2sDj63jqsg1iYotUuUkT8j2VjqIJ8YZMaUqkkkf_DHpLccwx33bK9Wiur4ybbol46OegQ7iGQaqaH5Nrb4Cg3ih2Z9ZGbtHVuymx_N9LePalSXBMAjlRjcZYMx72_Knq54NH8TitL3tepDnhInIyFXSl_mFedQ==",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8539949300&itemId=24724409591&vendorItemId=90782851578&traceid=V0-153-ce139d1d14d10a08&clickBeacon=bce98c50-d56d-11f1-9253-2730f371ed02%7E3&requestid=20261101055752197074444065&token=31850C%7CMIXED&pt=1&slot=1",
+          "isRocket": true,
+          "isFreeShipping": false
+        },
+        {
+          "id": "8850546143",
+          "name": "로딘 국산 투홀 겸용 세면샤워 2홀 세면수전 수도꼭지 M1-460",
+          "price": 36000,
+          "priceFormatted": "36,000원",
+          "imageUrl": "https://ads-partners.coupang.com/image1/NRVygupu1MMxxduTNZqGHnKeKWjUX_skCJNx87Sa6Dl_DjPpUK2mFUA9bazvLqMqF_6WHin0qLhEhuG349s11iejvy6LywdTXPS7pp-HOGCYha3qx5Y9a7ufMfXV8uRQesg-nnwajyM0Y-9MboSlbBOt3za0wweMxTN0ZCLh8AiTm0qEPU-3MGjoWFAIggGD8KjgQop6NqTN7-aVIUEW87JHIvwwNGdBrJwUFZPxqewO64Ivb8vMd_8eij3URQNvvs3WHTFoBLMwqpCTZMNNumsR8ZS1PcUvoL3GiWAV1GSZf-_O8SaeHeXP9vKONweRKzYeMpcQ3Zo2mX3N2ngBf5SoFqNrR2AIJ_c4zTMwTMYbZpNpRh1i1RW3_zqwCjeR38jh-AzFFpT6s84LAPqlhebVIiVHRgRzExJLwSe_uxEUqe3j6hyEoEw-ORAvrfGrLOENQhKRHv10xhCZYIVpLnO58dVeJCTvdssYE9hh4RC0zigCCZQmeCPntqHFmmF7Jcc6DV1oRPQUTKvswReT3QWQuNHpBBm6-jF74ykEGTm5uLFBc0XGYls=",
+          "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=linkmgr&pageKey=8850546143&itemId=25800739232&vendorItemId=92709275103&traceid=V0-153-c2a1fc1a5937b298&requestid=20261101055752197074444065&token=31850C%7CMIXED&pt=0&slot=2",
+          "isRocket": true,
+          "isFreeShipping": false
+        }
+      ]
+    }
+  ]
+}
