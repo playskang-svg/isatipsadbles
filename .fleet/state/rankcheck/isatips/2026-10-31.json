@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-09-16T20:47:52.215Z",
+  "checkedAt": "2026-10-31T20:55:24.494Z",
   "engine": "naver",
   "results": [
     {
@@ -22,11 +22,11 @@
     },
     {
       "keyword": "포장이사 견적 비교",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "이사 에어컨 이전설치 비용",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "용달이사 사다리차",
