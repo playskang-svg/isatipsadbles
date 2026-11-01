@@ -179,9 +179,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <p className="eyebrow">{article.categoryLabel} · {article.keyword}</p>
           <h1>{article.title}</h1>
           <p className="article-deck">{article.description}</p>
+          {article.cta && <a className="hero-quote-button" href={article.cta.url} target="_blank" rel="sponsored nofollow noopener noreferrer">{article.cta.buttonLabel} <span aria-hidden="true">↗</span></a>}
           <div className="article-meta"><span>업데이트 {displayDate(article.updatedAt)}</span><span>{article.readingTime}분 읽기</span><span>편집팀</span></div>
           {article.badges && <ul className="article-badges">{article.badges.map((badge) => <li key={badge}>{badge}</li>)}</ul>}
-          {article.cta && <a className="hero-quote-button" href={article.cta.url} target="_blank" rel="sponsored nofollow noopener noreferrer">{article.cta.buttonLabel} <span aria-hidden="true">↗</span></a>}
         </div>
       </header>
       <div className="article-layout container">
