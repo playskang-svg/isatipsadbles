@@ -20,7 +20,8 @@ export async function resolve(specifier, context, nextResolve) {
     target = pathToFileURL(`${root}/${target.slice(2)}`).href;
   }
 
-  if (target.startsWith("./") || target.startsWith("../")) {
+  // @/ 별칭도 위에서 file: 주소가 되므로 확장자를 같이 메운다.
+  if (target.startsWith("./") || target.startsWith("../") || target.startsWith("file:")) {
     const candidate = new URL(target, context.parentURL);
     if (!/\.[a-z]+$/u.test(candidate.pathname) && existsSync(`${fileURLToPath(candidate)}.ts`)) {
       target = `${candidate.href}.ts`;

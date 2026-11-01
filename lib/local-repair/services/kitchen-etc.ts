@@ -82,6 +82,7 @@ export const kitchenEtcServices: ServiceModule[] = [
     titleTails: ["처진 싱크볼·상판 크랙 고치는 순서", "볼만 바꿀까 상판까지 바꿀까 판단법", "언더·탑 마운트, 사각·원형 차이"],
     quoteKey: "repair-soomgo-sink-replace",
     priceKey: "싱크대-교체",
+    nearest: "싱크대 교체",
     hero: { src: "/images/repair-install/kitchen-sink-plumbing.webp", alt: "상판 아래 스테인리스 싱크볼과 배수관을 점검하는 작업자" },
     answers: [
       "싱크볼이 내려앉았다면 물을 쓰지 말고 볼 아래를 받친 뒤 점검을 부르세요. 상판 실금은 번지기 전에 메워야 자국이 작습니다.",
@@ -155,6 +156,7 @@ export const kitchenEtcServices: ServiceModule[] = [
     titleTails: ["철거·이동 전 확인할 배선과 바닥", "철거할까 줄일까 옮길까 판단 기준", "철거·축소·이동 공사 범위 비교"],
     quoteKey: "repair-soomgo-kitchen-remodel",
     priceKey: "주방-리모델링",
+    nearest: "주방 리모델링",
     hero: { src: "/images/interior/apt-order-demolition.webp", alt: "벽지가 뜯기고 폐기물 자루가 쌓인 철거 중인 아파트 거실" },
     answers: [
       "아일랜드를 없애기 전에 아래로 전선이나 배수관이 지나가는지 먼저 확인하세요. 콘센트나 개수대가 달려 있다면 철거만으로 끝나지 않습니다.",
@@ -290,8 +292,9 @@ export const kitchenEtcServices: ServiceModule[] = [
     keyword: "가스레인지교체",
     keywordForms: ["빌트인 가스레인지", "매립형 가스레인지", "가스레인지 설치", "인덕션 교체"],
     titleTails: ["불 안 붙을 때 점검과 교체 순서", "같은 타공으로 될까 인덕션이 나을까", "빌트인·프리스탠딩·인덕션 설치 차이"],
-    quoteKey: "repair-soomgo-kitchen-remodel",
-    priceKey: "주방-리모델링",
+    quoteKey: "repair-soomgo-induction",
+    priceKey: "인덕션-설치",
+    nearest: "인덕션 설치",
     hero: { src: "/images/repair-install/home-repair-inspection.webp", alt: "배관 점검구가 보이는 벽 옆에서 작업자가 점검표를 적으며 벽을 살피는 모습" },
     answers: [
       "불이 안 붙으면 건전지와 버너 캡부터 확인하세요. 그래도 안 되거나 가스 냄새가 나면 콕을 잠그고 도시가스사나 제조사에 연락하세요.",
@@ -655,6 +658,7 @@ export const kitchenEtcServices: ServiceModule[] = [
     titleTails: ["삐걱임·까짐·미끄럼 잡는 방법", "판 교체까지 갈까 보수로 끝낼까", "샌딩 재도장·판 교체·덧방 비교"],
     quoteKey: "repair-soomgo-floor-repair",
     priceKey: "마루-보수",
+    nearest: "마루 보수",
     hero: { src: "/images/repair-install/home-repair-inspection.webp", alt: "나무 문틀과 마루가 보이는 집에서 작업자가 점검표를 들고 상태를 살피는 모습" },
     answers: [
       "계단이 삐걱이면 어느 칸 어느 쪽에서 소리가 나는지 먼저 표시하세요. 이음부가 풀렸으면 다시 고정하고, 판이 갈라졌으면 그 칸만 바꿉니다.",
@@ -799,6 +803,7 @@ export const kitchenEtcServices: ServiceModule[] = [
     titleTails: ["우리 집 가능 조건과 설치 순서", "셀프로 될까 기사를 부를까 판단법", "싱크대·다용도실·붙박이 설치 비교"],
     quoteKey: "repair-soomgo-plumbing",
     priceKey: "수도-설치-수리",
+    nearest: "수도 설치·수리",
     hero: { src: "/images/repair-install/kitchen-sink-plumbing.webp", alt: "싱크대 아래 급수·배수 배관을 손전등으로 확인하는 작업자" },
     answers: [
       "직배수는 내 모델에 맞는 제조사 키트가 있는지와 물을 딸 자리부터 확인하세요. 수전에서 멀거나 호스가 심하게 꺾이는 자리는 설치를 막는 제품이 있습니다.",

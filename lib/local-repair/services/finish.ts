@@ -79,8 +79,9 @@ export const finishServices: ServiceModule[] = [
     keyword: "벽구멍수리",
     keywordForms: ["석고보드 수리", "벽구멍 메우기", "벽 복원", "천장 구멍 보수"],
     titleTails: ["못 자국·석고보드 구멍 메우는 순서", "메워서 끝날까 벽지까지 바꿀까", "패치·퍼티·보드 교체 언제 무엇을 쓸까"],
-    quoteKey: "repair-soomgo-wallpaper",
-    priceKey: "도배-시공",
+    quoteKey: "repair-soomgo-home-repair",
+    priceKey: "집-수리",
+    nearest: "집 수리",
     hero: { src: "/images/door-repair/abs-door-hole-repair.webp", alt: "실내문에 난 구멍을 헤라와 퍼티로 메우는 손" },
     answers: [
       "못 구멍과 앵커 자국은 퍼티로 메우고 사포질한 뒤 벽지나 페인트로 덮으면 끝납니다. 석고보드가 주먹만큼 뚫렸다면 보수 패치로 받침을 대고 메우세요.",
@@ -152,8 +153,9 @@ export const finishServices: ServiceModule[] = [
     keyword: "에어컨구멍 메우기",
     keywordForms: ["에어컨구멍", "에어컨구멍막기", "에어컨배관구멍", "벽걸이에어컨 타공 복원"],
     titleTails: ["철거 뒤 배관구멍 막는 순서와 비용", "셀프로 막을까 외벽까지 맡길까", "마감캡·퍼티·벽지 복원 무엇이 맞을까"],
-    quoteKey: "repair-soomgo-aircon",
-    priceKey: "에어컨-설치-수리",
+    quoteKey: "repair-soomgo-home-repair",
+    priceKey: "집-수리",
+    nearest: "집 수리",
     hero: { src: "/images/repair-install/home-repair-inspection.webp", alt: "벽면 배관 점검구 옆에서 갈라진 벽을 살피며 메모하는 작업자" },
     answers: [
       "에어컨을 뗀 배관구멍은 안쪽을 우레탄폼으로 채운 뒤 실내는 마감 캡이나 퍼티로, 바깥은 외벽 재질에 맞춰 막습니다. 바깥쪽이 베란다면 직접 할 만하지만 창밖 외벽이면 손대지 마세요.",

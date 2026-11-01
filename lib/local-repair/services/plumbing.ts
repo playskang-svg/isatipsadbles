@@ -88,6 +88,7 @@ export const plumbingServices: ServiceModule[] = [
     titleTails: ["물 넘치기 전에 뚫는 순서와 응급 대처", "뚫어뻥으로 될까 기사를 불러야 할까", "뚫어뻥·관통기·변기 탈거 언제 쓰나"],
     quoteKey: "repair-soomgo-drain",
     priceKey: "하수구-청소",
+    nearest: "하수구 청소",
     hero: { src: "/images/repair-install/bathroom-fixture-repair.webp", alt: "욕실 바닥에 무릎을 꿇고 일체형 변기 옆을 공구로 손보는 작업자" },
     answers: [
       "물을 더 내리지 말고 변기 옆 앵글밸브를 시계 방향으로 잠그세요. 그다음 물에 잠긴 뚫어뻥을 배수구에 밀착해 천천히 누른 뒤 힘 있게 당기기를 반복합니다.",
@@ -241,6 +242,7 @@ export const plumbingServices: ServiceModule[] = [
     titleTails: ["물 샘·흔들림 잡는 수리와 교체 순서", "부속 교체로 끝날까 통째로 바꿀까", "일체형·투피스·벽걸이 장단점 비교"],
     quoteKey: "repair-soomgo-plumbing",
     priceKey: "수도-설치-수리",
+    nearest: "수도 설치·수리",
     hero: { src: "/images/repair-install/bathroom-fixture-repair.webp", alt: "유리 샤워부스가 있는 욕실에서 일체형 양변기를 공구로 손보는 작업자" },
     answers: [
       "변기 물이 안 멈추면 탱크 뚜껑을 열어 물이 넘침 관으로 넘어가는지 보세요. 넘어가면 필밸브, 안 넘어가는데 변기로 계속 흐르면 플러시밸브 쪽이고, 고칠 때까지는 앵글밸브를 잠가 둡니다.",
@@ -318,6 +320,7 @@ export const plumbingServices: ServiceModule[] = [
     titleTails: ["팝업 고장·물 샘·처짐 고치는 순서", "세면대를 바꿔야 할까 부품이면 될까", "벽걸이·탑볼·반다리 무엇이 맞을까"],
     quoteKey: "repair-soomgo-plumbing",
     priceKey: "수도-설치-수리",
+    nearest: "수도 설치·수리",
     hero: { src: "/images/repair-install/bathroom-fixture-repair.webp", alt: "욕실 변기 옆 벽 배관을 손보는 작업자와 매트 위에 놓인 스패너" },
     answers: [
       "세면대 물이 안 빠지면 팝업 마개를 빼서 머리카락부터 걷어 내고, 그래도 막히면 아래 트랩을 풀어 청소하세요. 세면대가 벽에서 벌어졌다면 기대지 말고 고정부터 점검받으세요.",
@@ -396,6 +399,7 @@ export const plumbingServices: ServiceModule[] = [
     titleTails: ["물 새는 수전 잠그고 바꾸는 순서", "카트리지 교체로 될까 수전을 바꿀까", "싱크대·세면대·욕조 수전 규격 차이"],
     quoteKey: "repair-soomgo-plumbing",
     priceKey: "수도-설치-수리",
+    nearest: "수도 설치·수리",
     hero: { src: "/images/freeze-prevention/faucet.jpg", alt: "창가 스테인리스 싱크대의 수전에서 종이컵으로 가늘게 물이 떨어지는 모습" },
     answers: [
       "수전이 새면 수전 아래쪽 앵글밸브를 시계 방향으로 잠그세요. 앵글밸브가 없는 욕조 수전이나 밸브가 안 잠기는 곳은 세대 수도 밸브를 잠근 뒤 손댑니다.",

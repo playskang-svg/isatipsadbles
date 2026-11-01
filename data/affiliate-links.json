@@ -3,7 +3,7 @@
   "version": "2026.11.02-01",
   "build": "a35f977d",
   "updated": "2026-11-02",
-  "link_count": 142,
+  "link_count": 144,
   "note": "이사준비백서 제휴링크. 코드는 link_key로만 조회한다. 쿠팡은 data/coupang-links.json(파트너 ID AF8819972, 관리 화면 간편 링크)을 쓴다.",
   "partner_id": "A100709419",
   "links": [
@@ -3229,6 +3229,48 @@
       "site_code": "A100709419",
       "keywords": [
         "하수구 청소"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-home-repair",
+      "category": "repair",
+      "label": "숨고 집수리",
+      "cta": "집수리 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A7%91-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EC%A7%91-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "집수리"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-induction",
+      "category": "repair",
+      "label": "숨고 인덕션 설치",
+      "cta": "인덕션 설치 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9D%B8%EB%8D%95%EC%85%98-%EC%84%A4%EC%B9%98",
+      "dest": "https://soomgo.com/hire/%EC%9D%B8%EB%8D%95%EC%85%98-%EC%84%A4%EC%B9%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "인덕션 설치"
       ],
       "collected_at": "2026-11-02",
       "updated": "2026-11-02",

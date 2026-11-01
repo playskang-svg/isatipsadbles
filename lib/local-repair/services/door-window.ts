@@ -226,6 +226,7 @@ export const doorWindowServices: ServiceModule[] = [
     titleTails: ["쾅 닫히는 현관문 도어클로저 조절법", "부속만 갈지 문 전체를 바꿀지 판단", "조절·부속 교체·전체 교체 차이"],
     quoteKey: "repair-soomgo-door-build",
     priceKey: "도어-시공",
+    nearest: "도어 시공",
     hero: { src: "/images/door-repair/fire-door-inspection.webp", alt: "철제 현관문의 도어클로저와 경첩을 점검하는 작업자" },
     answers: [
       "현관문이 쾅 닫히거나 끝까지 안 닫히면 도어클로저 조절 나사부터 확인하세요. 기름이 새거나 돌려도 변화가 없으면 부속 교체 대상입니다.",
@@ -514,6 +515,7 @@ export const doorWindowServices: ServiceModule[] = [
     titleTails: ["창문이 뻑뻑할 때 롤러·잠금 손보기", "교체 전에 부품 수리로 될지 판단", "부품·창짝·전체 교체 범위 비교"],
     quoteKey: "repair-soomgo-sash",
     priceKey: "창문-설치-수리",
+    priceNote: "샷시 설치까지 포함한 항목이라 롤러나 잠금장치만 고치는 작업은 이 범위와 크게 다를 수 있습니다.",
     hero: { src: "/images/repair-install/window-folding-door.webp", alt: "고층 아파트 샷시에 수평계를 대고 점검하는 작업자와 뒤쪽 유리 폴딩도어" },
     answers: [
       "창문이 뻑뻑하면 레일 청소부터 하고 창짝 아래 조정 나사로 높이를 맞춰 보세요. 잠가도 흔들리면 크리센트(반달 모양 잠금) 위치를 다시 잡으면 풀리기도 합니다.",
@@ -651,5 +653,6 @@ export const doorWindowServices: ServiceModule[] = [
       recent: "입주 10년 안쪽이면 복층유리일 때가 많아 필름을 고를 때 유리 조건부터 확인하세요. 결로가 심하면 하자 여부도 문의해 보세요.",
     },
     related: ["sash", "screen", "film", "leak", "wallpaper"],
+    guide: "window-insulation-film-condensation-guide",
   },
 ];

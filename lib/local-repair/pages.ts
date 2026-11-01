@@ -102,9 +102,17 @@ function priceParagraphs(region: Region, service: ServiceModule): string[] {
   if (!price) {
     return [`${eun(service.name)} 막힌 위치, 방문 시간대, 장비 사용 여부에 따라 금액 차이가 커서 공개된 평균값을 그대로 믿기 어렵습니다. 전화로 묻기 전에 증상 영상을 보내고 출장비와 작업비를 나눠 받으세요.`];
   }
+  const range = `평균 ${won(price.avg)}, 낮게는 ${won(price.min)}부터 높게는 ${won(price.max)}까지 나옵니다. 활동 고수 ${price.pros.toLocaleString("ko-KR")}명, 누적 견적요청 ${price.requests.toLocaleString("ko-KR")}건이 쌓인 전국 자료입니다.`;
+  const compare = `${region.label} 고정가격이 아니라 전국에서 거래된 범위입니다. 같은 작업 이름이라도 아래 항목에 따라 금액이 달라지니, 견적서에 이 항목이 어떻게 적혀 있는지 나란히 비교하세요.`;
+  if (service.nearest) {
+    return [
+      `숨고 예상금액 자료(${CHECKED} 확인)에 ${service.name}만 따로 잡힌 값은 없습니다. 가장 가까운 ${eun(price.title)} ${range}`,
+      `${eun(price.title)} ${gwa(service.name)} 작업 범위가 달라 실제 금액은 이 범위와 크게 다를 수 있습니다. ${compare}`,
+    ];
+  }
   return [
-    `숨고 예상금액 자료(${CHECKED} 확인)에서 ${eun(price.title)} 평균 ${won(price.avg)}, 낮게는 ${won(price.min)}부터 높게는 ${won(price.max)}까지 나옵니다. 활동 고수 ${price.pros.toLocaleString("ko-KR")}명, 누적 견적요청 ${price.requests.toLocaleString("ko-KR")}건이 쌓인 전국 자료입니다.`,
-    `${region.label} 고정가격이 아니라 전국에서 거래된 범위입니다. 같은 작업 이름이라도 아래 항목에 따라 금액이 달라지니, 견적서에 이 항목이 어떻게 적혀 있는지 나란히 비교하세요.`,
+    `숨고 예상금액 자료(${CHECKED} 확인)에서 ${eun(price.title)} ${range}`,
+    service.priceNote ? `${service.priceNote} ${compare}` : compare,
   ];
 }
 
@@ -201,13 +209,14 @@ function quoteSection(region: Region, service: ServiceModule, order: number): Se
   const stats = statsOf(region, 8);
   const sample = stats.top.length ? stats.top[order % stats.top.length] : undefined;
   const sign = service.symptoms[order % service.symptoms.length].sign.split(/[,·]/)[0];
-  const request = `${region.full}${sample ? ` ${sample[0]}, ${sample[1]}년 입주` : ""} 집입니다. ${sign} 상태라 ${service.name} 견적을 받고 싶습니다. 사진 3장 첨부합니다.`;
+  const request = `${region.full}${sample ? ` ${sample[0]}, ${sample[1]}년 준공` : ""} 집입니다. ${sign} 상태라 ${service.name} 견적을 받고 싶습니다. 사진 3장 첨부합니다.`;
   return {
     heading: `${region.label} ${service.name} 견적, 사진 3장이면 시작됩니다`,
     paragraphs: [
       `전화로 얼마냐고 물으면 현장을 봐야 안다는 답이 먼저 돌아옵니다. 아래 사진 3장과 건물 조건을 함께 보내면 답이 훨씬 구체적으로 옵니다.`,
       `요청서는 이렇게 쓰면 됩니다. "${request}"`,
       `[숨고에서 ${service.name} 요청서 보내기](${url})로 보내면 조건이 맞는 고수들이 견적을 보냅니다. 받은 견적을 같은 항목으로 나란히 놓고 고르세요.`,
+      ...(service.nearest ? [`숨고에 ${service.name} 항목이 따로 없어 ${service.nearest} 요청서로 이어집니다. 요청 내용에 ${service.name}${hasFinal(service.name) ? "이라고" : "라고"} 적어 주세요.`] : []),
     ],
     checklist: service.photos,
   };
@@ -227,7 +236,6 @@ function trustSection(region: Region, service: ServiceModule, order: number): Se
       `가장 싼 곳보다 왜 그 방법을 권하는지 설명하는 곳이 낫습니다. 견적을 받을 때 아래 질문을 그대로 물어보고, 답이 구체적인 곳을 고르세요.`,
       `자주 하는 실수도 있습니다. ${pick(service.mistakes, order, 1).join(" ")}`,
       ...(related.length ? [`같이 살펴보면 좋은 작업은 ${related.join(", ")}입니다.`] : []),
-      ...(service.guide ? [`원리부터 더 보고 싶다면 [${service.name} 기본 가이드](/articles/${service.guide})를 함께 읽어 보세요.`] : []),
     ],
     checklist: pick(service.ask, order, 2),
   };
@@ -296,6 +304,7 @@ function makeServicePage(item: PlanItem, index: number): Article {
   const url = linkUrl(service.quoteKey);
   const sameService = planItems.filter((other) => other.service === item.service && other.region !== item.region && getRegion(other.region).city === region.city).slice(0, 10);
   const sameRegion = planItems.filter((other) => other.region === item.region && other.service !== item.service).slice(0, 12);
+  const dongHub = dongEntries.find((entry) => entry.city === region.city && entry.dong === region.label);
 
   return {
     slug,
@@ -331,6 +340,10 @@ function makeServicePage(item: PlanItem, index: number): Article {
         const near = nearestService(region, id);
         return near ? [near.href.replace("/articles/", "")] : [];
       }),
+      ...(dongHub ? [dongHubSlug(dongHub)] : []),
+      cityHubSlug(region.city),
+      ...sameRegion.slice(0, 3).map((other) => slugOf(region, moduleById.get(other.service)!)),
+      ...sameService.map((other) => slugOf(getRegion(other.region), service)),
     ],
     editorNote: `이사준비백서는 시공 업체가 아니라 집수리 정보를 정리하는 사이트입니다. 금액은 ${CHECKED}에 확인한 숨고 공개 자료이고 단지 정보는 K-apt 자료입니다. 실제 견적과 시공 책임은 계약한 작업자에게 있으니 범위와 금액을 문서로 남기세요.`,
     cta: {
@@ -475,17 +488,21 @@ function makeDongHub(item: DongEntry, index: number): Article {
       { question: `${item.dong} 집수리 비용은 어디서 확인하나요?`, answer: `${item.dong}만의 고정가격은 없습니다. 작업별 숨고 예상금액은 ${item.city} 작업 페이지에서 볼 수 있고, 실제 금액은 사진을 보낸 뒤 받는 견적으로 비교하세요.` },
     ],
     sources: [KAPT_SOURCE],
-    relatedSlugs: ids.flatMap((id) => {
-      const near = nearestService(region, id);
-      return near ? [near.href.replace("/articles/", "")] : [];
-    }),
+    relatedSlugs: [
+      ...ids.flatMap((id) => {
+        const near = nearestService(region, id);
+        return near ? [near.href.replace("/articles/", "")] : [];
+      }),
+      cityHubSlug(item.city),
+      ...dongEntries.filter((other) => other.city === item.city && other.gu === item.gu && other.dong !== item.dong).slice(0, 4).map(dongHubSlug),
+    ],
     editorNote: `이사준비백서는 시공 업체가 아니라 집수리 정보를 정리하는 사이트입니다. 단지 정보는 ${CHECKED}에 확인한 K-apt 자료입니다. 실제 견적과 시공 책임은 계약한 작업자에게 있습니다.`,
     cta: {
       eyebrow: "숨고 견적 비교",
       title: `${item.dong} 집수리, 사진 보내고 견적 받기`,
       description: "작업 종류를 고르고 사진과 동 이름을 적으면 조건이 맞는 고수들이 견적을 보냅니다.",
-      buttonLabel: `숨고에서 ${moduleById.get(ids[0])!.name} 견적 받기`,
-      url: linkUrl(moduleById.get(ids[0])!.quoteKey),
+      buttonLabel: "숨고에서 집수리 견적 받기",
+      url: linkUrl("repair-soomgo-home-repair"),
     },
     treeAtBottom: true,
     regionTree: {
@@ -548,7 +565,7 @@ function makeCityHub(city: City, index: number): Article {
         paragraphs: [`아래는 ${CHECKED}에 확인한 숨고 공개 자료입니다. 전국에서 거래된 범위라 ${city} 고정가격은 아닙니다.`],
         table: {
           head: ["작업", "평균", "범위"],
-          rows: ["문-설치-수리", "도배-시공", "누수-탐지", "열쇠-도어락-설치-수리", "방충망-설치-수리", "타일-시공", "싱크대-교체", "수도-설치-수리"].flatMap((key) => {
+          rows: ["집-수리", "문-설치-수리", "도배-시공", "누수-탐지", "열쇠-도어락-설치-수리", "방충망-설치-수리", "타일-시공", "싱크대-교체", "수도-설치-수리"].flatMap((key) => {
             const price = priceTable[key];
             return price ? [[price.title, won(price.avg), `${won(price.min)} ~ ${won(price.max)}`]] : [];
           }),
@@ -569,13 +586,17 @@ function makeCityHub(city: City, index: number): Article {
       { question: "전월세 집은 누가 고쳐야 하나요?", answer: "손상 원인과 계약 내용에 따라 달라집니다. 찾기 쉬운 생활법령정보의 임대차 안내와 계약서를 확인하고 집주인과 먼저 이야기하세요." },
     ],
     sources: [KAPT_SOURCE],
+    relatedSlugs: [
+      ...servicesHere.slice(0, 6).map((item) => slugOf(region, moduleById.get(item.service)!)),
+      ...CITIES.filter((other) => other !== city).map(cityHubSlug),
+    ],
     editorNote: `이사준비백서는 시공 업체가 아니라 집수리 정보를 정리하는 사이트입니다. 금액과 단지 정보는 ${CHECKED}에 확인한 공개 자료이며 실제 견적과 다를 수 있습니다.`,
     cta: {
       eyebrow: "숨고 견적 비교",
       title: `${city} 집수리, 사진 보내고 견적 받기`,
       description: "작업을 고르고 사진과 동 이름을 적으면 조건이 맞는 고수들이 견적을 보냅니다.",
-      buttonLabel: "숨고에서 문 수리 견적 받기",
-      url: linkUrl("repair-soomgo-door-repair"),
+      buttonLabel: "숨고에서 집수리 견적 받기",
+      url: linkUrl("repair-soomgo-home-repair"),
     },
     regionTree: {
       title: `${city} 동네별 집수리`,

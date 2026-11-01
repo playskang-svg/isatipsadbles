@@ -71,7 +71,7 @@ npm run audit:seo       # 위 서버가 떠 있어야 동작
 
 ## 5-2. 지역 집수리 페이지
 
-`lib/local-repair/`가 만든다. 서비스 지식은 `services/*.ts`, 지역은 `regions.ts`, 조합과 문장은 `pages.ts`다. 공개 순서와 날짜는 `data/local-repair-plan.json`이고 `publishedAt`이 지나면 재배포 없이 자동 공개된다. 금액은 `data/soomgo-prices.json`(숨고 공개 자료), 단지 연식은 `data/apt-complexes.json`(K-apt 자료)에서만 가져온다. 모듈에 금액을 직접 쓰지 않는다.
+`lib/local-repair/`가 만든다. 서비스 지식은 `services/*.ts`, 지역은 `regions.ts`, 조합과 문장은 `pages.ts`다. 공개 순서와 날짜는 `data/local-repair-plan.json`이고 `publishedAt`이 지나면 재배포 없이 자동 공개된다. 금액은 `data/soomgo-prices.json`(숨고 공개 자료), 단지 연식은 `data/apt-complexes.json`(K-apt 자료)에서만 가져온다. 모듈에 금액을 직접 쓰지 않는다. 숨고에 그 작업만의 항목이 없어 가까운 항목으로 이으면 모듈에 `nearest`를 적는다. 금액 문단과 요청서 안내가 그 사실을 밝힌다.
 
 고치면 `npm run audit:local`을 돌린다. 같은 작업끼리 본문 유사도 70%를 넘으면 실패한다.
 

@@ -13,6 +13,10 @@ export type ServiceModule = {
   quoteKey: string;
   /** data/soomgo-prices.json의 key. 예상금액이 없으면 생략 */
   priceKey?: string;
+  /** 숨고에 이 작업만의 항목이 없어 가까운 항목으로 이을 때 그 이름. 금액과 요청서 안내에 밝힌다. */
+  nearest?: string;
+  /** 금액 자료가 이 작업과 크게 다를 수 있을 때 덧붙이는 문장 */
+  priceNote?: string;
   hero: { src: string; alt: string };
   /** 첫 화면 즉답 3가지. 문제해결형·판단형·비교형 순서. 지역명 없이 완성된 문장 2개 이내 */
   answers: [string, string, string];

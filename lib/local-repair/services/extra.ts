@@ -139,6 +139,7 @@ export const extraServices: ServiceModule[] = [
       recent: "입주 10년 안쪽이면 하자 접수 대상인지 먼저 확인하고, 입주 초기 콘크리트 습기로 생긴 곰팡이는 환기로 잡히기도 합니다.",
     },
     related: ["leak", "wallpaper", "draft", "paint", "cleaning"],
+    guide: "winter-condensation-mold-prevention-guide",
   },
   {
     id: "waterproof",
