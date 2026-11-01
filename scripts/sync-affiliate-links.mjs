@@ -13,11 +13,11 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const source =
-  process.env.AFFILIATE_SOURCE ?? resolve(root, "../A-factory/affiliate-links.json");
+// 2026-11-02부터 data/affiliate-links.json이 이 사이트의 정본이다. 다른 소스로 덮어쓰려면 AFFILIATE_SOURCE를 지정한다.
+const source = process.env.AFFILIATE_SOURCE ?? "";
 const target = resolve(root, "data/affiliate-links.json");
 
-if (!existsSync(source)) {
+if (!source || !existsSync(source)) {
   if (existsSync(target)) {
     console.warn(`[affiliate] 소스 없음 (${source}) — 기존 data/affiliate-links.json 사용`);
     process.exit(0);

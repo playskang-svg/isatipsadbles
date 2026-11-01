@@ -2,7 +2,7 @@ import type { Article, Section } from "./articles";
 import { yonginDistricts, yonginRegionTree, YONGIN_CITY_SLUG, YONGIN_CITY_SOURCE, type YonginDistrict, type YonginDong } from "./yongin-keyword-tree";
 import { linkUrl } from "./affiliate";
 
-const INTERIOR_URL = linkUrl("repair-interior");
+const BLIND_URL = linkUrl("repair-soomgo-blind");
 const LAW_SOURCE_URL = "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=629&ccfNo=4&cciNo=2&cnpClsNo=1";
 const MASTER_GUIDE_URL = "/articles/curtain-blind-installation-cost";
 const PUBLISHED_AT = "2026-09-12T09:00:00.000Z";
@@ -34,7 +34,7 @@ function makeSections(areaLabel: string, localNote: string, housingType: "apartm
       heading: `${areaLabel} 견적, 이렇게 비교하세요`,
       paragraphs: [
         "제품 유형과 실측 치수, 타공 여부와 전동 필요 여부를 모든 업체에 동일하게 전달해야 가격과 포함 범위를 제대로 비교할 수 있습니다. 방문 실측이 무료인지, 계약하지 않으면 별도 비용이 청구되는지도 견적 단계에서 확인하세요.",
-        `구매·시공 전에 다양한 공간 사례를 먼저 살펴보고 싶다면 [인테리어 사례·견적 확인](${INTERIOR_URL})에서 원하는 분위기와 예산을 구체화해 볼 수 있습니다.`,
+        `구매·시공 전에 우리 집 창 조건으로 비교해 보고 싶다면 [블라인드·커튼 시공 견적](${BLIND_URL})을 받아 원하는 제품과 예산을 구체화해 볼 수 있습니다.`,
       ],
     },
   ];

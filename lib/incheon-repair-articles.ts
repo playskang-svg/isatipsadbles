@@ -8,7 +8,7 @@ import {
 } from "./incheon-repair-keyword-tree";
 import { linkUrl } from "./affiliate";
 
-const INTERIOR_URL = linkUrl("repair-interior");
+const INTERIOR_URL = linkUrl("repair-soomgo-apt-interior");
 const PUBLISHED_AT = "2026-09-24T00:00:00.000Z";
 const UPDATED_AT = "2026-09-24T00:00:00.000Z";
 const accents = ["mint", "amber", "blue", "violet", "rose", "green"];
@@ -78,7 +78,7 @@ function makeSections(areaLabel: string, localNote: string, housingType: "apartm
       heading: "사진 견적에 넣을 항목",
       paragraphs: [
         "전체 사진과 가까운 사진, 가로·세로·두께 또는 모델명, 작동 문제를 보여주는 영상, 주차·승강기·계단 조건을 같은 양식으로 여러 업체에 보내야 추가금 차이를 줄일 수 있습니다.",
-        `구체적인 시공 사례와 예산을 먼저 살펴보고 싶다면 [인테리어 사례·견적 확인](${INTERIOR_URL})에서 원하는 범위를 구체화해 볼 수 있습니다.`,
+        `공사 범위가 여러 공정에 걸친다면 [숨고 아파트 인테리어 견적](${INTERIOR_URL})을 받아 원하는 범위를 구체화해 볼 수 있습니다.`,
       ],
       checklist: ["전체 사진과 가까운 사진", "가로·세로·두께 또는 모델명", "작동 문제를 보여주는 영상", "주차·승강기·계단", "기본 작업과 추가 가능 항목", "작업 후 보수 범위"],
     },

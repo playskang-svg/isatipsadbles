@@ -38,7 +38,7 @@ fi
 # 자격증명은 선택이다. 글쓰기·대기열 처리에는 필요 없다 —
 # 키워드·순위 재료는 Actions 가 이미 모아 .fleet/state 에 커밋해 둔다.
 # Codespaces 시크릿이 있을 때만 주입한다.
-if [ -n "${NAVER_AD_API_KEY:-}${GOOGLE_SA_KEY:-}${COUPANG_ACCESS_KEY:-}" ]; then
+if [ -n "${NAVER_AD_API_KEY:-}${GOOGLE_SA_KEY:-}" ]; then
   node "$DIR/runner/inject-credentials.mjs" >/dev/null 2>&1 && echo "  ✓ Codespaces 시크릿 주입"
 fi
 

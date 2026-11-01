@@ -50,8 +50,9 @@ export const affiliateRel = "sponsored nofollow noopener noreferrer";
 export const affiliateTarget = "_blank";
 
 /** JSON에 등록된 제휴 링크들의 호스트 집합 */
-export const affiliateHosts = new Set(
-  links
+export const affiliateHosts = new Set([
+  "link.coupang.com",
+  ...links
     .map((l) => {
       try {
         return new URL(l.url).host.toLowerCase();
@@ -59,8 +60,8 @@ export const affiliateHosts = new Set(
         return "";
       }
     })
-    .filter(Boolean)
-);
+    .filter(Boolean),
+]);
 
 /**
  * 이 URL이 제휴 링크인지 판정한다.

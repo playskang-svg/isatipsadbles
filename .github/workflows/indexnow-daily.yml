@@ -1,0 +1,22 @@
+name: IndexNow daily
+
+# 지역 집수리 페이지는 날짜별로 공개된다. 그날 공개된 주소를 네이버·빙에 알린다.
+on:
+  schedule:
+    - cron: "20 15 * * *" # 00:20 KST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Submit URLs updated in the last day
+        run: node scripts/indexnow-submit.mjs --days 1

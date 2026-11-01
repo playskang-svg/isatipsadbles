@@ -37,6 +37,7 @@ Codespaces와 로컬을 번갈아가며 쓸 때는 딱 2단계 순서만 지킨�
 ```
 npm run lint            # tsc --noEmit
 npm run audit:migration
+npm run audit:local
 npm run build
 npm run start           # 127.0.0.1:3000
 npm run audit:seo       # 위 서버가 떠 있어야 동작
@@ -48,30 +49,31 @@ npm run audit:seo       # 위 서버가 떠 있어야 동작
 
 - 글 본문: `lib/articles.ts` 및 주제별 `lib/*-articles.ts`
 - 내부링크: `lib/internal-links.ts`
-- 제휴링크: 절대 URL을 하드코딩하지 않는다. `~/dev/A-factory/affiliate-links.json`이 단일 소스이고 `npm run sync:affiliate`가 `data/affiliate-links.json`으로 복사한다. 코드는 `link_key`로만 조회한다.
+- 제휴링크: 절대 URL을 하드코딩하지 않는다. `data/affiliate-links.json`이 정본이다(2026-11-02부터. 다른 소스로 덮어쓰려면 `AFFILIATE_SOURCE`를 지정한다). 코드는 `link_key`로만 조회한다.
 - 키워드→링크 매칭 규칙은 `lib/affiliate-match.ts` 한 곳에 모은다. 생성형 페이지를 개별로 고치지 않는다. 이름이 정해진 단독 글만 `lib/services.ts`의 `serviceByArticle`에 직접 적는다.
 - 링크를 폐기할 때는 JSON에서 지우지 말고 `status: "retired"`와 사유를 남긴다. 참조가 남아 있으면 빌드가 깨진다.
 
-## 5. 쿠팡 API 시크릿
+## 5. 쿠팡 링크 (API 폐기, 2026-11-02)
 
-`app/api/coupang-products`는 서버에서 HMAC 서명을 만들어 쿠팡 파트너스 검색 API를 호출한다. **Cloudflare Workers는 런타임에 `.env`를 읽지 않는다.** 로컬 `.env`에 키가 있어도 배포된 사이트에서는 인증이 실패한다. 키는 `wrangler secret`으로 따로 등록해야 한다.
+쿠팡 파트너스 API와 `app/api/coupang-products`는 폐기했다. 다시 넣지 않는다. 옛 API 링크는 다른 파트너 ID(`AF5563346`)로 잡혔다.
 
-```bash
-npx wrangler secret list                      # 등록된 이름만 표시(값은 안 보임)
-npx wrangler secret put COUPANG_ACCESS_KEY
-npx wrangler secret put COUPANG_SECRET_KEY
-```
+- 발급 계정은 `psa****@naver.com`(`psa1226@naver.com`, 파트너 ID `AF8819972`) 하나다. 화면의 로그인 계정이 다르면 만들지 않는다.
+- 자재 링크: `data/coupang-queries.json`의 검색어를 `scripts/coupang/issue-links.mjs`가 관리 화면 "간편 링크 만들기"로 만들어 `data/coupang-links.json`에 쌓는다. 코드는 `lib/coupang-links.ts`의 `coupangUrl(검색어)`로만 읽는다. 링크가 없는 검색어는 버튼 없이 이름만 나온다.
+- 배너: `data/coupang-banners.json`에 다이나믹 배너 id를 적으면 `components/AdFrames.tsx`가 iframe으로 띄운다.
+- 속도: 관리 화면 요청이 분당 50회를 넘으면 24시간 막히고 3회 쌓이면 이용이 제한된다. 2026-11-02에 1회 쌓였다. 스크립트는 건당 6초로 돌고 `rCode 429`를 받으면 멈춘다. 같은 계정을 쓰는 다른 사이트 발급과 동시에 돌리지 않는다.
+- 쿠팡 고지 문구는 페이지 맨 위에 둔다. 배너 아래나 푸터에만 두면 수익 지급이 중단될 수 있다.
 
-원본 키는 `~/dev/A-factory/affiliate-links.json`의 `coupang` 블록에 있다. 그 파일의 `locations` 항목에 등록 현황을 적어둔다. 시크릿 키는 브라우저·정적 HTML·커밋 어디에도 넣지 않는다.
+## 5-1. 숨고 딥링크 (링크프라이스)
 
-설정 여부는 값 노출 없이 확인할 수 있다.
+링크프라이스 사이트 "이사준비백서"(사이트 코드 `A100709419`)로 발급한다. 화면은 `https://ac.linkprice.net/adboxes/deep-link`이고 한 번에 20개까지 변환한다. 숨고 서비스 주소는 `https://soomgo.com/hire/<서비스>`, 예상금액 주소는 `https://soomgo.com/prices/<서비스>`다. 머천트 규정상 배너 이미지는 숨고가 제공한 것만 쓰고, 숨고 후기를 캡처하지 않으며, 할인·보장 문구를 지어내지 않는다.
 
-```bash
-curl -s "https://isatips.adbles.com/api/coupang-products?diag=1"
-# {"credentialsConfigured":true}
-```
+오늘의집은 2026-11-02 기준 링크프라이스에 머천트가 없고, 텐핑 캠페인은 종료돼 링크를 쓰지 않는다.
 
-키가 없으면 라우트는 502가 아니라 200에 `degraded: "credentials_missing"`을 실어 보내고, 프런트는 제휴 문구를 감춘 채 준비물 목록만 보여준다. 링크가 없는데 수수료 고지만 남는 상황을 막기 위해서다.
+## 5-2. 지역 집수리 페이지
+
+`lib/local-repair/`가 만든다. 서비스 지식은 `services/*.ts`, 지역은 `regions.ts`, 조합과 문장은 `pages.ts`다. 공개 순서와 날짜는 `data/local-repair-plan.json`이고 `publishedAt`이 지나면 재배포 없이 자동 공개된다. 금액은 `data/soomgo-prices.json`(숨고 공개 자료), 단지 연식은 `data/apt-complexes.json`(K-apt 자료)에서만 가져온다. 모듈에 금액을 직접 쓰지 않는다.
+
+고치면 `npm run audit:local`을 돌린다. 같은 작업끼리 본문 유사도 70%를 넘으면 실패한다.
 
 ## 6. 색인
 

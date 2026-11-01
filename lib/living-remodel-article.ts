@@ -106,7 +106,7 @@ export const livingRemodelArticles: Article[] = [
           "✅ 한 줄 정리: 거주 중 가능한 범위만 고르고, 공간 단위로 비우며 공사하고, 관리사무소 신고와 입주민 동의서를 착공 전에 끝내세요.",
           "공정 전체 흐름은 [아파트 인테리어 공사 순서 10단계](/articles/apartment-interior-construction-order)에, 욕실만 손볼 계획이라면 [욕실 양변기·샤워부스 시공](/articles/bathroom-toilet-shower-renovation-guide)에 정리해 두었습니다.",
           "짐을 잠시 맡겨야 한다면 [보관이사 비용 계산법](/articles/storage-moving-cost-guide)도 참고하세요.",
-          "우리 집 범위와 생활 일정을 정리했다면 [집닥 인테리어 견적 상담 신청하기](https://ocayn.info/t8g4kjiibn)에서 거주 중 공사 조건을 전달하고 견적을 받아 비교해 보세요.",
+          "우리 집 범위와 생활 일정을 정리했다면 [숨고에서 아파트 인테리어 견적 받기](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4)에서 거주 중 공사 조건을 전달하고 견적을 받아 비교해 보세요.",
         ],
       },
     ],

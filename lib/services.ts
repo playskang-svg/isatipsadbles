@@ -38,28 +38,26 @@ const cleaningSpecialist: MovingService = {
 
 const interiorGuide: MovingService = {
   eyebrow: "HOME INTERIOR",
-  title: "구매와 시공 전에 우리 집에 맞는 사례를 비교하세요",
-  description: "다양한 공간 사례와 유익한 정보를 살펴보고, 가구 구매나 시공 상담 전에 원하는 분위기와 예산을 구체화해 보세요.",
-  buttonLabel: "인테리어 사례·견적 확인",
-  url: linkUrl("repair-interior"),
+  title: "구매와 시공 전에 우리 집 조건으로 견적을 받아 보세요",
+  description: "공간 사진과 평수, 원하는 범위를 요청서에 적으면 시공 전문가들의 견적을 받아 예산을 가늠할 수 있습니다.",
+  buttonLabel: "숨고 아파트 인테리어 견적 받기",
+  url: linkUrl("repair-soomgo-apt-interior"),
 };
 
-/** 집닥 인테리어 견적 (텐핑 CPA 2023112116490001). 링크 데이터가 동기화로 덮여도 CTA가 깨지지 않게 폴백을 둔다. */
-const ZIPDOC_FALLBACK_URL = "https://ocayn.info/t8g4kjiibn";
-function zipdocUrl(): string {
-  try {
-    return linkUrl("interior-cpa-zipdoc");
-  } catch {
-    return ZIPDOC_FALLBACK_URL;
-  }
-}
+const blindInstall: MovingService = {
+  eyebrow: "CURTAIN · BLIND",
+  title: "창 크기를 재고 커튼·블라인드 시공 견적을 비교하세요",
+  description: "창 폭과 높이, 창틀 재질, 타공 가능 여부를 요청서에 적으면 제품과 시공 범위를 나란히 비교하기 쉽습니다.",
+  buttonLabel: "숨고 블라인드·커튼 시공 견적 받기",
+  url: linkUrl("repair-soomgo-blind"),
+};
 
 const interiorQuote: MovingService = {
   eyebrow: "INTERIOR QUOTE",
   title: "범위 목록이 준비됐다면 인테리어 견적을 비교해 보세요",
   description: "공간별로 정리한 공사 범위를 그대로 전달하고, 내역서와 일정이 담긴 견적을 받아 나란히 비교해 보세요.",
-  buttonLabel: "집닥 인테리어 견적 상담 신청",
-  url: zipdocUrl(),
+  buttonLabel: "숨고 아파트 인테리어 견적 받기",
+  url: linkUrl("repair-soomgo-apt-interior"),
 };
 
 
@@ -148,8 +146,8 @@ const packingTypeQuote: MovingService = {
 };
 
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
-function repairQuotes(topicId?: string): MovingService {
-  const quote = repairQuoteLink(topicId);
+function repairQuotes(topicId?: string, keyword?: string): MovingService {
+  const quote = repairQuoteLink(topicId, keyword);
   const subject = quote.label.replace(/^숨고 /u, "");
   return {
     eyebrow: "REPAIR · INSTALL",
@@ -265,7 +263,7 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "moving-cleaning-guide": cleaningSpecialist,
   "rental-deposit-moving-out-checklist": twoQuoteComparison,
   "easy-interior-ideas-for-beginners": interiorGuide,
-  "curtain-blind-installation-cost": interiorGuide,
+  "curtain-blind-installation-cost": blindInstall,
   "pre-move-in-interior-quote-comparison": interiorQuote,
   "apartment-interior-construction-order": interiorQuote,
   "living-in-home-remodeling-guide": interiorQuote,
@@ -307,19 +305,19 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "move-out-maintenance-fee-settlement-guide": wematchCompare,
 };
 
-// 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 인테리어 상담 CTA를 연결한다.
-serviceByArticle[YONGIN_CITY_SLUG] = interiorGuide;
+// 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 커튼·블라인드 시공 CTA를 연결한다.
+serviceByArticle[YONGIN_CITY_SLUG] = blindInstall;
 for (const district of yonginDistricts) {
-  serviceByArticle[district.slug] = interiorGuide;
-  for (const dong of district.dongs) serviceByArticle[dong.slug] = interiorGuide;
+  serviceByArticle[district.slug] = blindInstall;
+  for (const dong of district.dongs) serviceByArticle[dong.slug] = blindInstall;
 }
 
-export function getMovingService(slug: string): MovingService | undefined {
+export function getMovingService(slug: string, keyword?: string): MovingService | undefined {
   const direct = serviceByArticle[slug];
   if (direct) return direct;
   // repair-keyword-001-door-hole / regional-repair-001-door-hole → "door-hole"
   const topicId = topicIdFromSlug(slug);
-  return topicId ? repairQuotes(topicId) : undefined;
+  return topicId ? repairQuotes(topicId, keyword) : undefined;
 }
 
 /** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */

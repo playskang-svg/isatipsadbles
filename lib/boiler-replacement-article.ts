@@ -37,7 +37,7 @@ export const boilerReplacementArticles: Article[] = [
         "paragraphs": [
           "견적서는 본체, 설치·시공비, 배기통·배관, 철거·폐기 네 줄로 나뉘어 있는지부터 보세요(작성자 정리). 총액만 적힌 견적은 업체끼리 비교할 수 없습니다.",
           "여러 곳에 일일이 전화하기 번거롭다면 요청서 한 번으로 견적을 받아 비교해 볼 수 있습니다.",
-          "[![숨고에서 보일러 설치·수리 견적 요청서 확인하기](/images/buttons/btn_plain.webp)](https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%25B3%25B4%25EC%259D%25BC%25EB%259F%25AC-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC)",
+          "[![숨고에서 보일러 설치·수리 견적 요청서 확인하기](/images/buttons/btn_plain.webp)](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B3%B4%EC%9D%BC%EB%9F%AC-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC)",
           "용량과 브랜드, 연통을 새로 빼야 하는지에 따라 값이 달라진다고 안내돼 있습니다. 그래서 우리 집 평수와 현재 보일러 모델명을 알려 주고 견적을 받는 쪽이 정확합니다.",
           "저는 직접 견적을 받아 보지는 않았고 공개된 안내와 보도만 확인했습니다. 지역과 현장 조건에 따라 금액이 달라지니 2~3곳에서 같은 조건으로 받아 비교해 보세요.",
           "이미 단골 설치 업체가 있거나 제조사 서비스센터에서 견적을 받았다면 따로 요청하지 않아도 됩니다. 비교할 곳이 없을 때만 요청서를 써 보세요.",

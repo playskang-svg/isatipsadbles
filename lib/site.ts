@@ -33,7 +33,16 @@ export const navItems = [
       { label: "지역별 정보", href: "/category/regional" },
     ],
   },
-  { label: "수리·설치", href: "/category/repair-install" },
+  {
+    label: "수리·설치",
+    href: "/category/repair-install",
+    children: [
+      { label: "인천 집수리", href: "/articles/인천-집수리" },
+      { label: "천안 집수리", href: "/articles/천안-집수리" },
+      { label: "용인 집수리", href: "/articles/용인-집수리" },
+      { label: "평택 집수리", href: "/articles/평택-집수리" },
+    ],
+  },
   { label: "행정·공과금", href: "/category/admin" },
   { label: "청소·정리", href: "/category/home-care" },
 ];

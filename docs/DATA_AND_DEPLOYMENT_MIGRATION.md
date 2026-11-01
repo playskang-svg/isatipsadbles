@@ -36,7 +36,6 @@ GitHub 비공개 저장소
 
 - Cloudflare 계정 ID
 - 배포 권한이 제한된 Cloudflare API 토큰
-- `COUPANG_ACCESS_KEY`, `COUPANG_SECRET_KEY` Worker secret
 - `NEXT_PUBLIC_SITE_URL=https://isatips.adbles.com`
 - `isatips.adbles.com` DNS 관리 권한
 
@@ -54,10 +53,10 @@ GitHub 비공개 저장소
 ## 최초 외부 배포 순서
 
 1. 새 Cloudflare 계정에 Worker 이름 `moving-guide-korea` 사용 가능 여부를 확인한다.
-2. Cloudflare Worker secrets에 `COUPANG_ACCESS_KEY`, `COUPANG_SECRET_KEY`를 등록한다.
+2. Worker secret은 없다(쿠팡 API는 2026-11-02 폐기).
 3. GitHub Actions secrets에 Cloudflare 배포 토큰과 계정 ID를 등록한다.
 4. GitHub Actions에서 `Deploy external Cloudflare Worker`를 수동 실행한다.
-5. 생성된 `workers.dev` 주소로 페이지와 쿠팡 상품 영역을 확인한다.
+5. 생성된 `workers.dev` 주소로 페이지와 쿠팡 링크 영역을 확인한다.
 6. `isatips.adbles.com`을 새 Worker의 Custom Domain으로 연결한다.
 7. DNS 전환 후 sitemap, robots, canonical과 대표 URL을 확인한다.
 8. 문제가 없을 때까지 기존 Sites 연결은 롤백용으로 유지한다.

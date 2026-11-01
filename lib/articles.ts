@@ -3,6 +3,15 @@ export type Section = {
   paragraphs: string[];
   checklist?: string[];
   image?: ArticleImage;
+  table?: { caption?: string; head: string[]; rows: string[][] };
+  /** 순서가 있는 셀프 절차 */
+  steps?: string[];
+  /** 준비물. q는 쿠팡 간편 링크를 찾는 검색어 */
+  materials?: { q: string; why: string }[];
+  /** 쿠팡 다이나믹 배너 키(data/coupang-banners.json) */
+  coupangBanner?: string;
+  /** 여기서 멈추고 전문가를 부르는 기준 */
+  stopList?: string[];
 };
 
 export type ArticleImage = {
@@ -28,6 +37,20 @@ export type Article = {
   sections: Section[];
   faq: { question: string; answer: string }[];
   source?: { label: string; url: string };
+  /** 자료 출처가 여러 개일 때 */
+  sources?: { label: string; url: string }[];
+  /** 기본 편집 원칙 문구 대신 쓸 문구 */
+  editorNote?: string;
+  /** 첫 화면에 보이는 자료 근거 */
+  badges?: string[];
+  /** 글 중간 견적 안내. 없으면 lib/services.ts 매칭을 쓴다. */
+  cta?: { eyebrow: string; title: string; description: string; buttonLabel: string; url: string };
+  /** 글 중간 안내를 iframe 배너로 낼 때 */
+  quoteBanner?: { headline: string; sub: string; url: string };
+  /** 지역 연결 정보를 본문 뒤로 보낸다 */
+  treeAtBottom?: boolean;
+  /** 함께 볼 글 우선순위 */
+  relatedSlugs?: string[];
   affiliateNotice?: boolean;
   heroImage?: ArticleImage;
   breadcrumbs?: {
@@ -803,8 +826,9 @@ import { windowFilmArticles } from "./window-film-article";
 import { freezePreventionArticles } from "./freeze-prevention-article";
 import { boilerReplacementArticles } from "./boiler-replacement-article";
 import { boilerCheckArticles } from "./boiler-check-article";
+import { localRepairArticles } from "./local-repair/pages";
 
-export const articles: Article[] = enrichArticlesWithFieldImages([
+export const articles: Article[] = [...enrichArticlesWithFieldImages([
   ...baseArticles,
   ...regionalArticles,
   ...hanamArticles,
@@ -843,7 +867,7 @@ export const articles: Article[] = enrichArticlesWithFieldImages([
   ...freezePreventionArticles,
   ...boilerReplacementArticles,
   ...boilerCheckArticles,
-]);
+]), ...localRepairArticles];
 
 export const categoryMeta = {
   planning: { label: "이사 준비", description: "손없는날과 일정 선택부터 이사 당일까지 날짜별로 해야 할 일을 정리합니다." },

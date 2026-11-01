@@ -17,7 +17,7 @@ export function getSitemapEntries(): MetadataRoute.Sitemap {
   }));
 
   const posts = articles.map((article) => ({
-    url: `${SITE_URL}/articles/${article.slug}`,
+    url: `${SITE_URL}/articles/${encodeURI(article.slug)}`,
     lastModified: new Date(article.updatedAt),
     changeFrequency: "monthly" as const,
     priority: 0.8,

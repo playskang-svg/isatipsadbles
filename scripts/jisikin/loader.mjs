@@ -3,7 +3,7 @@
 // 쓰기 때문에 순수 node에서는 해석되지 않는다. 그 세 가지만 메워준다.
 //
 // 훅은 별도 워커에서 돌아 부모의 런타임 env를 보지 못한다. 루트는 initialize로 받는다.
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
@@ -22,7 +22,7 @@ export async function resolve(specifier, context, nextResolve) {
 
   if (target.startsWith("./") || target.startsWith("../")) {
     const candidate = new URL(target, context.parentURL);
-    if (!/\.[a-z]+$/u.test(candidate.pathname) && existsSync(`${candidate.pathname}.ts`)) {
+    if (!/\.[a-z]+$/u.test(candidate.pathname) && existsSync(`${fileURLToPath(candidate)}.ts`)) {
       target = `${candidate.href}.ts`;
     }
   }

@@ -111,7 +111,7 @@ export const aptInteriorOrderArticles: Article[] = [
           "✅ 한 줄 정리: 숨는 설비 위치부터 확정하고, 철거→설비·전기→목공→마감 순서에 양생·관리사무소 일정을 더한 공정표로 견적을 비교하세요.",
           "견적서 항목과 계약서에서 확인할 내용은 [이사 전 인테리어 견적 비교](/articles/pre-move-in-interior-quote-comparison)에, 욕실만 손볼 계획이라면 [욕실 타일 줄눈 시공·보수](/articles/bathroom-tile-grout-repair-guide)에 정리해 두었습니다.",
           "공사가 끝나면 [입주청소 범위와 일정](/articles/moving-cleaning-guide)까지 이어서 잡으세요.",
-          "우리 집 범위와 희망 일정을 정리했다면 [집닥 인테리어 견적 상담 신청하기](https://ocayn.info/t8g4kjiibn)에서 공정표가 담긴 견적을 받아 비교해 보세요.",
+          "우리 집 범위와 희망 일정을 정리했다면 [숨고에서 아파트 인테리어 견적 받기](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4)에서 공정표가 담긴 견적을 받아 비교해 보세요.",
         ],
       },
     ],

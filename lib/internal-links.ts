@@ -105,6 +105,7 @@ function incheonRepairHierarchyLinks(slug: string) {
 }
 
 function preferredSlugs(article: Article) {
+  if (article.relatedSlugs) return article.relatedSlugs;
   const hierarchy = suwonHierarchyLinks(article.slug);
   const yonginLinks = yonginHierarchyLinks(article.slug);
   const incheonRepairLinks = incheonRepairHierarchyLinks(article.slug);
@@ -128,6 +129,7 @@ function preferredSlugs(article: Article) {
 }
 
 function reasonFor(article: Article) {
+  if (article.cta) return "이어지는 작업과 가까운 지역을 함께 확인하려면";
   if (article.category === "quotes") return "견적 조건과 추가요금 기준을 더 정확히 비교하려면";
   if (article.category === "planning") return "날짜와 준비 순서를 빠뜨리지 않으려면";
   if (article.category === "admin") return "전입신고·보증금과 행정 절차까지 이어서 준비하려면";

@@ -104,7 +104,7 @@ export const preMoveInteriorArticles: Article[] = [
         paragraphs: [
           "✅ 한 줄 정리: 같은 범위 목록으로 2~3곳 견적을 받고, 내역서·대금 단계·업체 자격을 비교한 뒤 관리사무소 규약에 맞춰 일정을 확정하세요.",
           "공사가 처음이라면 [공간별 인테리어 사례](/articles/easy-interior-ideas-for-beginners)에서 원하는 분위기를 먼저 정해두면 상담이 빨라집니다.",
-          "범위 목록이 준비됐다면 [집닥 인테리어 견적 상담 신청하기](https://ocayn.info/t8g4kjiibn)로 비교를 시작해 보세요.",
+          "범위 목록이 준비됐다면 [숨고에서 아파트 인테리어 견적 받기](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4)로 비교를 시작해 보세요.",
         ],
       },
     ],

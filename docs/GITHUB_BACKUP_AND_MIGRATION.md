@@ -26,7 +26,7 @@ GitHub에 포함하지 않을 항목:
 
 ## 2. 현재 구조에서 중요한 점
 
-이 사이트는 순수 정적 사이트가 아니다. `/api/coupang-products`에서 서버 측 환경변수로 쿠팡 API를 호출한다. 따라서 서버 기능이 없는 GitHub Pages로 그대로 옮기면 상품 조회 기능이 작동하지 않는다.
+이 사이트는 Cloudflare Workers에서 렌더링한다. 2026-11-02 쿠팡 API를 폐기해 서버 환경변수로 넣는 비밀값은 없다.
 
 가장 적은 변경으로 이전하려면 GitHub 비공개 저장소를 소스 원본으로 두고 Cloudflare Workers 계열 호스팅에 연결한다. 다른 Node.js 호스팅으로 옮길 때는 Vinext/Cloudflare 빌드 호환 여부를 먼저 확인한다.
 
@@ -56,8 +56,6 @@ github  = 새 비공개 GitHub 백업 저장소
 | 이름 | 공개 여부 | 용도 |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | 공개 | canonical·sitemap 기준 주소. `https://isatips.adbles.com` 유지 |
-| `COUPANG_ACCESS_KEY` | 비밀 | 쿠팡 상품 API 인증 |
-| `COUPANG_SECRET_KEY` | 비밀 | 쿠팡 상품 API 서명 |
 
 키 값은 GitHub 코드에 넣지 않는다. 새 호스팅의 암호화된 환경변수 설정에 직접 등록한다. 과거 대화나 외부 문서에 노출된 키는 이전 전에 재발급하는 편이 안전하다.
 
@@ -103,7 +101,7 @@ github  = 새 비공개 GitHub 백업 저장소
 - `/sitemap.xml`
 - `/info/sitemap-info.xml`
 - `/robots.txt`
-- `/api/coupang-products` 관련 상품 영역
+- 글 하단 쿠팡 링크 영역
 
 ## 9. 롤백 원칙
 

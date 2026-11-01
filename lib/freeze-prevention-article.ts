@@ -129,7 +129,7 @@ export const freezePreventionArticles: Article[] = [
         "60도 넘는 고온의 물을 배관에 부으면 균열이 생길 수 있다고 제조사는 주의를 줍니다. 계량기 유리가 깨지거나 부풀어 오르면 서울시는 120다산콜재단, 관할 수도사업소, 아리수 사이버고객센터에 신고하라고 안내합니다(서울 기준).",
         "배관이 터져 물이 새기 시작하면 먼저 집 안 수도 밸브를 잠그는 것이 일반적인 순서입니다(작성자 정리). 직접 고치기 어렵다면 수도 설치·수리 견적을 받아 비교해 보세요.",
         "숨고의 수도 관련 설치 및 수리 페이지는 요청서를 쓰면 수도 전문 고수를 만날 수 있는 방식으로 안내합니다(2026년 10월 20일 확인). 비용은 현장 상태에 따라 달라 금액은 말씀드리지 못합니다.",
-        "[![숨고에서 수도 설치·수리 견적 요청서 보기](/images/buttons/btn_plain.webp)](https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2588%2598%25EB%258F%2584-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC)",
+        "[![숨고에서 수도 설치·수리 견적 요청서 보기](/images/buttons/btn_plain.webp)](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%88%98%EB%8F%84-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC)",
         "견적 항목을 읽는 법은 [집수리·설비 견적 가이드](/articles/home-repair-plumbing-estimate-guide)에 정리해 두었습니다."
       ],
       "checklist": [

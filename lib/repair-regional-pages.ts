@@ -111,7 +111,7 @@ function makeRegionalArticle(plan: PlannedRegionalArticle): Article {
   ];
   const intent = intentLabel(sourceKeyword);
   const topicId = topicIdFromSlug(sourceArticle.slug);
-  const quote = repairQuoteLink(topicId);
+  const quote = repairQuoteLink(topicId, sourceKeyword);
   const supply = repairSupplyLink(topicId, sourceKeyword);
   const localLinks = [
     { name: destination.locality, href: destination.localityHref },
@@ -158,7 +158,7 @@ function makeRegionalArticle(plan: PlannedRegionalArticle): Article {
           sourceArticle.intro,
           `전체 모습, 손상 부위, 작동 영상과 치수를 함께 보내세요. ${destination.locality} 현장에서도 같은 이름의 작업이라도 자재와 파손 범위에 따라 부분 수리와 전체 교체 판단이 달라질 수 있습니다.`,
           ...(supply
-            ? [`부속 교체로 끝날 수 있는 상태라면 규격을 먼저 확인하고 [${supply.label.replace(/^오늘의집 /u, "")} 제품 종류](${supply.url})를 비교해 보세요. 고정부나 바탕이 손상됐다면 자재만 바꿔도 같은 증상이 다시 나타날 수 있습니다.`]
+            ? [`부속 교체로 끝날 수 있는 상태라면 규격을 먼저 확인하고 [${supply.label} 제품 종류](${supply.url})를 비교해 보세요. 고정부나 바탕이 손상됐다면 자재만 바꿔도 같은 증상이 다시 나타날 수 있습니다.`]
             : []),
         ],
       },

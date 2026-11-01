@@ -47,8 +47,8 @@ function findKey() {
   if (fromEnv) return fromEnv;
   const candidates = readdirSync(PUBLIC_DIR).filter((name) => /^[A-Za-z0-9-]{8,128}\.txt$/.test(name));
   if (candidates.length === 0) throw new Error("public/ 에 IndexNow 키 파일(<key>.txt)이 없습니다.");
-  if (candidates.length > 1) throw new Error(`IndexNow 키 파일이 여러 개입니다: ${candidates.join(", ")}`);
-  const name = candidates[0];
+  // 키 파일이 둘 이상이어도 전부 공개돼 있으므로 정렬 순서로 하나를 고른다.
+  const name = candidates.sort()[0];
   const key = name.replace(/\.txt$/, "");
   const body = readFileSync(join(PUBLIC_DIR, name), "utf8").trim();
   if (body !== key) throw new Error(`키 파일 내용이 파일명과 다릅니다: ${name}`);

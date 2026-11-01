@@ -1,11 +1,11 @@
 {
   "$schema": "https://adbles.com/schema/affiliate-links-v1.json",
-  "version": "2026.09.05-04",
+  "version": "2026.11.02-01",
   "build": "a35f977d",
-  "updated": "2026-09-11",
-  "link_count": 104,
-  "note": "A-Factory 제휴링크 단일 소스. 사람이 읽는 문서는 affiliate-link.md. 코드에서는 이 JSON을 import해서 link_key로 조회한다. 어느 키워드에 어느 링크를 붙일지는 각 링크의 keywords 필드와 isatipsadbles/lib/affiliate-match.ts의 매칭 규칙을 기준으로 한다.",
-  "partner_id": "A100702444",
+  "updated": "2026-11-02",
+  "link_count": 140,
+  "note": "이사준비백서 제휴링크. 코드는 link_key로만 조회한다. 쿠팡은 data/coupang-links.json(파트너 ID AF8819972, 관리 화면 간편 링크)을 쓴다.",
+  "partner_id": "A100709419",
   "links": [
     {
       "key": "vpn-nordvpn",
@@ -220,14 +220,15 @@
       "cta": "인테리어 사례·견적 확인",
       "url": "https://ocayn.info/t8gcget9ab",
       "network": "tenping",
-      "status": "active",
-      "updated": "2026-09-05",
+      "status": "retired",
+      "updated": "2026-11-02",
       "keywords": [
         "인테리어 견적",
         "인테리어 사례",
         "셀프 인테리어",
         "집 꾸미기"
-      ]
+      ],
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "interior-cpa-zipdoc",
@@ -243,7 +244,7 @@
       "conversion": "상담 신청 접수",
       "min_approval": "50%",
       "verify_period": "3영업일",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "인테리어 견적",
         "인테리어 견적 비교",
@@ -251,8 +252,8 @@
         "리모델링 비용"
       ],
       "collected_at": "2026-10-09",
-      "updated": "2026-10-09",
-      "issue": "주의사항: A/S 기간 언급 금지, 검색광고 금지, 외부 이미지 도용 금지, 외부 입력폼 수집 금지"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-silicone",
@@ -263,7 +264,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "실리콘 보수",
         "욕실 실리콘",
@@ -271,7 +272,8 @@
       ],
       "product_count": 206,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-caulking-gun",
@@ -282,7 +284,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "코킹건",
         "실리콘건",
@@ -290,7 +292,8 @@
       ],
       "product_count": 118,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-door-handle",
@@ -301,7 +304,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "문손잡이",
         "도어핸들",
@@ -309,7 +312,8 @@
       ],
       "product_count": 5842,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-doorlock",
@@ -320,7 +324,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "도어락",
         "디지털도어락",
@@ -328,7 +332,8 @@
       ],
       "product_count": 1195,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-kitchen-faucet",
@@ -339,7 +344,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "주방수전",
         "싱크대 수전",
@@ -347,7 +352,8 @@
       ],
       "product_count": 1896,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-bath-faucet",
@@ -358,7 +364,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "욕실수전",
         "세면대 수전",
@@ -366,7 +372,8 @@
       ],
       "product_count": 4412,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-showerhead",
@@ -377,7 +384,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "샤워헤드",
         "샤워기 교체",
@@ -385,7 +392,8 @@
       ],
       "product_count": 2253,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-toilet-parts",
@@ -396,7 +404,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "변기부속",
         "변기 물내림",
@@ -404,7 +412,8 @@
       ],
       "product_count": 426,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-wallpaper",
@@ -415,7 +424,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "셀프도배",
         "벽지",
@@ -423,7 +432,8 @@
       ],
       "product_count": 946,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-flooring",
@@ -434,7 +444,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "장판",
         "바닥재",
@@ -442,7 +452,8 @@
       ],
       "product_count": 334,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-paint",
@@ -453,7 +464,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "셀프페인트",
         "벽 페인트",
@@ -461,7 +472,8 @@
       ],
       "product_count": 518,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-molding",
@@ -472,7 +484,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "몰딩",
         "걸레받이",
@@ -480,7 +492,8 @@
       ],
       "product_count": 2682,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-sheet",
@@ -491,7 +504,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "시트지",
         "인테리어 필름",
@@ -499,7 +512,8 @@
       ],
       "product_count": 6867,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-grout",
@@ -510,7 +524,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "줄눈",
         "줄눈 시공",
@@ -518,7 +532,8 @@
       ],
       "product_count": 345,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-screen-door",
@@ -529,7 +544,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "active",
+      "status": "retired",
       "keywords": [
         "방충망",
         "방충망 교체",
@@ -537,7 +552,8 @@
       ],
       "product_count": 1782,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "repair-ohouse-draft-strip",
@@ -548,7 +564,7 @@
       "merchant": "오늘의집",
       "network": "tenping",
       "payout": "최대 3.2% (구매확정 당일 검증)",
-      "status": "collected",
+      "status": "retired",
       "keywords": [
         "문풍지",
         "외풍차단",
@@ -556,7 +572,8 @@
       ],
       "product_count": 464,
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "issue": "텐핑 캠페인 종료: 2026-11-02 확인 시 EndMessage로 이동"
     },
     {
       "key": "move-cpa-isastory",
@@ -728,7 +745,7 @@
       "category": "repair",
       "label": "숨고 문 설치 및 수리",
       "cta": "문 설치 및 수리 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%25AC%25B8-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC%3Ffrom%3D%25EC%259D%25BC%25EB%25B0%2598%2520%25EC%259A%2594%25EC%25B2%25AD%25EC%2584%259C",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%AC%B8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EB%AC%B8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -743,15 +760,22 @@
         "문짝 수리"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05",
-      "verified": "사용자 실측 (링크프라이스 직접 생성)"
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "site_code": "A100709419",
+      "soomgo_price": {
+        "min": 70000,
+        "avg": 200000,
+        "max": 1050000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-door-build",
       "category": "repair",
       "label": "숨고 도어 시공",
       "cta": "도어 시공 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%258F%2584%25EC%2596%25B4-%25EC%258B%259C%25EA%25B3%25B5",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%8F%84%EC%96%B4-%EC%8B%9C%EA%B3%B5",
       "dest": "https://soomgo.com/hire/%EB%8F%84%EC%96%B4-%EC%8B%9C%EA%B3%B5",
       "merchant": "숨고",
       "network": "linkprice",
@@ -765,14 +789,22 @@
         "문 시공"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 200000,
+        "avg": 900000,
+        "max": 3200000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-middle-door",
       "category": "repair",
       "label": "숨고 중문 시공",
       "cta": "중문 시공 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%25A4%2591%25EB%25AC%25B8-%25EC%258B%259C%25EA%25B3%25B5",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A4%91%EB%AC%B8-%EC%8B%9C%EA%B3%B5",
       "dest": "https://soomgo.com/hire/%EC%A4%91%EB%AC%B8-%EC%8B%9C%EA%B3%B5",
       "merchant": "숨고",
       "network": "linkprice",
@@ -786,14 +818,22 @@
         "중문 설치 비용"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 550000,
+        "avg": 750000,
+        "max": 1300000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-doorlock",
       "category": "repair",
       "label": "숨고 열쇠·도어락 설치 및 수리",
       "cta": "열쇠·도어락 설치 및 수리 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2597%25B4%25EC%2587%25A0-%25EB%258F%2584%25EC%2596%25B4%25EB%259D%25BD-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%97%B4%EC%87%A0-%EB%8F%84%EC%96%B4%EB%9D%BD-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EC%97%B4%EC%87%A0-%EB%8F%84%EC%96%B4%EB%9D%BD-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -807,14 +847,22 @@
         "열쇠 수리"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 45000,
+        "avg": 130000,
+        "max": 320000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-doorlock-urgent",
       "category": "repair",
       "label": "숨고 (긴급) 도어락 고장",
       "cta": "(긴급) 도어락 고장 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EA%25B8%25B4%25EA%25B8%2589-%25EB%258F%2584%25EC%2596%25B4%25EB%259D%25BD-%25EA%25B3%25A0%25EC%259E%25A5",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B8%B4%EA%B8%89-%EB%8F%84%EC%96%B4%EB%9D%BD-%EA%B3%A0%EC%9E%A5",
       "dest": "https://soomgo.com/hire/%EA%B8%B4%EA%B8%89-%EB%8F%84%EC%96%B4%EB%9D%BD-%EA%B3%A0%EC%9E%A5",
       "merchant": "숨고",
       "network": "linkprice",
@@ -828,14 +876,16 @@
         "문 안열림"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
     },
     {
       "key": "repair-soomgo-screen-door",
       "category": "repair",
       "label": "숨고 방충망 설치 및 수리",
       "cta": "방충망 설치 및 수리 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%25B0%25A9%25EC%25B6%25A9%25EB%25A7%259D-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B0%A9%EC%B6%A9%EB%A7%9D-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EB%B0%A9%EC%B6%A9%EB%A7%9D-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -849,14 +899,22 @@
         "창문 방충망"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 40000,
+        "avg": 150000,
+        "max": 400000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-sash",
       "category": "repair",
       "label": "숨고 샷시 설치 및 수리",
       "cta": "샷시 설치 및 수리 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%25B0%25BD%25EB%25AC%25B8-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%B0%BD%EB%AC%B8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EC%B0%BD%EB%AC%B8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -870,14 +928,22 @@
         "창문 수리"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 1500000,
+        "avg": 2863000,
+        "max": 4500000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-glass",
       "category": "repair",
       "label": "숨고 유리 제작 및 시공",
       "cta": "유리 제작 및 시공 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%259C%25A0%25EB%25A6%25AC-%25EC%25A0%259C%25EC%259E%2591%25EB%25B0%258F%25EC%258B%259C%25EA%25B3%25B5",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9C%A0%EB%A6%AC-%EC%A0%9C%EC%9E%91%EB%B0%8F%EC%8B%9C%EA%B3%B5",
       "dest": "https://soomgo.com/hire/%EC%9C%A0%EB%A6%AC-%EC%A0%9C%EC%9E%91%EB%B0%8F%EC%8B%9C%EA%B3%B5",
       "merchant": "숨고",
       "network": "linkprice",
@@ -891,14 +957,22 @@
         "강화유리 제작"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 110000,
+        "avg": 300000,
+        "max": 1350000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-plumbing",
       "category": "repair",
       "label": "숨고 수도 관련 설치 및 수리",
       "cta": "수도 관련 설치 및 수리 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2588%2598%25EB%258F%2584-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%88%98%EB%8F%84-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EC%88%98%EB%8F%84-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -912,14 +986,22 @@
         "수도 수리"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 45000,
+        "avg": 85000,
+        "max": 260000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-leak",
       "category": "repair",
       "label": "숨고 누수 탐지·공사",
       "cta": "누수 탐지·공사 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%2588%2584%25EC%2588%2598-%25ED%2583%2590%25EC%25A7%2580",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%88%84%EC%88%98-%ED%83%90%EC%A7%80",
       "dest": "https://soomgo.com/hire/%EB%88%84%EC%88%98-%ED%83%90%EC%A7%80",
       "merchant": "숨고",
       "network": "linkprice",
@@ -933,14 +1015,22 @@
         "누수 공사 비용"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 300000,
+        "max": 800000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-washer",
       "category": "repair",
       "label": "숨고 세탁기 설치 및 수리",
       "cta": "세탁기 설치 및 수리 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2584%25B8%25ED%2583%2581%25EA%25B8%25B0-%25EC%2584%25A4%25EC%25B9%2598-%25EB%25B0%258F-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%84%B8%ED%83%81%EA%B8%B0-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EC%84%B8%ED%83%81%EA%B8%B0-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -954,14 +1044,22 @@
         "세탁기 이전설치"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 50000,
+        "avg": 110000,
+        "max": 220000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-aircon",
       "category": "repair",
       "label": "숨고 에어컨 설치 및 수리",
       "cta": "에어컨 설치 및 수리 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2597%2590%25EC%2596%25B4%25EC%25BB%25A8-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%97%90%EC%96%B4%EC%BB%A8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EC%97%90%EC%96%B4%EC%BB%A8-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
@@ -975,14 +1073,22 @@
         "에어컨 수리"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 100000,
+        "avg": 180000,
+        "max": 270000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-tv-mount",
       "category": "repair",
       "label": "숨고 벽걸이TV 설치 및 철거",
       "cta": "벽걸이TV 설치 및 철거 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%25B2%25BD%25EA%25B1%25B8%25EC%259D%25B4TV-%25EC%2584%25A4%25EC%25B9%2598-%25EC%25B2%25A0%25EA%25B1%25B0",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B2%BD%EA%B1%B8%EC%9D%B4TV-%EC%84%A4%EC%B9%98-%EC%B2%A0%EA%B1%B0",
       "dest": "https://soomgo.com/hire/%EB%B2%BD%EA%B1%B8%EC%9D%B4TV-%EC%84%A4%EC%B9%98-%EC%B2%A0%EA%B1%B0",
       "merchant": "숨고",
       "network": "linkprice",
@@ -996,56 +1102,74 @@
         "TV 철거"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 50000,
+        "avg": 110000,
+        "max": 265000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-light",
       "category": "repair",
       "label": "숨고 전등 교체·설치",
       "cta": "전등 교체·설치 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%25A0%2584%25EB%2593%25B1%25EA%25B5%2590%25EC%25B2%25B4-%25EC%2584%25A4%25EC%25B9%2598",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A0%84%EB%93%B1%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
       "dest": "https://soomgo.com/hire/%EC%A0%84%EB%93%B1%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "전등 교체",
         "조명 설치",
         "LED 교체"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
     },
     {
       "key": "repair-soomgo-boiler",
       "category": "repair",
       "label": "숨고 보일러 설치 및 수리",
       "cta": "보일러 설치 및 수리 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EB%25B3%25B4%25EC%259D%25BC%25EB%259F%25AC-%25EC%2584%25A4%25EC%25B9%2598-%25EC%2588%2598%25EB%25A6%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B3%B4%EC%9D%BC%EB%9F%AC-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "dest": "https://soomgo.com/hire/%EB%B3%B4%EC%9D%BC%EB%9F%AC-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "보일러 교체",
         "보일러 수리",
         "지역난방"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 680000,
+        "max": 890000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "repair-soomgo-draft",
       "category": "repair",
       "label": "숨고 외풍차단·틈막이 시공",
       "cta": "외풍차단·틈막이 시공 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%2599%25B8%25ED%2592%258D%25EC%25B0%25A8%25EB%258B%25A8%25ED%258B%2588%25EB%25A7%2589%25EC%259D%25B4-%25EC%258B%259C%25EA%25B3%25B5",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%99%B8%ED%92%8D%EC%B0%A8%EB%8B%A8%ED%8B%88%EB%A7%89%EC%9D%B4-%EC%8B%9C%EA%B3%B5",
       "dest": "https://soomgo.com/hire/%EC%99%B8%ED%92%8D%EC%B0%A8%EB%8B%A8%ED%8B%88%EB%A7%89%EC%9D%B4-%EC%8B%9C%EA%B3%B5",
       "merchant": "숨고",
       "network": "linkprice",
@@ -1059,21 +1183,29 @@
         "창문 단열"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05"
+      "updated": "2026-11-02",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 120000,
+        "avg": 500000,
+        "max": 1200000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "move-soomgo-home",
       "category": "moving",
       "label": "숨고 가정이사 (투룸 이상)",
       "cta": "가정이사 (투룸 이상) 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EA%25B0%2580%25EC%25A0%2595-%25EC%259D%25B4%25EC%2582%25AC-%25ED%2588%25AC%25EB%25A3%25B8-%25EC%2593%25B0%25EB%25A6%25AC%25EB%25A3%25B8",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B0%80%EC%A0%95-%EC%9D%B4%EC%82%AC-%ED%88%AC%EB%A3%B8-%EC%93%B0%EB%A6%AC%EB%A3%B8",
       "dest": "https://soomgo.com/hire/%EA%B0%80%EC%A0%95-%EC%9D%B4%EC%82%AC-%ED%88%AC%EB%A3%B8-%EC%93%B0%EB%A6%AC%EB%A3%B8",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "가정이사",
         "포장이사",
@@ -1081,74 +1213,106 @@
         "쓰리룸 이사"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05",
-      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보."
+      "updated": "2026-11-02",
+      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보.",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 350000,
+        "avg": 750000,
+        "max": 1700000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "move-soomgo-oneroom",
       "category": "moving",
       "label": "숨고 원룸·소형 이사",
       "cta": "원룸·소형 이사 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%259B%2590%25EB%25A3%25B8-%25EC%2586%258C%25ED%2598%2595-%25EC%259D%25B4%25EC%2582%25AC",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9B%90%EB%A3%B8-%EC%86%8C%ED%98%95-%EC%9D%B4%EC%82%AC",
       "dest": "https://soomgo.com/hire/%EC%9B%90%EB%A3%B8-%EC%86%8C%ED%98%95-%EC%9D%B4%EC%82%AC",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "원룸이사",
         "소형이사",
         "1인가구 이사"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05",
-      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보."
+      "updated": "2026-11-02",
+      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보.",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 100000,
+        "avg": 220000,
+        "max": 520000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "move-soomgo-truck",
       "category": "moving",
       "label": "숨고 용달·화물 운송",
       "cta": "용달·화물 운송 견적 받기",
-      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%259A%25A9%25EB%258B%25AC-%25EC%259A%25B4%25EC%2586%25A1",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9A%A9%EB%8B%AC-%EC%9A%B4%EC%86%A1",
       "dest": "https://soomgo.com/hire/%EC%9A%A9%EB%8B%AC-%EC%9A%B4%EC%86%A1",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "용달이사",
         "화물운송",
         "짐 옮기기"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05",
-      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보."
+      "updated": "2026-11-02",
+      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보.",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 50000,
+        "avg": 110000,
+        "max": 300000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "move-soomgo-movein-clean",
       "category": "moving",
       "label": "숨고 이사·입주 청소업체",
       "cta": "이사·입주 청소업체 견적 받기",
-      "url": "https://linkmoa.kr/click.php?m=soomgo&a=A100702444&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%25EC%259D%25B4%25EC%2582%25AC-%25EC%259E%2585%25EC%25A3%25BC-%25EC%25B2%25AD%25EC%2586%258C-%25EC%2597%2585%25EC%25B2%25B4",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9D%B4%EC%82%AC-%EC%9E%85%EC%A3%BC-%EC%B2%AD%EC%86%8C-%EC%97%85%EC%B2%B4",
       "dest": "https://soomgo.com/hire/%EC%9D%B4%EC%82%AC-%EC%9E%85%EC%A3%BC-%EC%B2%AD%EC%86%8C-%EC%97%85%EC%B2%B4",
       "merchant": "숨고",
       "network": "linkprice",
       "campaign_type": "CPS 딥링크",
       "payout": "최대 44.1%",
       "conversion": "견적 요청 완료",
-      "status": "collected",
+      "status": "active",
       "keywords": [
         "입주청소",
         "이사청소",
         "새집 청소"
       ],
       "collected_at": "2026-09-05",
-      "updated": "2026-09-05",
-      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보."
+      "updated": "2026-11-02",
+      "issue": "보류: 같은 수요를 텐핑 건당 정액 CPA(이사마켓 20,750원 등)가 이미 받고 있어 중복. 텐핑 승인율이 떨어질 때 교체 후보.",
+      "site_code": "A100709419",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 140000,
+        "avg": 250000,
+        "max": 420000,
+        "checked": "2026-11-02"
+      }
     },
     {
       "key": "hotel-urbanstay-cheonan-yeogi",
@@ -1666,8 +1830,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7212329043&itemId=16989887512&vendorItemId=92703083542&traceid=V0-153-8fdeabaeff8cea10&requestid=20260911145031939115349457&token=31850C%7CMIXED&pt=0&slot=7",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "이솝 올루스 룸스프레이 100ml"
@@ -1681,7 +1845,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "Aesop (이솝)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-redginseng",
@@ -1691,8 +1856,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7713557340&itemId=24159395459&vendorItemId=91786923982&traceid=V0-153-3830491e47150d01&requestid=20260911145045490324760862&token=31850C%7CGM&pt=0&slot=1",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "정관장 에브리타임 리미티드 30포"
@@ -1706,7 +1871,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "정관장"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-pulio",
@@ -1716,8 +1882,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9572321950&itemId=28571335105&vendorItemId=95515698293&traceid=V0-153-6c414ae26207db5b&requestid=20260911145052176153059270&token=31850C%7CMIXED&pt=0&slot=6",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "풀리오 종아리 마사지기 V3"
@@ -1731,7 +1897,8 @@
         "isRocket": true,
         "isFreeShipping": false,
         "brand": "PULIO (풀리오)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-nonfiction",
@@ -1741,8 +1908,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9678459036&itemId=28940588451&vendorItemId=90936670721&traceid=V0-153-19258b7e1011dd72&requestid=20260911145058792059131617&token=31850C%7CMIXED&pt=0&slot=9",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "논픽션 상탈크림 핸드크림 50ml"
@@ -1756,7 +1923,8 @@
         "isRocket": false,
         "isFreeShipping": false,
         "brand": "NONFICTION (논픽션)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-kinto",
@@ -1766,8 +1934,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=6834664090&itemId=23917432909&vendorItemId=90939723371&traceid=V0-153-f78e4e9fe358d605&requestid=20260911145105838153054017&token=31850C%7CMIXED&pt=0&slot=10",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "킨토 투고 텀블러 360ml"
@@ -1781,7 +1949,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "KINTO (킨토)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-lexon",
@@ -1791,8 +1960,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8491835784&itemId=19529383206&vendorItemId=84596526740&traceid=V0-153-8aff8d003c6843fe&requestid=20260911145112516044779107&token=31850C%7CMIXED&pt=0&slot=3",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "렉슨 미나 M LH64"
@@ -1806,7 +1975,8 @@
         "isRocket": false,
         "isFreeShipping": false,
         "brand": "LEXON (렉슨)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-medicube",
@@ -1816,8 +1986,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8464437029&itemId=24489528784&vendorItemId=95125758418&traceid=V0-153-a8042f67825773ac&requestid=20260911145126149051124783&token=31850C%7CMIXED&pt=0&slot=8",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "메디큐브 부스터 프로 미니"
@@ -1831,7 +2001,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "medicube (메디큐브)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-aesop-travel",
@@ -1841,8 +2012,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9037380649&itemId=26513528023&vendorItemId=93488035636&traceid=V0-153-4733ace06d38f461&requestid=20260911145132761059132553&token=31850C%7CMIXED&pt=0&slot=3",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "이솝 어라이벌 트래블 키트"
@@ -1856,7 +2027,8 @@
         "isRocket": true,
         "isFreeShipping": true,
         "brand": "Aesop (이솝)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-nespresso",
@@ -1866,8 +2038,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9708551484&itemId=29046405345&vendorItemId=85390118963&traceid=V0-153-23dd9204e7f178f0&requestid=20260911145146299319284357&token=31850C%7CMIXED&pt=0&slot=6",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "네스프레소 버츄오 팝"
@@ -1881,7 +2053,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "Nespresso (네스프레소)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-marshall",
@@ -1891,8 +2064,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=8764230988&itemId=25486746804&vendorItemId=93383518168&traceid=V0-153-f7d67752278a3dee&requestid=20260911145153023211410907&token=31850C%7CMIXED&pt=0&slot=5",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "마샬 엠버튼 2"
@@ -1906,7 +2079,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "Marshall (마샬)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-orthomol",
@@ -1916,8 +2090,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=7437344570&itemId=7877577488&vendorItemId=95810191859&traceid=V0-153-10183e309add1c2f&clickBeacon=e7a618a0-ada4-11f1-bf52-bad9f0f42c26%7E3&requestid=20260911145159720076631420&token=31850C%7CMIXED&pt=1&slot=1",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "오쏘몰 이뮨 30일"
@@ -1931,7 +2105,8 @@
         "isRocket": false,
         "isFreeShipping": false,
         "brand": "Orthomol (오쏘몰)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-diptyque",
@@ -1941,8 +2116,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9505128344&itemId=28320968313&vendorItemId=95273539064&traceid=V0-153-e066610d36aa1572&requestid=20260911145206457211415215&token=31850C%7CMIXED&pt=0&slot=5",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "딥티크 베이 캔들 190g"
@@ -1956,7 +2131,8 @@
         "isRocket": false,
         "isFreeShipping": true,
         "brand": "Diptyque (딥티크)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-nonfiction-duo",
@@ -1966,8 +2142,8 @@
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
       "url": "https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=sunmool&pageKey=9469719365&itemId=28695461007&vendorItemId=95636653135&traceid=V0-153-d7c7e41ddea026df&requestid=20260911145213151180117234&token=31850C%7CMIXED&pt=0&slot=6",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "논픽션 핸드크림 립밤 세트"
@@ -1981,7 +2157,8 @@
         "isRocket": true,
         "isFreeShipping": false,
         "brand": "NONFICTION (논픽션)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-loccitane-shower",
@@ -1990,8 +2167,8 @@
       "label": "록시땅 쎄드라 샤워 젤",
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "록시땅 꺄데 쉐이빙"
@@ -2006,7 +2183,8 @@
         "isRocket": false,
         "isFreeShipping": false,
         "brand": "록시땅"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-kinto-bottle",
@@ -2015,8 +2193,8 @@
       "label": "킨토 투고보틀 360ml",
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T05:50:20.992Z",
       "keywords": [
         "킨토 투고 텀블러 360ml"
@@ -2031,7 +2209,8 @@
         "isRocket": false,
         "isFreeShipping": false,
         "brand": "KINTO (킨토)"
-      }
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
     },
     {
       "key": "sunmool-coupang-arkdi-packing",
@@ -2040,8 +2219,8 @@
       "label": "아크디 여행용 압축파우치 7종 세트",
       "cta": "쿠팡에서 가격 보기",
       "network": "coupang",
-      "status": "active",
-      "updated": "2026-09-11",
+      "status": "retired",
+      "updated": "2026-11-02",
       "checkedAt": "2026-09-11T06:11:59.819Z",
       "keywords": [
         "아크디 여행용 압축파우치 7종 세트"
@@ -2056,6 +2235,961 @@
         "isRocket": true,
         "isFreeShipping": false,
         "brand": "아크디"
+      },
+      "issue": "쿠팡 API로 만든 다른 파트너 ID(AF5563346) 링크. 고정 계정 AF8819972로만 발급하기로 해 폐기"
+    },
+    {
+      "key": "repair-soomgo-window-film",
+      "category": "repair",
+      "label": "숨고 유리필름·시트 시공",
+      "cta": "유리필름·시트 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9C%A0%EB%A6%AC-%ED%95%84%EB%A6%84-%EC%8B%9C%ED%8A%B8-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EC%9C%A0%EB%A6%AC-%ED%95%84%EB%A6%84-%EC%8B%9C%ED%8A%B8-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "유리필름·시트 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 100000,
+        "avg": 300000,
+        "max": 900000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-thermal-film",
+      "category": "repair",
+      "label": "숨고 단열필름 시공",
+      "cta": "단열필름 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%8B%A8%EC%97%B4%ED%95%84%EB%A6%84-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%8B%A8%EC%97%B4%ED%95%84%EB%A6%84-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "단열필름 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 180000,
+        "avg": 650000,
+        "max": 1500000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-bath-leak",
+      "category": "repair",
+      "label": "숨고 (긴급) 화장실 누수",
+      "cta": "(긴급) 화장실 누수 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B8%B4%EA%B8%89-%EA%B0%80%EC%A0%95%EC%A7%91-%ED%99%94%EC%9E%A5%EC%8B%A4-%EB%88%84%EC%88%98",
+      "dest": "https://soomgo.com/hire/%EA%B8%B4%EA%B8%89-%EA%B0%80%EC%A0%95%EC%A7%91-%ED%99%94%EC%9E%A5%EC%8B%A4-%EB%88%84%EC%88%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "(긴급) 화장실 누수"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-sink-clog",
+      "category": "repair",
+      "label": "숨고 (긴급) 싱크대 막힘",
+      "cta": "(긴급) 싱크대 막힘 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B8%B4%EA%B8%89-%EC%8B%B1%ED%81%AC%EB%8C%80-%EB%A7%89%ED%9E%98",
+      "dest": "https://soomgo.com/hire/%EA%B8%B4%EA%B8%89-%EC%8B%B1%ED%81%AC%EB%8C%80-%EB%A7%89%ED%9E%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "(긴급) 싱크대 막힘"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-faucet-urgent",
+      "category": "repair",
+      "label": "숨고 (긴급) 싱크대 수도꼭지 고장·누수",
+      "cta": "(긴급) 싱크대 수도꼭지 고장·누수 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B8%B4%EA%B8%89-%EC%8B%B1%ED%81%AC%EB%8C%80-%EC%88%98%EB%8F%84%EA%BC%AD%EC%A7%80-%EA%B3%A0%EC%9E%A5-%EB%88%84%EC%88%98",
+      "dest": "https://soomgo.com/hire/%EA%B8%B4%EA%B8%89-%EC%8B%B1%ED%81%AC%EB%8C%80-%EC%88%98%EB%8F%84%EA%BC%AD%EC%A7%80-%EA%B3%A0%EC%9E%A5-%EB%88%84%EC%88%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "(긴급) 싱크대 수도꼭지 고장·누수"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-wallpaper",
+      "category": "repair",
+      "label": "숨고 도배 시공",
+      "cta": "도배 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%8F%84%EB%B0%B0-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%8F%84%EB%B0%B0-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "도배 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 170000,
+        "avg": 700000,
+        "max": 2300000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-wall-floor",
+      "category": "repair",
+      "label": "숨고 도배장판 시공",
+      "cta": "도배장판 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%8F%84%EB%B0%B0-%EC%9E%A5%ED%8C%90-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%8F%84%EB%B0%B0-%EC%9E%A5%ED%8C%90-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "도배장판 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 250000,
+        "avg": 1200000,
+        "max": 2700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-jangpan",
+      "category": "repair",
+      "label": "숨고 장판 시공",
+      "cta": "장판 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9E%A5%ED%8C%90-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EC%9E%A5%ED%8C%90-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "장판 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 46000,
+        "avg": 506000,
+        "max": 1830000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-floor-repair",
+      "category": "repair",
+      "label": "숨고 마루 보수",
+      "cta": "마루 보수 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%A7%88%EB%A3%A8-%EB%B3%B4%EC%88%98",
+      "dest": "https://soomgo.com/hire/%EB%A7%88%EB%A3%A8-%EB%B3%B4%EC%88%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "마루 보수"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 250000,
+        "max": 700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-floor-install",
+      "category": "repair",
+      "label": "숨고 마루 시공",
+      "cta": "마루 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%A7%88%EB%A3%A8-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%A7%88%EB%A3%A8-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "마루 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 660000,
+        "avg": 1693000,
+        "max": 2700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-floor-material",
+      "category": "repair",
+      "label": "숨고 바닥재 시공",
+      "cta": "바닥재 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B0%94%EB%8B%A5%EC%9E%AC-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%B0%94%EB%8B%A5%EC%9E%AC-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "바닥재 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 600000,
+        "avg": 1723000,
+        "max": 2600000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-molding",
+      "category": "repair",
+      "label": "숨고 몰딩 시공",
+      "cta": "몰딩 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%AA%B0%EB%94%A9-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%AA%B0%EB%94%A9-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "몰딩 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 358000,
+        "avg": 537000,
+        "max": 827000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-tile",
+      "category": "repair",
+      "label": "숨고 타일 시공",
+      "cta": "타일 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%ED%83%80%EC%9D%BC-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%ED%83%80%EC%9D%BC-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "타일 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 400000,
+        "max": 1900000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-grout",
+      "category": "repair",
+      "label": "숨고 줄눈 시공",
+      "cta": "줄눈 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A4%84%EB%88%88-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EC%A4%84%EB%88%88-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "줄눈 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 400000,
+        "max": 1000000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-caulk",
+      "category": "repair",
+      "label": "숨고 코킹 시공",
+      "cta": "코킹 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%BD%94%ED%82%B9-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EC%BD%94%ED%82%B9-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "코킹 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 100000,
+        "avg": 250000,
+        "max": 650000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-bath-remodel",
+      "category": "repair",
+      "label": "숨고 욕실·화장실 리모델링",
+      "cta": "욕실·화장실 리모델링 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9A%95%EC%8B%A4-%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81",
+      "dest": "https://soomgo.com/hire/%EC%9A%95%EC%8B%A4-%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "욕실·화장실 리모델링"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 1780000,
+        "max": 3800000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-sink-replace",
+      "category": "repair",
+      "label": "숨고 싱크대 교체",
+      "cta": "싱크대 교체 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%8B%B1%ED%81%AC%EB%8C%80-%EA%B5%90%EC%B2%B4",
+      "dest": "https://soomgo.com/hire/%EC%8B%B1%ED%81%AC%EB%8C%80-%EA%B5%90%EC%B2%B4",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "싱크대 교체"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 800000,
+        "max": 3000000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-kitchen-remodel",
+      "category": "repair",
+      "label": "숨고 주방 리모델링",
+      "cta": "주방 리모델링 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A3%BC%EB%B0%A9-%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81",
+      "dest": "https://soomgo.com/hire/%EC%A3%BC%EB%B0%A9-%EB%A6%AC%EB%AA%A8%EB%8D%B8%EB%A7%81",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "주방 리모델링"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 250000,
+        "avg": 1400000,
+        "max": 3700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-hood",
+      "category": "repair",
+      "label": "숨고 주방후드 교체·설치",
+      "cta": "주방후드 교체·설치 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A3%BC%EB%B0%A9%ED%9B%84%EB%93%9C-%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
+      "dest": "https://soomgo.com/hire/%EC%A3%BC%EB%B0%A9%ED%9B%84%EB%93%9C-%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "주방후드 교체·설치"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 80000,
+        "avg": 230000,
+        "max": 450000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-vent",
+      "category": "repair",
+      "label": "숨고 환풍기 교체·설치",
+      "cta": "환풍기 교체·설치 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%ED%99%98%ED%92%8D%EA%B8%B0-%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
+      "dest": "https://soomgo.com/hire/%ED%99%98%ED%92%8D%EA%B8%B0-%EA%B5%90%EC%B2%B4-%EC%84%A4%EC%B9%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "환풍기 교체·설치"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 50000,
+        "avg": 100000,
+        "max": 260000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-dishwasher",
+      "category": "repair",
+      "label": "숨고 식기세척기 설치·수리",
+      "cta": "식기세척기 설치·수리 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%8B%9D%EA%B8%B0%EC%84%B8%EC%B2%99%EA%B8%B0-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EC%8B%9D%EA%B8%B0%EC%84%B8%EC%B2%99%EA%B8%B0-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "식기세척기 설치·수리"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 250000,
+        "avg": 450000,
+        "max": 800000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-interior-film",
+      "category": "repair",
+      "label": "숨고 인테리어필름 시공",
+      "cta": "인테리어필름 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4-%ED%95%84%EB%A6%84-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4-%ED%95%84%EB%A6%84-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "인테리어필름 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 180000,
+        "avg": 580000,
+        "max": 2700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-paint",
+      "category": "repair",
+      "label": "숨고 페인트 시공",
+      "cta": "페인트 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%ED%8E%98%EC%9D%B8%ED%8A%B8-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%ED%8E%98%EC%9D%B8%ED%8A%B8-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "페인트 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 230000,
+        "avg": 600000,
+        "max": 1800000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-pigeon",
+      "category": "repair",
+      "label": "숨고 비둘기 퇴치",
+      "cta": "비둘기 퇴치 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B9%84%EB%91%98%EA%B8%B0-%ED%87%B4%EC%B9%98",
+      "dest": "https://soomgo.com/hire/%EB%B9%84%EB%91%98%EA%B8%B0-%ED%87%B4%EC%B9%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "비둘기 퇴치"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 250000,
+        "max": 380000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-furniture-repair",
+      "category": "repair",
+      "label": "숨고 가구 수리",
+      "cta": "가구 수리 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B0%80%EA%B5%AC-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EA%B0%80%EA%B5%AC-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "가구 수리"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 40000,
+        "avg": 80000,
+        "max": 300000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-furniture-reform",
+      "category": "repair",
+      "label": "숨고 가구 리폼",
+      "cta": "가구 리폼 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B0%80%EA%B5%AC-%EB%A6%AC%ED%8F%BC",
+      "dest": "https://soomgo.com/hire/%EA%B0%80%EA%B5%AC-%EB%A6%AC%ED%8F%BC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "가구 리폼"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 90000,
+        "avg": 350000,
+        "max": 1500000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-furniture-assemble",
+      "category": "repair",
+      "label": "숨고 가구 조립·설치",
+      "cta": "가구 조립·설치 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B0%80%EA%B5%AC-%EC%A1%B0%EB%A6%BD",
+      "dest": "https://soomgo.com/hire/%EA%B0%80%EA%B5%AC-%EC%A1%B0%EB%A6%BD",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "가구 조립·설치"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 40000,
+        "avg": 100000,
+        "max": 260000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-closet",
+      "category": "repair",
+      "label": "숨고 붙박이장 시공",
+      "cta": "붙박이장 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B6%99%EB%B0%95%EC%9D%B4%EC%9E%A5-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%B6%99%EB%B0%95%EC%9D%B4%EC%9E%A5-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "붙박이장 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 825000,
+        "avg": 1028000,
+        "max": 1350000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-demolition",
+      "category": "repair",
+      "label": "숨고 철거",
+      "cta": "철거 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%B2%A0%EA%B1%B0",
+      "dest": "https://soomgo.com/hire/%EC%B2%A0%EA%B1%B0",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "철거"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 150000,
+        "avg": 600000,
+        "max": 2700000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-electric",
+      "category": "repair",
+      "label": "숨고 전기배선 설치·수리",
+      "cta": "전기배선 설치·수리 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%A0%84%EA%B8%B0-%EB%B0%B0%EC%84%A0-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EC%A0%84%EA%B8%B0-%EB%B0%B0%EC%84%A0-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "전기배선 설치·수리"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 30000,
+        "avg": 100000,
+        "max": 500000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-mold",
+      "category": "repair",
+      "label": "숨고 곰팡이 제거",
+      "cta": "곰팡이 제거 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EA%B3%B0%ED%8C%A1%EC%9D%B4-%EC%A0%9C%EA%B1%B0",
+      "dest": "https://soomgo.com/hire/%EA%B3%B0%ED%8C%A1%EC%9D%B4-%EC%A0%9C%EA%B1%B0",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "곰팡이 제거"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 80000,
+        "avg": 200000,
+        "max": 650000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-insulation",
+      "category": "repair",
+      "label": "숨고 단열·결로 시공",
+      "cta": "단열·결로 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%8B%A8%EC%97%B4-%EA%B2%B0%EB%A1%9C-%EC%8B%9C%EA%B3%B5",
+      "dest": "https://soomgo.com/hire/%EB%8B%A8%EC%97%B4-%EA%B2%B0%EB%A1%9C-%EC%8B%9C%EA%B3%B5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "단열·결로 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 300000,
+        "avg": 1000000,
+        "max": 2450000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-balcony",
+      "category": "repair",
+      "label": "숨고 베란다·발코니 확장",
+      "cta": "베란다·발코니 확장 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B2%A0%EB%9E%80%EB%8B%A4-%EB%B0%9C%EC%BD%94%EB%8B%88-%ED%99%95%EC%9E%A5",
+      "dest": "https://soomgo.com/hire/%EB%B2%A0%EB%9E%80%EB%8B%A4-%EB%B0%9C%EC%BD%94%EB%8B%88-%ED%99%95%EC%9E%A5",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "베란다·발코니 확장"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 1000000,
+        "avg": 2500000,
+        "max": 6000000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-apt-interior",
+      "category": "repair",
+      "label": "숨고 아파트 인테리어",
+      "cta": "아파트 인테리어 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4",
+      "dest": "https://soomgo.com/hire/%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "아파트 인테리어"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 1000000,
+        "avg": 10000000,
+        "max": 38000000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-blind",
+      "category": "repair",
+      "label": "숨고 블라인드·커튼 시공",
+      "cta": "블라인드·커튼 시공 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B8%94%EB%9D%BC%EC%9D%B8%EB%93%9C-%EC%BB%A4%ED%8A%BC-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EB%B8%94%EB%9D%BC%EC%9D%B8%EB%93%9C-%EC%BB%A4%ED%8A%BC-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "블라인드·커튼 시공"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 50000,
+        "avg": 320000,
+        "max": 850000,
+        "checked": "2026-11-02"
+      }
+    },
+    {
+      "key": "repair-soomgo-security-window",
+      "category": "repair",
+      "label": "숨고 방범창 설치·수리",
+      "cta": "방범창 설치·수리 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EB%B0%A9%EB%B2%94%EC%B0%BD-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "dest": "https://soomgo.com/hire/%EB%B0%A9%EB%B2%94%EC%B0%BD-%EC%84%A4%EC%B9%98-%EC%88%98%EB%A6%AC",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "방범창 설치·수리"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급",
+      "soomgo_price": {
+        "min": 100000,
+        "avg": 200000,
+        "max": 700000,
+        "checked": "2026-11-02"
       }
     }
   ],
@@ -2143,7 +3277,6 @@
     "token_expires_at": ""
   },
   "topic_map": {
-    "_note": "repair-keyword-*/regional-repair-* 슬러그 끝의 토픽 id → 링크. 규칙 구현은 isatipsadbles/lib/affiliate-match.ts.",
     "quote": {
       "door-hole": "repair-soomgo-door-repair",
       "fire-door": "repair-soomgo-door-repair",

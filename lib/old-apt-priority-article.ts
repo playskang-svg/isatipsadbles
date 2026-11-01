@@ -105,7 +105,7 @@ export const oldAptPriorityArticles: Article[] = [
           "✅ 한 줄 정리: 구축 인테리어는 배관·방수 → 창호·단열 → 마감 순서로 예산을 배정하고, 견적서도 이 세 단계로 나눠 비교하세요.",
           "공정 전체 흐름은 [아파트 인테리어 공사 순서 10단계](/articles/apartment-interior-construction-order)에, 이사 전에 견적부터 정리하려면 [이사 전 인테리어 견적 비교](/articles/pre-move-in-interior-quote-comparison)에 정리해 두었습니다.",
           "이미 살고 있는 집이라면 [살면서 인테리어 하는 법](/articles/living-in-home-remodeling-guide)도 함께 보세요.",
-          "우선순위를 정했다면 [집닥 인테리어 견적 상담 신청하기](https://ocayn.info/t8g4kjiibn)에서 준공 연도와 1·2순위 공사 범위를 전달하고 견적을 받아 비교해 보세요.",
+          "우선순위를 정했다면 [숨고에서 아파트 인테리어 견적 받기](https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%95%84%ED%8C%8C%ED%8A%B8-%EC%9D%B8%ED%85%8C%EB%A6%AC%EC%96%B4)에서 준공 연도와 1·2순위 공사 범위를 전달하고 견적을 받아 비교해 보세요.",
         ],
       },
     ],

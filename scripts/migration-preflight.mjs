@@ -9,7 +9,6 @@ const requiredFiles = [
   "app/layout.tsx",
   "app/sitemap.ts",
   "app/robots.ts",
-  "app/api/coupang-products/route.ts",
   "lib/articles.ts",
 ];
 
@@ -32,7 +31,7 @@ if (forbiddenTrackedFiles.length) {
 }
 
 const envExample = readFileSync(".env.example", "utf8");
-const requiredEnvKeys = ["NEXT_PUBLIC_SITE_URL", "COUPANG_ACCESS_KEY", "COUPANG_SECRET_KEY"];
+const requiredEnvKeys = ["NEXT_PUBLIC_SITE_URL"];
 const missingEnvKeys = requiredEnvKeys.filter((key) => !envExample.includes(`${key}=`));
 
 if (missingEnvKeys.length) {

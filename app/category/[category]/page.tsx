@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleCard } from "@/components/ArticleCard";
 import { categoryMeta, getPublishedArticles } from "@/lib/articles";
+import { localRepairIndex } from "@/lib/local-repair/pages";
 import { repairRegionalIndex } from "@/lib/repair-regional-pages";
 import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -28,7 +29,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const { category } = await params;
   const meta = categoryMeta[category as CategoryKey];
   if (!meta) notFound();
-  const items = getPublishedArticles().filter((article) => article.category === category);
+  const now = Date.now();
+  const localHrefs = new Set(localRepairIndex.flatMap((group) => group.items.map((item) => item.href)));
+  const items = getPublishedArticles().filter((article) => article.category === category && !localHrefs.has(`/articles/${article.slug}`));
+  const localGroups = category === "regional" || category === "repair-install"
+    ? localRepairIndex.map((group) => ({ city: group.city, items: group.items.filter((item) => Date.parse(item.publishedAt) <= now) })).filter((group) => group.items.length > 0)
+    : [];
   const keywordItems = category === "repair-install" ? items.filter((article) => article.slug.startsWith("repair-keyword-")) : [];
   const regionalRepairItems = category === "regional" ? repairRegionalIndex : [];
   const featuredItems = category === "repair-install"
@@ -44,6 +50,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     ? [
         ...featuredItems.map((article) => ({ name: article.title, href: `/articles/${article.slug}` })),
         ...regionalRepairItems.map((item) => ({ name: item.title, href: item.href })),
+        ...localGroups.flatMap((group) => group.items.map((item) => ({ name: item.label, href: encodeURI(item.href) }))),
       ]
     : items.map((article) => ({ name: article.title, href: `/articles/${article.slug}` }));
   const categoryUrl = `${SITE_URL}/category/${category}`;
@@ -81,6 +88,23 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <header className="listing-hero"><div className="container"><nav className="breadcrumb"><Link href="/">홈</Link><span>›</span><span>{meta.label}</span></nav><p className="eyebrow">CATEGORY</p><h1>{meta.label}</h1><p>{meta.description}</p></div></header>
       <section className="section"><div className="container"><div className="listing-bar"><strong>{schemaItems.length}개의 글</strong><span>최근 업데이트 순</span></div><div className="article-grid">{featuredItems.map((article) => <ArticleCard key={article.slug} article={article} />)}</div></div></section>
+      {localGroups.length > 0 && (
+        <section className="section regional-service-index-section">
+          <div className="container">
+            <div className="section-heading"><div><p className="eyebrow dark">LOCAL HOME REPAIR</p><h2>우리 동네 집수리</h2></div><p>인천·천안·용인·평택의 동네와 작업을 골라 비용 범위와 셀프 보수 방법을 확인하세요.</p></div>
+            <div className="regional-service-groups">
+              {localGroups.map((group) => (
+                <section className="regional-service-group" key={group.city}>
+                  <div className="regional-service-group-title"><h3>{group.city}</h3><span>{group.items.length}개</span></div>
+                  <ul className="regional-service-link-list">
+                    {group.items.map((item) => <li key={item.href}><Link href={item.href}><span>{item.label}</span><b aria-hidden="true">→</b></Link></li>)}
+                  </ul>
+                </section>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       {keywordItems.length > 0 && (
         <section className="section keyword-index-section">
           <div className="container">
