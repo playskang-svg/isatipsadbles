@@ -51,4 +51,4 @@ jobs:
 
       - name: Submit changed URLs to IndexNow
         continue-on-error: true
-        run: node scripts/indexnow-submit.mjs --days 2
+        run: node --import ./scripts/jisikin/register.mjs scripts/indexnow-submit.mjs --days 2

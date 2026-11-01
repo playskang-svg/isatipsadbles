@@ -4,14 +4,16 @@ import prices from "@/data/soomgo-prices.json";
 import priceLinks from "@/data/soomgo-price-links.json";
 import plan from "@/data/local-repair-plan.json";
 import { doorServices } from "./services/door";
+import { extraServices } from "./services/extra";
 import { doorWindowServices } from "./services/door-window";
 import { finishServices } from "./services/finish";
 import { plumbingServices } from "./services/plumbing";
 import { kitchenEtcServices } from "./services/kitchen-etc";
+import { HERO_CAPTION, heroAlt } from "./heroes";
 import type { ServiceModule } from "./types";
 import { ageBucket, ageOf, dominantEra, dongBreakdown, dongEntries, ERA_LABELS, getRegion, mainBucket, regions, siblingDongs, statsOf, type City, type DongEntry, type Region } from "./regions";
 
-export const serviceModules: ServiceModule[] = [...doorServices, ...doorWindowServices, ...finishServices, ...plumbingServices, ...kitchenEtcServices];
+export const serviceModules: ServiceModule[] = [...doorServices, ...doorWindowServices, ...finishServices, ...plumbingServices, ...kitchenEtcServices, ...extraServices];
 const moduleById = new Map(serviceModules.map((item) => [item.id, item]));
 
 type PlanItem = { region: string; service: string; volume: number; posts: number | null; top: string; publishedAt: string };
@@ -24,6 +26,14 @@ const priceTable = prices.prices as Record<string, { title: string; min: number;
 const priceLinkTable = priceLinks as Record<string, string>;
 const CITIES: City[] = ["인천", "천안", "용인", "평택"];
 const ACCENTS = ["mint", "amber", "blue", "violet", "rose", "green"];
+
+/** 서비스 전용 이미지가 있으면 그것을, 없으면 모듈 기본 이미지를 쓴다. */
+function heroOf(service: ServiceModule, title: string) {
+  const alt = heroAlt[service.id];
+  return alt
+    ? { src: `/images/local-repair/${service.id}.webp`, alt, title, caption: HERO_CAPTION }
+    : { src: service.hero.src, alt: service.hero.alt, title };
+}
 
 function hasFinal(word: string) {
   const code = word.charCodeAt(word.length - 1);
@@ -293,6 +303,7 @@ function makeServicePage(item: PlanItem, index: number): Article {
     description: descriptionOf(region, service, ct),
     category: "regional",
     categoryLabel: "지역별 정보",
+    googleNoindex: true,
     keyword: `${region.label} ${service.keyword}`,
     secondaryKeywords: [`${region.label}${service.keyword}`, ...forms.slice(0, 4).map((value) => `${region.label} ${value}`), `${region.city} ${service.keyword}`],
     readingTime: 6,
@@ -300,7 +311,7 @@ function makeServicePage(item: PlanItem, index: number): Article {
     updatedAt: item.publishedAt,
     accent: ACCENTS[index % ACCENTS.length],
     affiliateNotice: true,
-    heroImage: { src: service.hero.src, alt: service.hero.alt, title: `${region.label} ${service.keyword}` },
+    heroImage: heroOf(service, `${region.label} ${service.keyword}`),
     breadcrumbs: [
       { name: "지역별 정보", href: "/category/regional" },
       { name: `${region.city} 집수리`, href: `/articles/${cityHubSlug(region.city)}` },
@@ -423,6 +434,7 @@ function makeDongHub(item: DongEntry, index: number): Article {
     description: `${item.city} ${item.dong} 단지 ${item.entry.n}곳의 연식을 K-apt 자료로 살펴보고 연차별로 먼저 볼 곳, ${ids.slice(0, 3).map((id) => moduleById.get(id)!.keyword).join("·")} 견적 기준을 정리했습니다. 사진 3장으로 견적을 비교해 보세요.`,
     category: "regional",
     categoryLabel: "지역별 정보",
+    googleNoindex: true,
     keyword: `${item.dong} 집수리`,
     secondaryKeywords: [`${item.dong} 집수리 업체`, ...ids.map((id) => `${item.dong} ${moduleById.get(id)!.keyword}`), `${item.city} ${item.dong} 수리`],
     readingTime: 5,
@@ -430,7 +442,7 @@ function makeDongHub(item: DongEntry, index: number): Article {
     updatedAt: publishedAt,
     accent: ACCENTS[index % ACCENTS.length],
     affiliateNotice: true,
-    heroImage: { src: "/images/repair-install/home-repair-inspection.webp", alt: "문, 싱크대, 샷시 등 설치·수리 현장을 점검하는 작업자", title: `${item.dong} 집수리` },
+    heroImage: heroOf(moduleById.get(ids[0])!, `${item.dong} 집수리`),
     breadcrumbs: [
       { name: "지역별 정보", href: "/category/regional" },
       { name: `${item.city} 집수리`, href: `/articles/${cityHubSlug(item.city)}` },

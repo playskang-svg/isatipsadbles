@@ -65,6 +65,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section keyword-index-section">
+        <div className="container">
+          <div className="section-heading"><div><p className="eyebrow dark">LOCAL HOME REPAIR</p><h2>우리 동네 집수리</h2></div><p>동네 아파트 연식과 작업별 비용 범위, 셀프 보수 방법을 확인하세요.</p></div>
+          <ul className="keyword-index-list">
+            {["인천", "천안", "용인", "평택"].map((city) => <li key={city}><Link href={`/articles/${city}-집수리`}>{city} 집수리<span aria-hidden="true">→</span></Link></li>)}
+          </ul>
+        </div>
+      </section>
+
       <section className="section latest-section" id="latest">
         <div className="container">
           <div className="section-heading"><div><p className="eyebrow dark">FIRST CHECK</p><h2>가장 먼저 읽을 글</h2></div><Link href="/category/planning" className="text-link">이사 준비 전체 보기 →</Link></div>

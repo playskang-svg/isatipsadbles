@@ -19,4 +19,4 @@ jobs:
         with:
           node-version: 22
       - name: Submit URLs updated in the last day
-        run: node scripts/indexnow-submit.mjs --days 1
+        run: node --import ./scripts/jisikin/register.mjs scripts/indexnow-submit.mjs --days 1

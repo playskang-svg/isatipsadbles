@@ -41,6 +41,8 @@ export type Article = {
   sources?: { label: string; url: string }[];
   /** 기본 편집 원칙 문구 대신 쓸 문구 */
   editorNote?: string;
+  /** 네이버에는 노출하고 구글에는 색인하지 않는다(지역 조합 페이지의 사이트 평가 보호) */
+  googleNoindex?: boolean;
   /** 첫 화면에 보이는 자료 근거 */
   badges?: string[];
   /** 글 중간 견적 안내. 없으면 lib/services.ts 매칭을 쓴다. */

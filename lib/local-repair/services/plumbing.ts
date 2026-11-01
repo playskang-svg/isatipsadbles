@@ -86,8 +86,8 @@ export const plumbingServices: ServiceModule[] = [
     keyword: "변기막힘",
     keywordForms: ["변기뚫음", "변기 막혔을때", "하수구 막힘"],
     titleTails: ["물 넘치기 전에 뚫는 순서와 응급 대처", "뚫어뻥으로 될까 기사를 불러야 할까", "뚫어뻥·관통기·변기 탈거 언제 쓰나"],
-    quoteKey: "repair-soomgo-plumbing",
-    priceKey: "수도-설치-수리",
+    quoteKey: "repair-soomgo-drain",
+    priceKey: "하수구-청소",
     hero: { src: "/images/repair-install/bathroom-fixture-repair.webp", alt: "욕실 바닥에 무릎을 꿇고 일체형 변기 옆을 공구로 손보는 작업자" },
     answers: [
       "물을 더 내리지 말고 변기 옆 앵글밸브를 시계 방향으로 잠그세요. 그다음 물에 잠긴 뚫어뻥을 배수구에 밀착해 천천히 누른 뒤 힘 있게 당기기를 반복합니다.",

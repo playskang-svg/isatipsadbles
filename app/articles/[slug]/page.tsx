@@ -66,6 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.description,
+    ...(article.googleNoindex ? { robots: { index: true, follow: true, googleBot: { index: false, follow: true } } } : {}),
     keywords: [article.keyword, ...(article.secondaryKeywords ?? []), article.categoryLabel, SITE_NAME, ...filterRestrictedKeywords(article.slug, SITE_KEYWORDS)],
     alternates: { canonical: `/articles/${encodeURI(article.slug)}` },
     authors: [{ name: `${SITE_NAME} 편집팀`, url: "/about" }],

@@ -61,7 +61,12 @@ function absolute(url) {
 
 async function fetchSitemapEntries() {
   const res = await fetch(`${SITE_URL}/sitemap.xml`, { headers: { "user-agent": "isatips-indexnow/1.0" } });
-  if (!res.ok) throw new Error(`사이트맵을 읽지 못했습니다: ${res.status} ${res.statusText}`);
+  if (!res.ok) {
+    // GitHub Actions IP는 Cloudflare가 403으로 막는다. 사이트맵을 만드는 코드에서 바로 읽는다.
+    console.log(`사이트맵 응답 ${res.status}, 코드에서 목록을 만듭니다.`);
+    const { getSitemapEntries } = await import("../lib/sitemap.ts");
+    return getSitemapEntries().map((entry) => ({ loc: entry.url, lastmod: entry.lastModified ? new Date(entry.lastModified) : null }));
+  }
   const xml = await res.text();
   const entries = [];
   for (const block of xml.match(/<url>[\s\S]*?<\/url>/g) ?? []) {
@@ -120,7 +125,7 @@ async function main() {
   }
 
   console.log(`대상 ${targets.length}건 / host=${host} / key=${key}`);
-  for (const url of targets) console.log(`  - ${url}`);
+  for (const url of targets) console.log(`  - ${decodeURI(url)}`);
   if (opts.dryRun) {
     console.log("--dry-run 이므로 제출하지 않았습니다.");
     return;
@@ -128,7 +133,8 @@ async function main() {
 
   // 키 파일이 실제로 공개돼 있는지 먼저 확인한다. 없으면 IndexNow가 전부 거절한다.
   const keyCheck = await fetch(`${SITE_URL}/${key}.txt`);
-  if (!keyCheck.ok || (await keyCheck.text()).trim() !== key) {
+  // 403은 CI IP 차단이라 키 파일 문제가 아니다. 파일이 없을 때만 멈춘다.
+  if (keyCheck.status === 404 || (keyCheck.ok && (await keyCheck.text()).trim() !== key)) {
     throw new Error(`키 파일이 공개되지 않았습니다: ${SITE_URL}/${key}.txt (배포 완료 후 다시 실행하세요)`);
   }
 

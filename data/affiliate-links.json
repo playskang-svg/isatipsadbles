@@ -3,7 +3,7 @@
   "version": "2026.11.02-01",
   "build": "a35f977d",
   "updated": "2026-11-02",
-  "link_count": 140,
+  "link_count": 142,
   "note": "이사준비백서 제휴링크. 코드는 link_key로만 조회한다. 쿠팡은 data/coupang-links.json(파트너 ID AF8819972, 관리 화면 간편 링크)을 쓴다.",
   "partner_id": "A100709419",
   "links": [
@@ -3191,6 +3191,48 @@
         "max": 700000,
         "checked": "2026-11-02"
       }
+    },
+    {
+      "key": "repair-soomgo-waterproof",
+      "category": "repair",
+      "label": "숨고 옥상공사·방수",
+      "cta": "옥상공사·방수 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%EC%98%A5%EC%83%81%EA%B3%B5%EC%82%AC-%EB%B0%A9%EC%88%98",
+      "dest": "https://soomgo.com/hire/%EC%98%A5%EC%83%81%EA%B3%B5%EC%82%AC-%EB%B0%A9%EC%88%98",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "옥상공사·방수"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
+    },
+    {
+      "key": "repair-soomgo-drain",
+      "category": "repair",
+      "label": "숨고 하수구 청소",
+      "cta": "하수구 청소 견적 받기",
+      "url": "https://lpweb.kr/click.php?m=soomgo&a=A100709419&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fsoomgo.com%2Fhire%2F%ED%95%98%EC%88%98%EA%B5%AC-%EC%B2%AD%EC%86%8C",
+      "dest": "https://soomgo.com/hire/%ED%95%98%EC%88%98%EA%B5%AC-%EC%B2%AD%EC%86%8C",
+      "merchant": "숨고",
+      "network": "linkprice",
+      "campaign_type": "CPS 딥링크",
+      "payout": "최대 44.1%",
+      "conversion": "요청서 발송 후 받은 견적서 열람",
+      "status": "active",
+      "site_code": "A100709419",
+      "keywords": [
+        "하수구 청소"
+      ],
+      "collected_at": "2026-11-02",
+      "updated": "2026-11-02",
+      "verified": "링크프라이스 사이트 \"이사준비백서\"(isatips.adbles.com)로 2026-11-02 발급"
     }
   ],
   "slug_map": {

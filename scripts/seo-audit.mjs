@@ -38,8 +38,14 @@ const articles = [
   "hanam-wirye-moving-guide",
   "hanam-chungung-moving-guide",
   "hanam-choi-moving-guide",
+  "인천-집수리",
+  "천안-집수리",
+  "용인-집수리",
+  "평택-집수리",
+  "인천-청라-방충망",
+  "천안-도어락",
 ];
-const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${value}`)];
+const pages = ["/", "/about", "/editorial-policy", ...categories.map((value) => `/category/${value}`), ...articles.map((value) => `/articles/${encodeURI(value)}`)];
 const failures = [];
 const titles = new Map();
 const descriptions = new Map();
