@@ -1,0 +1,51 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-11-03T22:52:32.828Z",
+  "updatedAt": "2026-11-03T22:52:32.828Z",
+  "createdBy": "actions/41734036468",
+  "titles": [
+    {
+      "keyword": "10월이사손없는날",
+      "volume": 1370,
+      "grade": "1위가능",
+      "title": "10월이사손없는날, 견적서에 이 항목 빠지면 당일 현장 추가금 붙습니다",
+      "hook": "당일 바가지 요금과 계약 외 추가금 예방",
+      "intent": "계약서 특약에 반드시 넣어야 할 핵심 체크리스트",
+      "alternatives": [
+        "10월이사손없는날, 1톤 용달과 반포장 사이 짐 양으로 선택하는 법",
+        "10월이사손없는날, 파손·분실 발생 시 현장에서 바로 보상받는 절차",
+        "10월이사손없는날, 무조건 최저가 골랐다가 이삿날 계약 취소당하는 구조"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-11-03T22:52:32.789Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "10월이사손없는날",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    }
+  ]
+}
