@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-11-04T23:08:21.785Z",
+  "checkedAt": "2026-11-06T22:39:40.537Z",
   "engine": "naver",
   "results": [
     {
@@ -38,7 +38,7 @@
     },
     {
       "keyword": "벽걸이TV 이전설치",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "천안 불당동 이사",
@@ -66,7 +66,21 @@
     },
     {
       "keyword": "천안 동남구 이사",
-      "error": "HTTP 403"
+      "hit": true,
+      "rank": 2,
+      "block": "기타",
+      "title": "천안 동남구 포장이사 견적, 원도심·읍면에서 달라지는 조건",
+      "urls": [
+        "https://isatips.adbles.com/articles/cheonan-dongnam-gu-moving"
+      ],
+      "items": [
+        {
+          "url": "https://isatips.adbles.com/articles/cheonan-dongnam-gu-moving",
+          "title": "천안 동남구 포장이사 견적, 원도심·읍면에서 달라지는 조건",
+          "rank": 2,
+          "block": "기타"
+        }
+      ]
     },
     {
       "keyword": "천안 서북구 이사",
@@ -94,7 +108,7 @@
     },
     {
       "keyword": "이사 전입신고 확정일자",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "세탁기 이전설치 2단 직렬",
