@@ -1,0 +1,88 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-11-06T22:42:28.740Z",
+  "updatedAt": "2026-11-06T22:42:28.740Z",
+  "createdBy": "actions/42306269132",
+  "titles": [
+    {
+      "keyword": "현관중문커튼",
+      "volume": 1460,
+      "grade": "1위가능",
+      "title": "현관중문커튼, 틀 통째 교체 vs 망만 갈기 비용·수명 비교",
+      "hook": "틀 교체와 망 교체의 가격 차이와 내구성",
+      "intent": "굳이 틀까지 바꿔야 하는지 망설이는 독자 타깃",
+      "alternatives": [
+        "현관중문커튼, 미세방충망 바람 안 통한다는 오해와 실측 통기성",
+        "현관중문커튼, 24평 아파트 창문 개수별 시공 견적과 교체 시간",
+        "현관중문커튼, 가스켓 헐거움과 틈새 벌레 유입 막는 점검법"
+      ]
+    },
+    {
+      "keyword": "현관문가격",
+      "volume": 1470,
+      "grade": "1위가능",
+      "title": "현관문가격, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "현관문가격, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "현관문가격, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "현관문가격, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-11-06T22:42:28.657Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관중문커튼",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-06T22:42:28.702Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    }
+  ]
+}
