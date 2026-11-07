@@ -5,8 +5,8 @@
   "repo": "playskang-svg/isatipsadbles",
   "type": "publish",
   "createdAt": "2026-11-06T22:42:28.740Z",
-  "updatedAt": "2026-11-06T22:42:28.740Z",
-  "createdBy": "actions/42306269132",
+  "updatedAt": "2026-11-07T21:26:13.512Z",
+  "createdBy": "actions/42415532189",
   "titles": [
     {
       "keyword": "현관중문커튼",
@@ -32,6 +32,19 @@
         "현관문가격, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
         "현관문가격, 초보자가 흔히 저지르는 실수 3가지와 예방법",
         "현관문가격, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    },
+    {
+      "keyword": "욕실샤워기수전교체",
+      "volume": 1440,
+      "grade": "상위가능",
+      "title": "욕실샤워기수전교체, 누수 없이 혼자 교체하는 공구와 몽키스패너 요령",
+      "hook": "누수 불안 해소 및 필수 공구 안내",
+      "intent": "셀프 교체 중 물 샐까 봐 두려워하는 독자 타깃",
+      "alternatives": [
+        "욕실샤워기수전교체, 오래된 아파트 호환 규격과 출장 교체 실견적",
+        "욕실샤워기수전교체, 싼 제품 샀다가 테프론 테이프 감다 후회하는 이유",
+        "욕실샤워기수전교체, 부속품 교체할 때 계량기 밸브 잠그는 순서"
       ]
     }
   ],
@@ -65,6 +78,54 @@
       "site": "isatips",
       "domain": "isatips.adbles.com",
       "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-07T21:26:13.443Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-07T21:26:13.481Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "욕실샤워기수전교체",
       "slug": null,
       "internal": [],
       "external": [
