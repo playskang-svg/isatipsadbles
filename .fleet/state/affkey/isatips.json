@@ -3,7 +3,7 @@
   "label": "이사팁스",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "updatedAt": "2026-11-10T01:09:17.567Z",
+  "updatedAt": "2026-11-10T22:48:27.886Z",
   "updatedBy": "actions",
   "networks": [
     "숨고(LinkPrice) 견적 딥링크",
@@ -18,13 +18,6 @@
   },
   "needs": [],
   "history": [
-    {
-      "at": "2026-10-11T21:27:56.588Z",
-      "by": "actions",
-      "open": 0,
-      "new": 0,
-      "resolved": 0
-    },
     {
       "at": "2026-10-13T00:07:24.050Z",
       "by": "actions",
@@ -223,6 +216,13 @@
     },
     {
       "at": "2026-11-10T01:09:17.567Z",
+      "by": "actions",
+      "open": 0,
+      "new": 0,
+      "resolved": 0
+    },
+    {
+      "at": "2026-11-10T22:48:27.886Z",
       "by": "actions",
       "open": 0,
       "new": 0,
