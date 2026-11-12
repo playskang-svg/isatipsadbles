@@ -1,0 +1,162 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-11-12T00:02:23.683Z",
+  "updatedAt": "2026-11-12T00:02:23.683Z",
+  "createdBy": "actions/43123815327",
+  "titles": [
+    {
+      "keyword": "원홀세면대수전",
+      "volume": 1430,
+      "grade": "1위가능",
+      "title": "원홀세면대수전, 누수 없이 혼자 교체하는 공구와 몽키스패너 요령",
+      "hook": "누수 불안 해소 및 필수 공구 안내",
+      "intent": "셀프 교체 중 물 샐까 봐 두려워하는 독자 타깃",
+      "alternatives": [
+        "원홀세면대수전, 오래된 아파트 호환 규격과 출장 교체 실견적",
+        "원홀세면대수전, 싼 제품 샀다가 테프론 테이프 감다 후회하는 이유",
+        "원홀세면대수전, 부속품 교체할 때 계량기 밸브 잠그는 순서"
+      ]
+    },
+    {
+      "keyword": "현관문가격",
+      "volume": 1450,
+      "grade": "1위가능",
+      "title": "현관문가격, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "현관문가격, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "현관문가격, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "현관문가격, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    },
+    {
+      "keyword": "가스보일러교체비용",
+      "volume": 1360,
+      "grade": "상위가능",
+      "title": "가스보일러교체비용, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "가스보일러교체비용, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "가스보일러교체비용, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "가스보일러교체비용, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    },
+    {
+      "keyword": "화장실줄눈셀프",
+      "volume": 1450,
+      "grade": "상위가능",
+      "title": "화장실줄눈셀프, 원피스 vs 치마형 투피스 청소·물내림 실사용 비교",
+      "hook": "모델별 물내림 수압과 청소 편의성 차이",
+      "intent": "예쁜 것과 실용적인 것 사이에서의 고민 해결",
+      "alternatives": [
+        "화장실줄눈셀프, 철거·폐기물 처리비 포함된 실제 시공 견적 기준",
+        "화장실줄눈셀프, 정심 플랜지 결합 불량으로 악취 올라올 때 해결법",
+        "화장실줄눈셀프, 곰팡이 안 생기는 실리콘 종류와 건조 시간 지키기"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-11-12T00:02:23.519Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "원홀세면대수전",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-12T00:02:23.561Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-12T00:02:23.604Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "가스보일러교체비용",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-12T00:02:23.647Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "화장실줄눈셀프",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    }
+  ]
+}
