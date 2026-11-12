@@ -1,0 +1,1010 @@
+{
+  "site": "isatips",
+  "scoredAt": "2026-11-12T23:11:28.076Z",
+  "rows": [
+    {
+      "keyword": "현관문가격",
+      "from": "ABS도어",
+      "volume": 1430,
+      "volumePc": 160,
+      "volumeMobile": 1270,
+      "adComp": "높음",
+      "adDepth": 7,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.windo.co.kr",
+          1
+        ],
+        [
+          "www.a-ha.io",
+          2
+        ],
+        [
+          "www.changhojajae.com",
+          3
+        ],
+        [
+          "m.enuri.com",
+          4
+        ],
+        [
+          "simplewoody.com",
+          5
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 0,
+      "ourRank": null,
+      "domainCount": 5,
+      "grade": "1위가능",
+      "why": "질의어를 정면으로 겨냥한 글이 없다 · 1위 전문사이트(www.windo.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "가스보일러교체비용",
+      "from": "도시가스 수리",
+      "volume": 1350,
+      "volumePc": 210,
+      "volumeMobile": 1140,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "nicplan.com",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "상위가능",
+      "why": "겨냥한 글 1건 · 1위 전문사이트(nicplan.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "욕실리모델링비용",
+      "from": "세면대",
+      "volume": 1480,
+      "volumePc": 290,
+      "volumeMobile": 1190,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "soomgo.com",
+          3
+        ],
+        [
+          "ohou.se",
+          4
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 6건 · 1위 대형플랫폼(soomgo.com)",
+      "incumbent": "대형플랫폼"
+    },
+    {
+      "keyword": "화장실세면대수전",
+      "from": "세면대",
+      "volume": 1410,
+      "volumePc": 340,
+      "volumeMobile": 1070,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 5,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 5건"
+    },
+    {
+      "keyword": "가정용엘리베이터",
+      "from": "싱크대",
+      "volume": 1370,
+      "volumePc": 290,
+      "volumeMobile": 1080,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.swedenlift.com",
+          1
+        ],
+        [
+          "ko.cherishlifts.com",
+          1
+        ],
+        [
+          "www.savaria.asia",
+          2
+        ],
+        [
+          "www.shelevator.co.kr",
+          3
+        ],
+        [
+          "www.saehanltec.co.kr",
+          4
+        ],
+        [
+          "www.otis.com",
+          5
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 29,
+      "ourRank": null,
+      "domainCount": 6,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 29건 · 1위 전문사이트(www.swedenlift.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "현관센서등교체",
+      "from": "조명 교체",
+      "volume": 1490,
+      "volumePc": 210,
+      "volumeMobile": 1280,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "guideblogger.co.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 18,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 18건 · 1위 전문사이트(guideblogger.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "원홀세면대수전",
+      "from": "세면대",
+      "volume": 1450,
+      "volumePc": 320,
+      "volumeMobile": 1130,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건"
+    },
+    {
+      "keyword": "화장실줄눈셀프",
+      "from": "전입신고",
+      "volume": 1410,
+      "volumePc": 210,
+      "volumeMobile": 1200,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.clien.net",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 3,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 3건 · 1위 전문사이트(www.clien.net)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "도어락교체비용",
+      "from": "누수",
+      "volume": 1400,
+      "volumePc": 190,
+      "volumeMobile": 1210,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.lawtalk.co.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 14,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 14건 · 1위 전문사이트(www.lawtalk.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "이사비용견적",
+      "from": "세면대",
+      "volume": 1440,
+      "volumePc": 330,
+      "volumeMobile": 1110,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.easylaw.go.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 11,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 11건 · 1위 관공서(www.easylaw.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "천안줄눈시공",
+      "from": "전입신고",
+      "volume": 1360,
+      "volumePc": 70,
+      "volumeMobile": 1290,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "julnun.kokoo.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 12,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 12건 · 1위 전문사이트(julnun.kokoo.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "타일세면대",
+      "from": "세면대",
+      "volume": 1490,
+      "volumePc": 650,
+      "volumeMobile": 840,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "yhbmall.co.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 13,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 13건 · 1위 전문사이트(yhbmall.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "자동문센서",
+      "from": "ABS도어",
+      "volume": 1470,
+      "volumePc": 500,
+      "volumeMobile": 970,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 4건"
+    },
+    {
+      "keyword": "변성실리콘",
+      "from": "세면대",
+      "volume": 1460,
+      "volumePc": 440,
+      "volumeMobile": 1020,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "woodmall.co.kr",
+          1
+        ],
+        [
+          "www.noroopaint.com",
+          2
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 20,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 20건 · 1위 전문사이트(woodmall.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "KCC샷시",
+      "from": "새시",
+      "volume": 1420,
+      "volumePc": 440,
+      "volumeMobile": 980,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.kccworld.co.kr",
+          1
+        ],
+        [
+          "www.youtube.com",
+          1
+        ],
+        [
+          "kccbusan.com",
+          2
+        ],
+        [
+          "www.phiko.kr",
+          3
+        ]
+      ],
+      "bigCount": 1,
+      "targeted": 8,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 8건 · 1위 전문사이트(www.kccworld.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "피아노경첩",
+      "from": "ABS도어",
+      "volume": 1400,
+      "volumePc": 640,
+      "volumeMobile": 760,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "the-chulmul.com",
+          1
+        ],
+        [
+          "www.bandochulmool.co.kr",
+          1
+        ],
+        [
+          "99mim.com",
+          2
+        ],
+        [
+          "www.sonjabitool.com",
+          2
+        ],
+        [
+          "chulmin.co.kr",
+          2
+        ],
+        [
+          "www.buyoung.com",
+          3
+        ],
+        [
+          "www.99mim.com",
+          3
+        ],
+        [
+          "chulmoolstore.co.kr",
+          3
+        ],
+        [
+          "www.xn--392bopf4iwtp.com",
+          4
+        ],
+        [
+          "indishop.kr",
+          4
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 30,
+      "ourRank": null,
+      "domainCount": 13,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 30건 · 1위 전문사이트(the-chulmul.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "문다소중문",
+      "from": "전입신고",
+      "volume": 1400,
+      "volumePc": 230,
+      "volumeMobile": 1170,
+      "adComp": "중간",
+      "adDepth": 4,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "moondasomall.com",
+          1
+        ],
+        [
+          "www.moondaso.com",
+          2
+        ],
+        [
+          "www.moondaso-review.com",
+          2
+        ],
+        [
+          "store.ohou.se",
+          4
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 9,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 9건 · 1위 전문사이트(moondasomall.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "이사준비",
+      "from": "문틀",
+      "volume": 1480,
+      "volumePc": 490,
+      "volumeMobile": 990,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "easylaw.go.kr",
+          1
+        ],
+        [
+          "www.easylaw.go.kr",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 17,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 17건 · 1위 관공서(easylaw.go.kr)",
+      "incumbent": "관공서"
+    },
+    {
+      "keyword": "배관부속",
+      "from": "방화문",
+      "volume": 1460,
+      "volumePc": 560,
+      "volumeMobile": 900,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.daegasudo.com",
+          1
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 14,
+      "ourRank": null,
+      "domainCount": 1,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 14건 · 1위 전문사이트(www.daegasudo.com)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "중문가격",
+      "from": "전입신고",
+      "volume": 1440,
+      "volumePc": 270,
+      "volumeMobile": 1170,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.yl.co.kr",
+          1
+        ],
+        [
+          "store.hanssem.com",
+          2
+        ],
+        [
+          "prod.danawa.com",
+          3
+        ],
+        [
+          "www.danawa.com",
+          3
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 3,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 3건 · 1위 전문사이트(www.yl.co.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "소방설비",
+      "from": "방화문",
+      "volume": 1390,
+      "volumePc": 500,
+      "volumeMobile": 890,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "namu.wiki",
+          1
+        ],
+        [
+          "ko.wikipedia.org",
+          2
+        ],
+        [
+          "easylaw.go.kr",
+          3
+        ],
+        [
+          "www.easylaw.go.kr",
+          3
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 27,
+      "ourRank": null,
+      "domainCount": 4,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 27건 · 1위 백과(namu.wiki)",
+      "incumbent": "백과"
+    },
+    {
+      "keyword": "변기종류",
+      "from": "방화문",
+      "volume": 1350,
+      "volumePc": 240,
+      "volumeMobile": 1110,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "myhometerior.kr",
+          1
+        ],
+        [
+          "www.gysarang.com",
+          1
+        ],
+        [
+          "folkency.nfm.go.kr",
+          3
+        ],
+        [
+          "sunhome.pe.kr",
+          3
+        ],
+        [
+          "kelimmall.net",
+          4
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 22,
+      "ourRank": null,
+      "domainCount": 5,
+      "grade": "경쟁있음",
+      "why": "겨냥한 글 22건 · 1위 전문사이트(myhometerior.kr)",
+      "incumbent": "전문사이트"
+    },
+    {
+      "keyword": "간이싱크대",
+      "from": "싱크대",
+      "volume": 1500,
+      "volumePc": 520,
+      "volumeMobile": 980,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.coupang.com",
+          1
+        ],
+        [
+          "deal.11st.co.kr",
+          3
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "의도불일치",
+      "why": "1위 쇼핑(www.coupang.com) — 상품을 사려는 질의다. 정보 글로 1위를 해도 전환되지 않는다.",
+      "incumbent": "쇼핑"
+    },
+    {
+      "keyword": "씽크대선반",
+      "from": "이사 싱크대",
+      "volume": 1490,
+      "volumePc": 220,
+      "volumeMobile": 1270,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "store.ohou.se",
+          1
+        ],
+        [
+          "www.dujubang.com",
+          2
+        ]
+      ],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 2,
+      "grade": "의도불일치",
+      "why": "1위 쇼핑(store.ohou.se) — 상품을 사려는 질의다. 정보 글로 1위를 해도 전환되지 않는다.",
+      "incumbent": "쇼핑"
+    },
+    {
+      "keyword": "자물쇠경첩",
+      "from": "ABS도어",
+      "volume": 1370,
+      "volumePc": 490,
+      "volumeMobile": 880,
+      "adComp": "높음",
+      "adDepth": 9,
+      "hasWebBlock": true,
+      "top": [
+        [
+          "www.coupang.com",
+          1
+        ],
+        [
+          "www.vegannews.co.kr",
+          1
+        ],
+        [
+          "rocket9.co.kr",
+          2
+        ],
+        [
+          "wjchulmool.com",
+          2
+        ],
+        [
+          "withlock.co.kr",
+          3
+        ],
+        [
+          "www.11st.co.kr",
+          3
+        ],
+        [
+          "www.freeks.kr",
+          4
+        ],
+        [
+          "auroomstore.com",
+          4
+        ],
+        [
+          "store.ohou.se",
+          5
+        ],
+        [
+          "www.ssg.com",
+          5
+        ]
+      ],
+      "bigCount": 2,
+      "targeted": 7,
+      "ourRank": null,
+      "domainCount": 10,
+      "grade": "의도불일치",
+      "why": "1위 쇼핑(www.coupang.com) — 상품을 사려는 질의다. 정보 글로 1위를 해도 전환되지 않는다.",
+      "incumbent": "쇼핑"
+    },
+    {
+      "keyword": "전기온수기설치방법",
+      "from": "보일러 교체",
+      "volume": 1380,
+      "volumePc": 180,
+      "volumeMobile": 1200,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "도시가스배관철거",
+      "from": "가스 수리",
+      "volume": 1420,
+      "volumePc": 210,
+      "volumeMobile": 1210,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 10,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "화장실타일교체",
+      "from": "처진문",
+      "volume": 1490,
+      "volumePc": 200,
+      "volumeMobile": 1290,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 4,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "에어컨철거비용",
+      "from": "싱크대 교체",
+      "volume": 1480,
+      "volumePc": 230,
+      "volumeMobile": 1250,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 6,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "아파트입주청소",
+      "from": "이사짐",
+      "volume": 1460,
+      "volumePc": 400,
+      "volumeMobile": 1060,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 8,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "외벽방수실리콘",
+      "from": "세면대",
+      "volume": 1440,
+      "volumePc": 300,
+      "volumeMobile": 1140,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 5,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "엘리베이터보양",
+      "from": "싱크대",
+      "volume": 1410,
+      "volumePc": 470,
+      "volumeMobile": 940,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 15,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "세면대수전원홀",
+      "from": "세면대",
+      "volume": 1390,
+      "volumePc": 270,
+      "volumeMobile": 1120,
+      "adComp": "중간",
+      "adDepth": 8,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 1,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "화장실거울교체",
+      "from": "입주 거울",
+      "volume": 1360,
+      "volumePc": 200,
+      "volumeMobile": 1160,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 5,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "커튼레일설치",
+      "from": "이삿 블라인드",
+      "volume": 1480,
+      "volumePc": 260,
+      "volumeMobile": 1220,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 0,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "보관이사추천",
+      "from": "방화문",
+      "volume": 1470,
+      "volumePc": 1220,
+      "volumeMobile": 250,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 3,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "깨진타일보수",
+      "from": "처진문",
+      "volume": 1450,
+      "volumePc": 210,
+      "volumeMobile": 1240,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 5,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "현관중문가격",
+      "from": "전입신고",
+      "volume": 1430,
+      "volumePc": 170,
+      "volumeMobile": 1260,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 2,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "에어컨수리",
+      "from": "전입 에어컨",
+      "volume": 1500,
+      "volumePc": 450,
+      "volumeMobile": 1050,
+      "adComp": "높음",
+      "adDepth": 10,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 21,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    },
+    {
+      "keyword": "에어컨배관",
+      "from": "전입 에어컨",
+      "volume": 1390,
+      "volumePc": 370,
+      "volumeMobile": 1020,
+      "adComp": "높음",
+      "adDepth": 8,
+      "hasWebBlock": false,
+      "top": [],
+      "bigCount": 0,
+      "targeted": 18,
+      "ourRank": null,
+      "domainCount": 0,
+      "grade": "진입불가",
+      "why": "웹사이트 블록 없음(블로그·카페 위주)"
+    }
+  ]
+}
