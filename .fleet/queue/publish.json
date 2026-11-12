@@ -5,8 +5,8 @@
   "repo": "playskang-svg/isatipsadbles",
   "type": "publish",
   "createdAt": "2026-11-12T00:02:23.683Z",
-  "updatedAt": "2026-11-12T00:02:23.683Z",
-  "createdBy": "actions/43123815327",
+  "updatedAt": "2026-11-12T23:11:28.524Z",
+  "createdBy": "actions/43326098293",
   "titles": [
     {
       "keyword": "원홀세면대수전",
@@ -139,6 +139,54 @@
       "site": "isatips",
       "domain": "isatips.adbles.com",
       "keyword": "화장실줄눈셀프",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-12T23:11:28.436Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-12T23:11:28.483Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "가스보일러교체비용",
       "slug": null,
       "internal": [],
       "external": [
