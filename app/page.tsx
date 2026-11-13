@@ -26,6 +26,8 @@ export default function Home() {
         name: SITE_NAME,
         url: SITE_URL,
         description: "이사 준비부터 입주 후 정리까지 실용적인 생활 정보를 제공하는 편집형 정보 사이트",
+        // 네이버 사이트 연관채널·구글 sameAs: 같은 운영자의 SNS 채널
+        sameAs: ["https://www.instagram.com/isatips.kr/", "https://www.threads.com/@housetips.kr"],
       },
     ],
   };
