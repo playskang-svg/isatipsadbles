@@ -820,6 +820,7 @@ import { dualIncomeMovingArticles } from "./dual-income-moving-article";
 import { parentsMovingArticles } from "./parents-moving-article";
 import { packingTypeArticles } from "./packing-type-article";
 import { moveOutFeeSettlementArticles } from "./move-out-fee-settlement-article";
+import { utilityMovingArticles } from "./utility-moving-articles";
 import { rainyDayMovingArticles } from "./rainy-day-moving-article";
 import { draftStopperArticles } from "./draft-stopper-article";
 import { condensationArticles } from "./condensation-article";
@@ -861,6 +862,7 @@ export const articles: Article[] = [...enrichArticlesWithFieldImages([
   ...parentsMovingArticles,
   ...packingTypeArticles,
   ...moveOutFeeSettlementArticles,
+...utilityMovingArticles,
   ...rainyDayMovingArticles,
   ...draftStopperArticles,
   ...condensationArticles,
