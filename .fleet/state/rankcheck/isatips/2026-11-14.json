@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-11-11T23:59:25.696Z",
+  "checkedAt": "2026-11-14T21:55:39.409Z",
   "engine": "naver",
   "results": [
     {
@@ -34,11 +34,11 @@
     },
     {
       "keyword": "입주청소 비용",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "벽걸이TV 이전설치",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 불당동 이사",
@@ -54,7 +54,7 @@
     },
     {
       "keyword": "천안 백석동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 성환읍 이사",
