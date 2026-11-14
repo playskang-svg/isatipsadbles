@@ -103,9 +103,7 @@ export const windowFilmArticles: Article[] = [
         },
         paragraphs: [
           "아래 순서는 일반적인 흐름을 정리한 작성자 제안이며 공식 기준이 아닙니다. 제품 설명서가 항상 우선입니다.",
-          "크기 옵션부터 고르세요. 제가 쿠팡에서 확인한 하우스키퍼 단열필름은 사이즈 옵션이 5M·10M로 나뉘고 표시가는 25,900원이었습니다(2026년 10월 20일 확인, 옵션과 재고에 따라 달라질 수 있습니다). 저는 이 제품을 써 본 것이 아니라 상품명과 가격만 확인했습니다. 효과와 시공 난이도는 상품 상세와 구매 후기로 직접 확인하세요.",
-          "붙이기로 정했다면 지금 표시 가격과 사이즈 옵션을 먼저 확인해 보세요.",
-          "[![하우스키퍼 단열필름 쿠팡에서 가격과 사이즈 보기](/images/buttons/btn_shop.webp)](https://link.coupang.com/re/AFFSDP?lptag=AF5563346&subid=isatips&pageKey=7771726039&itemId=20983052982&vendorItemId=88047815276&traceid=V0-153-0adcf0a0fb48079b&clickBeacon=d5f5ccb0-cbde-11f1-94db-e54d343b520e%7E3&requestid=20261020020215741047252118&token=31850C%7CMIXED&pt=1&slot=1)",
+          "필름 대신 부담이 낮은 선택지로 에어캡(뽁뽁이)도 있습니다. 저는 써 본 것이 아니라 상품명만 확인했습니다. 효과와 붙이는 방법은 상품 상세와 구매 후기로 직접 확인하세요. 필름은 폭과 사이즈 옵션부터 맞춰 보세요.",
           "필름 말고 에어캡·문풍지·커튼까지 같이 비교하고 싶다면 겨울 외풍 점검 글이 도움이 됩니다.",
           "[![외풍차단 창가 냉기 점검 글 보기](/images/buttons/btn_blog.webp)](https://blog.naver.com/hawaii_residence/224446274664)",
           "틈새 바람이 먼저 걱정이라면 [문풍지 붙이는 법 가이드](/articles/window-door-draft-stopper-guide)도 함께 보세요.",

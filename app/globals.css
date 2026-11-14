@@ -377,3 +377,13 @@ a { color:inherit; text-decoration:none; }
 .hero-quote-button { display:inline-flex; align-items:center; gap:10px; min-height:52px; padding:0 22px; background:var(--ink); color:#fff; font-size:15px; font-weight:900; }
 .hero-quote-button:hover { background:#365044; }
 .hero-quote-button + .article-meta { margin-top:22px; }
+
+/* 쿠팡 상품 카드 (가운데 정렬) */
+.coupang-picks { display:flex; flex-direction:column; align-items:center; gap:14px; margin:26px 0; text-align:center; }
+.coupang-pick { display:flex; flex-direction:column; align-items:center; width:min(100%,360px); padding:18px 16px 16px; background:#fff; border:1px solid var(--line); }
+.coupang-pick img { width:160px; height:160px; object-fit:contain; background:#fff; }
+.coupang-pick strong { margin-top:10px; font-size:14px; line-height:1.45; }
+.coupang-pick p { margin:8px 0 12px!important; color:var(--muted); font-size:14px!important; line-height:1.55; }
+.coupang-pick-button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:0 20px; background:var(--ink); color:#fff!important; font-size:14px; font-weight:900; border-radius:8px; }
+.coupang-pick-button:hover { background:#365044; }
+.coupang-picks small { color:#717b76; font-size:12px; }

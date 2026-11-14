@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { Fragment, type ReactNode } from "react";
 import { ArticleCard } from "@/components/ArticleCard";
 import { CoupangBanner, QuoteBanner } from "@/components/AdFrames";
+import { CoupangPicks } from "@/components/CoupangPicks";
 import { MaterialPicks } from "@/components/MaterialPicks";
 import { ServiceCta } from "@/components/ServiceCta";
 import { ShoppingPicks } from "@/components/ShoppingPicks";
 import { getArticle, getPublishedArticles, isArticlePublished } from "@/lib/articles";
+import { getArticlePicks } from "@/lib/coupang-picks";
 import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
 import { filterRestrictedArticles, filterRestrictedKeywords, getMovingService } from "@/lib/services";
@@ -82,6 +84,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const article = getArticle(decodeURIComponent(slug));
   if (!article || !isArticlePublished(article)) notFound();
   const shoppingGuide = getShoppingGuide(article.slug);
+  const coupangPicks = getArticlePicks(article.slug);
+  // 상품 카드는 지정 소제목 뒤에 놓되, 결론(마지막 소제목) 앞을 넘지 않게 한다.
+  const coupangPicksAfter = coupangPicks ? Math.min(coupangPicks.after, Math.max(article.sections.length - 2, 0)) : -1;
   const movingService = article.cta ?? getMovingService(article.slug, article.keyword);
   const publishedArticles = getPublishedArticles();
   const publishedArticleHrefs = new Set(publishedArticles.map((item) => `/articles/${item.slug}`));
@@ -169,7 +174,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {regionTreeSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(regionTreeSchema) }} />}
-      {(article.affiliateNotice || shoppingGuide || movingService) && <p className="top-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 이 포스팅은 제휴마케팅이 포함된 광고로 커미션을 지급 받습니다.</p>}
+      {(article.affiliateNotice || shoppingGuide || movingService || coupangPicks) && <p className="top-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 이 포스팅은 제휴마케팅이 포함된 광고로 커미션을 지급 받습니다.</p>}
       <header className={`article-hero article-${article.accent}`}>
         <div className="narrow-container">
           <nav className="breadcrumb" aria-label="현재 위치">
@@ -227,6 +232,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 {section.stopList && <div className="stop-list"><strong>여기서 멈추고 맡기세요</strong><ul>{section.stopList.map((item) => <li key={item}>{item}</li>)}</ul></div>}
                 {section.checklist && <div className="checklist"><strong>바로 확인하기</strong><ul>{section.checklist.map((item) => <li key={item}>{item}</li>)}</ul></div>}
               </section>
+              {coupangPicks && index === coupangPicksAfter && <CoupangPicks items={coupangPicks.items} />}
               {index % 2 === 0 && index <= 4 && contextualLinks[Math.floor(index / 2)] && (() => {
                 const recommendation = contextualLinks[Math.floor(index / 2)];
                 return (
