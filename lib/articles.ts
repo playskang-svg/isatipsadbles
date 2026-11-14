@@ -825,6 +825,7 @@ import { rainyDayMovingArticles } from "./rainy-day-moving-article";
 import { draftStopperArticles } from "./draft-stopper-article";
 import { condensationArticles } from "./condensation-article";
 import { novemberSonDayArticles } from "./november-son-day-article";
+import { winter1114Articles } from "./winter-1114-articles";
 import { windowFilmArticles } from "./window-film-article";
 import { freezePreventionArticles } from "./freeze-prevention-article";
 import { boilerReplacementArticles } from "./boiler-replacement-article";
@@ -867,6 +868,7 @@ export const articles: Article[] = [...enrichArticlesWithFieldImages([
   ...draftStopperArticles,
   ...condensationArticles,
   ...novemberSonDayArticles,
+  ...winter1114Articles,
   ...windowFilmArticles,
   ...freezePreventionArticles,
   ...boilerReplacementArticles,
