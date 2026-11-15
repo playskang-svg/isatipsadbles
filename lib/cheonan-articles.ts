@@ -14,6 +14,9 @@ const INSTALL_REPAIR = linkUrl("repair-soomgo-aircon");
 const TV_MOUNT = linkUrl("repair-soomgo-tv-mount");
 
 const HERO_MOVE = "/images/moving-field/living-a04-14.webp";
+// 로컬브릿지AI_천안: 색인되는 /area/<동> 집수리 상담 페이지로 가는 맥락 링크 (noindex 인 /d 는 사용하지 않음)
+const localAreaUrl = (areaSlug: string) =>
+  `https://local.bizhelp.kr/area/${areaSlug}?src=isatips-${areaSlug}&utm_source=isatips.adbles.com&utm_medium=site&utm_campaign=localbridge&utm_content=${areaSlug}`;
 const HERO_TV = "/images/moving-field/living-a03-12.webp";
 
 type Focus = "quote" | "apartment" | "studio" | "cleaning" | "aircon" | "tv";
@@ -223,6 +226,7 @@ const cityArticle: Article = {
     { heading: "포장이사·일반이사·원룸이사를 어떻게 고를까요?", paragraphs: ["포장이사는 포장과 운반, 정리 범위가 넓어 시간이 부족하거나 가족 짐이 많은 경우 검토할 수 있습니다. 일반·반포장은 직접 포장 가능한 범위와 업체가 맡을 운반·가구 작업을 나눠야 합니다.", "원룸 용달은 짐이 적다는 이유만으로 항상 가장 저렴한 것은 아닙니다. 기사 도움, 계단, 운반 거리와 대기를 추가하면 조건이 달라지므로 필요한 작업을 모두 포함한 총견적으로 비교하세요."], checklist: ["짐의 양과 직접 포장 가능 시간", "운반 인력과 계단 작업", "가구 분해·가전 연결", "양쪽 주차·승강기 조건"] },
     { heading: "입주청소와 에어컨·TV 설치는 이삿짐과 시간을 나누세요", image: { src: HERO_TV, alt: "벽걸이TV 이전설치 상태를 확인하는 실제 현장 사진", title: "TV 설치 확인" }, paragraphs: ["입주청소는 빈집에서 하자와 오염을 확인한 뒤 짐을 들이는 순서가 좋습니다. 청소 범위는 면적뿐 아니라 창틀, 베란다, 수납장과 오염 상태로 비교하세요.", `에어컨과 벽걸이TV는 이사업체가 운반만 하고 전문 설치가 별도일 수 있습니다. 제품 모델과 새집 설치 위치를 준비해 [설치·수리 견적을 비교](${INSTALL_REPAIR})하고 책임 범위를 문서로 남기세요.`] },
     { heading: "천안 지역 페이지를 사용하는 순서", paragraphs: ["먼저 동남구 또는 서북구 페이지에서 구 전체의 이동·주거 특성을 확인하세요. 다음으로 읍·면·동 페이지에서 현재 필요한 포장이사, 원룸이사, 청소, 에어컨 또는 TV 이전설치 질문을 확인하면 됩니다.", "각 상세 글은 상위 구와 같은 구에서 주거 형태·작업 조건이 비슷한 지역, 관련 서비스 글로 연결됩니다. 실제 이동경로는 출발지와 도착지의 전체 주소로 확인하세요."] },
+    { heading: "이사 후 집수리·설치가 필요하다면", paragraphs: [`이사를 마친 뒤 문·도배·타일·수전 같은 집수리나 설치가 필요하면 [천안 집수리 상담 정보](${localAreaUrl("cheonan")})에서 작업 종류별 안내를 볼 수 있습니다. 이 글은 이사 준비 정보이고, 집수리 쪽은 동네 기준으로 따로 정리된 별도 페이지입니다.`] },
   ],
   faq: [
     { question: "천안시는 동남구와 서북구로 나뉘나요?", answer: "네. 천안시는 동남구와 서북구의 2개 일반구 아래 4개 읍, 8개 면, 19개 행정동으로 구성됩니다." },
@@ -255,6 +259,7 @@ function makeDistrictArticle(district: DistrictProfile, index: number): Article 
       { heading: "주거 형태별 이사 준비", paragraphs: ["아파트는 관리사무소 예약, 지하 높이와 승강기 치수를 확인하세요. 빌라·다가구는 계단과 골목 주차를, 원룸은 기사 도움과 포장 범위를, 단독주택은 마당·창고·옥상 짐을 따로 기록합니다.", "같은 지역이라도 건물 연식과 관리 규정이 다르므로 특정 지역 평균가격보다 실제 주소와 사진으로 받은 견적을 우선하세요."] },
       { heading: "청소와 가전 설치는 별도 일정으로 확인하세요", image: { src: HERO_TV, alt: `${district.name} 이사 중 벽걸이TV 설치 상태를 확인하는 실제 사진`, title: "설치 작업 확인" }, paragraphs: ["청소는 짐 반입 전 빈집에서 진행하고, 에어컨·벽걸이TV·커튼은 이사업체의 운반 범위와 전문기사의 설치 범위를 나누세요.", `창틀·수납장·오염 사진으로 [이사·입주청소 견적을 비교](${CLEANING_COMPARE})하고, 제품 모델과 새 위치 사진으로 [설치·수리 견적을 비교](${INSTALL_REPAIR})할 수 있습니다.`] },
       { heading: `${district.name}에서 다음 지역 찾기`, paragraphs: [`위 목록에서 ${district.units.map((unit) => unit.name).join(", ")} 상세 글로 이동할 수 있습니다.`, "상위 [천안시 이사 지역별 정보](/articles/cheonan-moving-regional-guide)에서는 동남구와 서북구 전체 구조와 이사 종류별 선택 기준을 함께 확인할 수 있습니다."] },
+      { heading: `이사 후 ${district.name} 집수리·설치가 필요하다면`, paragraphs: [`입주 후 문·도배·타일·수전 같은 집수리나 설치가 필요하면 [${district.name} 집수리 상담 정보](${localAreaUrl(district.slug.replace(/^cheonan-/, "").replace(/-moving$/, ""))})에서 작업 종류별 안내를 볼 수 있습니다. 이 글은 이사 준비 정보이고, 집수리 쪽은 동네 기준으로 따로 정리된 별도 페이지입니다.`] },
     ],
     faq: [
       { question: `${district.name} 포장이사 비용은 지역만으로 알 수 있나요?`, answer: "지역명만으로 고정할 수 없습니다. 짐, 이동거리, 양쪽 건물의 주차·승강기·계단, 인원과 장비 조건에 따라 달라질 수 있습니다." },
@@ -268,6 +273,7 @@ function makeDistrictArticle(district: DistrictProfile, index: number): Article 
 function makeUnitArticle(district: DistrictProfile, unit: UnitProfile, districtIndex: number, unitIndex: number): Article {
   const focus = focusContent[unit.focus];
   const related = relatedUnits(district, unit);
+  const localSlug = unit.slug.replace(/^cheonan-(dongnam|seobuk)-/, "").replace(/-moving$/, "").replace("cheongnyong", "cheongryong"); // local.bizhelp.kr 의 area 슬러그 표기
   return {
     slug: unit.slug,
     title: focus.title(unit.name),
@@ -292,6 +298,7 @@ function makeUnitArticle(district: DistrictProfile, unit: UnitProfile, districtI
       { heading: "아파트·빌라·원룸·단독주택별 확인사항", paragraphs: [`${unit.name}에는 ${unit.housing} 아파트는 엘리베이터 예약·보양·지하 높이를, 빌라는 계단 폭과 사다리차 공간을, 원룸은 기사 도움과 포장 범위를 먼저 확인하세요. 단독주택은 마당·창고·옥상 짐을 실내 짐과 나눠 적습니다.`, `${unit.name}에서도 건물마다 조건이 다릅니다. 특히 ${unit.access} 확인되지 않은 지역 평균가격이나 고정 추가비보다 실제 주소와 현장 사진이 반영된 견적을 기준으로 계약하세요.`] },
       { heading: "이사 전날과 당일 체크리스트", paragraphs: [`${unit.name} 이사 전날에는 업체명·담당자·시작시간과 두 주소를 다시 맞추세요. ${unit.character}이라는 점을 고려해 차량 대기 위치와 마지막 진입 구간도 재확인하고, 귀중품·계약서·하루치 생활용품은 직접 들고 갈 가방에 넣으세요.`, `${unit.name} 현장의 작업이 끝나기 전 상자 수, 가구·가전 파손, 조립과 설치 범위를 확인하세요. ${unit.housing} 건물 밖이나 공용부에 남은 짐이 없는지 살피고, 추가 작업은 시작 전 승인 내용과 금액 기록을 대조합니다.`], checklist: [`${unit.name} 담당자·시간·주소 재확인`, "귀중품·서류 직접 운반", "벽·바닥·가전 촬영", "추가 작업 승인 기록"] },
       { heading: `${unit.name}에서 다음으로 확인할 지역`, paragraphs: [`${unit.name}의 상위 [${district.name} 이사 가이드](/articles/${district.slug})에서 ${district.units.length}개 읍·면·동 전체 목록을 확인할 수 있습니다. 같은 구에서 이사 조건이 비슷한 ${related.map((item) => item.name).join("과 ")} 글도 위 지역 연결에서 바로 이동할 수 있습니다.`, `${unit.name}에서 천안 전체 구조와 동남구·서북구 비교가 필요하다면 [천안시 이사 지역별 정보](/articles/cheonan-moving-regional-guide)를 확인하세요. 관련 서비스 가이드는 하단 연관 글로 이어집니다.`] },
+      { heading: `이사 후 ${unit.name} 집수리·설치가 필요하다면`, paragraphs: [`${unit.name}으로 이사한 뒤 문·도배·타일·수전 같은 집수리나 설치가 필요하면 [${unit.name} 집수리 상담 정보](${localAreaUrl(localSlug)})에서 작업 종류별 안내를 볼 수 있습니다. 이 글은 이사 준비 정보이고, 집수리 쪽은 동네 기준으로 따로 정리된 별도 페이지입니다.`] },
     ],
     faq: [
       focus.faq(unit.name),
