@@ -145,6 +145,24 @@ const packingTypeQuote: MovingService = {
   url: isabangUrl(),
 };
 
+/** 방문견적·비대면 견적 비교 글: 날짜가 정해진 가정집 포장이사 기준(이사방 CPA 2019062817160001). */
+const visitQuoteCompare: MovingService = {
+  eyebrow: "QUOTE METHOD",
+  title: "견적서의 차량·인원·장비 칸을 같은 조건으로 비교하세요",
+  description: "같은 짐 목록과 조건으로 2곳 견적을 받아 칸별로 나란히 비교해 보세요. 두 달 안으로 날짜가 정해진 가정집 포장이사 기준입니다.",
+  buttonLabel: "포장이사 2곳 견적 비교 신청",
+  url: isabangUrl(),
+};
+
+/** 이사 견적 비교표 글: 여러 업체 견적 비교(위매치다이사 CPA 2018112615050001). 가정집 이사 기준. */
+const compareSheetQuote: MovingService = {
+  eyebrow: "QUOTE SHEET",
+  title: "비교표에 적을 견적을 한 번에 받아 보세요",
+  description: "위매치다이사는 이사업체가 아니라 내 주변 이사업체 견적을 모아 비교하는 플랫폼입니다. 같은 조건으로 받은 견적을 8칸에 옮겨 적어 비교해 보세요. 가정집 이사 기준입니다.",
+  buttonLabel: "위매치다이사 견적 비교 신청",
+  url: wematchUrl(),
+};
+
 /** 수리·설치 CTA는 글의 토픽에 맞는 견적 딥링크로 연결한다. */
 function repairQuotes(topicId?: string, keyword?: string): MovingService {
   const quote = repairQuoteLink(topicId, keyword);
@@ -303,6 +321,8 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "newlywed-moving-combine-households-guide": wematchCompare,
   "parents-home-moving-preparation-guide": wematchCompare,
   "move-out-maintenance-fee-settlement-guide": wematchCompare,
+  "moving-visit-vs-remote-quote-guide": visitQuoteCompare,
+  "moving-quote-comparison-sheet-guide": compareSheetQuote,
 };
 
 // 용인시 커튼·블라인드 지역별 페이지(시·구·동) 전부에 같은 커튼·블라인드 시공 CTA를 연결한다.
@@ -321,7 +341,7 @@ export function getMovingService(slug: string, keyword?: string): MovingService 
 }
 
 /** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */
-export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference", "rainy-day-moving-preparation-guide"]);
+export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference", "rainy-day-moving-preparation-guide", "moving-visit-vs-remote-quote-guide"]);
 export function filterRestrictedKeywords(slug: string, keywords: readonly string[]): string[] {
   if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
   return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));

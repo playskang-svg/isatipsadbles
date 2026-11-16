@@ -14,11 +14,11 @@ import { getInternalLinkRecommendations } from "@/lib/internal-links";
 import { getShoppingGuide } from "@/lib/shopping";
 import { filterRestrictedArticles, filterRestrictedKeywords, getMovingService } from "@/lib/services";
 import { DEFAULT_OG_IMAGE, SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/site";
-import { isAffiliateUrl } from "@/lib/affiliate";
+import { isAffiliateUrl, withLinkpriceUid } from "@/lib/affiliate";
 
 export const dynamic = "force-dynamic";
 
-function renderInlineLinks(text: string, isAvailable: (href: string) => boolean = () => true) {
+function renderInlineLinks(text: string, isAvailable: (href: string) => boolean = () => true, track: (href: string) => string = (href) => href) {
   const parts: ReactNode[] = [];
   const pattern = /\[!\[([^\]]*)\]\(([^)]+)\)\]\(((?:https?:\/\/|\/)[^)]+)\)|\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g;
   let lastIndex = 0;
@@ -26,7 +26,7 @@ function renderInlineLinks(text: string, isAvailable: (href: string) => boolean 
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
     const isButton = match[2] !== undefined;
-    const href = isButton ? match[3] : match[5];
+    const href = track(isButton ? match[3] : match[5]);
     const label = isButton ? match[1] : match[4];
     const sponsored = isAffiliateUrl(href);
     if (href.startsWith("/articles/") && !isAvailable(href)) {
@@ -87,7 +87,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const coupangPicks = getArticlePicks(article.slug);
   // 상품 카드는 지정 소제목 뒤에 놓되, 결론(마지막 소제목) 앞을 넘지 않게 한다.
   const coupangPicksAfter = coupangPicks ? Math.min(coupangPicks.after, Math.max(article.sections.length - 2, 0)) : -1;
-  const movingService = article.cta ?? getMovingService(article.slug, article.keyword);
+  // 링크프라이스(숨고·VPN) 클릭은 u_id=글 슬러그로 어느 글에서 나왔는지 추적한다.
+  const trackUrl = (href: string) => withLinkpriceUid(href, article.slug);
+  const rawService = article.cta ?? getMovingService(article.slug, article.keyword);
+  const movingService = rawService ? { ...rawService, url: trackUrl(rawService.url) } : undefined;
   const publishedArticles = getPublishedArticles();
   const publishedArticleHrefs = new Set(publishedArticles.map((item) => `/articles/${item.slug}`));
   const isAvailableHref = (href?: string) => Boolean(href && (!href.startsWith("/articles/") || publishedArticleHrefs.has(href)));
@@ -184,7 +187,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <p className="eyebrow">{article.categoryLabel} · {article.keyword}</p>
           <h1>{article.title}</h1>
           <p className="article-deck">{article.description}</p>
-          {article.cta && <a className="hero-quote-button" href={article.cta.url} target="_blank" rel="sponsored nofollow noopener noreferrer">{article.cta.buttonLabel} <span aria-hidden="true">↗</span></a>}
+          {article.cta && <a className="hero-quote-button" href={trackUrl(article.cta.url)} target="_blank" rel="sponsored nofollow noopener noreferrer">{article.cta.buttonLabel} <span aria-hidden="true">↗</span></a>}
           <div className="article-meta"><span>업데이트 {displayDate(article.updatedAt)}</span><span>{article.readingTime}분 읽기</span><span>편집팀</span></div>
           {article.badges && <ul className="article-badges">{article.badges.map((badge) => <li key={badge}>{badge}</li>)}</ul>}
         </div>
@@ -216,7 +219,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                     {section.image.caption && <figcaption>{section.image.caption}</figcaption>}
                   </figure>
                 )}
-                {section.paragraphs.map((paragraph) => <p key={paragraph}>{renderInlineLinks(paragraph, (href) => isAvailableHref(href))}</p>)}
+                {section.paragraphs.map((paragraph) => <p key={paragraph}>{renderInlineLinks(paragraph, (href) => isAvailableHref(href), trackUrl)}</p>)}
                 {section.table && (
                   <div className="info-table-wrap">
                     <table className="info-table">
@@ -244,7 +247,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   </aside>
                 );
               })()}
-              {index === 1 && article.quoteBanner && <QuoteBanner headline={article.quoteBanner.headline} sub={article.quoteBanner.sub} url={article.quoteBanner.url} />}
+              {index === 1 && article.quoteBanner && <QuoteBanner headline={article.quoteBanner.headline} sub={article.quoteBanner.sub} url={trackUrl(article.quoteBanner.url)} />}
               {index === 1 && !article.quoteBanner && movingService && <ServiceCta service={movingService} />}
             </Fragment>
           ))}

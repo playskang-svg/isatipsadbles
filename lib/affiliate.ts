@@ -76,6 +76,25 @@ export function isAffiliateUrl(href: string): boolean {
   }
 }
 
+/**
+ * 링크프라이스 클릭 링크(lpweb.kr·linkmoa.kr click.php)에 글 슬러그를 u_id 로 붙인다.
+ * 어느 글에서 숨고·VPN 클릭이 나왔는지 링크프라이스 리포트의 u_id 컬럼으로 알기 위함이다(2026-11-16).
+ * 이미 u_id 가 있거나 다른 호스트(텐핑 ocayn.info 등)는 그대로 돌려준다. 영숫자·하이픈만 남기고 48자로 자른다.
+ */
+export function withLinkpriceUid(url: string, slug: string): string {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.host.toLowerCase();
+    if ((host !== "lpweb.kr" && host !== "linkmoa.kr") || !parsed.pathname.endsWith("/click.php") || parsed.searchParams.has("u_id")) return url;
+    const uid = slug.toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 48).replace(/-+$/g, "");
+    if (!uid) return url;
+    // 기존 쿼리를 다시 인코딩하지 않도록 문자열로 이어 붙인다(숨고 tu 의 한글 주소 보존).
+    return `${url}${url.includes("?") ? "&" : "?"}u_id=${uid}`;
+  } catch {
+    return url;
+  }
+}
+
 /** 현재 링크 데이터의 버전. 포스팅에 붙일 때 최신 반영 여부를 확인하는 기준. */
 export const affiliateVersion = {
   version: (data as any).version as string,   // 예: "2026.09.05-02"

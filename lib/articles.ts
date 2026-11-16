@@ -822,6 +822,7 @@ import { packingTypeArticles } from "./packing-type-article";
 import { moveOutFeeSettlementArticles } from "./move-out-fee-settlement-article";
 import { utilityMovingArticles } from "./utility-moving-articles";
 import { rainyDayMovingArticles } from "./rainy-day-moving-article";
+import { movingQuoteMethodArticles } from "./moving-quote-method-articles";
 import { draftStopperArticles } from "./draft-stopper-article";
 import { condensationArticles } from "./condensation-article";
 import { novemberSonDayArticles } from "./november-son-day-article";
@@ -865,6 +866,7 @@ export const articles: Article[] = [...enrichArticlesWithFieldImages([
   ...moveOutFeeSettlementArticles,
 ...utilityMovingArticles,
   ...rainyDayMovingArticles,
+  ...movingQuoteMethodArticles,
   ...draftStopperArticles,
   ...condensationArticles,
   ...novemberSonDayArticles,
