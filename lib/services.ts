@@ -321,6 +321,10 @@ export const serviceByArticle: Partial<Record<string, MovingService>> = {
   "newlywed-moving-combine-households-guide": wematchCompare,
   "parents-home-moving-preparation-guide": wematchCompare,
   "move-out-maintenance-fee-settlement-guide": wematchCompare,
+  // 2026-11-16 GSC 28일 노출 있는 이사 일정·준비 글인데 이사 견적 CTA 가 없던 페이지에 의도 일치 2곳 견적 CTA 연결(WO-261116-1530-isatips-rev)
+  "hanam-deokpung-2-moving-guide": twoQuoteComparison,
+  "november-2026-son-eomneun-nal-moving-dates": twoQuoteComparison,
+  "december-2026-son-eomneun-nal-moving-dates": twoQuoteComparison,
   "moving-visit-vs-remote-quote-guide": visitQuoteCompare,
   "moving-quote-comparison-sheet-guide": compareSheetQuote,
 };
@@ -341,7 +345,7 @@ export function getMovingService(slug: string, keyword?: string): MovingService 
 }
 
 /** 이사방(텐핑 2019062817160001) CTA 글은 원룸·용달·오피스텔 키워드 소문 금지 → 사이트 공통 메타 키워드에서 제외한다. */
-export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference", "rainy-day-moving-preparation-guide", "moving-visit-vs-remote-quote-guide"]);
+export const ISABANG_KEYWORD_RESTRICTED_SLUGS = new Set(["storage-moving-cost-guide", "long-distance-moving-cost-guide", "fridge-moving-preparation-guide", "winter-moving-preparation-guide", "dual-income-couple-moving-schedule-guide", "packing-vs-half-packing-moving-difference", "rainy-day-moving-preparation-guide", "moving-visit-vs-remote-quote-guide", "hanam-deokpung-2-moving-guide", "november-2026-son-eomneun-nal-moving-dates", "december-2026-son-eomneun-nal-moving-dates"]);
 export function filterRestrictedKeywords(slug: string, keywords: readonly string[]): string[] {
   if (!ISABANG_KEYWORD_RESTRICTED_SLUGS.has(slug)) return [...keywords];
   return keywords.filter((keyword) => !/원룸|용달|오피스텔/u.test(keyword));
