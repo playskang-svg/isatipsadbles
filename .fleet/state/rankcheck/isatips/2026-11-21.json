@@ -1,12 +1,12 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-11-18T23:50:39.719Z",
+  "checkedAt": "2026-11-21T22:43:21.608Z",
   "engine": "naver",
   "results": [
     {
       "keyword": "천안원룸이사예약",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 원룸이사",
@@ -26,7 +26,7 @@
     },
     {
       "keyword": "이사 에어컨 이전설치 비용",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "용달이사 사다리차",
@@ -42,7 +42,7 @@
     },
     {
       "keyword": "천안 불당동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 신방동 이사",
@@ -50,55 +50,55 @@
     },
     {
       "keyword": "천안 쌍용동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 백석동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 성환읍 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 병천면 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 동남구 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 서북구 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 이사업체",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "무타공 벽걸이TV 설치",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "손없는날 이사 뜻",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사박스 수량 계산",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사 파손 보상 30일",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사 전입신고 확정일자",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "세탁기 이전설치 2단 직렬",
-      "hit": false
+      "error": "HTTP 403"
     }
   ]
 }
