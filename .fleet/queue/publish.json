@@ -1,0 +1,199 @@
+{
+  "site": "isatips",
+  "label": "이사팁스",
+  "domain": "isatips.adbles.com",
+  "repo": "playskang-svg/isatipsadbles",
+  "type": "publish",
+  "createdAt": "2026-11-22T23:12:16.989Z",
+  "updatedAt": "2026-11-22T23:12:16.989Z",
+  "createdBy": "actions/45081569651",
+  "titles": [
+    {
+      "keyword": "IOT도어락",
+      "volume": 1340,
+      "grade": "1위가능",
+      "title": "IOT도어락, 셀프 교체 vs 기사 방문 비용·소요시간 비교",
+      "hook": "자가 교체와 전문 기사 출장비 실익 비교",
+      "intent": "혼자 할 수 있는지 기사를 불러야 하는지 망설이는 독자 타깃",
+      "alternatives": [
+        "IOT도어락, 무타공 설치와 타공 규격 차이로 추가금 막는 법",
+        "IOT도어락, 당일 교체 전 문 두께·백셋 규격 확인 3단계",
+        "IOT도어락, 건전지 방전 시 9V 비상 전원과 고장 판정 기준"
+      ]
+    },
+    {
+      "keyword": "현관문가격",
+      "volume": 1380,
+      "grade": "1위가능",
+      "title": "현관문가격, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "현관문가격, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "현관문가격, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "현관문가격, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    },
+    {
+      "keyword": "현관문방풍커튼",
+      "volume": 1480,
+      "grade": "상위가능",
+      "title": "현관문방풍커튼, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "현관문방풍커튼, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "현관문방풍커튼, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "현관문방풍커튼, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    },
+    {
+      "keyword": "세면대수전원홀",
+      "volume": 1390,
+      "grade": "상위가능",
+      "title": "세면대수전원홀, 누수 없이 혼자 교체하는 공구와 몽키스패너 요령",
+      "hook": "누수 불안 해소 및 필수 공구 안내",
+      "intent": "셀프 교체 중 물 샐까 봐 두려워하는 독자 타깃",
+      "alternatives": [
+        "세면대수전원홀, 오래된 아파트 호환 규격과 출장 교체 실견적",
+        "세면대수전원홀, 싼 제품 샀다가 테프론 테이프 감다 후회하는 이유",
+        "세면대수전원홀, 부속품 교체할 때 계량기 밸브 잠그는 순서"
+      ]
+    },
+    {
+      "keyword": "폴딩도어가격",
+      "volume": 1490,
+      "grade": "상위가능",
+      "title": "폴딩도어가격, 자가 수리 vs 전문 기사 비용·소요시간 비교",
+      "hook": "직접 할지 업체를 부를지 분기점 제시",
+      "intent": "난이도와 예상 비용에 따른 합리적 선택",
+      "alternatives": [
+        "폴딩도어가격, 초보자가 흔히 저지르는 실수 3가지와 예방법",
+        "폴딩도어가격, 아파트 관리사무소 무료 지원 범위와 출장비 기준",
+        "폴딩도어가격, 규격 안 맞아 헛걸음하지 않는 사전 측정법"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "collected_at": "2026-11-22T23:12:16.819Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "IOT도어락",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-22T23:12:16.852Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-22T23:12:16.887Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "현관문방풍커튼",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-22T23:12:16.924Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "세면대수전원홀",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    },
+    {
+      "collected_at": "2026-11-22T23:12:16.960Z",
+      "site": "isatips",
+      "domain": "isatips.adbles.com",
+      "keyword": "폴딩도어가격",
+      "slug": null,
+      "internal": [],
+      "external": [
+        {
+          "name": "정부24 (전입신고·확정일자)",
+          "url": "https://www.gov.kr"
+        },
+        {
+          "name": "대법원 인터넷등기소",
+          "url": "http://www.iros.go.kr"
+        },
+        {
+          "name": "국가법령정보센터 (주택임대차보호법)",
+          "url": "https://www.law.go.kr/법령/주택임대차보호법"
+        }
+      ],
+      "affiliate": [],
+      "coupang": []
+    }
+  ]
+}
