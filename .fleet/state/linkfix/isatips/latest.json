@@ -3,21 +3,29 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-11-21T02:28:53.472Z",
+  "scannedAt": "2026-11-22T01:27:19.252Z",
   "pagesCrawled": 200,
   "sitemapUrls": 0,
   "externalChecked": 321,
   "summary": {
     "high": 1,
-    "low": 5
+    "low": 6
   },
-  "occurrences": 6,
+  "occurrences": 7,
   "findings": [
     {
       "severity": "high",
       "kind": "no-sitemap",
       "page": "https://isatips.adbles.com",
       "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/winter-condensation-mold-prevention-guide",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     },
     {
       "severity": "low",
