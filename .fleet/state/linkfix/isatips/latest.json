@@ -3,15 +3,15 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-11-22T01:27:19.252Z",
+  "scannedAt": "2026-11-23T01:57:14.149Z",
   "pagesCrawled": 200,
   "sitemapUrls": 0,
   "externalChecked": 321,
   "summary": {
     "high": 1,
-    "low": 6
+    "low": 5
   },
-  "occurrences": 7,
+  "occurrences": 6,
   "findings": [
     {
       "severity": "high",
@@ -22,55 +22,42 @@
     {
       "severity": "low",
       "kind": "internal-unreachable",
-      "page": "https://isatips.adbles.com/articles/winter-condensation-mold-prevention-guide",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-075-interior-door",
       "status": 503,
       "error": null,
       "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     },
     {
       "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/curtain-blind-installation-cost",
-      "href": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=629&ccfNo=4&cciNo=2&cnpClsNo=1",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-082-interior-door",
       "status": 503,
       "error": null,
-      "note": "503 — 일시적일 수 있어 다음 회차에 다시 본다"
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     },
     {
       "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/cheap-moving-date-guide",
-      "href": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=629&ccfNo=3&cciNo=1&cnpClsNo=1",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-110-entrance-steel-gate",
       "status": 503,
       "error": null,
-      "note": "503 — 일시적일 수 있어 다음 회차에 다시 본다"
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     },
     {
       "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/moving-with-kids-school-transfer-guide",
-      "href": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=666&ccfNo=4&cciNo=2&cnpClsNo=1",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-144-entrance-steel-gate",
       "status": 503,
       "error": null,
-      "note": "503 — 일시적일 수 있어 다음 회차에 다시 본다"
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     },
     {
       "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/november-2026-son-eomneun-nal-moving-dates",
-      "href": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=1&csmSeq=629",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/winter-condensation-mold-prevention-guide",
       "status": 503,
       "error": null,
-      "note": "503 — 일시적일 수 있어 다음 회차에 다시 본다"
-    },
-    {
-      "severity": "low",
-      "kind": "external-unreachable",
-      "page": "https://isatips.adbles.com/articles/packing-vs-half-packing-moving-difference",
-      "href": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=3&cciNo=1&cnpClsNo=1&csmSeq=629&popMenu=ov",
-      "status": 503,
-      "error": null,
-      "note": "503 — 일시적일 수 있어 다음 회차에 다시 본다"
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     }
   ],
   "detail": {},
