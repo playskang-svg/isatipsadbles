@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-11-07T21:23:19.315Z",
+  "checkedAt": "2026-11-24T03:44:51.923Z",
   "engine": "naver",
   "results": [
     {
@@ -30,103 +30,75 @@
     },
     {
       "keyword": "용달이사 사다리차",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "입주청소 비용",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "벽걸이TV 이전설치",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 불당동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 신방동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 쌍용동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 백석동 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 성환읍 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 병천면 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 동남구 이사",
-      "hit": true,
-      "rank": 3,
-      "block": "기타",
-      "title": "천안 동남구 포장이사 견적, 원도심·읍면에서 달라지는 조건",
-      "urls": [
-        "https://isatips.adbles.com/articles/cheonan-dongnam-gu-moving"
-      ],
-      "items": [
-        {
-          "url": "https://isatips.adbles.com/articles/cheonan-dongnam-gu-moving",
-          "title": "천안 동남구 포장이사 견적, 원도심·읍면에서 달라지는 조건",
-          "rank": 3,
-          "block": "기타"
-        }
-      ]
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 서북구 이사",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "천안 이사업체",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "무타공 벽걸이TV 설치",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "손없는날 이사 뜻",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사박스 수량 계산",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사 파손 보상 30일",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "이사 전입신고 확정일자",
-      "hit": false
+      "error": "HTTP 403"
     },
     {
       "keyword": "세탁기 이전설치 2단 직렬",
-      "hit": true,
-      "rank": 1,
-      "block": "기타",
-      "title": "세탁기·건조기 이전설치 비용, 2단 직렬이면 무엇이 달라질까?",
-      "urls": [
-        "https://isatips.adbles.com/articles/washer-dryer-moving-installation-cost"
-      ],
-      "items": [
-        {
-          "url": "https://isatips.adbles.com/articles/washer-dryer-moving-installation-cost",
-          "title": "세탁기·건조기 이전설치 비용, 2단 직렬이면 무엇이 달라질까?",
-          "rank": 1,
-          "block": "기타"
-        }
-      ]
+      "error": "HTTP 403"
     }
   ]
 }
