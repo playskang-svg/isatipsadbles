@@ -3,20 +3,37 @@
   "label": "이사팁스 (이사준비백서)",
   "domain": "isatips.adbles.com",
   "repo": "playskang-svg/isatipsadbles",
-  "scannedAt": "2026-11-24T05:32:56.217Z",
+  "scannedAt": "2026-11-26T03:50:37.192Z",
   "pagesCrawled": 200,
   "sitemapUrls": 0,
   "externalChecked": 321,
   "summary": {
-    "high": 1
+    "high": 1,
+    "low": 2
   },
-  "occurrences": 1,
+  "occurrences": 3,
   "findings": [
     {
       "severity": "high",
       "kind": "no-sitemap",
       "page": "https://isatips.adbles.com",
       "note": "sitemap.xml이 없다. 색인 제출과 고아 문서 판정의 기준선이 사라진다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/repair-keyword-144-entrance-steel-gate",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
+    },
+    {
+      "severity": "low",
+      "kind": "internal-unreachable",
+      "page": "https://isatips.adbles.com/articles/winter-condensation-mold-prevention-guide",
+      "status": 503,
+      "error": null,
+      "note": "503 — 서버가 일시적으로 못 받는 상태다. 다음 회차에 다시 본다"
     }
   ],
   "detail": {},
