@@ -1,7 +1,7 @@
 {
   "site": "isatips",
   "domain": "isatips.adbles.com",
-  "checkedAt": "2026-11-27T01:26:25.079Z",
+  "checkedAt": "2026-11-28T00:59:43.610Z",
   "engine": "naver",
   "results": [
     {
@@ -50,11 +50,11 @@
     },
     {
       "keyword": "천안 쌍용동 이사",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "천안 백석동 이사",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "천안 성환읍 이사",
@@ -78,7 +78,7 @@
     },
     {
       "keyword": "무타공 벽걸이TV 설치",
-      "error": "HTTP 403"
+      "hit": false
     },
     {
       "keyword": "손없는날 이사 뜻",
